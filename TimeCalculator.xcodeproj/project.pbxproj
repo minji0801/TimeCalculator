@@ -7,23 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A53E786C2768628E00A30B63 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53E786B2768628E00A30B63 /* CameraViewController.swift */; };
 		A569A9E9276710BF00435CF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A569A9E8276710BF00435CF0 /* AppDelegate.swift */; };
 		A569A9EB276710BF00435CF0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A569A9EA276710BF00435CF0 /* SceneDelegate.swift */; };
-		A569A9ED276710BF00435CF0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A569A9EC276710BF00435CF0 /* ViewController.swift */; };
 		A569A9F0276710BF00435CF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A569A9EE276710BF00435CF0 /* Main.storyboard */; };
 		A569A9F2276710C000435CF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A569A9F1276710C000435CF0 /* Assets.xcassets */; };
 		A569A9F5276710C000435CF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A569A9F3276710C000435CF0 /* LaunchScreen.storyboard */; };
+		A569A9FD27671A8100435CF0 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A569A9FC27671A8100435CF0 /* CalculatorViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A53E786B2768628E00A30B63 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		A569A9E5276710BF00435CF0 /* TimeCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A569A9E8276710BF00435CF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A569A9EA276710BF00435CF0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A569A9EC276710BF00435CF0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A569A9EF276710BF00435CF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A569A9F1276710C000435CF0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A569A9F4276710C000435CF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A569A9F6276710C000435CF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A569A9FC27671A8100435CF0 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +60,8 @@
 			children = (
 				A569A9E8276710BF00435CF0 /* AppDelegate.swift */,
 				A569A9EA276710BF00435CF0 /* SceneDelegate.swift */,
-				A569A9EC276710BF00435CF0 /* ViewController.swift */,
+				A569A9FC27671A8100435CF0 /* CalculatorViewController.swift */,
+				A53E786B2768628E00A30B63 /* CameraViewController.swift */,
 				A569A9EE276710BF00435CF0 /* Main.storyboard */,
 				A569A9F1276710C000435CF0 /* Assets.xcassets */,
 				A569A9F3276710C000435CF0 /* LaunchScreen.storyboard */,
@@ -138,8 +141,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A569A9ED276710BF00435CF0 /* ViewController.swift in Sources */,
 				A569A9E9276710BF00435CF0 /* AppDelegate.swift in Sources */,
+				A53E786C2768628E00A30B63 /* CameraViewController.swift in Sources */,
+				A569A9FD27671A8100435CF0 /* CalculatorViewController.swift in Sources */,
 				A569A9EB276710BF00435CF0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
