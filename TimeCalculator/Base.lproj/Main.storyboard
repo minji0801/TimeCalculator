@@ -298,6 +298,9 @@
                                                 <state key="normal" image="plus" catalog="system">
                                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30" weight="thin"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="plusButtonTapped:" destination="oAN-Qf-RLF" eventType="touchUpInside" id="GeY-Zi-YBC"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -351,12 +354,23 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mKr-Ck-8EY">
-                                        <rect key="frame" x="295" y="48" width="99" height="60"/>
-                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="50"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="PdQ-be-EWg">
+                                        <rect key="frame" x="240" y="48" width="154" height="60"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PDM-wO-LCb">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="60"/>
+                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mKr-Ck-8EY">
+                                                <rect key="frame" x="55" y="0.0" width="99" height="60"/>
+                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="50"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -393,6 +407,7 @@
                         <outlet property="plusButton" destination="fYu-zE-Vhc" id="zQU-Jg-Jpq"/>
                         <outlet property="sevenButton" destination="qFx-ju-MwN" id="KeR-51-M5w"/>
                         <outlet property="sixButton" destination="TMb-JG-3Bg" id="G4r-go-T2Y"/>
+                        <outlet property="symbolLabel" destination="PDM-wO-LCb" id="fwE-2W-JGw"/>
                         <outlet property="threeButton" destination="eqJ-aU-9sb" id="BqS-9U-EW5"/>
                         <outlet property="twoButton" destination="XM0-CH-26r" id="ZSV-d5-67e"/>
                         <outlet property="zeroButton" destination="vkG-7N-7er" id="rCJ-iS-wic"/>
