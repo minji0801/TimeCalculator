@@ -32,11 +32,9 @@ class CalculatorViewController: UIViewController {
     @IBOutlet weak var plusButton: UIButton!
     @IBOutlet weak var equalButton: UIButton!
     
-    var input = [String]()
-    var operand = [String]()
-    
-    var countPlusTapped = 0
-    var isPlusTapped = false
+    var input = [String](), operand = [String]()
+    var countPlusTapped = 0, countMinusTapped = 0
+    var isPlusTapped = false, isMinusTapped = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,6 +63,10 @@ class CalculatorViewController: UIViewController {
         if isPlusTapped == true {
             isPlusTapped = false
         }
+        
+        if isMinusTapped == true {
+            isMinusTapped = false
+        }
     }
     
     // AC 버튼 눌렀을 때
@@ -73,7 +75,9 @@ class CalculatorViewController: UIViewController {
         operand = []
         
         countPlusTapped = 0
+        countMinusTapped = 0
         isPlusTapped = false
+        isMinusTapped = false
         
         inputLabel.text = "0:00"
         operandLabel.text = "0:00"
@@ -99,10 +103,9 @@ class CalculatorViewController: UIViewController {
                 print("operand = \(operand.joined())")
             } else {
                 // 처음 누른게 아니면 input + operand 값을 operand에 넣기
-                let result = Int(input.joined())! + Int(operand.joined())!
+                let result = Int(operand.joined())! + Int(input.joined())!
                 operand = String(result).map { String($0) }
                 print("operand = \(operand.joined())")
-                
             }
             
             input = []
@@ -111,13 +114,38 @@ class CalculatorViewController: UIViewController {
             operand = convertTimeFormat(operand)
             updateLabel(inputLabel, input)
             updateLabel(operandLabel, operand)
-            
-            // inputLabel 앞에 + 붙이기
         } else {
             print("이미 + 버튼 눌렀잖아!")
         }
         
         isPlusTapped = true
+    }
+    
+    // - 버튼 눌렀을 때
+    @IBAction func minusButtonTapped(_ sender: UIButton) {
+        if isMinusTapped == false {
+            symbolLabel.text = "-"
+            
+            if countMinusTapped == 0 {
+                operand = input
+                print("operand = \(operand.joined())")
+            } else {
+                let result = minusOperation()
+                operand = String(result).map { String($0) }
+                print("operand = \(operand.joined())")
+            }
+            
+            input = []
+            countMinusTapped = countMinusTapped + 1
+            
+            operand = convertTimeFormat(operand)
+            updateLabel(inputLabel, input)
+            updateLabel(operandLabel, operand)
+        } else {
+            print("이미 - 버튼 눌렀잖아!")
+        }
+        
+        isMinusTapped = true
     }
     
     // = 버튼 눌렀을 때
@@ -139,6 +167,39 @@ class CalculatorViewController: UIViewController {
         
         countPlusTapped = 0
         isPlusTapped = false
+    }
+    
+    func minusOperation() -> Int {
+        // operand가 3자리 이상이고, operand의 분이 input 분보다 작을 때 무조건 -40
+        var result = 0
+        if operand.count > 2 {
+            let operandLastIndex = operand.lastIndex(of: operand.last!)!
+            let operandMinute = Int(operand[operandLastIndex - 1 ... operandLastIndex].joined())!
+            
+            let inputLastIndex = input.lastIndex(of: input.last!)!
+            var inputMinute = 0
+            
+            if input.count > 1 {
+                inputMinute = Int(input[inputLastIndex - 1 ... inputLastIndex].joined())!
+            } else {
+                inputMinute = Int(input[inputLastIndex])!
+            }
+            
+            print("operandMinute = \(operandMinute), inputMinute = \(inputMinute)")
+            if operandMinute < inputMinute {
+                result = Int(operand.joined())! - Int(input.joined())! - 40
+            } else {
+                result = Int(operand.joined())! - Int(input.joined())!
+            }
+        } else {
+            result = Int(operand.joined())! - Int(input.joined())!
+        }
+        
+        if result < 0 {
+            result = Int(input.joined())!
+        }
+        
+        return result
     }
     
     func convertTimeFormat(_ value: [String]) -> [String] {

@@ -255,6 +255,9 @@
                                                 <state key="normal" image="minus" catalog="system">
                                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30" weight="thin"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="minusButtonTapped:" destination="oAN-Qf-RLF" eventType="touchUpInside" id="pc8-Pa-mFg"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
