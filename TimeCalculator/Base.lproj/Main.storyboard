@@ -286,6 +286,9 @@
                                                 <state key="normal" image="equal" catalog="system">
                                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30" weight="thin"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="equalButtonTapped:" destination="oAN-Qf-RLF" eventType="touchUpInside" id="0v1-o0-WRO"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fYu-zE-Vhc">
                                                 <rect key="frame" x="300.5" y="0.0" width="93.5" height="93.5"/>

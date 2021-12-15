@@ -108,7 +108,7 @@ class CalculatorViewController: UIViewController {
             input = []
             countPlusTapped = countPlusTapped + 1
             
-            convertTimeFormat()
+            operand = convertTimeFormat(operand)
             updateLabel(inputLabel, input)
             updateLabel(operandLabel, operand)
             
@@ -120,23 +120,47 @@ class CalculatorViewController: UIViewController {
         isPlusTapped = true
     }
     
-    func convertTimeFormat() {
+    // = 버튼 눌렀을 때
+    @IBAction func equalButtonTapped(_ sender: UIButton) {
+        print("clicked equal!!")
+        print("input = \(input.joined())")
+        print("operand = \(operand.joined())")
+        
+        if symbolLabel.text == "+" {
+            let result = (Int(input.joined()) ?? 0) + Int(operand.joined())!
+            print("plus result = \(result)")
+            input = String(result).map { String($0) }
+            operand = []
+        }
+        
+        updateLabel(inputLabel, input)
+        updateLabel(operandLabel, operand)
+        symbolLabel.text = ""
+        
+        countPlusTapped = 0
+        isPlusTapped = false
+    }
+    
+    func convertTimeFormat(_ value: [String]) -> [String] {
         // 시간 포맷에 맞추기 (분이 60에서 99사이라면 60을 뺀 값을 분에 적고 시에 +1 해주기)
         // 두글자 이상일 때 [6, 1] 뒤에서 두글자 가져오기
-        let lastIndex = operand.lastIndex(of: operand.last!)!
-        var operandMinute = Int(operand[lastIndex - 1 ... lastIndex].joined())!
-        
-        if operandMinute > 59 {
-            var operandHour = 0
+        if value.count > 1 {
+            let lastIndex = value.lastIndex(of: value.last!)!
+            var operandMinute = Int(value[lastIndex - 1 ... lastIndex].joined())!
             
-            if operand.count > 2 {
-                operandHour = Int(operand[0...lastIndex - 2].joined())!
+            if operandMinute > 59 {
+                var operandHour = 0
+                
+                if value.count > 2 {
+                    operandHour = Int(value[0...lastIndex - 2].joined())!
+                }
+                operandHour = operandHour + 1
+                operandMinute = operandMinute - 60
+                print("format => \(operandHour):\(String(format: "%02d", operandMinute))")
+                return "\(operandHour)\(String(format: "%02d", operandMinute))".map { String($0) }
             }
-            operandHour = operandHour + 1
-            operandMinute = operandMinute - 60
-            operand = "\(operandHour)\(String(format: "%02d", operandMinute))".map { String($0) }
-            print("format => \(operandHour):\(String(format: "%02d", operandMinute))")
         }
+        return value
     }
     
     func updateLabel(_ label: UILabel, _ value: [String]) {
