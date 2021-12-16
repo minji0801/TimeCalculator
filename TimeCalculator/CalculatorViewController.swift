@@ -94,6 +94,7 @@ class CalculatorViewController: UIViewController {
     
     // + 버튼 눌렀을 때
     @IBAction func plusButtonTapped(_ sender: UIButton) {
+        // - 버튼이 이미 눌러져있을 때 symbol 만 바뀌게
         if isPlusTapped == false {
             symbolLabel.text = "+"
             
@@ -123,6 +124,7 @@ class CalculatorViewController: UIViewController {
     
     // - 버튼 눌렀을 때
     @IBAction func minusButtonTapped(_ sender: UIButton) {
+        // + 버튼이 이미 눌러져있을 때 symbol 만 바뀌게
         if isMinusTapped == false {
             symbolLabel.text = "-"
             
@@ -155,8 +157,13 @@ class CalculatorViewController: UIViewController {
         print("operand = \(operand.joined())")
         
         if symbolLabel.text == "+" {
-            let result = (Int(input.joined()) ?? 0) + Int(operand.joined())!
+            let result = Int(operand.joined())! + (Int(input.joined()) ?? 0)
             print("plus result = \(result)")
+            input = String(result).map { String($0) }
+            operand = []
+        } else if symbolLabel.text == "-" {
+            let result = minusOperation()
+            print("minus result = \(result)")
             input = String(result).map { String($0) }
             operand = []
         }
@@ -166,7 +173,9 @@ class CalculatorViewController: UIViewController {
         symbolLabel.text = ""
         
         countPlusTapped = 0
+        countMinusTapped = 0
         isPlusTapped = false
+        isMinusTapped = false
     }
     
     func minusOperation() -> Int {
@@ -176,23 +185,23 @@ class CalculatorViewController: UIViewController {
             let operandLastIndex = operand.lastIndex(of: operand.last!)!
             let operandMinute = Int(operand[operandLastIndex - 1 ... operandLastIndex].joined())!
             
-            let inputLastIndex = input.lastIndex(of: input.last!)!
+            let inputLastIndex = input.lastIndex(of: input.last ?? "0") ?? 0
             var inputMinute = 0
             
             if input.count > 1 {
                 inputMinute = Int(input[inputLastIndex - 1 ... inputLastIndex].joined())!
             } else {
-                inputMinute = Int(input[inputLastIndex])!
+                inputMinute = Int(input.joined()) ?? 0
             }
             
             print("operandMinute = \(operandMinute), inputMinute = \(inputMinute)")
             if operandMinute < inputMinute {
-                result = Int(operand.joined())! - Int(input.joined())! - 40
+                result = Int(operand.joined())! - (Int(input.joined()) ?? 0) - 40
             } else {
-                result = Int(operand.joined())! - Int(input.joined())!
+                result = Int(operand.joined())! - (Int(input.joined()) ?? 0)
             }
         } else {
-            result = Int(operand.joined())! - Int(input.joined())!
+            result = Int(operand.joined())! - (Int(input.joined()) ?? 0)
         }
         
         if result < 0 {
