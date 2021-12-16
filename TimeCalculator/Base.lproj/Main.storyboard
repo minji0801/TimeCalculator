@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="K0Y-0L-rH8">
-    <device id="retina6_1" orientation="portrait" appearance="dark"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -9,33 +9,128 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Dday View Controller-->
         <scene sceneID="dcF-SE-Lxa">
             <objects>
-                <viewController id="NWT-X2-Y8n" sceneMemberID="viewController">
+                <viewController id="NWT-X2-Y8n" customClass="DdayViewController" customModule="TimeCalculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="n2p-KH-6jN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="디데이" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zma-xl-Yo2">
-                                <rect key="frame" x="185" y="437.5" width="44.5" height="21"/>
+                                <rect key="frame" x="185" y="54" width="44.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Dic-V1-RR8">
+                                <rect key="frame" x="20" y="124.5" width="374" height="200"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rKz-qJ-YxO">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="251" text="시작 날짜 : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7oX-6x-IA6">
+                                                <rect key="frame" x="0.0" y="0.0" width="73" height="50"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="X0V-C6-TBl">
+                                                <rect key="frame" x="73" y="0.0" width="301" height="50"/>
+                                                <color key="tintColor" name="MainColor"/>
+                                                <locale key="locale" localeIdentifier="ko_KR"/>
+                                            </datePicker>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="imp-NZ-9fS">
+                                        <rect key="frame" x="0.0" y="70" width="374" height="50"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="251" text="종료 날짜 : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E68-KV-b9t">
+                                                <rect key="frame" x="0.0" y="0.0" width="76.5" height="50"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="xcu-T8-hKj">
+                                                <rect key="frame" x="76.5" y="0.0" width="297.5" height="50"/>
+                                                <color key="tintColor" name="MainColor"/>
+                                                <locale key="locale" localeIdentifier="ko_KR"/>
+                                            </datePicker>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pV5-j3-hvV">
+                                        <rect key="frame" x="0.0" y="140" width="374" height="60"/>
+                                        <color key="backgroundColor" name="MainColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="MtC-YH-qe9"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="계산하기"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tRV-7n-rs2">
+                                <rect key="frame" x="0.0" y="324.5" width="414" height="438.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D-DAY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CUv-I8-g24">
+                                        <rect key="frame" x="137" y="189.5" width="140" height="60"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="50"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="CUv-I8-g24" firstAttribute="centerX" secondItem="tRV-7n-rs2" secondAttribute="centerX" id="fiT-Ob-GCh"/>
+                                    <constraint firstItem="CUv-I8-g24" firstAttribute="centerY" secondItem="tRV-7n-rs2" secondAttribute="centerY" id="xLT-94-C4g"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4G0-0K-hra">
+                                <rect key="frame" x="0.0" y="763" width="414" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="광고뷰" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NtS-mj-X1o">
+                                        <rect key="frame" x="185" y="15" width="44.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <constraints>
+                                    <constraint firstItem="NtS-mj-X1o" firstAttribute="centerX" secondItem="4G0-0K-hra" secondAttribute="centerX" id="1YR-xb-7oF"/>
+                                    <constraint firstAttribute="height" constant="50" id="2fi-65-cnk"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="gb0-rX-jVM"/>
+                                    <constraint firstItem="NtS-mj-X1o" firstAttribute="centerY" secondItem="4G0-0K-hra" secondAttribute="centerY" id="mgt-Cp-Jms"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="va6-Di-i5C"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="zma-xl-Yo2" firstAttribute="centerY" secondItem="n2p-KH-6jN" secondAttribute="centerY" id="13K-E4-bEg"/>
+                            <constraint firstItem="va6-Di-i5C" firstAttribute="bottom" secondItem="4G0-0K-hra" secondAttribute="bottom" id="35O-dR-Xu3"/>
+                            <constraint firstItem="Dic-V1-RR8" firstAttribute="top" secondItem="zma-xl-Yo2" secondAttribute="bottom" constant="50" id="Am2-mh-mcU"/>
+                            <constraint firstItem="4G0-0K-hra" firstAttribute="top" secondItem="tRV-7n-rs2" secondAttribute="bottom" id="AuF-BR-Dt9"/>
+                            <constraint firstItem="tRV-7n-rs2" firstAttribute="leading" secondItem="va6-Di-i5C" secondAttribute="leading" id="BHg-gf-n64"/>
+                            <constraint firstItem="tRV-7n-rs2" firstAttribute="top" secondItem="Dic-V1-RR8" secondAttribute="bottom" id="Hya-RB-heD"/>
+                            <constraint firstItem="4G0-0K-hra" firstAttribute="leading" secondItem="va6-Di-i5C" secondAttribute="leading" id="NEb-vF-cUb"/>
+                            <constraint firstItem="Dic-V1-RR8" firstAttribute="centerX" secondItem="n2p-KH-6jN" secondAttribute="centerX" id="Snn-rz-dV8"/>
+                            <constraint firstAttribute="trailing" secondItem="Dic-V1-RR8" secondAttribute="trailing" constant="20" id="Xau-HA-ZmN"/>
+                            <constraint firstItem="zma-xl-Yo2" firstAttribute="top" secondItem="va6-Di-i5C" secondAttribute="top" constant="10" id="g7a-6t-zgv"/>
+                            <constraint firstItem="va6-Di-i5C" firstAttribute="trailing" secondItem="tRV-7n-rs2" secondAttribute="trailing" id="gCH-e2-vZE"/>
+                            <constraint firstItem="4G0-0K-hra" firstAttribute="trailing" secondItem="va6-Di-i5C" secondAttribute="trailing" id="m2c-2K-zzR"/>
                             <constraint firstItem="zma-xl-Yo2" firstAttribute="centerX" secondItem="n2p-KH-6jN" secondAttribute="centerX" id="qPM-Lf-bZ6"/>
+                            <constraint firstItem="Dic-V1-RR8" firstAttribute="leading" secondItem="va6-Di-i5C" secondAttribute="leading" constant="20" id="sTw-r6-5p5"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="calender" id="yHv-m8-LRf"/>
+                    <connections>
+                        <outlet property="calculateButton" destination="pV5-j3-hvV" id="g5Y-jR-9Lm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rJw-Ar-ona" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="546" y="429"/>
+            <point key="canvasLocation" x="544.92753623188412" y="428.57142857142856"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="vkc-wQ-yme">

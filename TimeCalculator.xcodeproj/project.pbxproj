@@ -14,6 +14,7 @@
 		A569A9F2276710C000435CF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A569A9F1276710C000435CF0 /* Assets.xcassets */; };
 		A569A9F5276710C000435CF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A569A9F3276710C000435CF0 /* LaunchScreen.storyboard */; };
 		A569A9FD27671A8100435CF0 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A569A9FC27671A8100435CF0 /* CalculatorViewController.swift */; };
+		A5CBF44B276B48FA002C3A87 /* DdayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CBF44A276B48FA002C3A87 /* DdayViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		A569A9F4276710C000435CF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A569A9F6276710C000435CF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A569A9FC27671A8100435CF0 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
+		A5CBF44A276B48FA002C3A87 /* DdayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DdayViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				A569A9EA276710BF00435CF0 /* SceneDelegate.swift */,
 				A569A9FC27671A8100435CF0 /* CalculatorViewController.swift */,
 				A53E786B2768628E00A30B63 /* CameraViewController.swift */,
+				A5CBF44A276B48FA002C3A87 /* DdayViewController.swift */,
 				A569A9EE276710BF00435CF0 /* Main.storyboard */,
 				A569A9F1276710C000435CF0 /* Assets.xcassets */,
 				A569A9F3276710C000435CF0 /* LaunchScreen.storyboard */,
@@ -145,6 +148,7 @@
 				A53E786C2768628E00A30B63 /* CameraViewController.swift in Sources */,
 				A569A9FD27671A8100435CF0 /* CalculatorViewController.swift in Sources */,
 				A569A9EB276710BF00435CF0 /* SceneDelegate.swift in Sources */,
+				A5CBF44B276B48FA002C3A87 /* DdayViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
