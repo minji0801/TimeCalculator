@@ -6,8 +6,11 @@
 //
 
 import UIKit
+import AVFoundation
 
 class SettingViewController: UIViewController {
+    var player: AVAudioPlayer!
+    
     @IBOutlet weak var darkModeButton: UIButton!
     @IBOutlet weak var soundButton: UIButton!
     @IBOutlet weak var reviewButton: UIButton!
@@ -31,6 +34,16 @@ class SettingViewController: UIViewController {
         }
     }
     
+    // 모든 버튼이 눌릴 때마다 소리 출력
+    @IBAction func buttonPressed(_ sender: UIButton) {
+        let soundOff = UserDefaults.standard.bool(forKey: "SoundOff")
+        if !soundOff {
+            let url = Bundle.main.url(forResource: "click", withExtension: "wav")
+            player = try! AVAudioPlayer(contentsOf: url!)
+            player.play()
+        }
+    }
+    
     // 다크모드 버튼 클릭 시
     @IBAction func darkModeButtonTapped(_ sender: UIButton) {
         if self.overrideUserInterfaceStyle == .light {
@@ -40,4 +53,11 @@ class SettingViewController: UIViewController {
         }
         self.viewWillAppear(true)
     }
+    
+    // 버튼 사운드 클릭 시
+    @IBAction func soundButtonTapped(_ sender: UIButton) {
+        let soundOff = UserDefaults.standard.bool(forKey: "SoundOff")
+        UserDefaults.standard.set(!soundOff, forKey: "SoundOff")
+    }
+    
 }

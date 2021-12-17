@@ -173,6 +173,7 @@
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="다크 모드"/>
                                                 <connections>
+                                                    <action selector="buttonPressed:" destination="cJv-8g-LZY" eventType="touchUpInside" id="olL-uZ-DE9"/>
                                                     <action selector="darkModeButtonTapped:" destination="cJv-8g-LZY" eventType="touchUpInside" id="4U0-FY-To0"/>
                                                 </connections>
                                             </button>
@@ -181,6 +182,10 @@
                                                 <color key="tintColor" systemColor="labelColor"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="버튼 사운드"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="cJv-8g-LZY" eventType="touchUpInside" id="WUT-SO-zUS"/>
+                                                    <action selector="soundButtonTapped:" destination="cJv-8g-LZY" eventType="touchUpInside" id="WcQ-9k-WaL"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -195,12 +200,18 @@
                                                 <color key="tintColor" systemColor="labelColor"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="앱 평가"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="cJv-8g-LZY" eventType="touchUpInside" id="ZrZ-wr-gQc"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kp2-2A-CDA">
                                                 <rect key="frame" x="187" y="0.0" width="167" height="55.5"/>
                                                 <color key="tintColor" systemColor="labelColor"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="피드백 보내기"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="cJv-8g-LZY" eventType="touchUpInside" id="Obd-LJ-46I"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -252,6 +263,7 @@
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="7"/>
                                                 <connections>
+                                                    <action selector="buttonPressed:" destination="oAN-Qf-RLF" eventType="touchUpInside" id="Epq-kn-oKH"/>
                                                     <action selector="numberButtonTapped:" destination="oAN-Qf-RLF" eventType="touchUpInside" id="8fc-A1-yt5"/>
                                                 </connections>
                                             </button>
@@ -266,6 +278,7 @@
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="8"/>
                                                 <connections>
+                                                    <action selector="buttonPressed:" destination="oAN-Qf-RLF" eventType="touchUpInside" id="ea6-cv-beU"/>
                                                     <action selector="numberButtonTapped:" destination="oAN-Qf-RLF" eventType="touchUpInside" id="faf-Md-WQs"/>
                                                 </connections>
                                             </button>
@@ -280,6 +293,7 @@
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="9"/>
                                                 <connections>
+                                                    <action selector="buttonPressed:" destination="oAN-Qf-RLF" eventType="touchUpInside" id="y1c-of-MII"/>
                                                     <action selector="numberButtonTapped:" destination="oAN-Qf-RLF" eventType="touchUpInside" id="LkD-0Q-q7E"/>
                                                 </connections>
                                             </button>
@@ -295,6 +309,7 @@
                                                 <state key="normal" title="AC"/>
                                                 <connections>
                                                     <action selector="allClearButtonTapped:" destination="oAN-Qf-RLF" eventType="touchUpInside" id="mss-hY-CRo"/>
+                                                    <action selector="buttonPressed:" destination="oAN-Qf-RLF" eventType="touchUpInside" id="9kI-t4-SrX"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -313,6 +328,7 @@
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="4"/>
                                                 <connections>
+                                                    <action selector="buttonPressed:" destination="oAN-Qf-RLF" eventType="touchUpInside" id="MkY-bD-8TW"/>
                                                     <action selector="numberButtonTapped:" destination="oAN-Qf-RLF" eventType="touchUpInside" id="kT6-mr-bfe"/>
                                                 </connections>
                                             </button>
@@ -327,6 +343,7 @@
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="5"/>
                                                 <connections>
+                                                    <action selector="buttonPressed:" destination="oAN-Qf-RLF" eventType="touchUpInside" id="8Ol-s8-Ly6"/>
                                                     <action selector="numberButtonTapped:" destination="oAN-Qf-RLF" eventType="touchUpInside" id="Eys-1l-bM1"/>
                                                 </connections>
                                             </button>
@@ -341,6 +358,7 @@
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="6"/>
                                                 <connections>
+                                                    <action selector="buttonPressed:" destination="oAN-Qf-RLF" eventType="touchUpInside" id="Cxe-ue-5WJ"/>
                                                     <action selector="numberButtonTapped:" destination="oAN-Qf-RLF" eventType="touchUpInside" id="VJf-KW-wG9"/>
                                                 </connections>
                                             </button>
@@ -356,6 +374,7 @@
                                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30" weight="thin"/>
                                                 </state>
                                                 <connections>
+                                                    <action selector="buttonPressed:" destination="oAN-Qf-RLF" eventType="touchUpInside" id="qlR-dq-1uQ"/>
                                                     <action selector="deleteButtonTapped:" destination="oAN-Qf-RLF" eventType="touchUpInside" id="v9i-mE-13T"/>
                                                 </connections>
                                             </button>
@@ -375,6 +394,7 @@
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="1"/>
                                                 <connections>
+                                                    <action selector="buttonPressed:" destination="oAN-Qf-RLF" eventType="touchUpInside" id="Bv6-e4-2CM"/>
                                                     <action selector="numberButtonTapped:" destination="oAN-Qf-RLF" eventType="touchUpInside" id="YgA-Hc-7Rw"/>
                                                 </connections>
                                             </button>
@@ -389,6 +409,7 @@
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="2"/>
                                                 <connections>
+                                                    <action selector="buttonPressed:" destination="oAN-Qf-RLF" eventType="touchUpInside" id="yth-1u-ixP"/>
                                                     <action selector="numberButtonTapped:" destination="oAN-Qf-RLF" eventType="touchUpInside" id="5MA-WG-IND"/>
                                                 </connections>
                                             </button>
@@ -403,6 +424,7 @@
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="3"/>
                                                 <connections>
+                                                    <action selector="buttonPressed:" destination="oAN-Qf-RLF" eventType="touchUpInside" id="wSI-et-wnv"/>
                                                     <action selector="numberButtonTapped:" destination="oAN-Qf-RLF" eventType="touchUpInside" id="bu1-e4-m5D"/>
                                                 </connections>
                                             </button>
@@ -418,6 +440,7 @@
                                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30" weight="thin"/>
                                                 </state>
                                                 <connections>
+                                                    <action selector="buttonPressed:" destination="oAN-Qf-RLF" eventType="touchUpInside" id="MPb-t7-OP1"/>
                                                     <action selector="minusButtonTapped:" destination="oAN-Qf-RLF" eventType="touchUpInside" id="pc8-Pa-mFg"/>
                                                 </connections>
                                             </button>
@@ -437,6 +460,7 @@
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="0"/>
                                                 <connections>
+                                                    <action selector="buttonPressed:" destination="oAN-Qf-RLF" eventType="touchUpInside" id="Z0I-Iq-FGL"/>
                                                     <action selector="numberButtonTapped:" destination="oAN-Qf-RLF" eventType="touchUpInside" id="WjG-jh-JrX"/>
                                                 </connections>
                                             </button>
@@ -452,6 +476,7 @@
                                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30" weight="thin"/>
                                                 </state>
                                                 <connections>
+                                                    <action selector="buttonPressed:" destination="oAN-Qf-RLF" eventType="touchUpInside" id="4Nk-9Z-Yb4"/>
                                                     <action selector="equalButtonTapped:" destination="oAN-Qf-RLF" eventType="touchUpInside" id="0v1-o0-WRO"/>
                                                 </connections>
                                             </button>
@@ -467,6 +492,7 @@
                                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30" weight="thin"/>
                                                 </state>
                                                 <connections>
+                                                    <action selector="buttonPressed:" destination="oAN-Qf-RLF" eventType="touchUpInside" id="uZm-oO-1F7"/>
                                                     <action selector="plusButtonTapped:" destination="oAN-Qf-RLF" eventType="touchUpInside" id="GeY-Zi-YBC"/>
                                                 </connections>
                                             </button>
@@ -510,6 +536,7 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
                                 </buttonConfiguration>
                                 <connections>
+                                    <action selector="buttonPressed:" destination="oAN-Qf-RLF" eventType="touchUpInside" id="WIn-3t-Z80"/>
                                     <segue destination="uKW-Oa-cbI" kind="show" id="iIl-Ot-Jhw"/>
                                 </connections>
                             </button>

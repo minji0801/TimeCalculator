@@ -6,9 +6,11 @@
 //
 
 import UIKit
-import Foundation
+import AVFoundation
 
 class CalculatorViewController: UIViewController {
+    var player: AVAudioPlayer!
+    
     @IBOutlet weak var cameraButton: UIButton!
     
     @IBOutlet weak var operandLabel: UILabel!
@@ -52,6 +54,15 @@ class CalculatorViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         AppearanceCheck(self)
+    }
+    
+    // 버튼이 눌릴 때마다 소리 출력
+    @IBAction func buttonPressed(_ sender: Any) {
+        let soundOff = UserDefaults.standard.bool(forKey: "SoundOff")
+        if !soundOff {
+            let systemSoundID: SystemSoundID = 1104
+            AudioServicesPlaySystemSound(systemSoundID)
+        }
     }
     
     // 숫자 버튼 눌렀을 때

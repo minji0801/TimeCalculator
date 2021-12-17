@@ -16,6 +16,7 @@
 		A569A9FD27671A8100435CF0 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A569A9FC27671A8100435CF0 /* CalculatorViewController.swift */; };
 		A56AF275276C67270043FD12 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56AF274276C67270043FD12 /* SettingViewController.swift */; };
 		A56AF278276C82180043FD12 /* UIConfigure.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56AF277276C82180043FD12 /* UIConfigure.swift */; };
+		A56AF282276C89240043FD12 /* click.wav in Resources */ = {isa = PBXBuildFile; fileRef = A56AF27D276C89240043FD12 /* click.wav */; };
 		A5CBF44B276B48FA002C3A87 /* DdayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CBF44A276B48FA002C3A87 /* DdayViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		A569A9FC27671A8100435CF0 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
 		A56AF274276C67270043FD12 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		A56AF277276C82180043FD12 /* UIConfigure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIConfigure.swift; sourceTree = "<group>"; };
+		A56AF27D276C89240043FD12 /* click.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = click.wav; sourceTree = "<group>"; };
 		A5CBF44A276B48FA002C3A87 /* DdayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DdayViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -71,6 +73,7 @@
 				A5CBF44A276B48FA002C3A87 /* DdayViewController.swift */,
 				A56AF274276C67270043FD12 /* SettingViewController.swift */,
 				A56AF276276C81FF0043FD12 /* Method */,
+				A56AF279276C890F0043FD12 /* Sound */,
 				A569A9EE276710BF00435CF0 /* Main.storyboard */,
 				A569A9F1276710C000435CF0 /* Assets.xcassets */,
 				A569A9F3276710C000435CF0 /* LaunchScreen.storyboard */,
@@ -85,6 +88,14 @@
 				A56AF277276C82180043FD12 /* UIConfigure.swift */,
 			);
 			path = Method;
+			sourceTree = "<group>";
+		};
+		A56AF279276C890F0043FD12 /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				A56AF27D276C89240043FD12 /* click.wav */,
+			);
+			path = Sound;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,6 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A569A9F5276710C000435CF0 /* LaunchScreen.storyboard in Resources */,
+				A56AF282276C89240043FD12 /* click.wav in Resources */,
 				A569A9F2276710C000435CF0 /* Assets.xcassets in Resources */,
 				A569A9F0276710BF00435CF0 /* Main.storyboard in Resources */,
 			);
