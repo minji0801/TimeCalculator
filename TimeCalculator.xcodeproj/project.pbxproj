@@ -15,6 +15,7 @@
 		A569A9F5276710C000435CF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A569A9F3276710C000435CF0 /* LaunchScreen.storyboard */; };
 		A569A9FD27671A8100435CF0 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A569A9FC27671A8100435CF0 /* CalculatorViewController.swift */; };
 		A56AF275276C67270043FD12 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56AF274276C67270043FD12 /* SettingViewController.swift */; };
+		A56AF278276C82180043FD12 /* UIConfigure.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56AF277276C82180043FD12 /* UIConfigure.swift */; };
 		A5CBF44B276B48FA002C3A87 /* DdayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CBF44A276B48FA002C3A87 /* DdayViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		A569A9F6276710C000435CF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A569A9FC27671A8100435CF0 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
 		A56AF274276C67270043FD12 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		A56AF277276C82180043FD12 /* UIConfigure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIConfigure.swift; sourceTree = "<group>"; };
 		A5CBF44A276B48FA002C3A87 /* DdayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DdayViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -68,12 +70,21 @@
 				A53E786B2768628E00A30B63 /* CameraViewController.swift */,
 				A5CBF44A276B48FA002C3A87 /* DdayViewController.swift */,
 				A56AF274276C67270043FD12 /* SettingViewController.swift */,
+				A56AF276276C81FF0043FD12 /* Method */,
 				A569A9EE276710BF00435CF0 /* Main.storyboard */,
 				A569A9F1276710C000435CF0 /* Assets.xcassets */,
 				A569A9F3276710C000435CF0 /* LaunchScreen.storyboard */,
 				A569A9F6276710C000435CF0 /* Info.plist */,
 			);
 			path = TimeCalculator;
+			sourceTree = "<group>";
+		};
+		A56AF276276C81FF0043FD12 /* Method */ = {
+			isa = PBXGroup;
+			children = (
+				A56AF277276C82180043FD12 /* UIConfigure.swift */,
+			);
+			path = Method;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,6 +160,7 @@
 			files = (
 				A569A9E9276710BF00435CF0 /* AppDelegate.swift in Sources */,
 				A53E786C2768628E00A30B63 /* CameraViewController.swift in Sources */,
+				A56AF278276C82180043FD12 /* UIConfigure.swift in Sources */,
 				A569A9FD27671A8100435CF0 /* CalculatorViewController.swift in Sources */,
 				A569A9EB276710BF00435CF0 /* SceneDelegate.swift in Sources */,
 				A5CBF44B276B48FA002C3A87 /* DdayViewController.swift in Sources */,

@@ -19,6 +19,11 @@ class DdayViewController: UIViewController {
         calculateButton.layer.cornerRadius = 30
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        AppearanceCheck(self)
+    }
+    
     // 계산하기 버튼 눌렀을 때
     @IBAction func calculateButtonTapped(_ sender: UIButton) {
         let day = calculationDday()

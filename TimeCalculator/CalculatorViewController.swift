@@ -49,6 +49,11 @@ class CalculatorViewController: UIViewController {
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        AppearanceCheck(self)
+    }
+    
     // 숫자 버튼 눌렀을 때
     @IBAction func numberButtonTapped(_ sender: UIButton) {
         let clickValue = sender.title(for: .normal)!
