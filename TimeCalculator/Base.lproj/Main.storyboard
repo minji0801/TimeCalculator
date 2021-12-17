@@ -67,14 +67,17 @@
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="계산하기"/>
+                                        <connections>
+                                            <action selector="calculateButtonTapped:" destination="NWT-X2-Y8n" eventType="touchUpInside" id="MYl-yn-I5O"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tRV-7n-rs2">
                                 <rect key="frame" x="0.0" y="324.5" width="414" height="438.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D-DAY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CUv-I8-g24">
-                                        <rect key="frame" x="137" y="189.5" width="140" height="60"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CUv-I8-g24">
+                                        <rect key="frame" x="207" y="219.5" width="0.0" height="0.0"/>
                                         <fontDescription key="fontDescription" type="system" weight="thin" pointSize="50"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -126,35 +129,96 @@
                     <tabBarItem key="tabBarItem" title="" image="calender" id="yHv-m8-LRf"/>
                     <connections>
                         <outlet property="calculateButton" destination="pV5-j3-hvV" id="g5Y-jR-9Lm"/>
+                        <outlet property="ddayLabel" destination="CUv-I8-g24" id="VA7-Tz-1tI"/>
+                        <outlet property="endDatePicker" destination="xcu-T8-hKj" id="vnT-cH-vzF"/>
+                        <outlet property="startDatePicker" destination="X0V-C6-TBl" id="uGq-j1-KEA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rJw-Ar-ona" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="544.92753623188412" y="428.57142857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Setting View Controller-->
         <scene sceneID="vkc-wQ-yme">
             <objects>
-                <viewController id="cJv-8g-LZY" sceneMemberID="viewController">
+                <viewController id="cJv-8g-LZY" customClass="SettingViewController" customModule="TimeCalculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="X3t-nc-V9Z">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="설정  다크모드 키보드 사운드 앱평가 앱버전 피드백 보내기 앱설명" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5o-7l-2Q1">
-                                <rect key="frame" x="160.5" y="367" width="93" height="162.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="VdU-tk-Nwm">
+                                <rect key="frame" x="30" y="342" width="354" height="212"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="설정" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5o-7l-2Q1">
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iOS v1.0.0 build 1" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R10-rT-UvL">
+                                        <rect key="frame" x="0.0" y="40.5" width="354" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="cRv-9n-bf9">
+                                        <rect key="frame" x="0.0" y="81" width="354" height="55.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ezx-ko-Ih3">
+                                                <rect key="frame" x="0.0" y="0.0" width="167" height="55.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="Ezx-ko-Ih3" secondAttribute="height" multiplier="3:1" id="ORt-Cw-Gq5"/>
+                                                </constraints>
+                                                <color key="tintColor" systemColor="labelColor"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="다크 모드"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0rt-Gl-gOH">
+                                                <rect key="frame" x="187" y="0.0" width="167" height="55.5"/>
+                                                <color key="tintColor" systemColor="labelColor"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="버튼 사운드"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="oLR-50-6SL">
+                                        <rect key="frame" x="0.0" y="156.5" width="354" height="55.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oWg-Kk-4FT">
+                                                <rect key="frame" x="0.0" y="0.0" width="167" height="55.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="oWg-Kk-4FT" secondAttribute="height" multiplier="3:1" id="0E3-mj-Hl0"/>
+                                                </constraints>
+                                                <color key="tintColor" systemColor="labelColor"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="앱 평가"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kp2-2A-CDA">
+                                                <rect key="frame" x="187" y="0.0" width="167" height="55.5"/>
+                                                <color key="tintColor" systemColor="labelColor"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="피드백 보내기"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Z8f-rb-h7d"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="A5o-7l-2Q1" firstAttribute="centerY" secondItem="X3t-nc-V9Z" secondAttribute="centerY" id="1Te-zN-htG"/>
-                            <constraint firstItem="A5o-7l-2Q1" firstAttribute="centerX" secondItem="X3t-nc-V9Z" secondAttribute="centerX" id="5wg-ZM-eU6"/>
+                            <constraint firstItem="Z8f-rb-h7d" firstAttribute="trailing" secondItem="VdU-tk-Nwm" secondAttribute="trailing" constant="30" id="b7w-lW-HUV"/>
+                            <constraint firstItem="VdU-tk-Nwm" firstAttribute="centerY" secondItem="X3t-nc-V9Z" secondAttribute="centerY" id="oP5-Ls-rfD"/>
+                            <constraint firstItem="VdU-tk-Nwm" firstAttribute="leading" secondItem="Z8f-rb-h7d" secondAttribute="leading" constant="30" id="zhX-gk-4jg"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="setting" id="eZr-oT-wwu"/>
+                    <connections>
+                        <outlet property="darkModeButton" destination="Ezx-ko-Ih3" id="agh-Mg-vPl"/>
+                        <outlet property="feedbackButton" destination="Kp2-2A-CDA" id="3GX-kb-uSh"/>
+                        <outlet property="reviewButton" destination="oWg-Kk-4FT" id="bM1-GP-Pun"/>
+                        <outlet property="soundButton" destination="0rt-Gl-gOH" id="p9e-EE-HrA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kkj-dL-y30" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
