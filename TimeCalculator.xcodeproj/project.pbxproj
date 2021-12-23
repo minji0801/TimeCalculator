@@ -7,12 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A53E786C2768628E00A30B63 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53E786B2768628E00A30B63 /* CameraViewController.swift */; };
+		A5649A50277440BD00A77CF2 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5649A4F277440BD00A77CF2 /* TabBarController.swift */; };
 		A564A33B2772AE48009A22E0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A564A33A2772AE48009A22E0 /* GoogleService-Info.plist */; };
-		A564A3482772BEDF009A22E0 /* test1.heic in Resources */ = {isa = PBXBuildFile; fileRef = A564A3442772BEDE009A22E0 /* test1.heic */; };
-		A564A3492772BEDF009A22E0 /* test2.heic in Resources */ = {isa = PBXBuildFile; fileRef = A564A3452772BEDE009A22E0 /* test2.heic */; };
-		A564A34A2772BEDF009A22E0 /* test4.heic in Resources */ = {isa = PBXBuildFile; fileRef = A564A3462772BEDE009A22E0 /* test4.heic */; };
-		A564A34B2772BEDF009A22E0 /* test3.heic in Resources */ = {isa = PBXBuildFile; fileRef = A564A3472772BEDF009A22E0 /* test3.heic */; };
 		A569A9E9276710BF00435CF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A569A9E8276710BF00435CF0 /* AppDelegate.swift */; };
 		A569A9EB276710BF00435CF0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A569A9EA276710BF00435CF0 /* SceneDelegate.swift */; };
 		A569A9F0276710BF00435CF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A569A9EE276710BF00435CF0 /* Main.storyboard */; };
@@ -22,7 +18,6 @@
 		A56AF275276C67270043FD12 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56AF274276C67270043FD12 /* SettingViewController.swift */; };
 		A56AF278276C82180043FD12 /* UIConfigure.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56AF277276C82180043FD12 /* UIConfigure.swift */; };
 		A56AF282276C89240043FD12 /* click.wav in Resources */ = {isa = PBXBuildFile; fileRef = A56AF27D276C89240043FD12 /* click.wav */; };
-		A5C7C7EF276D9C8500727334 /* MNISTClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = A5C7C7EE276D9C8500727334 /* MNISTClassifier.mlmodel */; };
 		A5CBF44B276B48FA002C3A87 /* DdayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CBF44A276B48FA002C3A87 /* DdayViewController.swift */; };
 		BE525AA815EE8C86C2163F41 /* Pods_TimeCalculator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C0C5D515CEF79F2941F9F08 /* Pods_TimeCalculator.framework */; };
 /* End PBXBuildFile section */
@@ -30,12 +25,8 @@
 /* Begin PBXFileReference section */
 		0E15CF34BEBADE3696531552 /* Pods-TimeCalculator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeCalculator.release.xcconfig"; path = "Target Support Files/Pods-TimeCalculator/Pods-TimeCalculator.release.xcconfig"; sourceTree = "<group>"; };
 		5C0C5D515CEF79F2941F9F08 /* Pods_TimeCalculator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimeCalculator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A53E786B2768628E00A30B63 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		A5649A4F277440BD00A77CF2 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		A564A33A2772AE48009A22E0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		A564A3442772BEDE009A22E0 /* test1.heic */ = {isa = PBXFileReference; lastKnownFileType = file; path = test1.heic; sourceTree = "<group>"; };
-		A564A3452772BEDE009A22E0 /* test2.heic */ = {isa = PBXFileReference; lastKnownFileType = file; path = test2.heic; sourceTree = "<group>"; };
-		A564A3462772BEDE009A22E0 /* test4.heic */ = {isa = PBXFileReference; lastKnownFileType = file; path = test4.heic; sourceTree = "<group>"; };
-		A564A3472772BEDF009A22E0 /* test3.heic */ = {isa = PBXFileReference; lastKnownFileType = file; path = test3.heic; sourceTree = "<group>"; };
 		A569A9E5276710BF00435CF0 /* TimeCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A569A9E8276710BF00435CF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A569A9EA276710BF00435CF0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,7 +38,6 @@
 		A56AF274276C67270043FD12 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		A56AF277276C82180043FD12 /* UIConfigure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIConfigure.swift; sourceTree = "<group>"; };
 		A56AF27D276C89240043FD12 /* click.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = click.wav; sourceTree = "<group>"; };
-		A5C7C7EE276D9C8500727334 /* MNISTClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MNISTClassifier.mlmodel; sourceTree = "<group>"; };
 		A5CBF44A276B48FA002C3A87 /* DdayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DdayViewController.swift; sourceTree = "<group>"; };
 		B13DFBB1662FBE634EDE0077 /* Pods-TimeCalculator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeCalculator.debug.xcconfig"; path = "Target Support Files/Pods-TimeCalculator/Pods-TimeCalculator.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -104,8 +94,8 @@
 			children = (
 				A569A9E8276710BF00435CF0 /* AppDelegate.swift */,
 				A569A9EA276710BF00435CF0 /* SceneDelegate.swift */,
+				A5649A4F277440BD00A77CF2 /* TabBarController.swift */,
 				A569A9FC27671A8100435CF0 /* CalculatorViewController.swift */,
-				A53E786B2768628E00A30B63 /* CameraViewController.swift */,
 				A5CBF44A276B48FA002C3A87 /* DdayViewController.swift */,
 				A56AF274276C67270043FD12 /* SettingViewController.swift */,
 				A56AF276276C81FF0043FD12 /* Method */,
@@ -115,11 +105,6 @@
 				A569A9F3276710C000435CF0 /* LaunchScreen.storyboard */,
 				A569A9F6276710C000435CF0 /* Info.plist */,
 				A564A33A2772AE48009A22E0 /* GoogleService-Info.plist */,
-				A5C7C7EE276D9C8500727334 /* MNISTClassifier.mlmodel */,
-				A564A3442772BEDE009A22E0 /* test1.heic */,
-				A564A3452772BEDE009A22E0 /* test2.heic */,
-				A564A3472772BEDF009A22E0 /* test3.heic */,
-				A564A3462772BEDE009A22E0 /* test4.heic */,
 			);
 			path = TimeCalculator;
 			sourceTree = "<group>";
@@ -152,7 +137,6 @@
 				A569A9E2276710BF00435CF0 /* Frameworks */,
 				A569A9E3276710BF00435CF0 /* Resources */,
 				FB379501C3C97D04D9C28EF4 /* [CP] Embed Pods Frameworks */,
-				23479D95F6555EF6B38467FE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -202,37 +186,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				A569A9F5276710C000435CF0 /* LaunchScreen.storyboard in Resources */,
-				A564A34B2772BEDF009A22E0 /* test3.heic in Resources */,
-				A564A3482772BEDF009A22E0 /* test1.heic in Resources */,
-				A564A34A2772BEDF009A22E0 /* test4.heic in Resources */,
 				A56AF282276C89240043FD12 /* click.wav in Resources */,
 				A569A9F2276710C000435CF0 /* Assets.xcassets in Resources */,
 				A569A9F0276710BF00435CF0 /* Main.storyboard in Resources */,
 				A564A33B2772AE48009A22E0 /* GoogleService-Info.plist in Resources */,
-				A564A3492772BEDF009A22E0 /* test2.heic in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		23479D95F6555EF6B38467FE /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TimeCalculator/Pods-TimeCalculator-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TimeCalculator/Pods-TimeCalculator-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TimeCalculator/Pods-TimeCalculator-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		60AFDCBBD65E80C00B8BE4FB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -280,13 +243,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A569A9E9276710BF00435CF0 /* AppDelegate.swift in Sources */,
-				A53E786C2768628E00A30B63 /* CameraViewController.swift in Sources */,
 				A56AF278276C82180043FD12 /* UIConfigure.swift in Sources */,
+				A5649A50277440BD00A77CF2 /* TabBarController.swift in Sources */,
 				A569A9FD27671A8100435CF0 /* CalculatorViewController.swift in Sources */,
 				A569A9EB276710BF00435CF0 /* SceneDelegate.swift in Sources */,
 				A5CBF44B276B48FA002C3A87 /* DdayViewController.swift in Sources */,
 				A56AF275276C67270043FD12 /* SettingViewController.swift in Sources */,
-				A5C7C7EF276D9C8500727334 /* MNISTClassifier.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

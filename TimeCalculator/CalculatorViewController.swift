@@ -40,7 +40,6 @@ class CalculatorViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        cameraButton.layer.cornerRadius = 20
         
         [zeroButton, oneButton, twoButton, threeButton, fourButton, fiveButton, sixButton, sevenButton, eightButton, nineButton, allClearButton, deleteButton, minusButton, plusButton, equalButton].forEach {
             $0?.layer.cornerRadius = ($0?.layer.bounds.height)! / 3
