@@ -572,16 +572,10 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="ZbM-g3-Q9y">
-                                <rect key="frame" x="10" y="238.5" width="394" height="108"/>
+                                <rect key="frame" x="10" y="286.5" width="394" height="60"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="urd-H3-JBw">
-                                        <rect key="frame" x="314" y="0.0" width="80" height="48"/>
-                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="40"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="PdQ-be-EWg">
-                                        <rect key="frame" x="240" y="48" width="154" height="60"/>
+                                        <rect key="frame" x="240" y="0.0" width="154" height="60"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PDM-wO-LCb">
                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="60"/>
@@ -616,24 +610,8 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="calculator" id="U1T-Ao-NQc"/>
                     <connections>
-                        <outlet property="allClearButton" destination="vbu-21-2ew" id="PX3-Y4-6yN"/>
-                        <outlet property="deleteButton" destination="ngj-mo-90P" id="wYC-Np-9XI"/>
-                        <outlet property="eightButton" destination="CN1-6y-2W2" id="QQe-sv-sSN"/>
-                        <outlet property="equalButton" destination="vJX-Y6-DBe" id="8YR-jV-BWC"/>
-                        <outlet property="fiveButton" destination="keI-qy-7eu" id="1jT-LH-2qk"/>
-                        <outlet property="fourButton" destination="CBN-iU-OlE" id="5vq-eB-cbg"/>
-                        <outlet property="inputLabel" destination="mKr-Ck-8EY" id="EML-GT-Okn"/>
-                        <outlet property="minusButton" destination="0Gn-Ao-2Rx" id="wie-iY-3XU"/>
-                        <outlet property="nineButton" destination="6P0-OO-20J" id="76Y-64-GEO"/>
-                        <outlet property="oneButton" destination="UCs-vm-Sss" id="4Xh-q9-OVx"/>
-                        <outlet property="operandLabel" destination="urd-H3-JBw" id="zZY-YO-fIV"/>
-                        <outlet property="plusButton" destination="fYu-zE-Vhc" id="zQU-Jg-Jpq"/>
-                        <outlet property="sevenButton" destination="qFx-ju-MwN" id="KeR-51-M5w"/>
-                        <outlet property="sixButton" destination="TMb-JG-3Bg" id="G4r-go-T2Y"/>
+                        <outlet property="outputLabel" destination="mKr-Ck-8EY" id="8Ks-Qv-5Rg"/>
                         <outlet property="symbolLabel" destination="PDM-wO-LCb" id="fwE-2W-JGw"/>
-                        <outlet property="threeButton" destination="eqJ-aU-9sb" id="BqS-9U-EW5"/>
-                        <outlet property="twoButton" destination="XM0-CH-26r" id="ZSV-d5-67e"/>
-                        <outlet property="zeroButton" destination="vkG-7N-7er" id="rCJ-iS-wic"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7n4-h0-bPD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -664,11 +642,50 @@
         </scene>
     </scenes>
     <designables>
+        <designable name="0Gn-Ao-2Rx">
+            <size key="intrinsicContentSize" width="30.5" height="18"/>
+        </designable>
         <designable name="6P0-OO-20J">
             <size key="intrinsicContentSize" width="30" height="48"/>
         </designable>
+        <designable name="CBN-iU-OlE">
+            <size key="intrinsicContentSize" width="30" height="48"/>
+        </designable>
+        <designable name="CN1-6y-2W2">
+            <size key="intrinsicContentSize" width="30" height="48"/>
+        </designable>
+        <designable name="TMb-JG-3Bg">
+            <size key="intrinsicContentSize" width="30" height="48"/>
+        </designable>
+        <designable name="UCs-vm-Sss">
+            <size key="intrinsicContentSize" width="30" height="48"/>
+        </designable>
+        <designable name="XM0-CH-26r">
+            <size key="intrinsicContentSize" width="30" height="48"/>
+        </designable>
+        <designable name="eqJ-aU-9sb">
+            <size key="intrinsicContentSize" width="30" height="48"/>
+        </designable>
+        <designable name="fYu-zE-Vhc">
+            <size key="intrinsicContentSize" width="30.5" height="28.5"/>
+        </designable>
+        <designable name="keI-qy-7eu">
+            <size key="intrinsicContentSize" width="30" height="48"/>
+        </designable>
+        <designable name="ngj-mo-90P">
+            <size key="intrinsicContentSize" width="37" height="31"/>
+        </designable>
+        <designable name="qFx-ju-MwN">
+            <size key="intrinsicContentSize" width="30" height="48"/>
+        </designable>
+        <designable name="vJX-Y6-DBe">
+            <size key="intrinsicContentSize" width="26.5" height="22"/>
+        </designable>
         <designable name="vbu-21-2ew">
             <size key="intrinsicContentSize" width="38" height="48"/>
+        </designable>
+        <designable name="vkG-7N-7er">
+            <size key="intrinsicContentSize" width="30" height="48"/>
         </designable>
     </designables>
     <resources>
