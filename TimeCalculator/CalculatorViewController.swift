@@ -41,13 +41,13 @@ class CalculatorViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        [zeroButton, oneButton, twoButton, threeButton, fourButton, fiveButton, sixButton, sevenButton, eightButton, nineButton, allClearButton, deleteButton, minusButton, plusButton, equalButton].forEach {
-            $0?.layer.cornerRadius = ($0?.layer.bounds.height)! / 3
-            $0?.layer.shadowColor = UIColor.darkGray.cgColor
-            $0?.layer.shadowOpacity = 0.1
-            $0?.layer.shadowOffset = CGSize.init(width: 5, height: 5)
-            $0?.layer.shadowRadius = 10
-        }
+//        [zeroButton, oneButton, twoButton, threeButton, fourButton, fiveButton, sixButton, sevenButton, eightButton, nineButton, allClearButton, deleteButton, minusButton, plusButton, equalButton].forEach {
+//            $0?.layer.cornerRadius = ($0?.layer.bounds.height)! / 3
+//            $0?.layer.shadowColor = UIColor.darkGray.cgColor
+//            $0?.layer.shadowOpacity = 0.1
+//            $0?.layer.shadowOffset = CGSize.init(width: 5, height: 5)
+//            $0?.layer.shadowRadius = 10
+//        }
     }
     
     override func viewWillAppear(_ animated: Bool) {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A528F4D527798E3700034F36 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A528F4D427798E3700034F36 /* RoundButton.swift */; };
 		A5649A50277440BD00A77CF2 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5649A4F277440BD00A77CF2 /* TabBarController.swift */; };
 		A569A9E9276710BF00435CF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A569A9E8276710BF00435CF0 /* AppDelegate.swift */; };
 		A569A9EB276710BF00435CF0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A569A9EA276710BF00435CF0 /* SceneDelegate.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A528F4D427798E3700034F36 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		A5649A4F277440BD00A77CF2 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		A569A9E5276710BF00435CF0 /* TimeCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A569A9E8276710BF00435CF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				A569A9F1276710C000435CF0 /* Assets.xcassets */,
 				A569A9F3276710C000435CF0 /* LaunchScreen.storyboard */,
 				A569A9F6276710C000435CF0 /* Info.plist */,
+				A528F4D427798E3700034F36 /* RoundButton.swift */,
 			);
 			path = TimeCalculator;
 			sourceTree = "<group>";
@@ -170,6 +173,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A528F4D527798E3700034F36 /* RoundButton.swift in Sources */,
 				A569A9E9276710BF00435CF0 /* AppDelegate.swift in Sources */,
 				A56AF278276C82180043FD12 /* UIConfigure.swift in Sources */,
 				A5649A50277440BD00A77CF2 /* TabBarController.swift in Sources */,

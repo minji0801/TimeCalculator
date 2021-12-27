@@ -258,7 +258,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Rmc-QE-iyD">
                                         <rect key="frame" x="0.0" y="0.0" width="394" height="91"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qFx-ju-MwN">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qFx-ju-MwN" customClass="RoundButton" customModule="TimeCalculator" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="91" height="91"/>
                                                 <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
                                                 <constraints>
@@ -268,12 +268,15 @@
                                                 <color key="tintColor" systemColor="labelColor"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="7"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isRound" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="buttonPressed:" destination="oAN-Qf-RLF" eventType="touchUpInside" id="Epq-kn-oKH"/>
                                                     <action selector="numberButtonTapped:" destination="oAN-Qf-RLF" eventType="touchUpInside" id="8fc-A1-yt5"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CN1-6y-2W2">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CN1-6y-2W2" customClass="RoundButton" customModule="TimeCalculator" customModuleProvider="target">
                                                 <rect key="frame" x="101" y="0.0" width="91" height="91"/>
                                                 <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
                                                 <constraints>
@@ -283,12 +286,15 @@
                                                 <color key="tintColor" systemColor="labelColor"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="8"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isRound" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="buttonPressed:" destination="oAN-Qf-RLF" eventType="touchUpInside" id="ea6-cv-beU"/>
                                                     <action selector="numberButtonTapped:" destination="oAN-Qf-RLF" eventType="touchUpInside" id="faf-Md-WQs"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6P0-OO-20J">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6P0-OO-20J" customClass="RoundButton" customModule="TimeCalculator" customModuleProvider="target">
                                                 <rect key="frame" x="202" y="0.0" width="91" height="91"/>
                                                 <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
                                                 <constraints>
@@ -298,12 +304,15 @@
                                                 <color key="tintColor" systemColor="labelColor"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="9"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isRound" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="buttonPressed:" destination="oAN-Qf-RLF" eventType="touchUpInside" id="y1c-of-MII"/>
                                                     <action selector="numberButtonTapped:" destination="oAN-Qf-RLF" eventType="touchUpInside" id="LkD-0Q-q7E"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vbu-21-2ew">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vbu-21-2ew" customClass="RoundButton" customModule="TimeCalculator" customModuleProvider="target">
                                                 <rect key="frame" x="303" y="0.0" width="91" height="91"/>
                                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -313,6 +322,9 @@
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="AC"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isRound" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="allClearButtonTapped:" destination="oAN-Qf-RLF" eventType="touchUpInside" id="mss-hY-CRo"/>
                                                     <action selector="buttonPressed:" destination="oAN-Qf-RLF" eventType="touchUpInside" id="9kI-t4-SrX"/>
@@ -323,7 +335,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="pNt-r0-m7X">
                                         <rect key="frame" x="0.0" y="101" width="394" height="91"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CBN-iU-OlE">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CBN-iU-OlE" customClass="RoundButton" customModule="TimeCalculator" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="91" height="91"/>
                                                 <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
                                                 <constraints>
@@ -333,12 +345,15 @@
                                                 <color key="tintColor" systemColor="labelColor"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="4"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isRound" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="buttonPressed:" destination="oAN-Qf-RLF" eventType="touchUpInside" id="MkY-bD-8TW"/>
                                                     <action selector="numberButtonTapped:" destination="oAN-Qf-RLF" eventType="touchUpInside" id="kT6-mr-bfe"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="keI-qy-7eu">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="keI-qy-7eu" customClass="RoundButton" customModule="TimeCalculator" customModuleProvider="target">
                                                 <rect key="frame" x="101" y="0.0" width="91" height="91"/>
                                                 <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
                                                 <constraints>
@@ -348,12 +363,15 @@
                                                 <color key="tintColor" systemColor="labelColor"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="5"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isRound" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="buttonPressed:" destination="oAN-Qf-RLF" eventType="touchUpInside" id="8Ol-s8-Ly6"/>
                                                     <action selector="numberButtonTapped:" destination="oAN-Qf-RLF" eventType="touchUpInside" id="Eys-1l-bM1"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TMb-JG-3Bg">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TMb-JG-3Bg" customClass="RoundButton" customModule="TimeCalculator" customModuleProvider="target">
                                                 <rect key="frame" x="202" y="0.0" width="91" height="91"/>
                                                 <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
                                                 <constraints>
@@ -363,12 +381,15 @@
                                                 <color key="tintColor" systemColor="labelColor"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="6"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isRound" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="buttonPressed:" destination="oAN-Qf-RLF" eventType="touchUpInside" id="Cxe-ue-5WJ"/>
                                                     <action selector="numberButtonTapped:" destination="oAN-Qf-RLF" eventType="touchUpInside" id="VJf-KW-wG9"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ngj-mo-90P">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ngj-mo-90P" customClass="RoundButton" customModule="TimeCalculator" customModuleProvider="target">
                                                 <rect key="frame" x="303" y="0.0" width="91" height="91"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -379,6 +400,9 @@
                                                 <state key="normal" title="" image="delete.left" catalog="system">
                                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30" weight="thin"/>
                                                 </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isRound" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="buttonPressed:" destination="oAN-Qf-RLF" eventType="touchUpInside" id="qlR-dq-1uQ"/>
                                                     <action selector="deleteButtonTapped:" destination="oAN-Qf-RLF" eventType="touchUpInside" id="v9i-mE-13T"/>
@@ -389,7 +413,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="yHE-Lp-d9y">
                                         <rect key="frame" x="0.0" y="202" width="394" height="91"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UCs-vm-Sss">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UCs-vm-Sss" customClass="RoundButton" customModule="TimeCalculator" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="91" height="91"/>
                                                 <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
                                                 <constraints>
@@ -399,12 +423,15 @@
                                                 <color key="tintColor" systemColor="labelColor"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="1"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isRound" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="buttonPressed:" destination="oAN-Qf-RLF" eventType="touchUpInside" id="Bv6-e4-2CM"/>
                                                     <action selector="numberButtonTapped:" destination="oAN-Qf-RLF" eventType="touchUpInside" id="YgA-Hc-7Rw"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XM0-CH-26r">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XM0-CH-26r" customClass="RoundButton" customModule="TimeCalculator" customModuleProvider="target">
                                                 <rect key="frame" x="101" y="0.0" width="91" height="91"/>
                                                 <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
                                                 <constraints>
@@ -414,12 +441,15 @@
                                                 <color key="tintColor" systemColor="labelColor"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="2"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isRound" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="buttonPressed:" destination="oAN-Qf-RLF" eventType="touchUpInside" id="yth-1u-ixP"/>
                                                     <action selector="numberButtonTapped:" destination="oAN-Qf-RLF" eventType="touchUpInside" id="5MA-WG-IND"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eqJ-aU-9sb">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eqJ-aU-9sb" customClass="RoundButton" customModule="TimeCalculator" customModuleProvider="target">
                                                 <rect key="frame" x="202" y="0.0" width="91" height="91"/>
                                                 <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
                                                 <constraints>
@@ -429,12 +459,15 @@
                                                 <color key="tintColor" systemColor="labelColor"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="3"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isRound" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="buttonPressed:" destination="oAN-Qf-RLF" eventType="touchUpInside" id="wSI-et-wnv"/>
                                                     <action selector="numberButtonTapped:" destination="oAN-Qf-RLF" eventType="touchUpInside" id="bu1-e4-m5D"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Gn-Ao-2Rx">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Gn-Ao-2Rx" customClass="RoundButton" customModule="TimeCalculator" customModuleProvider="target">
                                                 <rect key="frame" x="303" y="0.0" width="91" height="91"/>
                                                 <color key="backgroundColor" name="MainColor"/>
                                                 <constraints>
@@ -445,6 +478,9 @@
                                                 <state key="normal" image="minus" catalog="system">
                                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30" weight="thin"/>
                                                 </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isRound" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="buttonPressed:" destination="oAN-Qf-RLF" eventType="touchUpInside" id="MPb-t7-OP1"/>
                                                     <action selector="minusButtonTapped:" destination="oAN-Qf-RLF" eventType="touchUpInside" id="pc8-Pa-mFg"/>
@@ -455,7 +491,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="YFB-Yt-eJb">
                                         <rect key="frame" x="0.0" y="303" width="394" height="93.5"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vkG-7N-7er">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vkG-7N-7er" customClass="RoundButton" customModule="TimeCalculator" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="187" height="93.5"/>
                                                 <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
                                                 <constraints>
@@ -465,12 +501,15 @@
                                                 <color key="tintColor" systemColor="labelColor"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="0"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isRound" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="buttonPressed:" destination="oAN-Qf-RLF" eventType="touchUpInside" id="Z0I-Iq-FGL"/>
                                                     <action selector="numberButtonTapped:" destination="oAN-Qf-RLF" eventType="touchUpInside" id="WjG-jh-JrX"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vJX-Y6-DBe">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vJX-Y6-DBe" customClass="RoundButton" customModule="TimeCalculator" customModuleProvider="target">
                                                 <rect key="frame" x="197" y="0.0" width="93.5" height="93.5"/>
                                                 <color key="backgroundColor" name="MainColor"/>
                                                 <constraints>
@@ -481,12 +520,15 @@
                                                 <state key="normal" image="equal" catalog="system">
                                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30" weight="thin"/>
                                                 </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isRound" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="buttonPressed:" destination="oAN-Qf-RLF" eventType="touchUpInside" id="4Nk-9Z-Yb4"/>
                                                     <action selector="equalButtonTapped:" destination="oAN-Qf-RLF" eventType="touchUpInside" id="0v1-o0-WRO"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fYu-zE-Vhc">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fYu-zE-Vhc" customClass="RoundButton" customModule="TimeCalculator" customModuleProvider="target">
                                                 <rect key="frame" x="300.5" y="0.0" width="93.5" height="93.5"/>
                                                 <color key="backgroundColor" name="MainColor"/>
                                                 <constraints>
@@ -497,6 +539,9 @@
                                                 <state key="normal" image="plus" catalog="system">
                                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30" weight="thin"/>
                                                 </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isRound" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="buttonPressed:" destination="oAN-Qf-RLF" eventType="touchUpInside" id="uZm-oO-1F7"/>
                                                     <action selector="plusButtonTapped:" destination="oAN-Qf-RLF" eventType="touchUpInside" id="GeY-Zi-YBC"/>
@@ -618,6 +663,14 @@
             <point key="canvasLocation" x="-341" y="79"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="6P0-OO-20J">
+            <size key="intrinsicContentSize" width="30" height="48"/>
+        </designable>
+        <designable name="vbu-21-2ew">
+            <size key="intrinsicContentSize" width="38" height="48"/>
+        </designable>
+    </designables>
     <resources>
         <image name="calculator" width="24" height="24"/>
         <image name="calender" width="24" height="24"/>
