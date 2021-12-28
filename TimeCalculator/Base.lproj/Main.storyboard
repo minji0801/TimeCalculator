@@ -8,6 +8,11 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="FredokaOne-Regular.ttf">
+            <string>FredokaOne-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Dday View Controller-->
         <scene sceneID="dcF-SE-Lxa">
@@ -17,62 +22,77 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="디데이" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zma-xl-Yo2">
-                                <rect key="frame" x="185" y="54" width="44.5" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Dic-V1-RR8">
-                                <rect key="frame" x="20" y="124.5" width="374" height="120"/>
+                                <rect key="frame" x="20" y="94" width="374" height="120"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rKz-qJ-YxO">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="251" text="시작 날짜 : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7oX-6x-IA6">
-                                                <rect key="frame" x="0.0" y="0.0" width="76.5" height="50"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="251" text="start date :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7oX-6x-IA6">
+                                                <rect key="frame" x="0.0" y="0.0" width="91.5" height="50"/>
+                                                <fontDescription key="fontDescription" name="FredokaOne-Regular" family="Fredoka One" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="X0V-C6-TBl">
-                                                <rect key="frame" x="76.5" y="0.0" width="297.5" height="50"/>
+                                                <rect key="frame" x="91.5" y="0.0" width="282.5" height="50"/>
                                                 <color key="tintColor" name="MainColor"/>
-                                                <locale key="locale" localeIdentifier="ko_KR"/>
                                             </datePicker>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="imp-NZ-9fS">
                                         <rect key="frame" x="0.0" y="70" width="374" height="50"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="251" text="종료 날짜 : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E68-KV-b9t">
-                                                <rect key="frame" x="0.0" y="0.0" width="76.5" height="50"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="251" text="end date :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E68-KV-b9t">
+                                                <rect key="frame" x="0.0" y="0.0" width="80.5" height="50"/>
+                                                <fontDescription key="fontDescription" name="FredokaOne-Regular" family="Fredoka One" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="xcu-T8-hKj">
-                                                <rect key="frame" x="76.5" y="0.0" width="297.5" height="50"/>
+                                                <rect key="frame" x="80.5" y="0.0" width="293.5" height="50"/>
                                                 <color key="tintColor" name="MainColor"/>
-                                                <locale key="locale" localeIdentifier="ko_KR"/>
                                             </datePicker>
                                         </subviews>
                                     </stackView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="imp-NZ-9fS" firstAttribute="top" secondItem="Dic-V1-RR8" secondAttribute="top" constant="70" id="smh-MU-g8g"/>
+                                </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pV5-j3-hvV">
-                                <rect key="frame" x="20" y="294.5" width="374" height="60"/>
+                                <rect key="frame" x="20" y="264" width="374" height="60"/>
                                 <color key="backgroundColor" name="MainColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="MtC-YH-qe9"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="FredokaOne-Regular" family="Fredoka One" pointSize="17"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="계산하기"/>
+                                <state key="normal" title="calculate"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isRound" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="calculateButtonTapped:" destination="NWT-X2-Y8n" eventType="touchUpInside" id="MYl-yn-I5O"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tRV-7n-rs2">
+                                <rect key="frame" x="0.0" y="324" width="414" height="439"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D - DAY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CUv-I8-g24">
+                                        <rect key="frame" x="117" y="189.5" width="180" height="60.5"/>
+                                        <fontDescription key="fontDescription" name="FredokaOne-Regular" family="Fredoka One" pointSize="50"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="CUv-I8-g24" firstAttribute="centerX" secondItem="tRV-7n-rs2" secondAttribute="centerX" id="fiT-Ob-GCh"/>
+                                    <constraint firstItem="CUv-I8-g24" firstAttribute="centerY" secondItem="tRV-7n-rs2" secondAttribute="centerY" id="xLT-94-C4g"/>
+                                </constraints>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4G0-0K-hra">
                                 <rect key="frame" x="0.0" y="763" width="414" height="50"/>
                                 <subviews>
@@ -91,41 +111,22 @@
                                     <constraint firstItem="NtS-mj-X1o" firstAttribute="centerY" secondItem="4G0-0K-hra" secondAttribute="centerY" id="mgt-Cp-Jms"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tRV-7n-rs2">
-                                <rect key="frame" x="0.0" y="354.5" width="414" height="408.5"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CUv-I8-g24">
-                                        <rect key="frame" x="207" y="204.5" width="0.0" height="0.0"/>
-                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="50"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstItem="CUv-I8-g24" firstAttribute="centerX" secondItem="tRV-7n-rs2" secondAttribute="centerX" id="fiT-Ob-GCh"/>
-                                    <constraint firstItem="CUv-I8-g24" firstAttribute="centerY" secondItem="tRV-7n-rs2" secondAttribute="centerY" id="xLT-94-C4g"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="va6-Di-i5C"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="va6-Di-i5C" firstAttribute="bottom" secondItem="4G0-0K-hra" secondAttribute="bottom" id="35O-dR-Xu3"/>
-                            <constraint firstItem="Dic-V1-RR8" firstAttribute="top" secondItem="zma-xl-Yo2" secondAttribute="bottom" constant="50" id="Am2-mh-mcU"/>
+                            <constraint firstItem="Dic-V1-RR8" firstAttribute="top" secondItem="va6-Di-i5C" secondAttribute="top" constant="50" id="6Ln-JI-sB8"/>
                             <constraint firstItem="4G0-0K-hra" firstAttribute="top" secondItem="tRV-7n-rs2" secondAttribute="bottom" id="AuF-BR-Dt9"/>
                             <constraint firstItem="tRV-7n-rs2" firstAttribute="leading" secondItem="va6-Di-i5C" secondAttribute="leading" id="BHg-gf-n64"/>
                             <constraint firstItem="pV5-j3-hvV" firstAttribute="leading" secondItem="va6-Di-i5C" secondAttribute="leading" constant="20" id="FSY-rm-V3P"/>
                             <constraint firstItem="4G0-0K-hra" firstAttribute="leading" secondItem="va6-Di-i5C" secondAttribute="leading" id="NEb-vF-cUb"/>
-                            <constraint firstItem="Dic-V1-RR8" firstAttribute="centerX" secondItem="n2p-KH-6jN" secondAttribute="centerX" id="Snn-rz-dV8"/>
                             <constraint firstItem="pV5-j3-hvV" firstAttribute="top" secondItem="Dic-V1-RR8" secondAttribute="bottom" constant="50" id="WVY-BQ-z5M"/>
                             <constraint firstAttribute="trailing" secondItem="Dic-V1-RR8" secondAttribute="trailing" constant="20" id="Xau-HA-ZmN"/>
                             <constraint firstItem="va6-Di-i5C" firstAttribute="trailing" secondItem="pV5-j3-hvV" secondAttribute="trailing" constant="20" id="bmq-D6-jUr"/>
-                            <constraint firstItem="zma-xl-Yo2" firstAttribute="top" secondItem="va6-Di-i5C" secondAttribute="top" constant="10" id="g7a-6t-zgv"/>
                             <constraint firstItem="va6-Di-i5C" firstAttribute="trailing" secondItem="tRV-7n-rs2" secondAttribute="trailing" id="gCH-e2-vZE"/>
                             <constraint firstItem="tRV-7n-rs2" firstAttribute="top" secondItem="pV5-j3-hvV" secondAttribute="bottom" id="hUp-Yx-dFx"/>
                             <constraint firstItem="4G0-0K-hra" firstAttribute="trailing" secondItem="va6-Di-i5C" secondAttribute="trailing" id="m2c-2K-zzR"/>
-                            <constraint firstItem="zma-xl-Yo2" firstAttribute="centerX" secondItem="n2p-KH-6jN" secondAttribute="centerX" id="qPM-Lf-bZ6"/>
                             <constraint firstItem="Dic-V1-RR8" firstAttribute="leading" secondItem="va6-Di-i5C" secondAttribute="leading" constant="20" id="sTw-r6-5p5"/>
                         </constraints>
                     </view>
@@ -150,41 +151,51 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="VdU-tk-Nwm">
-                                <rect key="frame" x="30" y="342" width="354" height="212"/>
+                                <rect key="frame" x="30" y="333.5" width="354" height="229"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="설정" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5o-7l-2Q1">
-                                        <rect key="frame" x="0.0" y="0.0" width="354" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5o-7l-2Q1">
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="36.5"/>
+                                        <fontDescription key="fontDescription" name="FredokaOne-Regular" family="Fredoka One" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iOS v(Version) build (Build)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R10-rT-UvL">
-                                        <rect key="frame" x="0.0" y="40.5" width="354" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="0.0" y="56.5" width="354" height="21"/>
+                                        <fontDescription key="fontDescription" name="FredokaOne-Regular" family="Fredoka One" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="cRv-9n-bf9">
-                                        <rect key="frame" x="0.0" y="81" width="354" height="55.5"/>
+                                        <rect key="frame" x="0.0" y="97.5" width="354" height="56"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ezx-ko-Ih3">
-                                                <rect key="frame" x="0.0" y="0.0" width="167" height="55.5"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ezx-ko-Ih3" customClass="SettingButton" customModule="TimeCalculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="167" height="56"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="Ezx-ko-Ih3" secondAttribute="height" multiplier="3:1" id="ORt-Cw-Gq5"/>
                                                 </constraints>
                                                 <color key="tintColor" systemColor="labelColor"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" title="다크 모드"/>
+                                                <state key="normal" title="Dark Mode"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isBorder" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isFont15" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSetting" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="buttonPressed:" destination="cJv-8g-LZY" eventType="touchUpInside" id="olL-uZ-DE9"/>
                                                     <action selector="darkModeButtonTapped:" destination="cJv-8g-LZY" eventType="touchUpInside" id="4U0-FY-To0"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0rt-Gl-gOH">
-                                                <rect key="frame" x="187" y="0.0" width="167" height="55.5"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0rt-Gl-gOH" customClass="SettingButton" customModule="TimeCalculator" customModuleProvider="target">
+                                                <rect key="frame" x="187" y="0.0" width="167" height="56"/>
                                                 <color key="tintColor" systemColor="labelColor"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" title="버튼 사운드"/>
+                                                <state key="normal" title="Button Sound"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isBorder" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isFont15" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSetting" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="buttonPressed:" destination="cJv-8g-LZY" eventType="touchUpInside" id="WUT-SO-zUS"/>
                                                     <action selector="soundButtonTapped:" destination="cJv-8g-LZY" eventType="touchUpInside" id="WcQ-9k-WaL"/>
@@ -193,26 +204,36 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="oLR-50-6SL">
-                                        <rect key="frame" x="0.0" y="156.5" width="354" height="55.5"/>
+                                        <rect key="frame" x="0.0" y="173.5" width="354" height="55.5"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oWg-Kk-4FT">
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oWg-Kk-4FT" customClass="SettingButton" customModule="TimeCalculator" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="167" height="55.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="oWg-Kk-4FT" secondAttribute="height" multiplier="3:1" id="0E3-mj-Hl0"/>
                                                 </constraints>
                                                 <color key="tintColor" systemColor="labelColor"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" title="앱 평가"/>
+                                                <state key="normal" title="App Review"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isBorder" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isFont15" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSetting" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="buttonPressed:" destination="cJv-8g-LZY" eventType="touchUpInside" id="ZrZ-wr-gQc"/>
                                                     <action selector="reviewButtonTapped:" destination="cJv-8g-LZY" eventType="touchUpInside" id="VAg-FU-XfB"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kp2-2A-CDA">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kp2-2A-CDA" customClass="SettingButton" customModule="TimeCalculator" customModuleProvider="target">
                                                 <rect key="frame" x="187" y="0.0" width="167" height="55.5"/>
                                                 <color key="tintColor" systemColor="labelColor"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" title="피드백 보내기"/>
+                                                <state key="normal" title="Send Feedback"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isBorder" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isFont15" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSetting" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="buttonPressed:" destination="cJv-8g-LZY" eventType="touchUpInside" id="Obd-LJ-46I"/>
                                                     <action selector="feedbackButtonTapped:" destination="cJv-8g-LZY" eventType="touchUpInside" id="bFU-Xz-igT"/>
@@ -398,7 +419,7 @@
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="" image="delete.left" catalog="system">
-                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30" weight="thin"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30" weight="heavy"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isRound" value="YES"/>
@@ -476,7 +497,7 @@
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" image="minus" catalog="system">
-                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30" weight="thin"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="25" weight="heavy"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isRound" value="YES"/>
@@ -518,7 +539,7 @@
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" image="equal" catalog="system">
-                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30" weight="thin"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="25" weight="heavy"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isRound" value="YES"/>
@@ -537,7 +558,7 @@
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" image="plus" catalog="system">
-                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30" weight="thin"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="25" weight="heavy"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isRound" value="YES"/>
@@ -572,20 +593,20 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="ZbM-g3-Q9y">
-                                <rect key="frame" x="10" y="286.5" width="394" height="60"/>
+                                <rect key="frame" x="10" y="258.5" width="394" height="88"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="PdQ-be-EWg">
-                                        <rect key="frame" x="240" y="0.0" width="154" height="60"/>
+                                        <rect key="frame" x="235.5" y="0.0" width="158.5" height="88"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PDM-wO-LCb">
-                                                <rect key="frame" x="0.0" y="0.0" width="50" height="60"/>
-                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="88"/>
+                                                <fontDescription key="fontDescription" name="FredokaOne-Regular" family="Fredoka One" pointSize="30"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mKr-Ck-8EY">
-                                                <rect key="frame" x="55" y="0.0" width="99" height="60"/>
-                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="50"/>
+                                                <rect key="frame" x="55" y="0.0" width="103.5" height="88"/>
+                                                <fontDescription key="fontDescription" name="FredokaOne-Regular" family="Fredoka One" pointSize="50"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -643,49 +664,61 @@
     </scenes>
     <designables>
         <designable name="0Gn-Ao-2Rx">
-            <size key="intrinsicContentSize" width="30.5" height="18"/>
+            <size key="intrinsicContentSize" width="27.5" height="37"/>
+        </designable>
+        <designable name="0rt-Gl-gOH">
+            <size key="intrinsicContentSize" width="94" height="30"/>
         </designable>
         <designable name="6P0-OO-20J">
-            <size key="intrinsicContentSize" width="30" height="48"/>
+            <size key="intrinsicContentSize" width="30" height="49"/>
         </designable>
         <designable name="CBN-iU-OlE">
-            <size key="intrinsicContentSize" width="30" height="48"/>
+            <size key="intrinsicContentSize" width="30" height="49"/>
         </designable>
         <designable name="CN1-6y-2W2">
-            <size key="intrinsicContentSize" width="30" height="48"/>
+            <size key="intrinsicContentSize" width="30" height="49"/>
+        </designable>
+        <designable name="Ezx-ko-Ih3">
+            <size key="intrinsicContentSize" width="75" height="30"/>
+        </designable>
+        <designable name="Kp2-2A-CDA">
+            <size key="intrinsicContentSize" width="107" height="30"/>
         </designable>
         <designable name="TMb-JG-3Bg">
-            <size key="intrinsicContentSize" width="30" height="48"/>
+            <size key="intrinsicContentSize" width="30" height="49"/>
         </designable>
         <designable name="UCs-vm-Sss">
-            <size key="intrinsicContentSize" width="30" height="48"/>
+            <size key="intrinsicContentSize" width="30" height="49"/>
         </designable>
         <designable name="XM0-CH-26r">
-            <size key="intrinsicContentSize" width="30" height="48"/>
+            <size key="intrinsicContentSize" width="30" height="49"/>
         </designable>
         <designable name="eqJ-aU-9sb">
-            <size key="intrinsicContentSize" width="30" height="48"/>
+            <size key="intrinsicContentSize" width="30" height="49"/>
         </designable>
         <designable name="fYu-zE-Vhc">
-            <size key="intrinsicContentSize" width="30.5" height="28.5"/>
+            <size key="intrinsicContentSize" width="27.5" height="37"/>
         </designable>
         <designable name="keI-qy-7eu">
-            <size key="intrinsicContentSize" width="30" height="48"/>
+            <size key="intrinsicContentSize" width="30" height="49"/>
         </designable>
         <designable name="ngj-mo-90P">
-            <size key="intrinsicContentSize" width="37" height="31"/>
+            <size key="intrinsicContentSize" width="39.5" height="37"/>
+        </designable>
+        <designable name="oWg-Kk-4FT">
+            <size key="intrinsicContentSize" width="81" height="30"/>
         </designable>
         <designable name="qFx-ju-MwN">
-            <size key="intrinsicContentSize" width="30" height="48"/>
+            <size key="intrinsicContentSize" width="30" height="49"/>
         </designable>
         <designable name="vJX-Y6-DBe">
-            <size key="intrinsicContentSize" width="26.5" height="22"/>
+            <size key="intrinsicContentSize" width="25" height="37"/>
         </designable>
         <designable name="vbu-21-2ew">
-            <size key="intrinsicContentSize" width="38" height="48"/>
+            <size key="intrinsicContentSize" width="42" height="49"/>
         </designable>
         <designable name="vkG-7N-7er">
-            <size key="intrinsicContentSize" width="30" height="48"/>
+            <size key="intrinsicContentSize" width="30" height="49"/>
         </designable>
     </designables>
     <resources>

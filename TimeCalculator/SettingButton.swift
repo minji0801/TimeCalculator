@@ -1,0 +1,19 @@
+//
+//  font15Button.swift
+//  TimeCalculator
+//
+//  Created by 김민지 on 2021/12/28.
+//
+
+import UIKit
+
+@IBDesignable
+class SettingButton: UIButton {
+    @IBInspectable var isSetting: Bool = false {
+        didSet {
+            if isSetting {
+                self.titleLabel?.font = UIFont(name: "FredokaOne-Regular", size: 15)
+            }
+        }
+    }
+}

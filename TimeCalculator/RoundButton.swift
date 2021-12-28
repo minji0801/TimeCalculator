@@ -17,6 +17,7 @@ class RoundButton: UIButton {
                 self.layer.shadowOpacity = 0.1
                 self.layer.shadowOffset = CGSize.init(width: 5, height: 5)
                 self.layer.shadowRadius = 10
+                self.titleLabel?.font = UIFont(name: "FredokaOne-Regular", size: 30)
             }
         }
     }

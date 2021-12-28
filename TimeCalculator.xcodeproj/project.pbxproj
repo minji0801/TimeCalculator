@@ -18,6 +18,8 @@
 		A56AF275276C67270043FD12 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56AF274276C67270043FD12 /* SettingViewController.swift */; };
 		A56AF278276C82180043FD12 /* UIConfigure.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56AF277276C82180043FD12 /* UIConfigure.swift */; };
 		A56AF282276C89240043FD12 /* click.wav in Resources */ = {isa = PBXBuildFile; fileRef = A56AF27D276C89240043FD12 /* click.wav */; };
+		A595A4FB277AB945005D1279 /* FredokaOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A595A4FA277AB945005D1279 /* FredokaOne-Regular.ttf */; };
+		A595A507277AC88F005D1279 /* SettingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A595A506277AC88F005D1279 /* SettingButton.swift */; };
 		A5CBF44B276B48FA002C3A87 /* DdayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CBF44A276B48FA002C3A87 /* DdayViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +37,8 @@
 		A56AF274276C67270043FD12 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		A56AF277276C82180043FD12 /* UIConfigure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIConfigure.swift; sourceTree = "<group>"; };
 		A56AF27D276C89240043FD12 /* click.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = click.wav; sourceTree = "<group>"; };
+		A595A4FA277AB945005D1279 /* FredokaOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FredokaOne-Regular.ttf"; sourceTree = "<group>"; };
+		A595A506277AC88F005D1279 /* SettingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingButton.swift; sourceTree = "<group>"; };
 		A5CBF44A276B48FA002C3A87 /* DdayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DdayViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -74,13 +78,15 @@
 				A569A9FC27671A8100435CF0 /* CalculatorViewController.swift */,
 				A5CBF44A276B48FA002C3A87 /* DdayViewController.swift */,
 				A56AF274276C67270043FD12 /* SettingViewController.swift */,
+				A528F4D427798E3700034F36 /* RoundButton.swift */,
+				A595A506277AC88F005D1279 /* SettingButton.swift */,
 				A56AF276276C81FF0043FD12 /* Method */,
 				A56AF279276C890F0043FD12 /* Sound */,
+				A595A4ED277AB1C4005D1279 /* Font */,
 				A569A9EE276710BF00435CF0 /* Main.storyboard */,
 				A569A9F1276710C000435CF0 /* Assets.xcassets */,
 				A569A9F3276710C000435CF0 /* LaunchScreen.storyboard */,
 				A569A9F6276710C000435CF0 /* Info.plist */,
-				A528F4D427798E3700034F36 /* RoundButton.swift */,
 			);
 			path = TimeCalculator;
 			sourceTree = "<group>";
@@ -99,6 +105,14 @@
 				A56AF27D276C89240043FD12 /* click.wav */,
 			);
 			path = Sound;
+			sourceTree = "<group>";
+		};
+		A595A4ED277AB1C4005D1279 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				A595A4FA277AB945005D1279 /* FredokaOne-Regular.ttf */,
+			);
+			path = Font;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,6 +177,7 @@
 				A56AF282276C89240043FD12 /* click.wav in Resources */,
 				A569A9F2276710C000435CF0 /* Assets.xcassets in Resources */,
 				A569A9F0276710BF00435CF0 /* Main.storyboard in Resources */,
+				A595A4FB277AB945005D1279 /* FredokaOne-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,6 +188,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A595A507277AC88F005D1279 /* SettingButton.swift in Sources */,
 				A528F4D527798E3700034F36 /* RoundButton.swift in Sources */,
 				A569A9E9276710BF00435CF0 /* AppDelegate.swift in Sources */,
 				A56AF278276C82180043FD12 /* UIConfigure.swift in Sources */,

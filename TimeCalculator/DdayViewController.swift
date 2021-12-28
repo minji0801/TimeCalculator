@@ -27,7 +27,7 @@ class DdayViewController: UIViewController {
     // 계산하기 버튼 눌렀을 때
     @IBAction func calculateButtonTapped(_ sender: UIButton) {
         let day = calculationDday()
-        ddayLabel.text = "D\(day)"
+        ddayLabel.text = "D \(day)"
     }
     
     func calculationDday() -> String {
@@ -41,13 +41,13 @@ class DdayViewController: UIViewController {
         print("startDate : \(startDate), endDate : \(endDate)")
         
         if startDate == endDate {
-            return "-DAY"
+            return "- DAY"
         } else {
             let result = Calendar.current.dateComponents([.day], from: endDatePicker.date, to: startDatePicker.date).day!
             if result > 0 {
-                return "+\(result)"
+                return "+ \(result)"
             } else {
-                return "\(result - 1)"
+                return "- \((result - 1).magnitude)"
             }
         }
     }
