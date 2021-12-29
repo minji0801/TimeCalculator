@@ -146,6 +146,7 @@ class CalculatorViewController: UIViewController {
             self.currentOperation = operation
         } else {
             // 처음으로 연산기호 눌렀을 때
+            self.outputLabel.text = updateLabel(self.displayNumber)
             self.firstOperand = self.displayNumber
             self.currentOperation = operation
             self.displayNumber = ""
