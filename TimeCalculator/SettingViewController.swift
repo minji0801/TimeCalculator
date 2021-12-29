@@ -17,6 +17,7 @@ class SettingViewController: UIViewController {
     @IBOutlet weak var soundButton: UIButton!
     @IBOutlet weak var reviewButton: UIButton!
     @IBOutlet weak var feedbackButton: UIButton!
+    @IBOutlet weak var languageButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +31,7 @@ class SettingViewController: UIViewController {
         reviewButton.layer.borderColor = UIColor.systemGray.cgColor
         reviewButton.layer.borderWidth = 1
         
-        [darkModeButton, soundButton, feedbackButton].forEach {
+        [darkModeButton, soundButton, feedbackButton, languageButton].forEach {
             $0?.layer.borderWidth = 1
             if self.overrideUserInterfaceStyle == .light {
                 $0?.layer.borderColor = UIColor.black.cgColor
@@ -120,6 +121,14 @@ class SettingViewController: UIViewController {
             sendMailErrorAlert.addAction(cancleAction)
             self.present(sendMailErrorAlert, animated: true, completion: nil)
         }
+    }
+    
+    // 언어 변경 버튼 클릭
+    @IBAction func languageButtonTapped(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "Main", bundle: .main)
+        let languageViewController = storyboard.instantiateViewController(withIdentifier: "LanguageViewController")
+        languageViewController.modalPresentationStyle = .fullScreen
+        self.present(languageViewController, animated: false, completion: nil)
     }
     
     // Device Identifier 찾기

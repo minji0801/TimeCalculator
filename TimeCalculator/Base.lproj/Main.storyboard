@@ -150,23 +150,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="VdU-tk-Nwm">
-                                <rect key="frame" x="30" y="333.5" width="354" height="229"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="VdU-tk-Nwm">
+                                <rect key="frame" x="30" y="239" width="354" height="358"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5o-7l-2Q1">
-                                        <rect key="frame" x="0.0" y="0.0" width="354" height="36.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="55.5"/>
                                         <fontDescription key="fontDescription" name="FredokaOne-Regular" family="Fredoka One" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iOS v(Version) build (Build)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R10-rT-UvL">
-                                        <rect key="frame" x="0.0" y="56.5" width="354" height="21"/>
+                                        <rect key="frame" x="0.0" y="75.5" width="354" height="55.5"/>
                                         <fontDescription key="fontDescription" name="FredokaOne-Regular" family="Fredoka One" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="cRv-9n-bf9">
-                                        <rect key="frame" x="0.0" y="97.5" width="354" height="56"/>
+                                        <rect key="frame" x="0.0" y="151" width="354" height="56"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ezx-ko-Ih3" customClass="SettingButton" customModule="TimeCalculator" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="167" height="56"/>
@@ -204,7 +204,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="oLR-50-6SL">
-                                        <rect key="frame" x="0.0" y="173.5" width="354" height="55.5"/>
+                                        <rect key="frame" x="0.0" y="227" width="354" height="55.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oWg-Kk-4FT" customClass="SettingButton" customModule="TimeCalculator" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="167" height="55.5"/>
@@ -241,6 +241,26 @@
                                             </button>
                                         </subviews>
                                     </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="D0Z-Qm-neq">
+                                        <rect key="frame" x="0.0" y="302.5" width="354" height="55.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qmX-CG-GFo" customClass="SettingButton" customModule="TimeCalculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="354" height="55.5"/>
+                                                <color key="tintColor" systemColor="labelColor"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Language &amp; Region"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isBorder" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isFont15" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSetting" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="cJv-8g-LZY" eventType="touchUpInside" id="HXL-ju-x19"/>
+                                                    <action selector="languageButtonTapped:" destination="cJv-8g-LZY" eventType="touchUpInside" id="0zz-fn-46t"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -248,7 +268,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Z8f-rb-h7d" firstAttribute="trailing" secondItem="VdU-tk-Nwm" secondAttribute="trailing" constant="30" id="b7w-lW-HUV"/>
-                            <constraint firstItem="VdU-tk-Nwm" firstAttribute="centerY" secondItem="X3t-nc-V9Z" secondAttribute="centerY" id="oP5-Ls-rfD"/>
+                            <constraint firstItem="VdU-tk-Nwm" firstAttribute="centerY" secondItem="X3t-nc-V9Z" secondAttribute="centerY" constant="-30" id="oP5-Ls-rfD"/>
                             <constraint firstItem="VdU-tk-Nwm" firstAttribute="leading" secondItem="Z8f-rb-h7d" secondAttribute="leading" constant="30" id="zhX-gk-4jg"/>
                         </constraints>
                     </view>
@@ -256,6 +276,7 @@
                     <connections>
                         <outlet property="darkModeButton" destination="Ezx-ko-Ih3" id="agh-Mg-vPl"/>
                         <outlet property="feedbackButton" destination="Kp2-2A-CDA" id="3GX-kb-uSh"/>
+                        <outlet property="languageButton" destination="qmX-CG-GFo" id="gkC-TK-ARx"/>
                         <outlet property="reviewButton" destination="oWg-Kk-4FT" id="bM1-GP-Pun"/>
                         <outlet property="soundButton" destination="0rt-Gl-gOH" id="p9e-EE-HrA"/>
                         <outlet property="versionLabel" destination="R10-rT-UvL" id="ILe-No-Fka"/>
@@ -264,6 +285,78 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kkj-dL-y30" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="546" y="1088"/>
+        </scene>
+        <!--Language View Controller-->
+        <scene sceneID="ffK-N0-rSN">
+            <objects>
+                <viewController storyboardIdentifier="LanguageViewController" id="DQc-NT-tPx" customClass="LanguageViewController" customModule="TimeCalculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LBo-ke-olM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="xzA-um-nrI">
+                                <rect key="frame" x="30" y="420" width="354" height="56"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="TGF-Y9-FDX">
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="56"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FXB-o3-wde" customClass="SettingButton" customModule="TimeCalculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="167" height="56"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="FXB-o3-wde" secondAttribute="height" multiplier="3:1" id="mmf-qr-yAK"/>
+                                                </constraints>
+                                                <color key="tintColor" systemColor="labelColor"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="English"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isBorder" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isFont15" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSetting" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="cJv-8g-LZY" eventType="touchUpInside" id="79D-ZN-obI"/>
+                                                    <action selector="darkModeButtonTapped:" destination="cJv-8g-LZY" eventType="touchUpInside" id="kwp-iK-vbQ"/>
+                                                    <action selector="languageButtonTapped:" destination="DQc-NT-tPx" eventType="touchUpInside" id="g23-NL-o8p"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rgj-wr-trX" customClass="SettingButton" customModule="TimeCalculator" customModuleProvider="target">
+                                                <rect key="frame" x="187" y="0.0" width="167" height="56"/>
+                                                <color key="tintColor" systemColor="labelColor"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="한국어"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isBorder" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isFont15" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSetting" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="cJv-8g-LZY" eventType="touchUpInside" id="q2E-Vp-3oa"/>
+                                                    <action selector="languageButtonTapped:" destination="DQc-NT-tPx" eventType="touchUpInside" id="ca8-si-Dbn"/>
+                                                    <action selector="soundButtonTapped:" destination="cJv-8g-LZY" eventType="touchUpInside" id="XUQ-Fe-rN0"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="VwY-tq-wUO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xzA-um-nrI" firstAttribute="leading" secondItem="VwY-tq-wUO" secondAttribute="leading" constant="30" id="KLn-Y7-arX"/>
+                            <constraint firstItem="xzA-um-nrI" firstAttribute="centerY" secondItem="LBo-ke-olM" secondAttribute="centerY" id="X2A-6x-gWI"/>
+                            <constraint firstItem="VwY-tq-wUO" firstAttribute="trailing" secondItem="xzA-um-nrI" secondAttribute="trailing" constant="30" id="X6V-ax-e3m"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="RU6-zs-OJc"/>
+                    <connections>
+                        <outlet property="englishButton" destination="FXB-o3-wde" id="zFD-IU-JC3"/>
+                        <outlet property="koreanButton" destination="rgj-wr-trX" id="SgF-O6-aDV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hot-37-M3T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1365" y="1088"/>
         </scene>
         <!--Calculator View Controller-->
         <scene sceneID="b2P-2f-TXD">
@@ -664,61 +757,70 @@
     </scenes>
     <designables>
         <designable name="0Gn-Ao-2Rx">
-            <size key="intrinsicContentSize" width="27.5" height="18"/>
+            <size key="intrinsicContentSize" width="27.5" height="37"/>
         </designable>
         <designable name="0rt-Gl-gOH">
-            <size key="intrinsicContentSize" width="94" height="30"/>
+            <size key="intrinsicContentSize" width="98" height="31"/>
         </designable>
         <designable name="6P0-OO-20J">
-            <size key="intrinsicContentSize" width="30" height="48"/>
+            <size key="intrinsicContentSize" width="30" height="49"/>
         </designable>
         <designable name="CBN-iU-OlE">
-            <size key="intrinsicContentSize" width="30" height="48"/>
+            <size key="intrinsicContentSize" width="30" height="49"/>
         </designable>
         <designable name="CN1-6y-2W2">
-            <size key="intrinsicContentSize" width="30" height="48"/>
+            <size key="intrinsicContentSize" width="30" height="49"/>
         </designable>
         <designable name="Ezx-ko-Ih3">
-            <size key="intrinsicContentSize" width="75" height="30"/>
+            <size key="intrinsicContentSize" width="78" height="31"/>
+        </designable>
+        <designable name="FXB-o3-wde">
+            <size key="intrinsicContentSize" width="53" height="31"/>
         </designable>
         <designable name="Kp2-2A-CDA">
-            <size key="intrinsicContentSize" width="107" height="30"/>
+            <size key="intrinsicContentSize" width="108" height="31"/>
         </designable>
         <designable name="TMb-JG-3Bg">
-            <size key="intrinsicContentSize" width="30" height="48"/>
+            <size key="intrinsicContentSize" width="30" height="49"/>
         </designable>
         <designable name="UCs-vm-Sss">
-            <size key="intrinsicContentSize" width="30" height="48"/>
+            <size key="intrinsicContentSize" width="30" height="49"/>
         </designable>
         <designable name="XM0-CH-26r">
-            <size key="intrinsicContentSize" width="30" height="48"/>
+            <size key="intrinsicContentSize" width="30" height="49"/>
         </designable>
         <designable name="eqJ-aU-9sb">
-            <size key="intrinsicContentSize" width="30" height="48"/>
+            <size key="intrinsicContentSize" width="30" height="49"/>
         </designable>
         <designable name="fYu-zE-Vhc">
-            <size key="intrinsicContentSize" width="27.5" height="25.5"/>
+            <size key="intrinsicContentSize" width="27.5" height="37"/>
         </designable>
         <designable name="keI-qy-7eu">
-            <size key="intrinsicContentSize" width="30" height="48"/>
+            <size key="intrinsicContentSize" width="30" height="49"/>
         </designable>
         <designable name="ngj-mo-90P">
-            <size key="intrinsicContentSize" width="39.5" height="34"/>
+            <size key="intrinsicContentSize" width="39.5" height="37"/>
         </designable>
         <designable name="oWg-Kk-4FT">
-            <size key="intrinsicContentSize" width="81" height="30"/>
+            <size key="intrinsicContentSize" width="84" height="31"/>
         </designable>
         <designable name="qFx-ju-MwN">
-            <size key="intrinsicContentSize" width="30" height="48"/>
+            <size key="intrinsicContentSize" width="30" height="49"/>
+        </designable>
+        <designable name="qmX-CG-GFo">
+            <size key="intrinsicContentSize" width="139" height="31"/>
+        </designable>
+        <designable name="rgj-wr-trX">
+            <size key="intrinsicContentSize" width="39" height="31"/>
         </designable>
         <designable name="vJX-Y6-DBe">
-            <size key="intrinsicContentSize" width="25" height="21"/>
+            <size key="intrinsicContentSize" width="25" height="37"/>
         </designable>
         <designable name="vbu-21-2ew">
-            <size key="intrinsicContentSize" width="38" height="48"/>
+            <size key="intrinsicContentSize" width="42" height="49"/>
         </designable>
         <designable name="vkG-7N-7er">
-            <size key="intrinsicContentSize" width="30" height="48"/>
+            <size key="intrinsicContentSize" width="30" height="49"/>
         </designable>
     </designables>
     <resources>

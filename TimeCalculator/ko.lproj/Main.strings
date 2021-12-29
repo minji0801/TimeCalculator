@@ -1,0 +1,69 @@
+
+/* Class = "UIButton"; normalTitle = "Button Sound"; ObjectID = "0rt-Gl-gOH"; */
+"0rt-Gl-gOH.normalTitle" = "버튼 사운드";
+
+/* Class = "UIButton"; normalTitle = "9"; ObjectID = "6P0-OO-20J"; */
+"6P0-OO-20J.normalTitle" = "9";
+
+/* Class = "UILabel"; text = "start date :"; ObjectID = "7oX-6x-IA6"; */
+"7oX-6x-IA6.text" = "시작 날짜 :";
+
+/* Class = "UILabel"; text = "Settings"; ObjectID = "A5o-7l-2Q1"; */
+"A5o-7l-2Q1.text" = "설정";
+
+/* Class = "UIButton"; normalTitle = "4"; ObjectID = "CBN-iU-OlE"; */
+"CBN-iU-OlE.normalTitle" = "4";
+
+/* Class = "UIButton"; normalTitle = "8"; ObjectID = "CN1-6y-2W2"; */
+"CN1-6y-2W2.normalTitle" = "8";
+
+/* Class = "UILabel"; text = "end date :"; ObjectID = "E68-KV-b9t"; */
+"E68-KV-b9t.text" = "종료 날짜 :";
+
+/* Class = "UIButton"; normalTitle = "Dark Mode"; ObjectID = "Ezx-ko-Ih3"; */
+"Ezx-ko-Ih3.normalTitle" = "다크 모드";
+
+/* Class = "UIButton"; normalTitle = "Send Feedback"; ObjectID = "Kp2-2A-CDA"; */
+"Kp2-2A-CDA.normalTitle" = "피드백 보내기";
+
+/* Class = "UILabel"; text = "광고뷰"; ObjectID = "NtS-mj-X1o"; */
+"NtS-mj-X1o.text" = "광고뷰";
+
+/* Class = "UILabel"; text = "iOS v(Version) build (Build)"; ObjectID = "R10-rT-UvL"; */
+"R10-rT-UvL.text" = "iOS v(Version) build (Build)";
+
+/* Class = "UILabel"; text = "광고뷰"; ObjectID = "SLG-RE-Ez9"; */
+"SLG-RE-Ez9.text" = "광고뷰";
+
+/* Class = "UIButton"; normalTitle = "6"; ObjectID = "TMb-JG-3Bg"; */
+"TMb-JG-3Bg.normalTitle" = "6";
+
+/* Class = "UIButton"; normalTitle = "1"; ObjectID = "UCs-vm-Sss"; */
+"UCs-vm-Sss.normalTitle" = "1";
+
+/* Class = "UIButton"; normalTitle = "2"; ObjectID = "XM0-CH-26r"; */
+"XM0-CH-26r.normalTitle" = "2";
+
+/* Class = "UIButton"; normalTitle = "3"; ObjectID = "eqJ-aU-9sb"; */
+"eqJ-aU-9sb.normalTitle" = "3";
+
+/* Class = "UIButton"; normalTitle = "5"; ObjectID = "keI-qy-7eu"; */
+"keI-qy-7eu.normalTitle" = "5";
+
+/* Class = "UILabel"; text = "0:00"; ObjectID = "mKr-Ck-8EY"; */
+"mKr-Ck-8EY.text" = "0:00";
+
+/* Class = "UIButton"; normalTitle = "App Review"; ObjectID = "oWg-Kk-4FT"; */
+"oWg-Kk-4FT.normalTitle" = "앱 리뷰";
+
+/* Class = "UIButton"; normalTitle = "calculate"; ObjectID = "pV5-j3-hvV"; */
+"pV5-j3-hvV.normalTitle" = "계산하기";
+
+/* Class = "UIButton"; normalTitle = "7"; ObjectID = "qFx-ju-MwN"; */
+"qFx-ju-MwN.normalTitle" = "7";
+
+/* Class = "UIButton"; normalTitle = "AC"; ObjectID = "vbu-21-2ew"; */
+"vbu-21-2ew.normalTitle" = "AC";
+
+/* Class = "UIButton"; normalTitle = "0"; ObjectID = "vkG-7N-7er"; */
+"vkG-7N-7er.normalTitle" = "0";
