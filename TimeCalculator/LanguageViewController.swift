@@ -35,6 +35,7 @@ class LanguageViewController: UIViewController {
     @IBAction func languageButtonTapped(_ sender: UIButton) {
         // 사운드 출력
         let soundOff = UserDefaults.standard.bool(forKey: "SoundOff")
+        print(soundOff)
         if !soundOff {
             let url = Bundle.main.url(forResource: "click", withExtension: "wav")
             player = try! AVAudioPlayer(contentsOf: url!)
@@ -44,13 +45,14 @@ class LanguageViewController: UIViewController {
         // 언어 변경
         switch sender.titleLabel?.text! {
         case "English":
-            print("영어로")
+            UserDefaults.standard.set(["en"], forKey: "Language")
         case "한국어":
-            print("한글로")
+            UserDefaults.standard.set(["ko"], forKey: "Language")
         default:
             break
         }
-        
+        UserDefaults.standard.synchronize()
+        print("dismiss")
         dismiss(animated: false, completion: nil)
-    }
-}
+        NotificationCenter.default.post(name: NSNotification.Name("DismissLanguageVC"), object: nil, userInfo: nil)
+    }}

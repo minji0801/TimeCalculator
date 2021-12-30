@@ -1,0 +1,34 @@
+/* 
+  Localizable.strings
+  TimeCalculator
+
+  Created by 김민지 on 2021/12/30.
+  Korean(한국어)
+*/
+
+// 시작 날짜
+"start" = "시작 날짜 :";
+
+// 종료 날짜
+"end" = "종료 날짜 :";
+
+// 계산하기
+"calculate" = "계산하기";
+
+// 설정
+"settings" = "설정";
+
+// 다크 모드
+"dark" = "다크 모드";
+
+// 버튼 사운드
+"sound" = "버튼 사운드";
+
+// 앱 리뷰
+"review" = "앱 리뷰";
+
+// 피드백 보내기
+"feedback" = "피드백 보내기";
+
+// 언어
+"language" = "언어";

@@ -95,20 +95,10 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4G0-0K-hra">
                                 <rect key="frame" x="0.0" y="763" width="414" height="50"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="광고뷰" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NtS-mj-X1o">
-                                        <rect key="frame" x="185" y="15" width="44.5" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <constraints>
-                                    <constraint firstItem="NtS-mj-X1o" firstAttribute="centerX" secondItem="4G0-0K-hra" secondAttribute="centerX" id="1YR-xb-7oF"/>
                                     <constraint firstAttribute="height" constant="50" id="2fi-65-cnk"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="gb0-rX-jVM"/>
-                                    <constraint firstItem="NtS-mj-X1o" firstAttribute="centerY" secondItem="4G0-0K-hra" secondAttribute="centerY" id="mgt-Cp-Jms"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -135,7 +125,9 @@
                         <outlet property="calculateButton" destination="pV5-j3-hvV" id="g5Y-jR-9Lm"/>
                         <outlet property="ddayLabel" destination="CUv-I8-g24" id="VA7-Tz-1tI"/>
                         <outlet property="endDatePicker" destination="xcu-T8-hKj" id="vnT-cH-vzF"/>
+                        <outlet property="endLabel" destination="E68-KV-b9t" id="NCf-av-GAc"/>
                         <outlet property="startDatePicker" destination="X0V-C6-TBl" id="uGq-j1-KEA"/>
+                        <outlet property="startLabel" destination="7oX-6x-IA6" id="U2h-EH-CAa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rJw-Ar-ona" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -151,25 +143,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="VdU-tk-Nwm">
-                                <rect key="frame" x="30" y="239" width="354" height="358"/>
+                                <rect key="frame" x="30" y="344.5" width="354" height="207"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5o-7l-2Q1">
-                                        <rect key="frame" x="0.0" y="0.0" width="354" height="55.5"/>
-                                        <fontDescription key="fontDescription" name="FredokaOne-Regular" family="Fredoka One" pointSize="30"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iOS v(Version) build (Build)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R10-rT-UvL">
-                                        <rect key="frame" x="0.0" y="75.5" width="354" height="55.5"/>
-                                        <fontDescription key="fontDescription" name="FredokaOne-Regular" family="Fredoka One" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="cRv-9n-bf9">
-                                        <rect key="frame" x="0.0" y="151" width="354" height="56"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="55.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ezx-ko-Ih3" customClass="SettingButton" customModule="TimeCalculator" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="167" height="56"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="167" height="55.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="Ezx-ko-Ih3" secondAttribute="height" multiplier="3:1" id="ORt-Cw-Gq5"/>
                                                 </constraints>
@@ -187,7 +167,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0rt-Gl-gOH" customClass="SettingButton" customModule="TimeCalculator" customModuleProvider="target">
-                                                <rect key="frame" x="187" y="0.0" width="167" height="56"/>
+                                                <rect key="frame" x="187" y="0.0" width="167" height="55.5"/>
                                                 <color key="tintColor" systemColor="labelColor"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Button Sound"/>
@@ -204,10 +184,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="oLR-50-6SL">
-                                        <rect key="frame" x="0.0" y="227" width="354" height="55.5"/>
+                                        <rect key="frame" x="0.0" y="75.5" width="354" height="56"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oWg-Kk-4FT" customClass="SettingButton" customModule="TimeCalculator" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="167" height="55.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="167" height="56"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="oWg-Kk-4FT" secondAttribute="height" multiplier="3:1" id="0E3-mj-Hl0"/>
                                                 </constraints>
@@ -225,7 +205,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kp2-2A-CDA" customClass="SettingButton" customModule="TimeCalculator" customModuleProvider="target">
-                                                <rect key="frame" x="187" y="0.0" width="167" height="55.5"/>
+                                                <rect key="frame" x="187" y="0.0" width="167" height="56"/>
                                                 <color key="tintColor" systemColor="labelColor"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Send Feedback"/>
@@ -242,13 +222,13 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="D0Z-Qm-neq">
-                                        <rect key="frame" x="0.0" y="302.5" width="354" height="55.5"/>
+                                        <rect key="frame" x="0.0" y="151.5" width="354" height="55.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qmX-CG-GFo" customClass="SettingButton" customModule="TimeCalculator" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="354" height="55.5"/>
                                                 <color key="tintColor" systemColor="labelColor"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" title="Language &amp; Region"/>
+                                                <state key="normal" title="Language"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isBorder" value="YES"/>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isFont15" value="YES"/>
@@ -263,12 +243,32 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="QvH-iR-bBv">
+                                <rect key="frame" x="30" y="257" width="354" height="57.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5o-7l-2Q1">
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="36.5"/>
+                                        <fontDescription key="fontDescription" name="FredokaOne-Regular" family="Fredoka One" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iOS v(Version) build (Build)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R10-rT-UvL">
+                                        <rect key="frame" x="0.0" y="41.5" width="354" height="16"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Z8f-rb-h7d"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="VdU-tk-Nwm" firstAttribute="top" secondItem="QvH-iR-bBv" secondAttribute="bottom" constant="30" id="PEF-5T-V8m"/>
+                            <constraint firstItem="QvH-iR-bBv" firstAttribute="trailing" secondItem="VdU-tk-Nwm" secondAttribute="trailing" id="Zcf-T5-UPg"/>
                             <constraint firstItem="Z8f-rb-h7d" firstAttribute="trailing" secondItem="VdU-tk-Nwm" secondAttribute="trailing" constant="30" id="b7w-lW-HUV"/>
-                            <constraint firstItem="VdU-tk-Nwm" firstAttribute="centerY" secondItem="X3t-nc-V9Z" secondAttribute="centerY" constant="-30" id="oP5-Ls-rfD"/>
+                            <constraint firstItem="VdU-tk-Nwm" firstAttribute="centerY" secondItem="X3t-nc-V9Z" secondAttribute="centerY" id="oP5-Ls-rfD"/>
+                            <constraint firstItem="QvH-iR-bBv" firstAttribute="leading" secondItem="VdU-tk-Nwm" secondAttribute="leading" id="tvm-yZ-JAD"/>
                             <constraint firstItem="VdU-tk-Nwm" firstAttribute="leading" secondItem="Z8f-rb-h7d" secondAttribute="leading" constant="30" id="zhX-gk-4jg"/>
                         </constraints>
                     </view>
@@ -279,6 +279,7 @@
                         <outlet property="languageButton" destination="qmX-CG-GFo" id="gkC-TK-ARx"/>
                         <outlet property="reviewButton" destination="oWg-Kk-4FT" id="bM1-GP-Pun"/>
                         <outlet property="soundButton" destination="0rt-Gl-gOH" id="p9e-EE-HrA"/>
+                        <outlet property="titleLabel" destination="A5o-7l-2Q1" id="c2z-4q-mHB"/>
                         <outlet property="versionLabel" destination="R10-rT-UvL" id="ILe-No-Fka"/>
                     </connections>
                 </viewController>
@@ -314,8 +315,6 @@
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isSetting" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="buttonPressed:" destination="cJv-8g-LZY" eventType="touchUpInside" id="79D-ZN-obI"/>
-                                                    <action selector="darkModeButtonTapped:" destination="cJv-8g-LZY" eventType="touchUpInside" id="kwp-iK-vbQ"/>
                                                     <action selector="languageButtonTapped:" destination="DQc-NT-tPx" eventType="touchUpInside" id="g23-NL-o8p"/>
                                                 </connections>
                                             </button>
@@ -330,9 +329,7 @@
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isSetting" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="buttonPressed:" destination="cJv-8g-LZY" eventType="touchUpInside" id="q2E-Vp-3oa"/>
                                                     <action selector="languageButtonTapped:" destination="DQc-NT-tPx" eventType="touchUpInside" id="ca8-si-Dbn"/>
-                                                    <action selector="soundButtonTapped:" destination="cJv-8g-LZY" eventType="touchUpInside" id="XUQ-Fe-rN0"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -670,19 +667,9 @@
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oyy-vn-67g">
                                 <rect key="frame" x="0.0" y="763" width="414" height="50"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="광고뷰" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SLG-RE-Ez9">
-                                        <rect key="frame" x="185" y="15" width="44.5" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <constraints>
-                                    <constraint firstItem="SLG-RE-Ez9" firstAttribute="centerX" secondItem="oyy-vn-67g" secondAttribute="centerX" id="Oxl-Et-W0V"/>
                                     <constraint firstAttribute="height" constant="50" id="W9E-uL-ume"/>
-                                    <constraint firstItem="SLG-RE-Ez9" firstAttribute="centerY" secondItem="oyy-vn-67g" secondAttribute="centerY" id="slu-Lr-xa0"/>
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="ZbM-g3-Q9y">
@@ -808,7 +795,7 @@
             <size key="intrinsicContentSize" width="30" height="49"/>
         </designable>
         <designable name="qmX-CG-GFo">
-            <size key="intrinsicContentSize" width="139" height="31"/>
+            <size key="intrinsicContentSize" width="72" height="31"/>
         </designable>
         <designable name="rgj-wr-trX">
             <size key="intrinsicContentSize" width="39" height="31"/>

@@ -12,6 +12,7 @@ import MessageUI
 class SettingViewController: UIViewController {
     var player: AVAudioPlayer!
     
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var versionLabel: UILabel!
     @IBOutlet weak var darkModeButton: UIButton!
     @IBOutlet weak var soundButton: UIButton!
@@ -21,12 +22,14 @@ class SettingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        versionLabel.text = "iOS v\(getCurrentVersion()) build \(getBuildNumber())"
+        self.versionLabel.text = "iOS v\(getCurrentVersion()) build \(getBuildNumber())"
+        NotificationCenter.default.addObserver(self, selector: #selector(self.didDismissLanguageVCNotification(_:)), name: NSNotification.Name("DismissLanguageVC"), object: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         AppearanceCheck(self)
+        self.setLanguage()
         
         reviewButton.layer.borderColor = UIColor.systemGray.cgColor
         reviewButton.layer.borderWidth = 1
@@ -39,6 +42,10 @@ class SettingViewController: UIViewController {
                 $0?.layer.borderColor = UIColor.white.cgColor
             }
         }
+    }
+    
+    @objc func didDismissLanguageVCNotification(_ notification: Notification) {
+        self.viewWillAppear(true)
     }
     
     // 모든 버튼이 눌릴 때마다 소리 출력
@@ -123,7 +130,7 @@ class SettingViewController: UIViewController {
         }
     }
     
-    // 언어 변경 버튼 클릭
+    // 언어 버튼 클릭 시
     @IBAction func languageButtonTapped(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "Main", bundle: .main)
         let languageViewController = storyboard.instantiateViewController(withIdentifier: "LanguageViewController")
@@ -156,6 +163,23 @@ class SettingViewController: UIViewController {
         guard let dictionary = Bundle.main.infoDictionary,
               let build = dictionary["CFBundleVersion"] as? String else { return "" }
         return build
+    }
+    
+    // 언어 설정
+    func setLanguage() {
+        guard let language = UserDefaults.standard.array(forKey: "Language")?.first as? String else { return }
+        let index = language.index(language.startIndex, offsetBy: 2)
+        let languageCode = String(language[..<index])
+        
+        let path = Bundle.main.path(forResource: languageCode, ofType: "lproj")
+        let bundle = Bundle(path: path!)
+        
+        self.titleLabel.text = bundle?.localizedString(forKey: "settings", value: nil, table: nil)
+        self.darkModeButton.setTitle(bundle?.localizedString(forKey: "dark", value: nil, table: nil), for: .normal)
+        self.soundButton.setTitle(bundle?.localizedString(forKey: "sound", value: nil, table: nil), for: .normal)
+        self.reviewButton.setTitle(bundle?.localizedString(forKey: "review", value: nil, table: nil), for: .normal)
+        self.feedbackButton.setTitle(bundle?.localizedString(forKey: "feedback", value: nil, table: nil), for: .normal)
+        self.languageButton.setTitle(bundle?.localizedString(forKey: "language", value: nil, table: nil), for: .normal)
     }
 }
 
