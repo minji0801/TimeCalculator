@@ -35,11 +35,9 @@ class LanguageViewController: UIViewController {
     @IBAction func languageButtonTapped(_ sender: UIButton) {
         // 사운드 출력
         let soundOff = UserDefaults.standard.bool(forKey: "SoundOff")
-        print(soundOff)
         if !soundOff {
-            let url = Bundle.main.url(forResource: "click", withExtension: "wav")
-            player = try! AVAudioPlayer(contentsOf: url!)
-            player.play()
+            let systemSoundID: SystemSoundID = 1105
+            AudioServicesPlaySystemSound(systemSoundID)
         }
         
         // 언어 변경

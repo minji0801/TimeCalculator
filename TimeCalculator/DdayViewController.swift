@@ -6,8 +6,11 @@
 //
 
 import UIKit
+import AVFoundation
 
 class DdayViewController: UIViewController {
+    var player: AVAudioPlayer!
+    
     @IBOutlet weak var startLabel: UILabel!
     @IBOutlet weak var startDatePicker: UIDatePicker!
     @IBOutlet weak var endLabel: UILabel!
@@ -17,7 +20,6 @@ class DdayViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         calculateButton.layer.cornerRadius = 30
     }
     
@@ -29,6 +31,12 @@ class DdayViewController: UIViewController {
     
     // 계산하기 버튼 눌렀을 때
     @IBAction func calculateButtonTapped(_ sender: UIButton) {
+        let soundOff = UserDefaults.standard.bool(forKey: "SoundOff")
+        if !soundOff {
+            let systemSoundID: SystemSoundID = 1105
+            AudioServicesPlaySystemSound(systemSoundID)
+        }
+        
         let day = calculationDday()
         ddayLabel.text = "D \(day)"
     }
@@ -67,5 +75,8 @@ class DdayViewController: UIViewController {
         self.startLabel.text = bundle?.localizedString(forKey: "start", value: nil, table: nil)
         self.endLabel.text = bundle?.localizedString(forKey: "end", value: nil, table: nil)
         self.calculateButton.setTitle(bundle?.localizedString(forKey: "calculate", value: nil, table: nil), for: .normal)
+        
+        self.startDatePicker.locale = Locale(identifier: language)
+        self.endDatePicker.locale = Locale(identifier: language)
     }
 }

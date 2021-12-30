@@ -52,9 +52,8 @@ class SettingViewController: UIViewController {
     @IBAction func buttonPressed(_ sender: UIButton) {
         let soundOff = UserDefaults.standard.bool(forKey: "SoundOff")
         if !soundOff {
-            let url = Bundle.main.url(forResource: "click", withExtension: "wav")
-            player = try! AVAudioPlayer(contentsOf: url!)
-            player.play()
+            let systemSoundID: SystemSoundID = 1105
+            AudioServicesPlaySystemSound(systemSoundID)
         }
     }
     
