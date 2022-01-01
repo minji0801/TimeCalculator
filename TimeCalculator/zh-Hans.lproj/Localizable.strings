@@ -1,0 +1,37 @@
+/* 
+  Localizable.strings
+  TimeCalculator
+
+  Created by 김민지 on 2021/12/30.
+  Chinese(중국어)
+*/
+
+// 시작 날짜
+"start" = "开始日期 :";
+
+// 종료 날짜
+"end" = "结束日期 :";
+
+// 계산하기
+"calculate" = "计算";
+
+// 설정(설정 앱 참고)
+"settings" = "设置";
+
+// 다크 모드(설정 앱 참고)
+"dark" = "深色";
+
+// 소리
+"sound" = "声音";
+
+// 앱 평가(Hours 참고)
+"review" = "应用评分";
+
+// 피드백 보내기(Hours 참고)
+"feedback" = "发送反馈";
+
+// 언어(설정 앱 참고)
+"language" = "语言";
+
+// 뒤로가기(Hidden Folks 참고)
+"back" = "返回";
