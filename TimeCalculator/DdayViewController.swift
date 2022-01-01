@@ -44,7 +44,9 @@ class DdayViewController: UIViewController {
     func calculationDday() -> String {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd"
-        formatter.locale = Locale(identifier: "ko")
+        if let language = UserDefaults.standard.array(forKey: "Language")?.first as? String {
+            formatter.locale = Locale(identifier: language)
+        }
         
         let startDate = formatter.string(from: startDatePicker.date)
         let endDate = formatter.string(from: endDatePicker.date)

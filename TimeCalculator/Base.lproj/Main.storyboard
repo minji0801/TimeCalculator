@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="K0Y-0L-rH8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jEt-NO-QNy">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -132,7 +132,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rJw-Ar-ona" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="544.92753623188412" y="428.57142857142856"/>
+            <point key="canvasLocation" x="613" y="429"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="xtg-64-v7J">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="jEt-NO-QNy" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gXJ-ad-IXY">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="K0Y-0L-rH8" kind="relationship" relationship="rootViewController" id="WZv-kq-Gou"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VB0-ka-pnc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1070" y="78"/>
         </scene>
         <!--Setting View Controller-->
         <scene sceneID="vkc-wQ-yme">
@@ -260,20 +275,41 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MeN-K3-oVi" customClass="SettingButton" customModule="TimeCalculator" customModuleProvider="target">
+                                <rect key="frame" x="123.5" y="571.5" width="167" height="55.5"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Back"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isBorder" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isFont15" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSetting" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="backButtonTapped:" destination="cJv-8g-LZY" eventType="touchUpInside" id="ylr-7c-UwD"/>
+                                    <action selector="buttonPressed:" destination="cJv-8g-LZY" eventType="touchUpInside" id="sXZ-mj-JXs"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Z8f-rb-h7d"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="MeN-K3-oVi" firstAttribute="centerX" secondItem="X3t-nc-V9Z" secondAttribute="centerX" id="Ilz-RR-CDS"/>
+                            <constraint firstItem="MeN-K3-oVi" firstAttribute="top" secondItem="VdU-tk-Nwm" secondAttribute="bottom" constant="20" id="JC4-on-gFB"/>
                             <constraint firstItem="VdU-tk-Nwm" firstAttribute="top" secondItem="QvH-iR-bBv" secondAttribute="bottom" constant="30" id="PEF-5T-V8m"/>
                             <constraint firstItem="QvH-iR-bBv" firstAttribute="trailing" secondItem="VdU-tk-Nwm" secondAttribute="trailing" id="Zcf-T5-UPg"/>
                             <constraint firstItem="Z8f-rb-h7d" firstAttribute="trailing" secondItem="VdU-tk-Nwm" secondAttribute="trailing" constant="30" id="b7w-lW-HUV"/>
                             <constraint firstItem="VdU-tk-Nwm" firstAttribute="centerY" secondItem="X3t-nc-V9Z" secondAttribute="centerY" id="oP5-Ls-rfD"/>
+                            <constraint firstItem="MeN-K3-oVi" firstAttribute="height" secondItem="Ezx-ko-Ih3" secondAttribute="height" id="qXd-kT-tqc"/>
                             <constraint firstItem="QvH-iR-bBv" firstAttribute="leading" secondItem="VdU-tk-Nwm" secondAttribute="leading" id="tvm-yZ-JAD"/>
+                            <constraint firstItem="MeN-K3-oVi" firstAttribute="width" secondItem="Ezx-ko-Ih3" secondAttribute="width" id="u2H-vY-y48"/>
                             <constraint firstItem="VdU-tk-Nwm" firstAttribute="leading" secondItem="Z8f-rb-h7d" secondAttribute="leading" constant="30" id="zhX-gk-4jg"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" tag="2" title="" image="setting" id="eZr-oT-wwu"/>
+                    <navigationItem key="navigationItem" id="pt8-Xp-3nD"/>
                     <connections>
+                        <outlet property="backButton" destination="MeN-K3-oVi" id="Bas-tB-ZXu"/>
                         <outlet property="darkModeButton" destination="Ezx-ko-Ih3" id="agh-Mg-vPl"/>
                         <outlet property="feedbackButton" destination="Kp2-2A-CDA" id="3GX-kb-uSh"/>
                         <outlet property="languageButton" destination="qmX-CG-GFo" id="gkC-TK-ARx"/>
@@ -285,7 +321,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kkj-dL-y30" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="546" y="1088"/>
+            <point key="canvasLocation" x="1425" y="-226"/>
         </scene>
         <!--Language View Controller-->
         <scene sceneID="ffK-N0-rSN">
@@ -353,7 +389,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hot-37-M3T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1365" y="1088"/>
+            <point key="canvasLocation" x="2264" y="-226"/>
         </scene>
         <!--Calculator View Controller-->
         <scene sceneID="b2P-2f-TXD">
@@ -642,9 +678,6 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fYu-zE-Vhc" customClass="RoundButton" customModule="TimeCalculator" customModuleProvider="target">
                                                 <rect key="frame" x="300.5" y="0.0" width="93.5" height="93.5"/>
                                                 <color key="backgroundColor" name="MainColor"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="fYu-zE-Vhc" secondAttribute="height" multiplier="1:1" id="fe8-W9-qAF"/>
-                                                </constraints>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" image="plus" catalog="system">
@@ -694,6 +727,22 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6gO-d4-INX">
+                                <rect key="frame" x="10" y="54" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="6gO-d4-INX" secondAttribute="height" multiplier="1:1" id="aAv-BX-hVM"/>
+                                    <constraint firstAttribute="height" constant="50" id="xZT-46-jso"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="systemGrayColor"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="setting"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isRound" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="cJv-8g-LZY" kind="push" id="wvI-TP-KQ0"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Cic-Sl-eGZ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -707,6 +756,8 @@
                             <constraint firstItem="Cic-Sl-eGZ" firstAttribute="bottom" secondItem="oyy-vn-67g" secondAttribute="bottom" id="Q2j-vs-vJX"/>
                             <constraint firstItem="VTV-eD-2vV" firstAttribute="leading" secondItem="Cic-Sl-eGZ" secondAttribute="leading" constant="10" id="cgN-6L-W5Y"/>
                             <constraint firstItem="ZbM-g3-Q9y" firstAttribute="leading" secondItem="Cic-Sl-eGZ" secondAttribute="leading" constant="10" id="fxM-lJ-ifE"/>
+                            <constraint firstItem="6gO-d4-INX" firstAttribute="leading" secondItem="Cic-Sl-eGZ" secondAttribute="leading" constant="10" id="m6E-8i-F6v"/>
+                            <constraint firstItem="6gO-d4-INX" firstAttribute="top" secondItem="Cic-Sl-eGZ" secondAttribute="top" constant="10" id="wXG-M5-tr5"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="calculator" id="U1T-Ao-NQc"/>
@@ -717,7 +768,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7n4-h0-bPD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="546.37681159420299" y="-225"/>
+            <point key="canvasLocation" x="613" y="-226"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Vrh-bT-RXf">
@@ -734,12 +785,11 @@
                     <connections>
                         <segue destination="oAN-Qf-RLF" kind="relationship" relationship="viewControllers" id="eS4-1Z-CGe"/>
                         <segue destination="NWT-X2-Y8n" kind="relationship" relationship="viewControllers" id="xTr-Q7-hBY"/>
-                        <segue destination="cJv-8g-LZY" kind="relationship" relationship="viewControllers" id="lyN-Y2-Q7S"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cp1-9U-kjg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-341" y="79"/>
+            <point key="canvasLocation" x="-265" y="78"/>
         </scene>
     </scenes>
     <designables>
@@ -766,6 +816,9 @@
         </designable>
         <designable name="Kp2-2A-CDA">
             <size key="intrinsicContentSize" width="108" height="31"/>
+        </designable>
+        <designable name="MeN-K3-oVi">
+            <size key="intrinsicContentSize" width="35" height="31"/>
         </designable>
         <designable name="TMb-JG-3Bg">
             <size key="intrinsicContentSize" width="30" height="49"/>

@@ -32,3 +32,6 @@
 
 // 언어
 "language" = "Language";
+
+// 뒤로가기
+"back" = "Back";

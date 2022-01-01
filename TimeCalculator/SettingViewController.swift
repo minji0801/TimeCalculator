@@ -19,22 +19,24 @@ class SettingViewController: UIViewController {
     @IBOutlet weak var reviewButton: UIButton!
     @IBOutlet weak var feedbackButton: UIButton!
     @IBOutlet weak var languageButton: UIButton!
+    @IBOutlet weak var backButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setLanguage()
         self.versionLabel.text = "iOS v\(getCurrentVersion()) build \(getBuildNumber())"
+        
         NotificationCenter.default.addObserver(self, selector: #selector(self.didDismissLanguageVCNotification(_:)), name: NSNotification.Name("DismissLanguageVC"), object: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         AppearanceCheck(self)
-        self.setLanguage()
         
         reviewButton.layer.borderColor = UIColor.systemGray.cgColor
         reviewButton.layer.borderWidth = 1
         
-        [darkModeButton, soundButton, feedbackButton, languageButton].forEach {
+        [darkModeButton, soundButton, feedbackButton, languageButton, backButton].forEach {
             $0?.layer.borderWidth = 1
             if self.overrideUserInterfaceStyle == .light {
                 $0?.layer.borderColor = UIColor.black.cgColor
@@ -45,7 +47,7 @@ class SettingViewController: UIViewController {
     }
     
     @objc func didDismissLanguageVCNotification(_ notification: Notification) {
-        self.viewWillAppear(true)
+        self.setLanguage()
     }
     
     // 모든 버튼이 눌릴 때마다 소리 출력
@@ -137,6 +139,11 @@ class SettingViewController: UIViewController {
         self.present(languageViewController, animated: false, completion: nil)
     }
     
+    // 뒤로 가기 버튼 클릭 시
+    @IBAction func backButtonTapped(_ sender: UIButton) {
+        self.navigationController?.popToRootViewController(animated: true)
+    }
+    
     // Device Identifier 찾기
     func getDeviceIdentifier() -> String {
         var systemInfo = utsname()
@@ -179,6 +186,7 @@ class SettingViewController: UIViewController {
         self.reviewButton.setTitle(bundle?.localizedString(forKey: "review", value: nil, table: nil), for: .normal)
         self.feedbackButton.setTitle(bundle?.localizedString(forKey: "feedback", value: nil, table: nil), for: .normal)
         self.languageButton.setTitle(bundle?.localizedString(forKey: "language", value: nil, table: nil), for: .normal)
+        self.backButton.setTitle(bundle?.localizedString(forKey: "back", value: nil, table: nil), for: .normal)
     }
 }
 

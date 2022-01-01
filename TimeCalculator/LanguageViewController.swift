@@ -50,7 +50,6 @@ class LanguageViewController: UIViewController {
             break
         }
         UserDefaults.standard.synchronize()
-        print("dismiss")
         dismiss(animated: false, completion: nil)
         NotificationCenter.default.post(name: NSNotification.Name("DismissLanguageVC"), object: nil, userInfo: nil)
     }}
