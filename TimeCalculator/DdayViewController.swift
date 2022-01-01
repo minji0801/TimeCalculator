@@ -67,15 +67,15 @@ class DdayViewController: UIViewController {
     
     // 언어 설정
     func setLanguage() {
-        let language = UserDefaults.standard.array(forKey: "Language")?.first as? String ?? NSLocale.current.languageCode
-        let path = Bundle.main.path(forResource: language, ofType: "lproj")
+        let language = UserDefaults.standard.array(forKey: "Language")?.first as? String ?? String(NSLocale.preferredLanguages[0].prefix(2))
+        let path = Bundle.main.path(forResource: language, ofType: "lproj") ?? Bundle.main.path(forResource: "en", ofType: "lproj")
         let bundle = Bundle(path: path!)
         
         self.startLabel.text = bundle?.localizedString(forKey: "start", value: nil, table: nil)
         self.endLabel.text = bundle?.localizedString(forKey: "end", value: nil, table: nil)
         self.calculateButton.setTitle(bundle?.localizedString(forKey: "calculate", value: nil, table: nil), for: .normal)
         
-        self.startDatePicker.locale = Locale(identifier: language!)
-        self.endDatePicker.locale = Locale(identifier: language!)
+        self.startDatePicker.locale = Locale(identifier: language)
+        self.endDatePicker.locale = Locale(identifier: language)
     }
 }

@@ -173,8 +173,8 @@ class SettingViewController: UIViewController {
     
     // 언어 설정
     func setLanguage() {
-        let language = UserDefaults.standard.array(forKey: "Language")?.first as? String ?? NSLocale.current.languageCode
-        let path = Bundle.main.path(forResource: language, ofType: "lproj")
+        let language = UserDefaults.standard.array(forKey: "Language")?.first as? String ?? String(NSLocale.preferredLanguages[0].prefix(2))
+        let path = Bundle.main.path(forResource: language, ofType: "lproj") ?? Bundle.main.path(forResource: "en", ofType: "lproj")
         let bundle = Bundle(path: path!)
 
         self.titleLabel.text = bundle?.localizedString(forKey: "settings", value: nil, table: nil)
