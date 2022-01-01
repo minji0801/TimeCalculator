@@ -40,6 +40,8 @@
 		A569A9FC27671A8100435CF0 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
 		A56AF274276C67270043FD12 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		A56AF277276C82180043FD12 /* UIConfigure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIConfigure.swift; sourceTree = "<group>"; };
+		A5924F0427801579005AE15A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		A5924F06278015B3005AE15A /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Main.strings; sourceTree = "<group>"; };
 		A595A4FA277AB945005D1279 /* FredokaOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FredokaOne-Regular.ttf"; sourceTree = "<group>"; };
 		A595A506277AC88F005D1279 /* SettingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingButton.swift; sourceTree = "<group>"; };
 		A5CBF44A276B48FA002C3A87 /* DdayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DdayViewController.swift; sourceTree = "<group>"; };
@@ -222,6 +224,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				A569A9EF276710BF00435CF0 /* Base */,
+				A5924F0427801579005AE15A /* en */,
+				A5924F06278015B3005AE15A /* ko */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

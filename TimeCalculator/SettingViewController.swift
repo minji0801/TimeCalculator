@@ -173,13 +173,10 @@ class SettingViewController: UIViewController {
     
     // 언어 설정
     func setLanguage() {
-        guard let language = UserDefaults.standard.array(forKey: "Language")?.first as? String else { return }
-        let index = language.index(language.startIndex, offsetBy: 2)
-        let languageCode = String(language[..<index])
-        
-        let path = Bundle.main.path(forResource: languageCode, ofType: "lproj")
+        let language = UserDefaults.standard.array(forKey: "Language")?.first as? String ?? NSLocale.current.languageCode
+        let path = Bundle.main.path(forResource: language, ofType: "lproj")
         let bundle = Bundle(path: path!)
-        
+
         self.titleLabel.text = bundle?.localizedString(forKey: "settings", value: nil, table: nil)
         self.darkModeButton.setTitle(bundle?.localizedString(forKey: "dark", value: nil, table: nil), for: .normal)
         self.soundButton.setTitle(bundle?.localizedString(forKey: "sound", value: nil, table: nil), for: .normal)
