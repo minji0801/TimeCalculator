@@ -12,8 +12,9 @@ class LanguageViewController: UIViewController {
     var player: AVAudioPlayer!
 
     @IBOutlet weak var englishButton: UIButton!
-    @IBOutlet weak var koreanButton: UIButton!
     @IBOutlet weak var chineseButton: UIButton!
+    @IBOutlet weak var japaneseButton: UIButton!
+    @IBOutlet weak var koreanButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +24,7 @@ class LanguageViewController: UIViewController {
         super.viewWillAppear(animated)
         AppearanceCheck(self)
         
-        [englishButton, chineseButton, koreanButton].forEach {
+        [englishButton, chineseButton, japaneseButton, koreanButton].forEach {
             $0?.layer.borderWidth = 1
             if self.overrideUserInterfaceStyle == .light {
                 $0?.layer.borderColor = UIColor.black.cgColor
@@ -47,6 +48,8 @@ class LanguageViewController: UIViewController {
             UserDefaults.standard.set(["en"], forKey: "Language")
         case "简体中文":
             UserDefaults.standard.set(["zh-Hans"], forKey: "Language")
+        case "日本語":
+            UserDefaults.standard.set(["ja"], forKey: "Language")
         case "한국어":
             UserDefaults.standard.set(["ko"], forKey: "Language")
         default:

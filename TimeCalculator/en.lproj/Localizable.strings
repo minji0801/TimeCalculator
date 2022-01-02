@@ -15,23 +15,23 @@
 // 계산하기
 "calculate" = "calculate";
 
-// 설정
+// 설정(설정 앱 참고)
 "settings" = "Settings";
 
-// 다크 모드
+// 다크 모드(설정 앱 참고)
 "dark" = "Dark";
 
-// 버튼 사운드
+// 소리(설정 앱 참고)
 "sound" = "Sound";
 
-// 앱 리뷰
-"review" = "Review";
+// 앱 평가(Hours 참고)
+"review" = "Rate the App";
 
-// 피드백 보내기
-"feedback" = "Feedback";
+// 피드백 보내기(Hours 참고)
+"feedback" = "Send feedback";
 
-// 언어
+// 언어(설정 앱 참고)
 "language" = "Language";
 
-// 뒤로가기
+// 뒤로가기(Hidden Folks 참고)
 "back" = "Back";
