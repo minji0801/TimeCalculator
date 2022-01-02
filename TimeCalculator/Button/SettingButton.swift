@@ -13,6 +13,8 @@ class SettingButton: UIButton {
         didSet {
             if isSetting {
                 self.titleLabel?.font = UIFont(name: "FredokaOne-Regular", size: 15)
+                self.titleLabel?.lineBreakMode = NSLineBreakMode.byWordWrapping
+                self.titleLabel?.textAlignment = .center
             }
         }
     }

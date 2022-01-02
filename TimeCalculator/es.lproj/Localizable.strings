@@ -1,0 +1,37 @@
+/* 
+  Localizable.strings
+  TimeCalculator
+
+  Created by 김민지 on 2021/12/30.
+  Spanish(스페인어)
+*/
+
+// 시작 날짜
+"start" = "fecha de inicio :";
+
+// 종료 날짜
+"end" = "fecha de final :";
+
+// 계산하기
+"calculate" = "calcular";
+
+// 설정(설정 앱 참고)
+"settings" = "Ajustes";
+
+// 다크 모드(설정 앱 참고)
+"dark" = "Oscuro";
+
+// 소리(설정 앱 참고)
+"sound" = "Sonido";
+
+// 앱 평가(Hours 참고)
+"review" = "Califica la aplicación";
+
+// 피드백 보내기(Hours 참고)
+"feedback" = "Enviar comentarios";
+
+// 언어(설정 앱 참고)
+"language" = "Idioma";
+
+// 뒤로가기(Hidden Folks 참고)
+"back" = "Atrás";

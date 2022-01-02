@@ -180,7 +180,7 @@ class SettingViewController: UIViewController {
         }
         let path = Bundle.main.path(forResource: language, ofType: "lproj") ?? Bundle.main.path(forResource: "en", ofType: "lproj")
         let bundle = Bundle(path: path!)
-        print(language)
+        print(language!)
         print(path!)
 
         self.titleLabel.text = bundle?.localizedString(forKey: "settings", value: nil, table: nil)
