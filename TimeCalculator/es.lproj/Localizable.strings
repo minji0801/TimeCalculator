@@ -6,14 +6,14 @@
   Spanish(스페인어)
 */
 
-// 시작 날짜
-"start" = "fecha de inicio :";
+// 시작 날짜(캘린더 앱 참고)
+"start" = "Empieza :";
 
-// 종료 날짜
-"end" = "fecha de fin :";
+// 종료 날짜(캘린더 앱 참고)
+"end" = "Termina :";
 
 // 계산하기
-"calculate" = "calcular";
+"calculate" = "Calcular";
 
 // 설정(설정 앱 참고)
 "settings" = "Ajustes";

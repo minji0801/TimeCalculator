@@ -6,14 +6,14 @@
   French(프랑스어)
 */
 
-// 시작 날짜
-"start" = "date de début :";
+// 시작 날짜(캘린더 앱 참고)
+"start" = "Début :";
 
-// 종료 날짜
-"end" = "date de fin :";
+// 종료 날짜(캘린더 앱 참고)
+"end" = "Fin :";
 
 // 계산하기
-"calculate" = "calculer";
+"calculate" = "Calculer";
 
 // 설정(설정 앱 참고)
 "settings" = "Réglages";

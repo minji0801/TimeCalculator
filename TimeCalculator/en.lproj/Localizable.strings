@@ -6,14 +6,14 @@
   English(영어)
 */
 
-// 시작 날짜
-"start" = "start date :";
+// 시작 날짜(캘린더 앱 참고)
+"start" = "Starts :";
 
-// 종료 날짜
-"end" = "end date :";
+// 종료 날짜(캘린더 앱 참고)
+"end" = "Ends :";
 
 // 계산하기
-"calculate" = "calculate";
+"calculate" = "Calculate";
 
 // 설정(설정 앱 참고)
 "settings" = "Settings";

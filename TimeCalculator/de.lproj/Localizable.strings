@@ -3,35 +3,35 @@
   TimeCalculator
 
   Created by 김민지 on 2021/12/30.
-  Japanese(일본어)
+  German(독일어)
 */
 
 // 시작 날짜(캘린더 앱 참고)
-"start" = "開始 :";
+"start" = "Beginn :";
 
 // 종료 날짜(캘린더 앱 참고)
-"end" = "終了 :";
+"end" = "Ende :";
 
 // 계산하기
-"calculate" = "計算する";
+"calculate" = "Berechnen";
 
 // 설정(설정 앱 참고)
-"settings" = "設定";
+"settings" = "Einstellungen";
 
 // 다크 모드(설정 앱 참고)
-"dark" = "ダーク";
+"dark" = "Dunkel";
 
 // 소리(설정 앱 참고)
-"sound" = "サウンド";
+"sound" = "Ton";
 
 // 앱 평가(Hours 참고)
-"review" = "アプリを評価する";
+"review" = "App bewerten";
 
 // 피드백 보내기(Hours 참고)
-"feedback" = "フィードバックを送る";
+"feedback" = "Senden Sie einen kommentar";
 
 // 언어(설정 앱 참고)
-"language" = "言語";
+"language" = "Sprache";
 
 // 뒤로가기(Hidden Folks 참고)
-"back" = "戻る";
+"back" = "Zurück";
