@@ -389,8 +389,20 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="t4G-1y-VtI">
                                         <rect key="frame" x="0.0" y="151.5" width="354" height="55.5"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rgj-wr-trX" customClass="SettingButton" customModule="TimeCalculator" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cfj-Mf-5wl" customClass="SettingButton" customModule="TimeCalculator" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="167" height="55.5"/>
+                                                <color key="tintColor" systemColor="labelColor"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Français"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSetting" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="languageButtonTapped:" destination="DQc-NT-tPx" eventType="touchUpInside" id="D4f-RQ-hJe"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rgj-wr-trX" customClass="SettingButton" customModule="TimeCalculator" customModuleProvider="target">
+                                                <rect key="frame" x="187" y="0.0" width="167" height="55.5"/>
                                                 <color key="tintColor" systemColor="labelColor"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="한국어"/>
@@ -399,18 +411,6 @@
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="languageButtonTapped:" destination="DQc-NT-tPx" eventType="touchUpInside" id="Gq2-oZ-sM9"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cfj-Mf-5wl" customClass="SettingButton" customModule="TimeCalculator" customModuleProvider="target">
-                                                <rect key="frame" x="187" y="0.0" width="167" height="55.5"/>
-                                                <color key="tintColor" systemColor="labelColor"/>
-                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" title="프랑스어"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSetting" value="YES"/>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="languageButtonTapped:" destination="DQc-NT-tPx" eventType="touchUpInside" id="D4f-RQ-hJe"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -430,6 +430,7 @@
                     <connections>
                         <outlet property="chineseButton" destination="tBF-Ic-Aft" id="YTT-lR-Iib"/>
                         <outlet property="englishButton" destination="FXB-o3-wde" id="zFD-IU-JC3"/>
+                        <outlet property="frenchButton" destination="cfj-Mf-5wl" id="Tud-v1-Z2A"/>
                         <outlet property="japaneseButton" destination="tGm-63-gsB" id="K9a-c1-9J6"/>
                         <outlet property="koreanButton" destination="rgj-wr-trX" id="j3n-Ck-88Z"/>
                         <outlet property="spanishButton" destination="0Kj-7H-Iip" id="nAa-mC-9Zo"/>
@@ -881,7 +882,7 @@
             <size key="intrinsicContentSize" width="30" height="49"/>
         </designable>
         <designable name="cfj-Mf-5wl">
-            <size key="intrinsicContentSize" width="52" height="31"/>
+            <size key="intrinsicContentSize" width="62" height="31"/>
         </designable>
         <designable name="eqJ-aU-9sb">
             <size key="intrinsicContentSize" width="30" height="49"/>
