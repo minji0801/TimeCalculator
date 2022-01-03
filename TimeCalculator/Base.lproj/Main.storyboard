@@ -351,9 +351,6 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tGm-63-gsB" customClass="SettingButton" customModule="TimeCalculator" customModuleProvider="target">
                                                 <rect key="frame" x="242.5" y="0.0" width="111.5" height="37.5"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="tGm-63-gsB" secondAttribute="height" multiplier="3:1" id="Qtr-cM-42B"/>
-                                                </constraints>
                                                 <color key="tintColor" systemColor="labelColor"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="日本語"/>
@@ -371,9 +368,6 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Kj-7H-Iip" customClass="SettingButton" customModule="TimeCalculator" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="111.5" height="37"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="0Kj-7H-Iip" secondAttribute="height" multiplier="3:1" id="QsO-so-TfC"/>
-                                                </constraints>
                                                 <color key="tintColor" systemColor="labelColor"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Español"/>
@@ -458,7 +452,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="111.5" height="37"/>
                                                 <color key="tintColor" systemColor="labelColor"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" title="네덜란드어"/>
+                                                <state key="normal" title="Nederlands"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isSetting" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
@@ -535,6 +529,7 @@
                     <navigationItem key="navigationItem" id="RU6-zs-OJc"/>
                     <connections>
                         <outlet property="chineseButton" destination="tBF-Ic-Aft" id="YTT-lR-Iib"/>
+                        <outlet property="dutchButton" destination="tia-Wa-FgK" id="Q6Y-xl-aXq"/>
                         <outlet property="englishButton" destination="FXB-o3-wde" id="zFD-IU-JC3"/>
                         <outlet property="frenchButton" destination="cfj-Mf-5wl" id="Tud-v1-Z2A"/>
                         <outlet property="germanButton" destination="cex-NL-6Hi" id="oRc-AR-gMX"/>
@@ -960,6 +955,9 @@
         <designable name="0Gn-Ao-2Rx">
             <size key="intrinsicContentSize" width="27.5" height="37"/>
         </designable>
+        <designable name="0Kj-7H-Iip">
+            <size key="intrinsicContentSize" width="54" height="30"/>
+        </designable>
         <designable name="0rt-Gl-gOH">
             <size key="intrinsicContentSize" width="94" height="30"/>
         </designable>
@@ -1039,7 +1037,7 @@
             <size key="intrinsicContentSize" width="46" height="30"/>
         </designable>
         <designable name="tia-Wa-FgK">
-            <size key="intrinsicContentSize" width="65" height="30"/>
+            <size key="intrinsicContentSize" width="79" height="30"/>
         </designable>
         <designable name="vJX-Y6-DBe">
             <size key="intrinsicContentSize" width="25" height="37"/>

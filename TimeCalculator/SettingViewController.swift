@@ -38,7 +38,7 @@ class SettingViewController: UIViewController {
         
         [darkModeButton, soundButton, feedbackButton, languageButton, backButton].forEach {
             $0?.layer.borderWidth = 1
-            if self.overrideUserInterfaceStyle == .light {
+            if UIScreen.main.traitCollection.userInterfaceStyle == .light {
                 $0?.layer.borderColor = UIColor.black.cgColor
             } else {
                 $0?.layer.borderColor = UIColor.white.cgColor

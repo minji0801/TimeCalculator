@@ -1,0 +1,37 @@
+/* 
+  Localizable.strings
+  TimeCalculator
+
+  Created by 김민지 on 2021/12/30.
+  Dutch(네덜란드어)
+*/
+
+// 시작 날짜(캘린더 앱 참고)
+"start" = "Begin :";
+
+// 종료 날짜(캘린더 앱 참고)
+"end" = "Einde :";
+
+// 계산하기
+"calculate" = "Berekenen";
+
+// 설정(설정 앱 참고)
+"settings" = "Instellingen";
+
+// 다크 모드(설정 앱 참고)
+"dark" = "Donker";
+
+// 소리(설정 앱 참고)
+"sound" = "Geluid";
+
+// 앱 평가(Hours 참고)
+"review" = "Beoordeel de app";
+
+// 피드백 보내기(Hours 참고)
+"feedback" = "Feedback sturen";
+
+// 언어(설정 앱 참고)
+"language" = "Taal";
+
+// 뒤로가기(Hidden Folks 참고)
+"back" = "Terug";
