@@ -3,35 +3,35 @@
   TimeCalculator
 
   Created by 김민지 on 2021/12/30.
-  Thai(태국어)
+ Vietnamese(베트남어)
 */
 
 // 시작 날짜(캘린더 앱 참고)
-"start" = "เริ่ม :";
+"start" = "Bắt đầu :";
 
 // 종료 날짜(캘린더 앱 참고)
-"end" = "สิ้นสุด :";
+"end" = "Kết thúc :";
 
 // 계산하기
-"calculate" = "คำนวณ";
+"calculate" = "Tính toán";
 
 // 설정(설정 앱 참고)
-"settings" = "การตั้งค่า";
+"settings" = "Cài đặt";
 
 // 다크 모드(설정 앱 참고)
-"dark" = "มืด";
+"dark" = "Tối";
 
 // 소리(설정 앱 참고)
-"sound" = "เสียง";
+"sound" = "Âm thanh";
 
 // 앱 평가(Hours 참고)
-"review" = "ให้คะแนนแอป";
+"review" = "Đánh giá ứng dụng";
 
 // 피드백 보내기(Hours 참고)
-"feedback" = "ส่งความคิดเห็น";
+"feedback" = "Gửi phản hồi";
 
 // 언어(설정 앱 참고)
-"language" = "ภาษา";
+"language" = "Ngôn ngữ";
 
 // 뒤로가기(Hidden Folks 참고)
-"back" = "กลับ";
+"back" = "Trở về";

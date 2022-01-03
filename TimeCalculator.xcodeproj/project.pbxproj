@@ -30,6 +30,7 @@
 		A528F4D427798E3700034F36 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		A52F203B2782A03E0038E643 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A52F203C2782A4360038E643 /* th */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = th; path = th.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A52F203D2782A5D90038E643 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A5649A4F277440BD00A77CF2 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		A569A9E5276710BF00435CF0 /* TimeCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A569A9E8276710BF00435CF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -178,6 +179,7 @@
 				ru,
 				it,
 				th,
+				vi,
 			);
 			mainGroup = A569A9DC276710BF00435CF0;
 			productRefGroup = A569A9E6276710BF00435CF0 /* Products */;
@@ -238,6 +240,7 @@
 				A56DFFE72781B3B2005EF6E5 /* ru */,
 				A52F203B2782A03E0038E643 /* it */,
 				A52F203C2782A4360038E643 /* th */,
+				A52F203D2782A5D90038E643 /* vi */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
