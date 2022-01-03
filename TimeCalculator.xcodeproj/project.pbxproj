@@ -28,6 +28,7 @@
 		A523248F277D746900282987 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A52445DB277C4C6E00BB378F /* LanguageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageViewController.swift; sourceTree = "<group>"; };
 		A528F4D427798E3700034F36 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		A52F203B2782A03E0038E643 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A5649A4F277440BD00A77CF2 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		A569A9E5276710BF00435CF0 /* TimeCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A569A9E8276710BF00435CF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -174,6 +175,7 @@
 				fr,
 				de,
 				ru,
+				it,
 			);
 			mainGroup = A569A9DC276710BF00435CF0;
 			productRefGroup = A569A9E6276710BF00435CF0 /* Products */;
@@ -232,6 +234,7 @@
 				A56DFFE52781934E005EF6E5 /* fr */,
 				A56DFFE627819879005EF6E5 /* de */,
 				A56DFFE72781B3B2005EF6E5 /* ru */,
+				A52F203B2782A03E0038E643 /* it */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
