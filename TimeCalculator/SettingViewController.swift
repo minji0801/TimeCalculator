@@ -23,6 +23,7 @@ class SettingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.setLanguage()
         self.versionLabel.text = "iOS v\(getCurrentVersion()) build \(getBuildNumber())"
         
@@ -33,15 +34,17 @@ class SettingViewController: UIViewController {
         super.viewWillAppear(animated)
         AppearanceCheck(self)
         
-        reviewButton.layer.borderColor = UIColor.systemGray.cgColor
-        reviewButton.layer.borderWidth = 1
+//        reviewButton.layer.borderColor = UIColor.systemGray.cgColor
+//        reviewButton.layer.borderWidth = 1
+        
+        let appearance = UserDefaults.standard.bool(forKey: "Dark")
         
         [darkModeButton, soundButton, feedbackButton, languageButton, backButton].forEach {
             $0?.layer.borderWidth = 1
-            if UIScreen.main.traitCollection.userInterfaceStyle == .light {
-                $0?.layer.borderColor = UIColor.black.cgColor
-            } else {
+            if appearance {
                 $0?.layer.borderColor = UIColor.white.cgColor
+            } else {
+                $0?.layer.borderColor = UIColor.black.cgColor
             }
         }
     }
@@ -61,10 +64,12 @@ class SettingViewController: UIViewController {
     
     // 다크모드 버튼 클릭 시
     @IBAction func darkModeButtonTapped(_ sender: UIButton) {
-        if self.overrideUserInterfaceStyle == .light {
-            UserDefaults.standard.set("Dark", forKey: "Appearance")
+        let appearance = UserDefaults.standard.bool(forKey: "Dark")
+        
+        if appearance {
+            UserDefaults.standard.set(false, forKey: "Dark")
         } else {
-            UserDefaults.standard.set("Light", forKey: "Appearance")
+            UserDefaults.standard.set(true, forKey: "Dark")
         }
         self.viewWillAppear(true)
     }

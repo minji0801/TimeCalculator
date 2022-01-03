@@ -10,8 +10,9 @@ import UIKit
 
 // UserDefaults에 저장된 값을 통해 다크모드 확인하는 메소드
 func AppearanceCheck(_ viewController: UIViewController) {
-    guard let appearance = UserDefaults.standard.string(forKey: "Appearance") else { return }
-    if appearance == "Dark" {
+    let appearance = UserDefaults.standard.bool(forKey: "Dark")
+    
+    if appearance {
         viewController.overrideUserInterfaceStyle = .dark
         if #available(iOS 13.0, *) {
             UIApplication.shared.statusBarStyle = .lightContent

@@ -28,12 +28,14 @@ class LanguageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let appearance = UserDefaults.standard.bool(forKey: "Dark")
+        
         [englishButton, chineseButton, japaneseButton, spanishButton, frenchButton, germanButton, russianButton, italianButton, koreanButton, dutchButton, thaiButton, vietnameseButton, indonesianButton].forEach {
             $0?.layer.borderWidth = 1
-            if UIScreen.main.traitCollection.userInterfaceStyle == .light {
-                $0?.layer.borderColor = UIColor.black.cgColor
-            } else {
+            if appearance {
                 $0?.layer.borderColor = UIColor.white.cgColor
+            } else {
+                $0?.layer.borderColor = UIColor.black.cgColor
             }
         }
     }
