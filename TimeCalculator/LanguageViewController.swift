@@ -22,11 +22,12 @@ class LanguageViewController: UIViewController {
     @IBOutlet weak var koreanButton: UIButton!
     @IBOutlet weak var thaiButton: UIButton!
     @IBOutlet weak var vietnameseButton: UIButton!
+    @IBOutlet weak var indonesianButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        [englishButton, chineseButton, japaneseButton, spanishButton, frenchButton, germanButton, russianButton, italianButton, koreanButton, thaiButton, vietnameseButton].forEach {
+        [englishButton, chineseButton, japaneseButton, spanishButton, frenchButton, germanButton, russianButton, italianButton, koreanButton, thaiButton, vietnameseButton, indonesianButton].forEach {
             $0?.layer.borderWidth = 1
             if self.overrideUserInterfaceStyle == .light {
                 $0?.layer.borderColor = UIColor.black.cgColor
@@ -73,6 +74,8 @@ class LanguageViewController: UIViewController {
             UserDefaults.standard.set(["th"], forKey: "Language")
         case "Tiếng Việt":
             UserDefaults.standard.set(["vi"], forKey: "Language")
+        case "Bahasa Indonesia":
+            UserDefaults.standard.set(["id"], forKey: "Language")
         default:
             break
         }
