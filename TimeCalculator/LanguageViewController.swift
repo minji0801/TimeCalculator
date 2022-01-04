@@ -26,13 +26,14 @@ class LanguageViewController: UIViewController {
     @IBOutlet weak var danishButton: UIButton!
     @IBOutlet weak var vietnameseButton: UIButton!
     @IBOutlet weak var indonesianButton: UIButton!
+    @IBOutlet weak var norwegianButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let appearance = UserDefaults.standard.bool(forKey: "Dark")
         
-        [englishButton, chineseButton, japaneseButton, spanishButton, frenchButton, germanButton, russianButton, italianButton, koreanButton, dutchButton, thaiButton, swedishButton, danishButton,  vietnameseButton, indonesianButton].forEach {
+        [englishButton, chineseButton, japaneseButton, spanishButton, frenchButton, germanButton, russianButton, italianButton, koreanButton, dutchButton, thaiButton, swedishButton, danishButton,  vietnameseButton, indonesianButton, norwegianButton].forEach {
             $0?.layer.borderWidth = 1
             if appearance {
                 $0?.layer.borderColor = UIColor.white.cgColor
@@ -87,6 +88,8 @@ class LanguageViewController: UIViewController {
             UserDefaults.standard.set(["vi"], forKey: "Language")
         case "Bahasa Indonesia":
             UserDefaults.standard.set(["id"], forKey: "Language")
+        case "Norsk Bokmål":
+            UserDefaults.standard.set(["nb"], forKey: "Language")
         default:
             break
         }

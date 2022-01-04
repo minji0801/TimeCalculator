@@ -35,6 +35,7 @@
 		A52F203F2782B3850038E643 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A543FAF527841593006B71E7 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A543FAF6278416F6006B71E7 /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A543FAF72784193B006B71E7 /* nb */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nb; path = nb.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A5649A4F277440BD00A77CF2 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		A569A9E5276710BF00435CF0 /* TimeCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A569A9E8276710BF00435CF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -188,6 +189,7 @@
 				nl,
 				sv,
 				da,
+				nb,
 			);
 			mainGroup = A569A9DC276710BF00435CF0;
 			productRefGroup = A569A9E6276710BF00435CF0 /* Products */;
@@ -253,6 +255,7 @@
 				A52F203F2782B3850038E643 /* nl */,
 				A543FAF527841593006B71E7 /* sv */,
 				A543FAF6278416F6006B71E7 /* da */,
+				A543FAF72784193B006B71E7 /* nb */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
