@@ -22,6 +22,8 @@ class LanguageViewController: UIViewController {
     @IBOutlet weak var koreanButton: UIButton!
     @IBOutlet weak var dutchButton: UIButton!
     @IBOutlet weak var thaiButton: UIButton!
+    @IBOutlet weak var swedishButton: UIButton!
+    @IBOutlet weak var danishButton: UIButton!
     @IBOutlet weak var vietnameseButton: UIButton!
     @IBOutlet weak var indonesianButton: UIButton!
     
@@ -30,7 +32,7 @@ class LanguageViewController: UIViewController {
         
         let appearance = UserDefaults.standard.bool(forKey: "Dark")
         
-        [englishButton, chineseButton, japaneseButton, spanishButton, frenchButton, germanButton, russianButton, italianButton, koreanButton, dutchButton, thaiButton, vietnameseButton, indonesianButton].forEach {
+        [englishButton, chineseButton, japaneseButton, spanishButton, frenchButton, germanButton, russianButton, italianButton, koreanButton, dutchButton, thaiButton, swedishButton, danishButton,  vietnameseButton, indonesianButton].forEach {
             $0?.layer.borderWidth = 1
             if appearance {
                 $0?.layer.borderColor = UIColor.white.cgColor
@@ -77,6 +79,10 @@ class LanguageViewController: UIViewController {
             UserDefaults.standard.set(["nl"], forKey: "Language")
         case "ภาษาไทย":
             UserDefaults.standard.set(["th"], forKey: "Language")
+        case "Svenska":
+            UserDefaults.standard.set(["sv"], forKey: "Language")
+        case "Dansk":
+            UserDefaults.standard.set(["da"], forKey: "Language")
         case "Tiếng Việt":
             UserDefaults.standard.set(["vi"], forKey: "Language")
         case "Bahasa Indonesia":
