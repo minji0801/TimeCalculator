@@ -129,7 +129,12 @@ class CalculatorViewController: UIViewController {
                 // 연산 실시
                 switch self.currentOperation {
                 case .Add:
-                    self.result = "\(firstOperand + secondOperand)"
+                    // 둘다 두자리이고 두 합이 100이 넘으면 40 더하기
+                    if self.firstOperand.count == 2 && self.secondOperand.count == 2 && (firstOperand + secondOperand) > 99 {
+                        self.result = "\(firstOperand + secondOperand + 40)"
+                    } else {
+                        self.result = "\(firstOperand + secondOperand)"
+                    }
                     
                 case .Subtract:
                     self.result = String(minusOperation(self.firstOperand, self.secondOperand))
