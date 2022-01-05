@@ -10,6 +10,7 @@
 		A523248E277D746900282987 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A5232490277D746900282987 /* Localizable.strings */; };
 		A52445DC277C4C6E00BB378F /* LanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52445DB277C4C6E00BB378F /* LanguageViewController.swift */; };
 		A528F4D527798E3700034F36 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A528F4D427798E3700034F36 /* RoundButton.swift */; };
+		A55CF47727858B7C00BE53B7 /* SDSamliphopangcheTTFBasic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A55CF47527858B7C00BE53B7 /* SDSamliphopangcheTTFBasic.ttf */; };
 		A5649A50277440BD00A77CF2 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5649A4F277440BD00A77CF2 /* TabBarController.swift */; };
 		A569A9E9276710BF00435CF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A569A9E8276710BF00435CF0 /* AppDelegate.swift */; };
 		A569A9EB276710BF00435CF0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A569A9EA276710BF00435CF0 /* SceneDelegate.swift */; };
@@ -36,6 +37,7 @@
 		A543FAF527841593006B71E7 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A543FAF6278416F6006B71E7 /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A543FAF72784193B006B71E7 /* nb */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nb; path = nb.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A55CF47527858B7C00BE53B7 /* SDSamliphopangcheTTFBasic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SDSamliphopangcheTTFBasic.ttf; sourceTree = "<group>"; };
 		A5649A4F277440BD00A77CF2 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		A569A9E5276710BF00435CF0 /* TimeCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A569A9E8276710BF00435CF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				A595A4FA277AB945005D1279 /* FredokaOne-Regular.ttf */,
+				A55CF47527858B7C00BE53B7 /* SDSamliphopangcheTTFBasic.ttf */,
 			);
 			path = Font;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 			files = (
 				A569A9F5276710C000435CF0 /* LaunchScreen.storyboard in Resources */,
 				A523248E277D746900282987 /* Localizable.strings in Resources */,
+				A55CF47727858B7C00BE53B7 /* SDSamliphopangcheTTFBasic.ttf in Resources */,
 				A569A9F2276710C000435CF0 /* Assets.xcassets in Resources */,
 				A569A9F0276710BF00435CF0 /* Main.storyboard in Resources */,
 				A595A4FB277AB945005D1279 /* FredokaOne-Regular.ttf in Resources */,
