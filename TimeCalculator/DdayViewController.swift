@@ -27,6 +27,7 @@ class DdayViewController: UIViewController {
         super.viewWillAppear(animated)
         AppearanceCheck(self)
         self.setLanguage()
+        // 아랍어 인 경우에는 Label, DatePicker 위치 바꾸기
     }
     
     // 계산하기 버튼 눌렀을 때

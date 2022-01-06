@@ -18,22 +18,27 @@ class LanguageViewController: UIViewController {
     @IBOutlet weak var frenchButton: UIButton!
     @IBOutlet weak var germanButton: UIButton!
     @IBOutlet weak var russianButton: UIButton!
+    @IBOutlet weak var portugueseButton: UIButton!
     @IBOutlet weak var italianButton: UIButton!
     @IBOutlet weak var koreanButton: UIButton!
+    @IBOutlet weak var turkishButton: UIButton!
     @IBOutlet weak var dutchButton: UIButton!
+    @IBOutlet weak var arabicButton: UIButton!
     @IBOutlet weak var thaiButton: UIButton!
     @IBOutlet weak var swedishButton: UIButton!
     @IBOutlet weak var danishButton: UIButton!
     @IBOutlet weak var vietnameseButton: UIButton!
-    @IBOutlet weak var indonesianButton: UIButton!
     @IBOutlet weak var norwegianButton: UIButton!
+    @IBOutlet weak var polishButton: UIButton!
+    @IBOutlet weak var finnishButton: UIButton!
+    @IBOutlet weak var indonesianButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let appearance = UserDefaults.standard.bool(forKey: "Dark")
         
-        [englishButton, chineseButton, japaneseButton, spanishButton, frenchButton, germanButton, russianButton, italianButton, koreanButton, dutchButton, thaiButton, swedishButton, danishButton,  vietnameseButton, indonesianButton, norwegianButton].forEach {
+        [englishButton, chineseButton, japaneseButton, spanishButton, frenchButton, germanButton, russianButton, portugueseButton, italianButton, koreanButton, turkishButton, dutchButton, arabicButton, thaiButton, swedishButton, danishButton,  vietnameseButton, norwegianButton, polishButton, finnishButton,  indonesianButton,].forEach {
             $0?.layer.borderWidth = 1
             if appearance {
                 $0?.layer.borderColor = UIColor.white.cgColor
@@ -72,12 +77,18 @@ class LanguageViewController: UIViewController {
             UserDefaults.standard.set(["de"], forKey: "Language")
         case "Русский":
             UserDefaults.standard.set(["ru"], forKey: "Language")
+        case "Português (Brasil)":
+            UserDefaults.standard.set(["pt-BR"], forKey: "Language")
         case "Italiano":
             UserDefaults.standard.set(["it"], forKey: "Language")
         case "한국어":
             UserDefaults.standard.set(["ko"], forKey: "Language")
+        case "Türkçe":
+            UserDefaults.standard.set(["tr"], forKey: "Language")
         case "Nederlands":
             UserDefaults.standard.set(["nl"], forKey: "Language")
+        case "العربية":
+            UserDefaults.standard.set(["ar"], forKey: "Language")
         case "ภาษาไทย":
             UserDefaults.standard.set(["th"], forKey: "Language")
         case "Svenska":
@@ -90,6 +101,10 @@ class LanguageViewController: UIViewController {
             UserDefaults.standard.set(["id"], forKey: "Language")
         case "Norsk Bokmål":
             UserDefaults.standard.set(["nb"], forKey: "Language")
+        case "Polski":
+            UserDefaults.standard.set(["pl"], forKey: "Language")
+        case "Suomi":
+            UserDefaults.standard.set(["fi"], forKey: "Language")
         default:
             break
         }
