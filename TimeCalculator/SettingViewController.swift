@@ -99,26 +99,29 @@ class SettingViewController: UIViewController {
             composeViewController.mailComposeDelegate = self
             
             let bodyString = """
-                             이곳에 피드백을 작성해 주시면 최대한 빨리 답변해 드리겠습니다.
+                             Please write your feedback here.
+                             I will reply you as soon as possible.
+                             If there is an incorrect translation, please let me know and I will correct it.
+                             thank you :)
                              
-                             -------------------
                              
+                             
+                             ----------------------------
                              Device Model : \(self.getDeviceIdentifier())
                              Device OS : \(UIDevice.current.systemVersion)
                              App Version : \(self.getCurrentVersion())
-                             
-                             -------------------
+                             ----------------------------
                              """
             
             composeViewController.setToRecipients(["timeCalculator.help@gmail.com"])
-            composeViewController.setSubject("<시간계산기> 피드백")
+            composeViewController.setSubject("<Time Calculator> Feedback")
             composeViewController.setMessageBody(bodyString, isHTML: false)
             
             self.present(composeViewController, animated: true, completion: nil)
         } else {
             print("메일 보내기 실패")
-            let sendMailErrorAlert = UIAlertController(title: "메일 전송 실패", message: "메일을 보내려면 'Mail' 앱이 필요합니다. App Store에서 해당 앱을 복원하거나 이메일 설정을 확인하고 다시 시도해주세요.", preferredStyle: .alert)
-            let goAppStoreAction = UIAlertAction(title: "App Store로 이동하기", style: .default) { _ in
+            let sendMailErrorAlert = UIAlertController(title: "Failed to send mail", message: "You need the 'Mail' app to send mail. Please restore the app from the App Store or check your email settings and try again.", preferredStyle: .alert)
+            let goAppStoreAction = UIAlertAction(title: "Go to App Store", style: .default) { _ in
                 // 앱스토어로 이동하기(Mail)
                 if let url = URL(string: "https://apps.apple.com/kr/app/mail/id1108187098"), UIApplication.shared.canOpenURL(url) {
                     if #available(iOS 10.0, *) {
@@ -128,7 +131,7 @@ class SettingViewController: UIViewController {
                     }
                 }
             }
-            let cancleAction = UIAlertAction(title: "취소", style: .destructive, handler: nil)
+            let cancleAction = UIAlertAction(title: "Cancel", style: .destructive, handler: nil)
             
             sendMailErrorAlert.addAction(goAppStoreAction)
             sendMailErrorAlert.addAction(cancleAction)
