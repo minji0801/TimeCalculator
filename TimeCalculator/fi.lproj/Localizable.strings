@@ -3,35 +3,35 @@
   TimeCalculator
 
   Created by 김민지 on 2021/12/30.
-  Chinese, Simplified(중국어 - 간체)
+  Finnish(핀란드어)
 */
 
 // 시작 날짜(캘린더 앱 참고)
-"start" = "开始 :";
+"start" = "Alkaa :";
 
 // 종료 날짜(캘린더 앱 참고)
-"end" = "结束 :";
+"end" = "Päättyy :";
 
 // 계산하기
-"calculate" = "计算";
+"calculate" = "Laskea";
 
 // 설정(설정 앱 참고)
-"settings" = "设置";
+"settings" = "Asetukset";
 
 // 다크 모드(설정 앱 참고)
-"dark" = "深色";
+"dark" = "Tumma";
 
 // 소리(설정 앱 참고)
-"sound" = "声音";
+"sound" = "Ääni";
 
 // 앱 평가(Hours 참고)
-"review" = "为应用评分";
+"review" = "Arvioi sovellus";
 
 // 피드백 보내기(Hours 참고)
-"feedback" = "发送反馈";
+"feedback" = "Lähetä palautetta";
 
 // 언어(설정 앱 참고)
-"language" = "语言";
+"language" = "Kieli";
 
 // 뒤로가기(Hidden Folks 참고)
-"back" = "返回";
+"back" = "Takaisin";

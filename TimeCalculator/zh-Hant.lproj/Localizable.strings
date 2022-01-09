@@ -3,35 +3,35 @@
   TimeCalculator
 
   Created by 김민지 on 2021/12/30.
-  Chinese, Simplified(중국어 - 간체)
+  Chinese, Traditional(중국어 - 번체)
 */
 
 // 시작 날짜(캘린더 앱 참고)
-"start" = "开始 :";
+"start" = "開始 :";
 
 // 종료 날짜(캘린더 앱 참고)
-"end" = "结束 :";
+"end" = "結束 :";
 
 // 계산하기
-"calculate" = "计算";
+"calculate" = "計算";
 
 // 설정(설정 앱 참고)
-"settings" = "设置";
+"settings" = "設定";
 
 // 다크 모드(설정 앱 참고)
 "dark" = "深色";
 
 // 소리(설정 앱 참고)
-"sound" = "声音";
+"sound" = "聲音";
 
 // 앱 평가(Hours 참고)
-"review" = "为应用评分";
+"review" = "給應用評分";
 
 // 피드백 보내기(Hours 참고)
-"feedback" = "发送反馈";
+"feedback" = "發送反饋";
 
 // 언어(설정 앱 참고)
-"language" = "语言";
+"language" = "語言";
 
 // 뒤로가기(Hidden Folks 참고)
 "back" = "返回";
