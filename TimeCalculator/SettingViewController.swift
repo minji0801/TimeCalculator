@@ -113,8 +113,8 @@ class SettingViewController: UIViewController {
                              ----------------------------
                              """
             
-            composeViewController.setToRecipients(["timeCalculator.help@gmail.com"])
-            composeViewController.setSubject("<Time Calculator> Feedback")
+            composeViewController.setToRecipients(["hcolonours.help@gmail.com"])
+            composeViewController.setSubject("<h:ours> Feedback")
             composeViewController.setMessageBody(bodyString, isHTML: false)
             
             self.present(composeViewController, animated: true, completion: nil)
