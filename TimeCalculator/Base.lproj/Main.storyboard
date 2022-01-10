@@ -1061,7 +1061,7 @@
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="isRound" value="YES"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <segue destination="cdB-uB-GFD" kind="presentation" modalPresentationStyle="fullScreen" id="e58-UN-7FO"/>
+                                            <segue destination="cdB-uB-GFD" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="e58-UN-7FO"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BSe-QJ-jvX">
@@ -1106,10 +1106,10 @@
             </objects>
             <point key="canvasLocation" x="611.59420289855075" y="-226.33928571428569"/>
         </scene>
-        <!--View Controller-->
+        <!--History View Controller-->
         <scene sceneID="FVF-Wc-TiT">
             <objects>
-                <viewController id="cdB-uB-GFD" sceneMemberID="viewController">
+                <viewController id="cdB-uB-GFD" customClass="HistoryViewController" customModule="TimeCalculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hhc-2B-FIA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1121,11 +1121,11 @@
                                     <constraint firstAttribute="height" constant="50" id="h7E-1X-P8h"/>
                                 </constraints>
                             </view>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="휴지통 아이콘 클릭 -&gt; 지우겠습니까? Alert -&gt; '예' 하면 지우기 닫기 아이콘 클릭 -&gt; dismiss  여기에는 Userdefaults에 저장한 계산기록 보여주기" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fK0-qA-Plu">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="휴지통 아이콘 클릭 -&gt; 지우겠습니까? Alert -&gt; '예' 하면 지우기" textAlignment="right" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fK0-qA-Plu">
                                 <rect key="frame" x="10" y="104" width="394" height="698"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="SDSamliphopangcheTTFBasic" family="Sandoll Samliphopangche TTF" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Fm0-D8-5dK">
@@ -1143,6 +1143,9 @@
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="isRound" value="YES"/>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="deleteButtonTapped:" destination="cdB-uB-GFD" eventType="touchUpInside" id="ovl-Ac-NlD"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yQN-fA-VUT">
                                         <rect key="frame" x="70" y="0.0" width="254" height="50"/>
@@ -1164,6 +1167,9 @@
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="isRound" value="YES"/>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="dismissButtonTapped:" destination="cdB-uB-GFD" eventType="touchUpInside" id="G0X-6A-9g0"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -1187,6 +1193,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="YXx-cH-giv"/>
+                    <connections>
+                        <outlet property="historyTextView" destination="fK0-qA-Plu" id="dRs-xg-CL0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zvq-l8-Ph3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -26,16 +26,12 @@ class CalculatorViewController: UIViewController {
     var result = ""
     var currentOperation: Operation = .unknown
     
+    var formula = ""                // 계산식 담는 문자열
+    var isClickedOperation = false  // 연산자 버튼이 눌렸는지
+    var isClickedEqual = false      // = 기호 눌렀는지
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // 폰트 체크 하기
-//        UIFont.familyNames.sorted().forEach{ familyName in
-//            print("*** \(familyName) ***")
-//            UIFont.fontNames(forFamilyName: familyName).forEach { fontName in
-//                print("\(fontName)")
-//            }
-//            print("---------------------")
-//        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -54,6 +50,26 @@ class CalculatorViewController: UIViewController {
     
     // 숫자 버튼 눌렀을 때
     @IBAction func numberButtonTapped(_ sender: UIButton) {
+        if self.isClickedOperation {
+            if self.secondOperand.isEmpty || isClickedEqual {
+                // 첫번째 연산자 가져오는 경우 -> 두번째 연산자가 없을 때랑 = 기호 누른 후 추가로 연산할 때
+                formula = updateLabel(self.firstOperand)
+            } else {
+                formula += updateLabel(self.secondOperand)
+            }
+            
+            switch self.currentOperation {
+            case .Add:
+                formula += " + "
+            case .Subtract:
+                formula += " - "
+            default:
+                break
+            }
+        }
+        
+        self.isClickedOperation = false
+        
         guard let numberValue = sender.title(for: .normal) else { return }
         if displayNumber.count < 8 {
             self.displayNumber += numberValue
@@ -86,6 +102,8 @@ class CalculatorViewController: UIViewController {
         self.currentOperation = .unknown
         self.outputLabel.text = "0:00"
         self.symbolLabel.text = ""
+        self.isClickedOperation = false
+        self.isClickedEqual = false
     }
     
     // Del 버튼 눌렀을 때
@@ -112,9 +130,25 @@ class CalculatorViewController: UIViewController {
     @IBAction func equalButtonTapped(_ sender: UIButton) {
         symbolLabel.text = ""
         self.operation(self.currentOperation)
+        self.isClickedEqual = true
+        
+        // 계산 기록하기 : 계산식이 담긴 문자열(연산식 + "=" + 결과값)을 UserDefaults에 저장하기
+        // ex) 4:16 + 1:09 + 0:37 = 6:02
+        formula += "\(updateLabel(self.secondOperand)) = \(self.outputLabel.text!)"
+        
+        var history = UserDefaults.standard.array(forKey: "History") as? [String]
+        if history == nil {
+            history = [formula]
+        } else {
+            history?.append(formula)
+        }
+        UserDefaults.standard.set(history! ,forKey: "History")
+        
+        self.formula = ""
     }
     
     func operation(_ operation: Operation) {
+        self.isClickedOperation = true
         self.displayNumber = convertTimeFormat(displayNumber.map { String($0) })
         
         if self.currentOperation != .unknown {
@@ -158,6 +192,7 @@ class CalculatorViewController: UIViewController {
         }
     }
     
+    // 빼기 연산 함수
     func minusOperation(_ firstOperand: String, _ secondOperand: String) -> Int {
         // operand가 3자리 이상이고, operand의 분이 input 분보다 작을 때 무조건 -40
         var result = 0
@@ -177,7 +212,7 @@ class CalculatorViewController: UIViewController {
                 inputMinute = Int(secondOperand.joined()) ?? 0
             }
 
-            print("operandMinute = \(operandMinute), inputMinute = \(inputMinute)")
+//            print("operandMinute = \(operandMinute), inputMinute = \(inputMinute)")
             if operandMinute < inputMinute {
                 result = Int(firstOperand.joined())! - (Int(secondOperand.joined()) ?? 0) - 40
             } else {
@@ -194,6 +229,7 @@ class CalculatorViewController: UIViewController {
         return result
     }
     
+    // 시간 포맷에 맞춰 변환하는 함수
     func convertTimeFormat(_ value: [String]) -> String {
         // 시간 포맷에 맞추기 (분이 60에서 99사이라면 60을 뺀 값을 분에 적고 시에 +1 해주기)
         // 두글자 이상일 때 [6, 1] 뒤에서 두글자 가져오기
@@ -209,7 +245,7 @@ class CalculatorViewController: UIViewController {
                 }
                 operandHour = operandHour + 1
                 operandMinute = operandMinute - 60
-                print("format => \(operandHour):\(String(format: "%02d", operandMinute))")
+//                print("format => \(operandHour):\(String(format: "%02d", operandMinute))")
                 return "\(operandHour)\(String(format: "%02d", operandMinute))"
             }
         }

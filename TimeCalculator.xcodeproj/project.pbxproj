@@ -23,6 +23,7 @@
 		A595A4FB277AB945005D1279 /* FredokaOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A595A4FA277AB945005D1279 /* FredokaOne-Regular.ttf */; };
 		A595A507277AC88F005D1279 /* SettingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A595A506277AC88F005D1279 /* SettingButton.swift */; };
 		A5CBF44B276B48FA002C3A87 /* DdayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CBF44A276B48FA002C3A87 /* DdayViewController.swift */; };
+		A5FD7E09278BE95E0078D907 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FD7E08278BE95E0078D907 /* HistoryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,7 @@
 		A5E7F2A727867D46003A3AED /* fi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fi; path = fi.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A5E7F2A827867E27003A3AED /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		A5E7F2A9278682D6003A3AED /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A5FD7E08278BE95E0078D907 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 				A5CBF44A276B48FA002C3A87 /* DdayViewController.swift */,
 				A56AF274276C67270043FD12 /* SettingViewController.swift */,
 				A52445DB277C4C6E00BB378F /* LanguageViewController.swift */,
+				A5FD7E08278BE95E0078D907 /* HistoryViewController.swift */,
 				A56AF276276C81FF0043FD12 /* Method */,
 				A52445DD277C4CD900BB378F /* Button */,
 				A595A4ED277AB1C4005D1279 /* Font */,
@@ -244,6 +247,7 @@
 				A528F4D527798E3700034F36 /* RoundButton.swift in Sources */,
 				A569A9E9276710BF00435CF0 /* AppDelegate.swift in Sources */,
 				A56AF278276C82180043FD12 /* UIConfigure.swift in Sources */,
+				A5FD7E09278BE95E0078D907 /* HistoryViewController.swift in Sources */,
 				A5649A50277440BD00A77CF2 /* TabBarController.swift in Sources */,
 				A569A9FD27671A8100435CF0 /* CalculatorViewController.swift in Sources */,
 				A569A9EB276710BF00435CF0 /* SceneDelegate.swift in Sources */,
