@@ -14,28 +14,40 @@ class HistoryViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        guard let history = UserDefaults.standard.array(forKey: "History") as? [String] else { return }
-        
-        history.forEach {
-            text += """
-                    \($0) \n\n
-                    """
-        }
-        
-        historyTextView.text = self.text
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         AppearanceCheck(self)
+        
+        guard let history = UserDefaults.standard.array(forKey: "History") as? [String] else { return }
+        
+        if history.isEmpty {
+            self.text = ""
+        } else {
+            history.forEach {
+                self.text += """
+                             \($0) \n\n
+                             """
+            }
+        }
+        historyTextView.text = self.text
     }
     
     // 휴지통 버튼 클릭시
     @IBAction func deleteButtonTapped(_ sender: UIButton) {
-        // Alert 띄우기
-        // UserDefaults에 History 모두 지우고 화면 Reload하기
+        let alert = UIAlertController(title: "Delete history", message: "Would you like to clear the calculation history?", preferredStyle: .alert)
+        let noAction = UIAlertAction(title: "No", style: .destructive, handler: nil)
+        let yesAction = UIAlertAction(title: "Yes", style: .default) { _ in
+            UserDefaults.standard.set([], forKey: "History")
+            DispatchQueue.main.async {
+                self.viewWillAppear(true)
+            }
+        }
         
+        alert.addAction(noAction)
+        alert.addAction(yesAction)
+        self.present(alert, animated: true, completion: nil)
     }
 
     // 닫기 버튼 클릭시

@@ -1121,7 +1121,7 @@
                                     <constraint firstAttribute="height" constant="50" id="h7E-1X-P8h"/>
                                 </constraints>
                             </view>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="휴지통 아이콘 클릭 -&gt; 지우겠습니까? Alert -&gt; '예' 하면 지우기" textAlignment="right" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fK0-qA-Plu">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="right" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fK0-qA-Plu">
                                 <rect key="frame" x="10" y="104" width="394" height="698"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
