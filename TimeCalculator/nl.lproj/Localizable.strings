@@ -35,3 +35,9 @@
 
 // 뒤로가기(Hidden Folks 참고)
 "back" = "Terug";
+
+// 계산 기록 삭제 Alert 창
+"delete_history_title" = "Verwijder geschiedenis";
+"delete_history_message" = "Wilt u de berekeningsgeschiedenis wissen?";
+"delete_history_no" = "Nee";
+"delete_history_yes" = "Ja";

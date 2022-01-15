@@ -35,3 +35,9 @@
 
 // 뒤로가기(Hidden Folks 참고)
 "back" = "뒤로가기";
+
+// 계산 기록 삭제 Alert 창
+"delete_history_title" = "기록 삭제";
+"delete_history_message" = "계산 내역을 지우시겠습니까?";
+"delete_history_no" = "아니요";
+"delete_history_yes" = "네";

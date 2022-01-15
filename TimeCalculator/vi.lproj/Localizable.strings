@@ -35,3 +35,9 @@
 
 // 뒤로가기(Hidden Folks 참고)
 "back" = "Trở về";
+
+// 계산 기록 삭제 Alert 창
+"delete_history_title" = "Xóa lịch sử";
+"delete_history_message" = "Bạn có muốn xóa lịch sử tính toán không?";
+"delete_history_no" = "Không";
+"delete_history_yes" = "Vâng";

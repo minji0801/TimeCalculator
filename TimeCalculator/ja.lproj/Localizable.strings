@@ -35,3 +35,9 @@
 
 // 뒤로가기(Hidden Folks 참고)
 "back" = "戻る";
+
+// 계산 기록 삭제 Alert 창
+"delete_history_title" = "履歴を削除する";
+"delete_history_message" = "計算履歴をクリアしますか？";
+"delete_history_no" = "いいえ";
+"delete_history_yes" = "はい";

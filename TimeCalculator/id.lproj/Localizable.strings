@@ -35,3 +35,9 @@
 
 // 뒤로가기(Hidden Folks 참고)
 "back" = "Kembali";
+
+// 계산 기록 삭제 Alert 창
+"delete_history_title" = "Hapus riwayat";
+"delete_history_message" = "Apakah Anda ingin menghapus riwayat penghitungan?";
+"delete_history_no" = "Tidak";
+"delete_history_yes" = "Ya";
