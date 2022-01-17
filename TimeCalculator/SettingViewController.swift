@@ -188,6 +188,7 @@ class SettingViewController: UIViewController {
             let str = String(NSLocale.preferredLanguages[0])
             language = String(str.dropLast(3))
         }
+        
         let path = Bundle.main.path(forResource: language, ofType: "lproj") ?? Bundle.main.path(forResource: "en", ofType: "lproj")
         let bundle = Bundle(path: path!)
         print(language!)
