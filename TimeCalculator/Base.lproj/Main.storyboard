@@ -80,7 +80,7 @@
                                     <action selector="calculateButtonTapped:" destination="NWT-X2-Y8n" eventType="touchUpInside" id="MYl-yn-I5O"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4G0-0K-hra">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4G0-0K-hra">
                                 <rect key="frame" x="0.0" y="763" width="414" height="50"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <constraints>
@@ -104,6 +104,21 @@
                                     <constraint firstItem="CUv-I8-g24" firstAttribute="centerY" secondItem="tRV-7n-rs2" secondAttribute="centerY" id="xLT-94-C4g"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3cu-FO-IRR">
+                                <rect key="frame" x="354" y="54" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ZJ5-eH-90Z"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="systemGrayColor"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="refresh"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isRound" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="refreshButtonTapped:" destination="NWT-X2-Y8n" eventType="touchUpInside" id="Qkd-qy-ae5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="va6-Di-i5C"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -113,12 +128,15 @@
                             <constraint firstItem="pV5-j3-hvV" firstAttribute="leading" secondItem="va6-Di-i5C" secondAttribute="leading" constant="10" id="FSY-rm-V3P"/>
                             <constraint firstItem="tRV-7n-rs2" firstAttribute="top" secondItem="va6-Di-i5C" secondAttribute="top" id="Fwy-CS-gHN"/>
                             <constraint firstItem="4G0-0K-hra" firstAttribute="leading" secondItem="va6-Di-i5C" secondAttribute="leading" id="NEb-vF-cUb"/>
+                            <constraint firstItem="3cu-FO-IRR" firstAttribute="width" secondItem="3cu-FO-IRR" secondAttribute="height" multiplier="1:1" id="TW8-38-P0k"/>
                             <constraint firstItem="pV5-j3-hvV" firstAttribute="top" secondItem="Dic-V1-RR8" secondAttribute="bottom" constant="30" id="WVY-BQ-z5M"/>
                             <constraint firstItem="4G0-0K-hra" firstAttribute="top" secondItem="pV5-j3-hvV" secondAttribute="bottom" constant="10" id="WzC-6u-0pg"/>
                             <constraint firstAttribute="trailing" secondItem="Dic-V1-RR8" secondAttribute="trailing" constant="20" id="Xau-HA-ZmN"/>
                             <constraint firstItem="va6-Di-i5C" firstAttribute="trailing" secondItem="pV5-j3-hvV" secondAttribute="trailing" constant="10" id="bmq-D6-jUr"/>
                             <constraint firstItem="va6-Di-i5C" firstAttribute="trailing" secondItem="tRV-7n-rs2" secondAttribute="trailing" id="gCH-e2-vZE"/>
+                            <constraint firstItem="3cu-FO-IRR" firstAttribute="top" secondItem="va6-Di-i5C" secondAttribute="top" constant="10" id="kFs-hj-OG7"/>
                             <constraint firstItem="4G0-0K-hra" firstAttribute="trailing" secondItem="va6-Di-i5C" secondAttribute="trailing" id="m2c-2K-zzR"/>
+                            <constraint firstItem="va6-Di-i5C" firstAttribute="trailing" secondItem="3cu-FO-IRR" secondAttribute="trailing" constant="10" id="qw3-t0-Am8"/>
                             <constraint firstItem="Dic-V1-RR8" firstAttribute="leading" secondItem="va6-Di-i5C" secondAttribute="leading" constant="20" id="sTw-r6-5p5"/>
                             <constraint firstItem="Dic-V1-RR8" firstAttribute="top" secondItem="tRV-7n-rs2" secondAttribute="bottom" id="yHH-Zh-1zs"/>
                         </constraints>
@@ -1010,7 +1028,7 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oyy-vn-67g">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oyy-vn-67g">
                                 <rect key="frame" x="0.0" y="763" width="414" height="50"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <constraints>
@@ -1380,6 +1398,7 @@
         <image name="history" width="24" height="24"/>
         <image name="minus" catalog="system" width="128" height="24"/>
         <image name="plus" catalog="system" width="128" height="113"/>
+        <image name="refresh" width="24" height="24"/>
         <image name="setting" width="24" height="24"/>
         <namedColor name="AccentColor">
             <color red="0.40299999713897705" green="0.40999999642372131" blue="0.67199999094009399" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

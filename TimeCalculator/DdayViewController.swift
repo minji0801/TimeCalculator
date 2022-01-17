@@ -25,12 +25,18 @@ class DdayViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        AppearanceCheck(self)
         self.setLanguage()
-        // 아랍어 인 경우에는 Label, DatePicker 위치 바꾸기
+        AppearanceCheck(self)
     }
     
-    // 계산하기 버튼 눌렀을 때
+    // 새로고침
+    @IBAction func refreshButtonTapped(_ sender: UIButton) {
+        self.startDatePicker.date = Date()
+        self.endDatePicker.date = Date()
+        self.ddayLabel.text = "D - DAY"
+    }
+    
+    // 계산하기
     @IBAction func calculateButtonTapped(_ sender: UIButton) {
         let soundOff = UserDefaults.standard.bool(forKey: "SoundOff")
         if !soundOff {
@@ -42,6 +48,7 @@ class DdayViewController: UIViewController {
         ddayLabel.text = "D \(day)"
     }
     
+    // 디데이 계산
     func calculationDday() -> String {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd"
