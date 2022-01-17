@@ -37,7 +37,16 @@
 "back" = "Back";
 
 // 계산 기록 삭제 Alert 창
-"delete_history_title" = "Delete history";
-"delete_history_message" = "Do you want to clear the calculation history?";
+"delete_history_title" = "Delete the record";
+"delete_history_message" = "Do you want to erase the calculation record?";
 "delete_history_no" = "No";
 "delete_history_yes" = "Yes";
+
+// 피드백 보내기 Alert 창
+"send_feedback_title" = "Failed to send mail";
+"send_feedback_message" = "You need the 'Mail' app to send mail. Please restore the app from the App Store or check your email settings and try again.";
+"send_feedbacky_go" = "Go to App Store";
+"send_feedback_cancle" = "Cancel";
+
+// 언어 화면 NotiLabel Text
+"language_noti" = "More languages will be supported in the future.";

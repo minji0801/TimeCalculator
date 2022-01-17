@@ -58,6 +58,7 @@ class DdayViewController: UIViewController {
             return "- DAY"
         } else {
             let result = Calendar.current.dateComponents([.day], from: endDatePicker.date, to: startDatePicker.date).day!
+            print("result = \(result)")
             if result > 0 {
                 return "+ \(result)"
             } else {

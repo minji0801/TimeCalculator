@@ -41,3 +41,12 @@
 "delete_history_message" = "Vuoi cancellare la cronologia dei calcoli?";
 "delete_history_no" = "No";
 "delete_history_yes" = "sì";
+
+// 피드백 보내기 Alert 창
+"send_feedback_title" = "";
+"send_feedback_message" = "";
+"send_feedbacky_go" = "";
+"send_feedback_cancle" = "";
+
+// 언어 화면 NotiLabel Text
+"language_noti" = "";

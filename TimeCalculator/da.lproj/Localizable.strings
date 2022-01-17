@@ -36,9 +36,17 @@
 // 뒤로가기(Hidden Folks 참고)
 "back" = "Tilbage";
 
-
 // 계산 기록 삭제 Alert 창
 "delete_history_title" = "";
 "delete_history_message" = "";
 "delete_history_no" = "";
 "delete_history_yes" = "";
+
+// 피드백 보내기 Alert 창
+"send_feedback_title" = "";
+"send_feedback_message" = "";
+"send_feedbacky_go" = "";
+"send_feedback_cancle" = "";
+
+// 언어 화면 NotiLabel Text
+"language_noti" = "";

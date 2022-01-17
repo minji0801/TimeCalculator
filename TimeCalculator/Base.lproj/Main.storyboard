@@ -262,13 +262,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iOS v(Version) build (Build)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R10-rT-UvL">
-                                <rect key="frame" x="125" y="346.5" width="164" height="16"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <rect key="frame" x="132.5" y="349.5" width="149.5" height="13"/>
+                                <fontDescription key="fontDescription" name="SDSamliphopangcheTTFBasic" family="Sandoll Samliphopangche TTF" pointSize="13"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5o-7l-2Q1">
-                                <rect key="frame" x="154.5" y="286.5" width="105.5" height="60"/>
+                                <rect key="frame" x="154.5" y="289.5" width="105.5" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="HZz-jm-h0f"/>
                                 </constraints>
@@ -318,6 +318,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="More languages will be supported in the future." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fc8-Ss-MxC">
+                                <rect key="frame" x="30" y="387.5" width="354" height="12"/>
+                                <fontDescription key="fontDescription" name="SDSamliphopangcheTTFBasic" family="Sandoll Samliphopangche TTF" pointSize="12"/>
+                                <color key="textColor" systemColor="systemGrayColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="xzA-um-nrI">
                                 <rect key="frame" x="30" y="419.5" width="354" height="57"/>
                                 <subviews>
@@ -658,8 +664,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="xzA-um-nrI" firstAttribute="leading" secondItem="VwY-tq-wUO" secondAttribute="leading" constant="30" id="KLn-Y7-arX"/>
+                            <constraint firstItem="fc8-Ss-MxC" firstAttribute="trailing" secondItem="xzA-um-nrI" secondAttribute="trailing" id="Lqr-EG-asl"/>
+                            <constraint firstItem="fc8-Ss-MxC" firstAttribute="leading" secondItem="xzA-um-nrI" secondAttribute="leading" id="ONy-xS-Dvv"/>
                             <constraint firstItem="xzA-um-nrI" firstAttribute="centerY" secondItem="LBo-ke-olM" secondAttribute="centerY" id="X2A-6x-gWI"/>
                             <constraint firstItem="VwY-tq-wUO" firstAttribute="trailing" secondItem="xzA-um-nrI" secondAttribute="trailing" constant="30" id="X6V-ax-e3m"/>
+                            <constraint firstItem="xzA-um-nrI" firstAttribute="top" secondItem="fc8-Ss-MxC" secondAttribute="bottom" constant="20" id="i5i-S2-fWp"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="RU6-zs-OJc"/>
@@ -678,6 +687,7 @@
                         <outlet property="japaneseButton" destination="tGm-63-gsB" id="K9a-c1-9J6"/>
                         <outlet property="koreanButton" destination="rgj-wr-trX" id="j3n-Ck-88Z"/>
                         <outlet property="norwegianButton" destination="9NN-nt-hUB" id="zAJ-Np-VMk"/>
+                        <outlet property="notiLabel" destination="fc8-Ss-MxC" id="0mH-4a-uKv"/>
                         <outlet property="polishButton" destination="ywK-4l-3w0" id="isW-dL-9mt"/>
                         <outlet property="portugueseButton" destination="CLk-qc-Jbz" id="zb9-d5-fzg"/>
                         <outlet property="russianButton" destination="08n-5m-srM" id="XdG-Ji-AhK"/>

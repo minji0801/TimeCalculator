@@ -41,3 +41,12 @@
 "delete_history_message" = "Apakah Anda ingin menghapus riwayat penghitungan?";
 "delete_history_no" = "Tidak";
 "delete_history_yes" = "Ya";
+
+// 피드백 보내기 Alert 창
+"send_feedback_title" = "";
+"send_feedback_message" = "";
+"send_feedbacky_go" = "";
+"send_feedback_cancle" = "";
+
+// 언어 화면 NotiLabel Text
+"language_noti" = "";

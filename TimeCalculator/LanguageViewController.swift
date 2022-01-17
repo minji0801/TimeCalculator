@@ -10,7 +10,9 @@ import AVFoundation
 
 class LanguageViewController: UIViewController {
     var player: AVAudioPlayer!
-
+    
+    @IBOutlet weak var notiLabel: UILabel!
+    
     @IBOutlet weak var englishButton: UIButton!
     @IBOutlet weak var chineseHansButton: UIButton!
     @IBOutlet weak var chineseHantButton: UIButton!
@@ -37,6 +39,7 @@ class LanguageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setLanguage()
         
         let appearance = UserDefaults.standard.bool(forKey: "Dark")
         
@@ -116,4 +119,20 @@ class LanguageViewController: UIViewController {
         }
         dismiss(animated: false, completion: nil)
         NotificationCenter.default.post(name: NSNotification.Name("DismissLanguageVC"), object: nil, userInfo: nil)
-    }}
+    }
+    
+    // 언어 설정
+    func setLanguage() {
+        var language = UserDefaults.standard.array(forKey: "Language")?.first as? String
+        if language == nil {
+            let str = String(NSLocale.preferredLanguages[0])
+            language = String(str.dropLast(3))
+        }
+        let path = Bundle.main.path(forResource: language, ofType: "lproj") ?? Bundle.main.path(forResource: "en", ofType: "lproj")
+        let bundle = Bundle(path: path!)
+        print(language!)
+        print(path!)
+        
+        self.notiLabel.text = bundle?.localizedString(forKey: "language_noti", value: nil, table: nil)
+    }
+}

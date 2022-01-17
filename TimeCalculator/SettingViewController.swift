@@ -11,6 +11,8 @@ import MessageUI
 
 class SettingViewController: UIViewController {
     var player: AVAudioPlayer!
+    var alertTitle = "", alertMessage = ""
+    var goTitle = "", cancleTitle = ""
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var versionLabel: UILabel!
@@ -120,8 +122,8 @@ class SettingViewController: UIViewController {
             self.present(composeViewController, animated: true, completion: nil)
         } else {
             print("메일 보내기 실패")
-            let sendMailErrorAlert = UIAlertController(title: "Failed to send mail", message: "You need the 'Mail' app to send mail. Please restore the app from the App Store or check your email settings and try again.", preferredStyle: .alert)
-            let goAppStoreAction = UIAlertAction(title: "Go to App Store", style: .default) { _ in
+            let sendMailErrorAlert = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .alert)
+            let goAppStoreAction = UIAlertAction(title: goTitle, style: .default) { _ in
                 // 앱스토어로 이동하기(Mail)
                 if let url = URL(string: "https://apps.apple.com/kr/app/mail/id1108187098"), UIApplication.shared.canOpenURL(url) {
                     if #available(iOS 10.0, *) {
@@ -131,7 +133,7 @@ class SettingViewController: UIViewController {
                     }
                 }
             }
-            let cancleAction = UIAlertAction(title: "Cancel", style: .destructive, handler: nil)
+            let cancleAction = UIAlertAction(title: cancleTitle, style: .destructive, handler: nil)
             
             sendMailErrorAlert.addAction(goAppStoreAction)
             sendMailErrorAlert.addAction(cancleAction)
@@ -198,6 +200,12 @@ class SettingViewController: UIViewController {
         self.feedbackButton.setTitle(bundle?.localizedString(forKey: "feedback", value: nil, table: nil), for: .normal)
         self.languageButton.setTitle(bundle?.localizedString(forKey: "language", value: nil, table: nil), for: .normal)
         self.backButton.setTitle(bundle?.localizedString(forKey: "back", value: nil, table: nil), for: .normal)
+        
+        
+        self.alertTitle = bundle?.localizedString(forKey: "send_feedback_title", value: nil, table: nil) ?? ""
+        self.alertMessage = bundle?.localizedString(forKey: "send_feedback_message", value: nil, table: nil) ?? ""
+        self.goTitle = bundle?.localizedString(forKey: "send_feedbacky_go", value: nil, table: nil) ?? ""
+        self.cancleTitle = bundle?.localizedString(forKey: "send_feedback_cancle", value: nil, table: nil) ?? ""
     }
 }
 

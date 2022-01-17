@@ -38,6 +38,15 @@
 
 // 계산 기록 삭제 Alert 창
 "delete_history_title" = "기록 삭제";
-"delete_history_message" = "계산 내역을 지우시겠습니까?";
+"delete_history_message" = "계산 기록을 지우시겠습니까?";
 "delete_history_no" = "아니요";
 "delete_history_yes" = "네";
+
+// 피드백 보내기 Alert 창
+"send_feedback_title" = "메일 전송 실패";
+"send_feedback_message" = "메일을 보내려면 'Mail' 앱이 필요합니다. App Store에서 해당 앱을 복원하거나 이메일 설정을 확인하고 다시 시도해주세요.";
+"send_feedbacky_go" = "App Store로 이동하기";
+"send_feedback_cancle" = "취소";
+
+// 언어 화면 NotiLabel Text
+"language_noti" = "앞으로 더 많은 언어가 지원될 예정입니다.";
