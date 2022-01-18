@@ -50,9 +50,11 @@ class CalculatorViewController: UIViewController {
     
     // 숫자 버튼 눌렀을 때
     @IBAction func numberButtonTapped(_ sender: UIButton) {
-        if self.isClickedOperation {
+        // 계산식 바르게 만들기 위해서
+        if self.isClickedOperation {    // 계산 끝난 후 연산기호 누르면
+            
             if self.secondOperand.isEmpty || isClickedEqual {
-                // 첫번째 연산자 가져오는 경우 -> 두번째 연산자가 없을 때랑 = 기호 누른 후 추가로 연산할 때
+                // 첫번째 연산자 가져오는 경우 : 두번째 연산자가 없을 때, = 기호 누른 후 추가로 연산할 때
                 formula = updateLabel(self.firstOperand)
             } else {
                 formula += updateLabel(self.secondOperand)
@@ -65,6 +67,14 @@ class CalculatorViewController: UIViewController {
                 formula += " - "
             default:
                 break
+            }
+        } else {    // 계산 끝난 후 바로 숫자 누르면
+            if self.isClickedEqual {
+                self.firstOperand = ""
+                self.secondOperand = ""
+                self.currentOperation = .unknown
+                self.isClickedEqual = false
+                
             }
         }
         
@@ -163,8 +173,11 @@ class CalculatorViewController: UIViewController {
                 // 연산 실시
                 switch self.currentOperation {
                 case .Add:
-                    // 둘다 두자리이고 두 합이 100이 넘으면 40 더하기
-                    if self.firstOperand.count == 2 && self.secondOperand.count == 2 && (firstOperand + secondOperand) > 99 {
+                    // 둘다 분이 두자리고 두 합이 100이 넘으면 40 더하기
+                    let firstMin = self.firstOperand.suffix(2)
+                    let secondMin = self.secondOperand.suffix(2)
+                    
+                    if firstMin.count == 2 && secondMin.count == 2 && (Int(firstMin)! + Int(secondMin)!) > 99 {
                         self.result = "\(firstOperand + secondOperand + 40)"
                     } else {
                         self.result = "\(firstOperand + secondOperand)"
