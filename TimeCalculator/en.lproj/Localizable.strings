@@ -6,6 +6,12 @@
   English(영어)
 */
 
+// 튜토리얼
+"tutorial_page0" = "Calculate the time and D-day";
+"tutorial_page1" = "Check the previous calculation";
+"tutorial_page2" = "Manage the app in settings";
+"tutorial_page3" = "Reset the D-day Calculation";
+
 // 시작 날짜(캘린더 앱 참고)
 "start" = "Starts :";
 

@@ -32,6 +32,14 @@ class CalculatorViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let tutorial = UserDefaults.standard.bool(forKey: "showedTutorial")
+        if !tutorial {
+            let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+            let tutorialViewController = storyboard.instantiateViewController(withIdentifier: "TutorialViewController")
+            tutorialViewController.modalPresentationStyle = .fullScreen
+            self.present(tutorialViewController, animated: false, completion: nil)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {

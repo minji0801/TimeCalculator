@@ -6,6 +6,12 @@
  Korean(한국어)
 */
 
+// 튜토리얼
+"tutorial_page0" = "시간과 디데이를 계산해요";
+"tutorial_page1" = "이전 계산을 확인해요";
+"tutorial_page2" = "설정에서 앱을 관리해요";
+"tutorial_page3" = "디데이 계산을 초기화해요";
+
 // 시작 날짜(캘린더 앱 참고)
 "start" = "시작 :";
 
