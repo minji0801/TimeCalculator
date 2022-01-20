@@ -33,6 +33,7 @@ class CalculatorViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Check Tutorial
         let tutorial = UserDefaults.standard.bool(forKey: "showedTutorial")
         if !tutorial {
             let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
@@ -58,7 +59,7 @@ class CalculatorViewController: UIViewController {
     
     // 숫자 버튼 눌렀을 때
     @IBAction func numberButtonTapped(_ sender: UIButton) {
-        // 계산식 바르게 만들기 위해서
+        // 계산식을 올바르게 만들기 위해서
         if self.isClickedOperation {    // 계산 끝난 후 연산기호 누르면
             
             if self.secondOperand.isEmpty || isClickedEqual {
@@ -76,13 +77,13 @@ class CalculatorViewController: UIViewController {
             default:
                 break
             }
+            
         } else {    // 계산 끝난 후 바로 숫자 누르면
             if self.isClickedEqual {
                 self.firstOperand = ""
                 self.secondOperand = ""
                 self.currentOperation = .unknown
                 self.isClickedEqual = false
-                
             }
         }
         
@@ -95,6 +96,7 @@ class CalculatorViewController: UIViewController {
         }
     }
     
+    // outputLabel에 시간형식으로 값 보여주기
     func updateLabel(_ value: String) -> String {
         let value = value.map { String($0) }
         switch value.count {
@@ -165,6 +167,7 @@ class CalculatorViewController: UIViewController {
         self.formula = ""
     }
     
+    // 연산 함수
     func operation(_ operation: Operation) {
         self.isClickedOperation = true
         self.displayNumber = convertTimeFormat(displayNumber.map { String($0) })
@@ -213,7 +216,7 @@ class CalculatorViewController: UIViewController {
         }
     }
     
-    // 빼기 연산 함수
+    // 뺄셈 연산
     func minusOperation(_ firstOperand: String, _ secondOperand: String) -> Int {
         // operand가 3자리 이상이고, operand의 분이 input 분보다 작을 때 무조건 -40
         var result = 0
@@ -250,7 +253,7 @@ class CalculatorViewController: UIViewController {
         return result
     }
     
-    // 시간 포맷에 맞춰 변환하는 함수
+    // 시간 형식으로 맞춰 변환하는 함수
     func convertTimeFormat(_ value: [String]) -> String {
         // 시간 포맷에 맞추기 (분이 60에서 99사이라면 60을 뺀 값을 분에 적고 시에 +1 해주기)
         // 두글자 이상일 때 [6, 1] 뒤에서 두글자 가져오기

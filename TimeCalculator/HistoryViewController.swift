@@ -67,8 +67,6 @@ class HistoryViewController: UIViewController {
         }
         let path = Bundle.main.path(forResource: language, ofType: "lproj") ?? Bundle.main.path(forResource: "en", ofType: "lproj")
         let bundle = Bundle(path: path!)
-        print(language!)
-        print(path!)
         
         self.alertTitle = bundle?.localizedString(forKey: "delete_history_title", value: nil, table: nil) ?? ""
         self.alertMessage = bundle?.localizedString(forKey: "delete_history_message", value: nil, table: nil) ?? ""

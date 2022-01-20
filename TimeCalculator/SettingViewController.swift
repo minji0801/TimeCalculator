@@ -121,7 +121,7 @@ class SettingViewController: UIViewController {
             
             self.present(composeViewController, animated: true, completion: nil)
         } else {
-            print("메일 보내기 실패")
+//            print("메일 보내기 실패")
             let sendMailErrorAlert = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .alert)
             let goAppStoreAction = UIAlertAction(title: goTitle, style: .default) { _ in
                 // 앱스토어로 이동하기(Mail)

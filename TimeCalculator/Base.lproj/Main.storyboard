@@ -737,7 +737,7 @@
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <connections>
-                                    <action selector="skipButtonTapped:" destination="tdd-aQ-d9S" eventType="touchUpInside" id="0tv-5I-lwE"/>
+                                    <action selector="closeButtonTapped:" destination="tdd-aQ-d9S" eventType="touchUpInside" id="HNh-cE-v8H"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="시간과 디데이를 계산해요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Der-gW-tCA">
@@ -775,7 +775,6 @@
                         <outlet property="imageView" destination="wBH-sb-Uwi" id="dcu-Ud-BmV"/>
                         <outlet property="label" destination="Der-gW-tCA" id="QsA-k3-JwZ"/>
                         <outlet property="pageControl" destination="KCl-3g-k5z" id="6Or-dG-Kq1"/>
-                        <outlet property="skipButton" destination="tQr-FF-qrO" id="6Ww-7I-v80"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IRm-YI-2LL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

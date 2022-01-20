@@ -14,7 +14,6 @@ class TutorialViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var pageControl: UIPageControl!
-    @IBOutlet weak var skipButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,12 +34,13 @@ class TutorialViewController: UIViewController {
         self.view.addGestureRecognizer(swipeRight)
     }
     
-    // skip
-    @IBAction func skipButtonTapped(_ sender: UIButton) {
+    // close
+    @IBAction func closeButtonTapped(_ sender: UIButton) {
         UserDefaults.standard.set(true, forKey: "showedTutorial")
         self.dismiss(animated: false, completion: nil)
     }
     
+    // swipe
     @objc func respondToSwipeGesture(_ gesture: UIGestureRecognizer) {
         if let swipeGesture = gesture as? UISwipeGestureRecognizer {
             switch swipeGesture.direction {
@@ -72,10 +72,8 @@ class TutorialViewController: UIViewController {
             let str = String(NSLocale.preferredLanguages[0])
             language = String(str.dropLast(3))
         }
-        // Users/kimminji/Desktop/MyApp/TimeCalculator/TimeCalculator/ko.lproj/Localizable.strings
         let path = Bundle.main.path(forResource: language, ofType: "lproj") ?? Bundle.main.path(forResource: "en", ofType: "lproj")
         let bundle = Bundle(path: path!)
-        print(bundle)
         
         self.texts.append(bundle?.localizedString(forKey: "tutorial_page0", value: nil, table: nil) ?? "")
         self.texts.append(bundle?.localizedString(forKey: "tutorial_page1", value: nil, table: nil) ?? "")
