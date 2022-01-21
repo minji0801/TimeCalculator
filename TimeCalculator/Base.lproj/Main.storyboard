@@ -337,19 +337,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="More languages will be supported in the future." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fc8-Ss-MxC">
-                                <rect key="frame" x="30" y="387.5" width="354" height="12"/>
+                                <rect key="frame" x="30" y="374" width="354" height="12"/>
                                 <fontDescription key="fontDescription" name="SDSamliphopangcheTTFBasic" family="Sandoll Samliphopangche TTF" pointSize="12"/>
                                 <color key="textColor" systemColor="systemGrayColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="xzA-um-nrI">
-                                <rect key="frame" x="30" y="419.5" width="354" height="57"/>
+                                <rect key="frame" x="30" y="406" width="354" height="84"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="TGF-Y9-FDX">
-                                        <rect key="frame" x="0.0" y="0.0" width="354" height="57"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="37"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FXB-o3-wde" customClass="SettingButton" customModule="TimeCalculator" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="172" height="57"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="111.5" height="37"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="FXB-o3-wde" secondAttribute="height" multiplier="3:1" id="mmf-qr-yAK"/>
                                                 </constraints>
@@ -364,7 +364,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rgj-wr-trX" customClass="SettingButton" customModule="TimeCalculator" customModuleProvider="target">
-                                                <rect key="frame" x="182" y="0.0" width="172" height="57"/>
+                                                <rect key="frame" x="121.5" y="0.0" width="111" height="37"/>
                                                 <color key="tintColor" systemColor="labelColor"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="한국어"/>
@@ -375,8 +375,8 @@
                                                     <action selector="languageButtonTapped:" destination="DQc-NT-tPx" eventType="touchUpInside" id="Gq2-oZ-sM9"/>
                                                 </connections>
                                             </button>
-                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tGm-63-gsB" customClass="SettingButton" customModule="TimeCalculator" customModuleProvider="target">
-                                                <rect key="frame" x="354" y="0.0" width="0.0" height="57"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tGm-63-gsB" customClass="SettingButton" customModule="TimeCalculator" customModuleProvider="target">
+                                                <rect key="frame" x="242.5" y="0.0" width="111.5" height="37"/>
                                                 <color key="tintColor" systemColor="labelColor"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="日本語"/>
@@ -389,11 +389,11 @@
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="yoy-fw-Pte">
-                                        <rect key="frame" x="0.0" y="0.0" width="354" height="0.0"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="yoy-fw-Pte">
+                                        <rect key="frame" x="0.0" y="47" width="354" height="37"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tBF-Ic-Aft" customClass="SettingButton" customModule="TimeCalculator" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="111.5" height="0.0"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="172" height="37"/>
                                                 <color key="tintColor" systemColor="labelColor"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="简体中文"/>
@@ -405,7 +405,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2FP-ag-sTk" customClass="SettingButton" customModule="TimeCalculator" customModuleProvider="target">
-                                                <rect key="frame" x="121.5" y="0.0" width="111" height="0.0"/>
+                                                <rect key="frame" x="182" y="0.0" width="172" height="37"/>
                                                 <color key="tintColor" systemColor="labelColor"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="繁體中文"/>
@@ -416,8 +416,8 @@
                                                     <action selector="languageButtonTapped:" destination="DQc-NT-tPx" eventType="touchUpInside" id="Era-fe-Jdd"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Kj-7H-Iip" customClass="SettingButton" customModule="TimeCalculator" customModuleProvider="target">
-                                                <rect key="frame" x="242.5" y="0.0" width="111.5" height="0.0"/>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Kj-7H-Iip" customClass="SettingButton" customModule="TimeCalculator" customModuleProvider="target">
+                                                <rect key="frame" x="354" y="0.0" width="0.0" height="37"/>
                                                 <color key="tintColor" systemColor="labelColor"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Español"/>
@@ -431,7 +431,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="t4G-1y-VtI">
-                                        <rect key="frame" x="0.0" y="0.0" width="354" height="0.0"/>
+                                        <rect key="frame" x="0.0" y="84" width="354" height="0.0"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cfj-Mf-5wl" customClass="SettingButton" customModule="TimeCalculator" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="111.5" height="0.0"/>
@@ -472,7 +472,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="7ph-wF-5UF">
-                                        <rect key="frame" x="0.0" y="0.0" width="354" height="0.0"/>
+                                        <rect key="frame" x="0.0" y="84" width="354" height="0.0"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CLk-qc-Jbz" customClass="SettingButton" customModule="TimeCalculator" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="111.5" height="0.0"/>
@@ -513,7 +513,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qXW-TC-Twd">
-                                        <rect key="frame" x="0.0" y="0.0" width="354" height="0.0"/>
+                                        <rect key="frame" x="0.0" y="84" width="354" height="0.0"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tia-Wa-FgK" customClass="SettingButton" customModule="TimeCalculator" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="111.5" height="0.0"/>
@@ -554,7 +554,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="8wh-26-lxQ">
-                                        <rect key="frame" x="0.0" y="0.0" width="354" height="0.0"/>
+                                        <rect key="frame" x="0.0" y="84" width="354" height="0.0"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3h8-zV-LaV" customClass="SettingButton" customModule="TimeCalculator" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="111.5" height="0.0"/>
@@ -595,7 +595,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="a5i-kW-j7g">
-                                        <rect key="frame" x="0.0" y="0.0" width="354" height="0.0"/>
+                                        <rect key="frame" x="0.0" y="84" width="354" height="0.0"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ywK-4l-3w0" customClass="SettingButton" customModule="TimeCalculator" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="111.5" height="0.0"/>
@@ -636,7 +636,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="32z-g9-ERI">
-                                        <rect key="frame" x="0.0" y="0.0" width="354" height="0.0"/>
+                                        <rect key="frame" x="0.0" y="84" width="354" height="0.0"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RLN-Si-NEj" customClass="SettingButton" customModule="TimeCalculator" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="111.5" height="0.0"/>
@@ -740,8 +740,8 @@
                                     <action selector="closeButtonTapped:" destination="tdd-aQ-d9S" eventType="touchUpInside" id="HNh-cE-v8H"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="시간과 디데이를 계산해요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Der-gW-tCA">
-                                <rect key="frame" x="92.5" y="114" width="229" height="25"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="시간과 디데이를 계산해요" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Der-gW-tCA">
+                                <rect key="frame" x="20" y="114" width="374" height="25"/>
                                 <fontDescription key="fontDescription" name="SDSamliphopangcheTTFBasic" family="Sandoll Samliphopangche TTF" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -761,6 +761,7 @@
                             <constraint firstItem="tQr-FF-qrO" firstAttribute="top" secondItem="hac-V5-MNM" secondAttribute="top" id="1g1-sl-e3F"/>
                             <constraint firstItem="hac-V5-MNM" firstAttribute="bottom" secondItem="KCl-3g-k5z" secondAttribute="bottom" id="6GH-Zw-JNi"/>
                             <constraint firstItem="wBH-sb-Uwi" firstAttribute="leading" secondItem="hac-V5-MNM" secondAttribute="leading" constant="20" id="Gxp-Bq-fo6"/>
+                            <constraint firstItem="Der-gW-tCA" firstAttribute="leading" secondItem="wBH-sb-Uwi" secondAttribute="leading" id="HE2-X2-f4j"/>
                             <constraint firstItem="Der-gW-tCA" firstAttribute="top" secondItem="tQr-FF-qrO" secondAttribute="bottom" constant="20" id="HJ8-o6-O6z"/>
                             <constraint firstItem="hac-V5-MNM" firstAttribute="trailing" secondItem="tQr-FF-qrO" secondAttribute="trailing" id="YVj-Xy-qgJ"/>
                             <constraint firstItem="KCl-3g-k5z" firstAttribute="trailing" secondItem="hac-V5-MNM" secondAttribute="trailing" id="Z3m-Qn-JBy"/>
@@ -768,6 +769,7 @@
                             <constraint firstItem="Der-gW-tCA" firstAttribute="centerX" secondItem="w6N-u4-AZe" secondAttribute="centerX" id="brd-vM-kuR"/>
                             <constraint firstItem="KCl-3g-k5z" firstAttribute="top" secondItem="wBH-sb-Uwi" secondAttribute="bottom" constant="20" id="dba-dr-M69"/>
                             <constraint firstItem="KCl-3g-k5z" firstAttribute="leading" secondItem="hac-V5-MNM" secondAttribute="leading" id="etY-MC-uGb"/>
+                            <constraint firstItem="Der-gW-tCA" firstAttribute="trailing" secondItem="wBH-sb-Uwi" secondAttribute="trailing" id="jGv-pc-eXY"/>
                             <constraint firstItem="hac-V5-MNM" firstAttribute="trailing" secondItem="wBH-sb-Uwi" secondAttribute="trailing" constant="20" id="pi9-me-HfP"/>
                         </constraints>
                     </view>
@@ -1313,139 +1315,139 @@
     </scenes>
     <designables>
         <designable name="08n-5m-srM">
-            <size key="intrinsicContentSize" width="60" height="30"/>
+            <size key="intrinsicContentSize" width="63" height="27"/>
         </designable>
         <designable name="0Gn-Ao-2Rx">
-            <size key="intrinsicContentSize" width="27.5" height="18"/>
+            <size key="intrinsicContentSize" width="27.5" height="37"/>
         </designable>
         <designable name="0Kj-7H-Iip">
-            <size key="intrinsicContentSize" width="54" height="30"/>
+            <size key="intrinsicContentSize" width="51" height="27"/>
         </designable>
         <designable name="0rt-Gl-gOH">
-            <size key="intrinsicContentSize" width="94" height="30"/>
+            <size key="intrinsicContentSize" width="85" height="27"/>
         </designable>
         <designable name="1AS-68-tkK">
-            <size key="intrinsicContentSize" width="120" height="30"/>
+            <size key="intrinsicContentSize" width="109" height="27"/>
         </designable>
         <designable name="2FP-ag-sTk">
-            <size key="intrinsicContentSize" width="62" height="30"/>
+            <size key="intrinsicContentSize" width="60" height="27"/>
         </designable>
         <designable name="3h8-zV-LaV">
-            <size key="intrinsicContentSize" width="43" height="30"/>
+            <size key="intrinsicContentSize" width="39" height="27"/>
         </designable>
         <designable name="6P0-OO-20J">
-            <size key="intrinsicContentSize" width="30" height="48"/>
+            <size key="intrinsicContentSize" width="30" height="49"/>
         </designable>
         <designable name="8KU-bA-SvH">
-            <size key="intrinsicContentSize" width="43" height="30"/>
+            <size key="intrinsicContentSize" width="39" height="27"/>
         </designable>
         <designable name="9NN-nt-hUB">
-            <size key="intrinsicContentSize" width="95" height="30"/>
+            <size key="intrinsicContentSize" width="87" height="27"/>
         </designable>
         <designable name="CBN-iU-OlE">
-            <size key="intrinsicContentSize" width="30" height="48"/>
+            <size key="intrinsicContentSize" width="30" height="49"/>
         </designable>
         <designable name="CLk-qc-Jbz">
-            <size key="intrinsicContentSize" width="124" height="30"/>
+            <size key="intrinsicContentSize" width="117" height="27"/>
         </designable>
         <designable name="CN1-6y-2W2">
-            <size key="intrinsicContentSize" width="30" height="48"/>
+            <size key="intrinsicContentSize" width="30" height="49"/>
         </designable>
         <designable name="Ezx-ko-Ih3">
-            <size key="intrinsicContentSize" width="75" height="30"/>
+            <size key="intrinsicContentSize" width="68" height="27"/>
         </designable>
         <designable name="FXB-o3-wde">
-            <size key="intrinsicContentSize" width="50" height="30"/>
+            <size key="intrinsicContentSize" width="45" height="27"/>
         </designable>
         <designable name="Kp2-2A-CDA">
-            <size key="intrinsicContentSize" width="107" height="30"/>
+            <size key="intrinsicContentSize" width="94" height="27"/>
         </designable>
         <designable name="MeN-K3-oVi">
-            <size key="intrinsicContentSize" width="34" height="30"/>
+            <size key="intrinsicContentSize" width="30" height="27"/>
         </designable>
         <designable name="RLN-Si-NEj">
-            <size key="intrinsicContentSize" width="52" height="30"/>
+            <size key="intrinsicContentSize" width="52" height="27"/>
         </designable>
         <designable name="RYZ-ul-Yhd">
-            <size key="intrinsicContentSize" width="50" height="30"/>
+            <size key="intrinsicContentSize" width="47" height="27"/>
         </designable>
         <designable name="TMb-JG-3Bg">
-            <size key="intrinsicContentSize" width="30" height="48"/>
+            <size key="intrinsicContentSize" width="30" height="49"/>
         </designable>
         <designable name="UCs-vm-Sss">
-            <size key="intrinsicContentSize" width="30" height="48"/>
+            <size key="intrinsicContentSize" width="30" height="49"/>
         </designable>
         <designable name="Vng-ao-p7r">
-            <size key="intrinsicContentSize" width="70" height="30"/>
+            <size key="intrinsicContentSize" width="66" height="27"/>
         </designable>
         <designable name="XM0-CH-26r">
-            <size key="intrinsicContentSize" width="30" height="48"/>
+            <size key="intrinsicContentSize" width="30" height="49"/>
         </designable>
         <designable name="cex-NL-6Hi">
-            <size key="intrinsicContentSize" width="57" height="30"/>
+            <size key="intrinsicContentSize" width="52" height="27"/>
         </designable>
         <designable name="cfj-Mf-5wl">
-            <size key="intrinsicContentSize" width="58" height="30"/>
+            <size key="intrinsicContentSize" width="55" height="27"/>
         </designable>
         <designable name="dB8-dG-Ks0">
-            <size key="intrinsicContentSize" width="30" height="30"/>
+            <size key="intrinsicContentSize" width="30" height="27"/>
         </designable>
         <designable name="eqJ-aU-9sb">
-            <size key="intrinsicContentSize" width="30" height="48"/>
+            <size key="intrinsicContentSize" width="30" height="49"/>
         </designable>
         <designable name="fYu-zE-Vhc">
-            <size key="intrinsicContentSize" width="27.5" height="25.5"/>
+            <size key="intrinsicContentSize" width="27.5" height="37"/>
         </designable>
         <designable name="g75-cC-0a4">
-            <size key="intrinsicContentSize" width="60" height="30"/>
+            <size key="intrinsicContentSize" width="60" height="27"/>
         </designable>
         <designable name="keI-qy-7eu">
-            <size key="intrinsicContentSize" width="30" height="48"/>
+            <size key="intrinsicContentSize" width="30" height="49"/>
         </designable>
         <designable name="ngj-mo-90P">
-            <size key="intrinsicContentSize" width="39.5" height="34"/>
+            <size key="intrinsicContentSize" width="39.5" height="37"/>
         </designable>
         <designable name="o02-yY-GFx">
-            <size key="intrinsicContentSize" width="58" height="30"/>
+            <size key="intrinsicContentSize" width="53" height="27"/>
         </designable>
         <designable name="o7U-FA-3yc">
-            <size key="intrinsicContentSize" width="79" height="30"/>
+            <size key="intrinsicContentSize" width="86" height="27"/>
         </designable>
         <designable name="oWg-Kk-4FT">
-            <size key="intrinsicContentSize" width="81" height="30"/>
+            <size key="intrinsicContentSize" width="73" height="27"/>
         </designable>
         <designable name="qFx-ju-MwN">
-            <size key="intrinsicContentSize" width="30" height="48"/>
+            <size key="intrinsicContentSize" width="30" height="49"/>
         </designable>
         <designable name="qmX-CG-GFo">
-            <size key="intrinsicContentSize" width="68" height="30"/>
+            <size key="intrinsicContentSize" width="61" height="27"/>
         </designable>
         <designable name="rgj-wr-trX">
-            <size key="intrinsicContentSize" width="39" height="30"/>
+            <size key="intrinsicContentSize" width="36" height="27"/>
         </designable>
         <designable name="tBF-Ic-Aft">
-            <size key="intrinsicContentSize" width="62" height="30"/>
+            <size key="intrinsicContentSize" width="60" height="27"/>
         </designable>
         <designable name="tGm-63-gsB">
-            <size key="intrinsicContentSize" width="46" height="30"/>
+            <size key="intrinsicContentSize" width="45" height="27"/>
         </designable>
         <designable name="tia-Wa-FgK">
-            <size key="intrinsicContentSize" width="79" height="30"/>
+            <size key="intrinsicContentSize" width="72" height="27"/>
         </designable>
         <designable name="vJX-Y6-DBe">
-            <size key="intrinsicContentSize" width="25" height="21"/>
+            <size key="intrinsicContentSize" width="25" height="37"/>
         </designable>
         <designable name="vbu-21-2ew">
-            <size key="intrinsicContentSize" width="38" height="48"/>
+            <size key="intrinsicContentSize" width="42" height="49"/>
         </designable>
         <designable name="vkG-7N-7er">
-            <size key="intrinsicContentSize" width="30" height="48"/>
+            <size key="intrinsicContentSize" width="30" height="49"/>
         </designable>
         <designable name="wXz-PE-lVA">
-            <size key="intrinsicContentSize" width="47" height="30"/>
+            <size key="intrinsicContentSize" width="47" height="27"/>
         </designable>
         <designable name="ywK-4l-3w0">
-            <size key="intrinsicContentSize" width="41" height="30"/>
+            <size key="intrinsicContentSize" width="37" height="27"/>
         </designable>
     </designables>
     <resources>

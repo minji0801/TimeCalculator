@@ -7,52 +7,52 @@
 */
 
 // 튜토리얼
-"tutorial_page0" = "Calculate the time and D-day";
-"tutorial_page1" = "Check the previous calculation";
-"tutorial_page2" = "Manage the app in settings";
-"tutorial_page3" = "Reset the D-day Calculation";
+"tutorial_page0" = "计算时间和 D-day";
+"tutorial_page1" = "检查以前的计算";
+"tutorial_page2" = "在设置中管理应用";
+"tutorial_page3" = "重置 D-day 计算";
 
 // 시작 날짜(캘린더 앱 참고)
-"start" = "Starts :";
+"start" = "开始 :";
 
 // 종료 날짜(캘린더 앱 참고)
-"end" = "Ends :";
+"end" = "结束 :";
 
 // 계산하기
-"calculate" = "Calculate";
+"calculate" = "计算";
 
 // 설정(설정 앱 참고)
-"settings" = "Settings";
+"settings" = "设置";
 
 // 다크 모드(설정 앱 참고)
-"dark" = "Dark";
+"dark" = "深色";
 
 // 소리(설정 앱 참고)
-"sound" = "Sound";
+"sound" = "声音";
 
 // 앱 평가(Hours 참고)
-"review" = "Rate the App";
+"review" = "为应用评分";
 
 // 피드백 보내기(Hours 참고)
-"feedback" = "Send feedback";
+"feedback" = "发送反馈";
 
 // 언어(설정 앱 참고)
-"language" = "Language";
+"language" = "语言";
 
 // 뒤로가기(Hidden Folks 참고)
-"back" = "Back";
+"back" = "返回";
 
 // 계산 기록 삭제 Alert 창
-"delete_history_title" = "Delete the record";
-"delete_history_message" = "Do you want to erase the calculation record?";
-"delete_history_no" = "No";
-"delete_history_yes" = "Yes";
+"delete_history_title" = "删除历史";
+"delete_history_message" = "您确定要清除计算历史记录吗？";
+"delete_history_no" = "不";
+"delete_history_yes" = "是的";
 
 // 피드백 보내기 Alert 창
-"send_feedback_title" = "Failed to send mail";
-"send_feedback_message" = "You need the 'Mail' app to send mail. Please restore the app from the App Store or check your email settings and try again.";
-"send_feedbacky_go" = "Go to App Store";
-"send_feedback_cancle" = "Cancel";
+"send_feedback_title" = "发送邮件失败";
+"send_feedback_message" = "您需要“邮件”应用程序来发送邮件。 请从 App Store 恢复应用程序或检查您的电子邮件设置，然后重试。";
+"send_feedbacky_go" = "前往应用商店";
+"send_feedback_cancle" = "取消";
 
 // 언어 화면 NotiLabel Text
-"language_noti" = "More languages will be supported in the future.";
+"language_noti" = "未来将支持更多语言。";
