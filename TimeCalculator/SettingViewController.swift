@@ -36,12 +36,9 @@ class SettingViewController: UIViewController {
         super.viewWillAppear(animated)
         AppearanceCheck(self)
         
-//        reviewButton.layer.borderColor = UIColor.systemGray.cgColor
-//        reviewButton.layer.borderWidth = 1
-        
         let appearance = UserDefaults.standard.bool(forKey: "Dark")
         
-        [darkModeButton, soundButton, feedbackButton, languageButton, backButton].forEach {
+        [darkModeButton, soundButton,languageButton, feedbackButton, reviewButton, backButton].forEach {
             $0?.layer.borderWidth = 1
             if appearance {
                 $0?.layer.borderColor = UIColor.white.cgColor
@@ -85,13 +82,13 @@ class SettingViewController: UIViewController {
     // 앱 평가 버튼 클릭 시
     @IBAction func reviewButtonTapped(_ sender: UIButton) {
         // 스토어 url 열기
-//        if let url = URL(string: ""), UIApplication.shared.canOpenURL(url) {
-//            if #available(iOS 10.0, *) {
-//                UIApplication.shared.open(url, options: [:], completionHandler: nil)
-//            } else {
-//                UIApplication.shared.openURL(url)
-//            }
-//        }
+        if let url = URL(string: "https://apps.apple.com/kr/app/h-ours/id1605524722"), UIApplication.shared.canOpenURL(url) {
+            if #available(iOS 10.0, *) {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            } else {
+                UIApplication.shared.openURL(url)
+            }
+        }
     }
     
     // 피드백 보내기 버튼 클릭 시
