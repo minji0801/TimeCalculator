@@ -64,12 +64,14 @@ class DdayViewController: UIViewController {
         if startDate == endDate {
             return "- DAY"
         } else {
-            let result = Calendar.current.dateComponents([.day], from: endDatePicker.date, to: startDatePicker.date).day!
+            let result = Calendar.current.dateComponents([.day], from: startDatePicker.date, to: endDatePicker.date).day!
 //            print("result = \(result)")
-            if result > 0 {
-                return "+ \(result)"
+            if result < 0 {
+                // result가 음수면 절대값씌워서 앞에 + 붙이기
+                return "+ \(result.magnitude)"
             } else {
-                return "- \((result - 1).magnitude)"
+                // 0이거나 양수면 1더해서 앞에 - 붙이기
+                return "- \((result + 1))"
             }
         }
     }
