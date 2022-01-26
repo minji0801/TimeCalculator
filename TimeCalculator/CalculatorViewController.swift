@@ -7,6 +7,7 @@
 
 import UIKit
 import AVFoundation
+import GoogleMobileAds
 
 enum Operation {
     case Add
@@ -19,6 +20,7 @@ class CalculatorViewController: UIViewController {
     
     @IBOutlet weak var outputLabel: UILabel!
     @IBOutlet weak var symbolLabel: UILabel!
+    @IBOutlet weak var bannerView: GADBannerView!
     
     var displayNumber = ""
     var firstOperand = ""
@@ -32,6 +34,11 @@ class CalculatorViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Admob 광고
+        bannerView.adUnitID = "ca-app-pub-7980627220900140/3292460324"
+        bannerView.rootViewController = self
+        bannerView.load(GADRequest())
         
         // Check Tutorial
         let tutorial = UserDefaults.standard.bool(forKey: "showedTutorial")

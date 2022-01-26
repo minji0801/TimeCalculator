@@ -7,6 +7,7 @@
 
 import UIKit
 import AVFoundation
+import GoogleMobileAds
 
 class DdayViewController: UIViewController {
     var player: AVAudioPlayer!
@@ -17,10 +18,16 @@ class DdayViewController: UIViewController {
     @IBOutlet weak var endDatePicker: UIDatePicker!
     @IBOutlet weak var calculateButton: UIButton!
     @IBOutlet weak var ddayLabel: UILabel!
+    @IBOutlet weak var bannerView: GADBannerView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         calculateButton.layer.cornerRadius = 30
+        
+        // Admob 광고
+        bannerView.adUnitID = "ca-app-pub-7980627220900140/3292460324"
+        bannerView.rootViewController = self
+        bannerView.load(GADRequest())
     }
     
     override func viewWillAppear(_ animated: Bool) {

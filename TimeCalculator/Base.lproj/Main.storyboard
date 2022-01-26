@@ -32,13 +32,13 @@
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="251" text="start date :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7oX-6x-IA6">
-                                                <rect key="frame" x="0.0" y="0.0" width="81.5" height="50"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="82" height="50"/>
                                                 <fontDescription key="fontDescription" name="SDSamliphopangcheTTFBasic" family="Sandoll Samliphopangche TTF" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="X0V-C6-TBl">
-                                                <rect key="frame" x="81.5" y="0.0" width="292.5" height="50"/>
+                                                <rect key="frame" x="82" y="0.0" width="292" height="50"/>
                                                 <color key="tintColor" name="AccentColor"/>
                                             </datePicker>
                                         </subviews>
@@ -47,13 +47,13 @@
                                         <rect key="frame" x="0.0" y="70" width="374" height="50"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="251" text="end date :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E68-KV-b9t">
-                                                <rect key="frame" x="0.0" y="0.0" width="71" height="50"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="77" height="50"/>
                                                 <fontDescription key="fontDescription" name="SDSamliphopangcheTTFBasic" family="Sandoll Samliphopangche TTF" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="xcu-T8-hKj">
-                                                <rect key="frame" x="71" y="0.0" width="303" height="50"/>
+                                                <rect key="frame" x="77" y="0.0" width="297" height="50"/>
                                                 <color key="tintColor" name="AccentColor"/>
                                             </datePicker>
                                         </subviews>
@@ -80,7 +80,7 @@
                                     <action selector="calculateButtonTapped:" destination="NWT-X2-Y8n" eventType="touchUpInside" id="MYl-yn-I5O"/>
                                 </connections>
                             </button>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4G0-0K-hra">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4G0-0K-hra" customClass="GADBannerView">
                                 <rect key="frame" x="0.0" y="763" width="414" height="50"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <constraints>
@@ -92,7 +92,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="499"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D - DAY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CUv-I8-g24">
-                                        <rect key="frame" x="117" y="219.5" width="180" height="60.5"/>
+                                        <rect key="frame" x="117.5" y="220.5" width="179" height="58.5"/>
                                         <fontDescription key="fontDescription" name="FredokaOne-Regular" family="Fredoka One" pointSize="50"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -143,6 +143,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" tag="1" title="" image="calender" id="yHv-m8-LRf"/>
                     <connections>
+                        <outlet property="bannerView" destination="4G0-0K-hra" id="5rn-Ov-vBy"/>
                         <outlet property="calculateButton" destination="pV5-j3-hvV" id="g5Y-jR-9Lm"/>
                         <outlet property="ddayLabel" destination="CUv-I8-g24" id="VA7-Tz-1tI"/>
                         <outlet property="endDatePicker" destination="xcu-T8-hKj" id="vnT-cH-vzF"/>
@@ -280,13 +281,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iOS v(Version) build (Build)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R10-rT-UvL">
-                                <rect key="frame" x="132.5" y="319" width="149.5" height="13"/>
+                                <rect key="frame" x="130.5" y="316.5" width="153" height="15.5"/>
                                 <fontDescription key="fontDescription" name="SDSamliphopangcheTTFBasic" family="Sandoll Samliphopangche TTF" pointSize="13"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5o-7l-2Q1">
-                                <rect key="frame" x="154.5" y="259" width="105.5" height="60"/>
+                                <rect key="frame" x="152" y="256.5" width="110.5" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="HZz-jm-h0f"/>
                                 </constraints>
@@ -1090,7 +1091,7 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oyy-vn-67g">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oyy-vn-67g" customClass="GADBannerView">
                                 <rect key="frame" x="0.0" y="763" width="414" height="50"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <constraints>
@@ -1188,6 +1189,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="calculator" id="U1T-Ao-NQc"/>
                     <connections>
+                        <outlet property="bannerView" destination="oyy-vn-67g" id="PDp-eT-w3x"/>
                         <outlet property="outputLabel" destination="mKr-Ck-8EY" id="8Ks-Qv-5Rg"/>
                         <outlet property="symbolLabel" destination="PDM-wO-LCb" id="fwE-2W-JGw"/>
                     </connections>
@@ -1204,15 +1206,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TQd-Vt-eih">
-                                <rect key="frame" x="0.0" y="812" width="414" height="50"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TQd-Vt-eih" customClass="GADBannerView">
+                                <rect key="frame" x="0.0" y="762" width="414" height="100"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="h7E-1X-P8h"/>
+                                    <constraint firstAttribute="height" constant="100" id="h7E-1X-P8h"/>
                                 </constraints>
                             </view>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="right" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fK0-qA-Plu">
-                                <rect key="frame" x="10" y="104" width="394" height="698"/>
+                                <rect key="frame" x="10" y="104" width="394" height="648"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" name="FredokaOne-Regular" family="Fredoka One" pointSize="17"/>
@@ -1284,6 +1286,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="YXx-cH-giv"/>
                     <connections>
+                        <outlet property="bannerView" destination="TQd-Vt-eih" id="Rwt-Zz-YTD"/>
                         <outlet property="historyTextView" destination="fK0-qA-Plu" id="dRs-xg-CL0"/>
                     </connections>
                 </viewController>
@@ -1315,139 +1318,139 @@
     </scenes>
     <designables>
         <designable name="08n-5m-srM">
-            <size key="intrinsicContentSize" width="63" height="27"/>
+            <size key="intrinsicContentSize" width="60" height="30"/>
         </designable>
         <designable name="0Gn-Ao-2Rx">
-            <size key="intrinsicContentSize" width="27.5" height="37"/>
+            <size key="intrinsicContentSize" width="27.5" height="18"/>
         </designable>
         <designable name="0Kj-7H-Iip">
-            <size key="intrinsicContentSize" width="51" height="27"/>
+            <size key="intrinsicContentSize" width="54" height="30"/>
         </designable>
         <designable name="0rt-Gl-gOH">
-            <size key="intrinsicContentSize" width="85" height="27"/>
+            <size key="intrinsicContentSize" width="94" height="30"/>
         </designable>
         <designable name="1AS-68-tkK">
-            <size key="intrinsicContentSize" width="109" height="27"/>
+            <size key="intrinsicContentSize" width="120" height="30"/>
         </designable>
         <designable name="2FP-ag-sTk">
-            <size key="intrinsicContentSize" width="60" height="27"/>
+            <size key="intrinsicContentSize" width="62" height="30"/>
         </designable>
         <designable name="3h8-zV-LaV">
-            <size key="intrinsicContentSize" width="39" height="27"/>
+            <size key="intrinsicContentSize" width="43" height="30"/>
         </designable>
         <designable name="6P0-OO-20J">
-            <size key="intrinsicContentSize" width="30" height="49"/>
+            <size key="intrinsicContentSize" width="30" height="48"/>
         </designable>
         <designable name="8KU-bA-SvH">
-            <size key="intrinsicContentSize" width="39" height="27"/>
+            <size key="intrinsicContentSize" width="43" height="30"/>
         </designable>
         <designable name="9NN-nt-hUB">
-            <size key="intrinsicContentSize" width="87" height="27"/>
+            <size key="intrinsicContentSize" width="95" height="30"/>
         </designable>
         <designable name="CBN-iU-OlE">
-            <size key="intrinsicContentSize" width="30" height="49"/>
+            <size key="intrinsicContentSize" width="30" height="48"/>
         </designable>
         <designable name="CLk-qc-Jbz">
-            <size key="intrinsicContentSize" width="117" height="27"/>
+            <size key="intrinsicContentSize" width="124" height="30"/>
         </designable>
         <designable name="CN1-6y-2W2">
-            <size key="intrinsicContentSize" width="30" height="49"/>
+            <size key="intrinsicContentSize" width="30" height="48"/>
         </designable>
         <designable name="Ezx-ko-Ih3">
-            <size key="intrinsicContentSize" width="68" height="27"/>
+            <size key="intrinsicContentSize" width="75" height="30"/>
         </designable>
         <designable name="FXB-o3-wde">
-            <size key="intrinsicContentSize" width="45" height="27"/>
+            <size key="intrinsicContentSize" width="50" height="30"/>
         </designable>
         <designable name="Kp2-2A-CDA">
-            <size key="intrinsicContentSize" width="94" height="27"/>
+            <size key="intrinsicContentSize" width="107" height="30"/>
         </designable>
         <designable name="MeN-K3-oVi">
-            <size key="intrinsicContentSize" width="30" height="27"/>
+            <size key="intrinsicContentSize" width="34" height="30"/>
         </designable>
         <designable name="RLN-Si-NEj">
-            <size key="intrinsicContentSize" width="52" height="27"/>
+            <size key="intrinsicContentSize" width="52" height="30"/>
         </designable>
         <designable name="RYZ-ul-Yhd">
-            <size key="intrinsicContentSize" width="47" height="27"/>
+            <size key="intrinsicContentSize" width="50" height="30"/>
         </designable>
         <designable name="TMb-JG-3Bg">
-            <size key="intrinsicContentSize" width="30" height="49"/>
+            <size key="intrinsicContentSize" width="30" height="48"/>
         </designable>
         <designable name="UCs-vm-Sss">
-            <size key="intrinsicContentSize" width="30" height="49"/>
+            <size key="intrinsicContentSize" width="30" height="48"/>
         </designable>
         <designable name="Vng-ao-p7r">
-            <size key="intrinsicContentSize" width="66" height="27"/>
+            <size key="intrinsicContentSize" width="70" height="30"/>
         </designable>
         <designable name="XM0-CH-26r">
-            <size key="intrinsicContentSize" width="30" height="49"/>
+            <size key="intrinsicContentSize" width="30" height="48"/>
         </designable>
         <designable name="cex-NL-6Hi">
-            <size key="intrinsicContentSize" width="52" height="27"/>
+            <size key="intrinsicContentSize" width="57" height="30"/>
         </designable>
         <designable name="cfj-Mf-5wl">
-            <size key="intrinsicContentSize" width="55" height="27"/>
+            <size key="intrinsicContentSize" width="58" height="30"/>
         </designable>
         <designable name="dB8-dG-Ks0">
-            <size key="intrinsicContentSize" width="30" height="27"/>
+            <size key="intrinsicContentSize" width="30" height="30"/>
         </designable>
         <designable name="eqJ-aU-9sb">
-            <size key="intrinsicContentSize" width="30" height="49"/>
+            <size key="intrinsicContentSize" width="30" height="48"/>
         </designable>
         <designable name="fYu-zE-Vhc">
-            <size key="intrinsicContentSize" width="27.5" height="37"/>
+            <size key="intrinsicContentSize" width="27.5" height="25.5"/>
         </designable>
         <designable name="g75-cC-0a4">
-            <size key="intrinsicContentSize" width="60" height="27"/>
+            <size key="intrinsicContentSize" width="60" height="30"/>
         </designable>
         <designable name="keI-qy-7eu">
-            <size key="intrinsicContentSize" width="30" height="49"/>
+            <size key="intrinsicContentSize" width="30" height="48"/>
         </designable>
         <designable name="ngj-mo-90P">
-            <size key="intrinsicContentSize" width="39.5" height="37"/>
+            <size key="intrinsicContentSize" width="39.5" height="34"/>
         </designable>
         <designable name="o02-yY-GFx">
-            <size key="intrinsicContentSize" width="53" height="27"/>
+            <size key="intrinsicContentSize" width="58" height="30"/>
         </designable>
         <designable name="o7U-FA-3yc">
-            <size key="intrinsicContentSize" width="86" height="27"/>
+            <size key="intrinsicContentSize" width="79" height="30"/>
         </designable>
         <designable name="oWg-Kk-4FT">
-            <size key="intrinsicContentSize" width="73" height="27"/>
+            <size key="intrinsicContentSize" width="81" height="30"/>
         </designable>
         <designable name="qFx-ju-MwN">
-            <size key="intrinsicContentSize" width="30" height="49"/>
+            <size key="intrinsicContentSize" width="30" height="48"/>
         </designable>
         <designable name="qmX-CG-GFo">
-            <size key="intrinsicContentSize" width="61" height="27"/>
+            <size key="intrinsicContentSize" width="68" height="30"/>
         </designable>
         <designable name="rgj-wr-trX">
-            <size key="intrinsicContentSize" width="36" height="27"/>
+            <size key="intrinsicContentSize" width="39" height="30"/>
         </designable>
         <designable name="tBF-Ic-Aft">
-            <size key="intrinsicContentSize" width="60" height="27"/>
+            <size key="intrinsicContentSize" width="62" height="30"/>
         </designable>
         <designable name="tGm-63-gsB">
-            <size key="intrinsicContentSize" width="45" height="27"/>
+            <size key="intrinsicContentSize" width="46" height="30"/>
         </designable>
         <designable name="tia-Wa-FgK">
-            <size key="intrinsicContentSize" width="72" height="27"/>
+            <size key="intrinsicContentSize" width="79" height="30"/>
         </designable>
         <designable name="vJX-Y6-DBe">
-            <size key="intrinsicContentSize" width="25" height="37"/>
+            <size key="intrinsicContentSize" width="25" height="21"/>
         </designable>
         <designable name="vbu-21-2ew">
-            <size key="intrinsicContentSize" width="42" height="49"/>
+            <size key="intrinsicContentSize" width="38" height="48"/>
         </designable>
         <designable name="vkG-7N-7er">
-            <size key="intrinsicContentSize" width="30" height="49"/>
+            <size key="intrinsicContentSize" width="30" height="48"/>
         </designable>
         <designable name="wXz-PE-lVA">
-            <size key="intrinsicContentSize" width="47" height="27"/>
+            <size key="intrinsicContentSize" width="47" height="30"/>
         </designable>
         <designable name="ywK-4l-3w0">
-            <size key="intrinsicContentSize" width="37" height="27"/>
+            <size key="intrinsicContentSize" width="41" height="30"/>
         </designable>
     </designables>
     <resources>
@@ -1464,7 +1467,7 @@
         <image name="refresh" width="24" height="24"/>
         <image name="setting" width="24" height="24"/>
         <namedColor name="AccentColor">
-            <color red="0.40299999713897705" green="0.40999999642372131" blue="0.67199999094009399" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.40400001406669617" green="0.41200000047683716" blue="0.67100000381469727" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

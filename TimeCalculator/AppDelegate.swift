@@ -8,6 +8,7 @@
 import UIKit
 import AdSupport
 import AppTrackingTransparency
+import GoogleMobileAds
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -40,6 +41,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 }
             }
         }
+        
+        // AdMob
+        GADMobileAds.sharedInstance().start(completionHandler: nil)
+        
         return true
     }
 
