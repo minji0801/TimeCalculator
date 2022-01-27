@@ -1,8 +1,8 @@
 <!-- Header -->
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=6769AB&height=300&section=header&text=h:ours&fontSize=90&fontColor=FFFFFF"/>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=6667AB&height=300&section=header&text=h:ours&desc=Time%20and%20D-day%20Calculator&descAlignY=60&fontSize=85&fontAlignY=40&fontColor=FFFFFF"/>
 </p>
-<div align="center"> 시간 & 디데이 계산기 </div>
+<br/>
 <br/>
 <br/>
 
@@ -20,9 +20,12 @@
 <br/>
 <br/>
 <br/>
+<br/>
+<br/>
 
 <!-- Navigation -->
 # 목차
+0. [실행하기 전](#-실행하기-전)
 1. [개발 동기](#-개발-동기)
 2. [개발 목표](#-개발-목표)
 3. [시간 계산](#-시간-계산)
@@ -30,33 +33,42 @@
 5. [이전 계산 기록]
 6. [언어 지원]
 7. [그 외 기능]
-8. [UI/UX]
-9. [Contact]
-10. [버전기록]
+8. [화면 및 디자인](#-화면-및-디자인)
+9. [만나러 가기](#-만나러-가기)
+10. [버전 기록](#-버전-기록)
 <br/>
+
+<!-- 0. 실행하기 전 -->
+## 🛠 실행하기 전
+### Cocoapods
+```
+pod 'Google-Mobile-Ads-SDK'
+```
+<br/>
+
 
 <!-- 1. 개발 동기 -->
 ## 🔥 개발 동기
-**1. 시간을 계산하는데 불편함이 있다.**
+### 1. 시간을 계산하는데 불편함이 있다.
 - 매일 플래너에 Total Time을 기록하는데에 있어 시간 계산에 대한 불편함이 있다.
 - ‘Hours’ 앱을 시간을 계산하고 있지만 이와 차별화된 앱을 개발하고 싶다.
 
-**2. 시간과 더불어 날짜 계산도 한 곳에서 할 수 있으면 편리하겠다.**
+### 2. 시간과 더불어 날짜 계산도 한 곳에서 할 수 있으면 편리하겠다.
 - ‘Hours’ 앱은 시간만 계산할 수 있다. 
 - 시간 계산뿐만 아니라 날짜 계산(디데이)도 가능한 앱이 출시되면 좋겠다.
 <br/>
 
 <!-- 2. 개발 목표 -->
-## 🚀 개발 목표
-**1. 시간 계산**
+## 🎯 개발 목표
+### 1. 시간 계산
 - 시간 계산이 제일 우선으로, 앱을 켜면 바로 시간을 계산할 수 있다.
 - 일반 계산기 형태로 시간을 계산한다. (‘Hours’ 앱과 유사)
 
-**2. 날짜 계산**
+### 2. 날짜 계산
 - 기준일과 목표일을 사용자가 입력하면 디데이를 계산하여 보여준다.
 - 기준일과 목표일의 기본값에 오늘 날짜가 입력된다.
 
-**3. 다국어 지원**
+### 3. 다국어 지원
 - 앞서 출시한 'Scoit'은 영어만 지원했고, '모닥이'는 한국어만 지원했다.
 - 이번에는 현지화를 통해 다양한 나라에서 편하게 이용할 수 있다.
 <br/>
@@ -112,26 +124,61 @@ func convertTimeFormat(_ value: [String]) -> String {
 덧셈 연산은 입력받은 두 시간의 분이 모두 두자리이고, 분의 합이 100을 넘으면 40을 더하여 해결했다.
 > 예) 0:58 + 0:53 => 58 + 53 + 40 = 151 => 1:51 
 <br/>
+<br/>
 
 
 연산자를 눌렀는데 또누르면 에러발생!
 
+<br/>
 
-## UI/UX
-### Main Color
+<!-- 8. 화면 및 디자인 -->
+## 🌈 화면 및 디자인
+### Accent Color
+![스크린샷 2022-01-27 오후 8 31 14](https://user-images.githubusercontent.com/49383370/151350738-ec07e9ac-4de9-4388-9f47-f5584fdabc98.png)
+<br/>
+h:ours의 포인트 색상은 팬톤에서 선정한 2022년 올해의 컬러 '베리 페리(Veri Peri)'이다.
+
 ### Icon
-###
+초기 디자인 :
+<img width="720" alt="스크린샷 2022-01-27 오후 8 37 55" src="https://user-images.githubusercontent.com/49383370/151354559-0966e195-8053-4047-afcd-e73b9e5f1609.png">
 
-## Contact
-[App Store - h:ours](https://apps.apple.com/kr/app/h-ours/id1605524722)
-[Notion]()
-[Gmail]()
+최종 아이콘 :
+![icon-ios](https://user-images.githubusercontent.com/49383370/151354405-fc329708-2592-4448-9f75-47137ea35c59.png)
 
-## 버전기록
-### 1.0.0(날짜)
-### 1.1.0(날짜)
+### UI/UX
+<img width="769" alt="스크린샷 2022-01-27 오후 9 00 04" src="https://user-images.githubusercontent.com/49383370/151354913-944db9e6-5d09-4e49-b6cb-7452094932cb.png">
+<br/>
+
+<!-- 9. 만나러 가기 -->
+## 👀 만나러 가기
+### App Store
+> https://apps.apple.com/kr/app/h-ours/id1605524722
+
+### Notion
+> https://midi-dill-147.notion.site/h-ours-4d1c8693f14f417d8676e4d2742aab38
+
+### Gmail
+> hcolonours.help@gmail.com
+<br/>
+
+<!-- 10. 버전 기록 -->
+## 🚀 버전 기록
+### v1.0.0 (2022. 1. 21)
+> - 한국어, 영어 지원
+> - 기본 기능 제공(시간 및 디데이 계산, 이전 계산 기록 확인)
+> - 설정 : 다크모드, 사운드 설정, 언어 변경, 피드백 보내기
+
+### v1.1.0 (2022. 1. 23)
+> - 일본어, 중국어(간체, 번체) 지원
+> - 디데이 계산 오류 수정
+> - 설정 : 앱 평가 기능 추가
+<br/>
+<br/>
 
 ---
+<br/>
+<br/>
+<br/>
 
 <!-- Footer -->
 <p align="center">
