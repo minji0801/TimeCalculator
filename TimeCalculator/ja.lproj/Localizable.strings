@@ -7,10 +7,10 @@
 */
 
 // 튜토리얼
-"tutorial_page0" = "時間とディーデーを計算します。";
+"tutorial_page0" = "時間とD-Dayを計算します。";
 "tutorial_page1" = "以前の計算を確認してください。";
 "tutorial_page2" = "設定でアプリを管理します。";
-"tutorial_page3" = "ディーデー計算を初期化します。";
+"tutorial_page3" = "D-Day計算を初期化します。";
 
 // 시작 날짜(캘린더 앱 참고)
 "start" = "開始 :";
@@ -52,7 +52,7 @@
 "send_feedback_title" = "メール送信失敗";
 "send_feedback_message" = "メールを送信するには「メール」アプリが必要です。 App Storeでそのアプリを復元するか、メール設定を確認してもう一度お試しください。";
 "send_feedbacky_go" = "App Storeに行く";
-"send_feedback_cancle" = "キャンセル";
+"send_feedback_cancle" = "キャンセル";    // (언어 설정 시 참고)
 
 // 언어 화면 NotiLabel Text
 "language_noti" = "今後、より多くの言語がサポートされる予定です。";

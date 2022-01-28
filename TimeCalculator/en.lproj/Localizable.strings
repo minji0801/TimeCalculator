@@ -52,7 +52,7 @@
 "send_feedback_title" = "Failed to send mail";
 "send_feedback_message" = "You need the 'Mail' app to send mail. Please restore the app from the App Store or check your email settings and try again.";
 "send_feedbacky_go" = "Go to App Store";
-"send_feedback_cancle" = "Cancel";
+"send_feedback_cancle" = "Cancel";    // (언어 설정 시 참고)
 
 // 언어 화면 NotiLabel Text
 "language_noti" = "More languages will be supported in the future.";

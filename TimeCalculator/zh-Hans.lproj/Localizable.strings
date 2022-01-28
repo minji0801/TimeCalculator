@@ -52,7 +52,7 @@
 "send_feedback_title" = "发送邮件失败";
 "send_feedback_message" = "您需要“邮件”应用程序来发送邮件。 请从 App Store 恢复应用程序或检查您的电子邮件设置，然后重试。";
 "send_feedbacky_go" = "前往应用商店";
-"send_feedback_cancle" = "取消";
+"send_feedback_cancle" = "取消";    // (언어 설정 시 참고)
 
 // 언어 화면 NotiLabel Text
 "language_noti" = "未来将支持更多语言。";

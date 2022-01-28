@@ -7,52 +7,52 @@
 */
 
 // 튜토리얼
-"tutorial_page0" = "Calculate the time and D-day";
-"tutorial_page1" = "Check the previous calculation";
-"tutorial_page2" = "Manage the app in settings";
-"tutorial_page3" = "Reset the D-day Calculation";
+"tutorial_page0" = "Berechnen Sie Zeit und D-Day";
+"tutorial_page1" = "Überprüfen Sie vorherige Berechnungen";
+"tutorial_page2" = "Verwalten Sie Apps in den Einstellungen";
+"tutorial_page3" = "Setzen Sie die D-Day-Berechnung zurück";
 
 // 시작 날짜(캘린더 앱 참고)
-"start" = "Starts :";
+"start" = "Beginn :";
 
 // 종료 날짜(캘린더 앱 참고)
-"end" = "Ends :";
+"end" = "Ende :";
 
 // 계산하기
-"calculate" = "Calculate";
+"calculate" = "Berechnen";
 
 // 설정(설정 앱 참고)
-"settings" = "Settings";
+"settings" = "Einstellungen";
 
 // 다크 모드(설정 앱 참고)
-"dark" = "Dark";
+"dark" = "Dunkel";
 
 // 소리(설정 앱 참고)
-"sound" = "Sound";
+"sound" = "Ton";
 
 // 앱 평가(Hours 참고)
-"review" = "Rate the App";
+"review" = "App bewerten";
 
 // 피드백 보내기(Hours 참고)
-"feedback" = "Send feedback";
+"feedback" = "Senden Sie einen kommentar";
 
 // 언어(설정 앱 참고)
-"language" = "Language";
+"language" = "Sprache";
 
 // 뒤로가기(Hidden Folks 참고)
-"back" = "Back";
+"back" = "Zurück";
 
 // 계산 기록 삭제 Alert 창
-"delete_history_title" = "Delete the record";
-"delete_history_message" = "Do you want to erase the calculation record?";
-"delete_history_no" = "No";
-"delete_history_yes" = "Yes";
+"delete_history_title" = "Verlauf löschen";
+"delete_history_message" = "Möchten Sie den Berechnungsverlauf wirklich löschen?";
+"delete_history_no" = "Nein";
+"delete_history_yes" = "ja";
 
 // 피드백 보내기 Alert 창
-"send_feedback_title" = "Failed to send mail";
-"send_feedback_message" = "You need the 'Mail' app to send mail. Please restore the app from the App Store or check your email settings and try again.";
-"send_feedbacky_go" = "Go to App Store";
-"send_feedback_cancle" = "Cancel";
+"send_feedback_title" = "E-Mail konnte nicht gesendet werden";
+"send_feedback_message" = "Zum Versenden von E-Mails benötigen Sie die App „Mail“. Bitte stellen Sie die App aus dem App Store wieder her oder überprüfen Sie Ihre E-Mail-Einstellungen und versuchen Sie es erneut.";
+"send_feedbacky_go" = "Gehen Sie zum App Store";
+"send_feedback_cancle" = "Abbrechen";    // (언어 설정 시 참고)
 
 // 언어 화면 NotiLabel Text
-"language_noti" = "More languages will be supported in the future.";
+"language_noti" = "Weitere Sprachen werden in Zukunft unterstützt.";

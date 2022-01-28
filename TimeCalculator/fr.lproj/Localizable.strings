@@ -13,46 +13,46 @@
 "tutorial_page3" = "Reset the D-day Calculation";
 
 // 시작 날짜(캘린더 앱 참고)
-"start" = "Starts :";
+"start" = "Début :";
 
 // 종료 날짜(캘린더 앱 참고)
-"end" = "Ends :";
+"end" = "Fin :";
 
 // 계산하기
-"calculate" = "Calculate";
+"calculate" = "Calculer";
 
 // 설정(설정 앱 참고)
-"settings" = "Settings";
+"settings" = "Réglages";
 
 // 다크 모드(설정 앱 참고)
-"dark" = "Dark";
+"dark" = "Sombre";
 
 // 소리(설정 앱 참고)
-"sound" = "Sound";
+"sound" = "Son";
 
 // 앱 평가(Hours 참고)
-"review" = "Rate the App";
+"review" = "Noter l'App";
 
 // 피드백 보내기(Hours 참고)
-"feedback" = "Send feedback";
+"feedback" = "Envoyer un commentaire";
 
 // 언어(설정 앱 참고)
-"language" = "Language";
+"language" = "Langue";
 
 // 뒤로가기(Hidden Folks 참고)
-"back" = "Back";
+"back" = "Retour";
 
 // 계산 기록 삭제 Alert 창
-"delete_history_title" = "Delete the record";
-"delete_history_message" = "Do you want to erase the calculation record?";
-"delete_history_no" = "No";
-"delete_history_yes" = "Yes";
+"delete_history_title" = "effacer l'historique";
+"delete_history_message" = "Voulez-vous vraiment effacer l'historique des calculs ?";
+"delete_history_no" = "non";
+"delete_history_yes" = "Oui";
 
 // 피드백 보내기 Alert 창
-"send_feedback_title" = "Failed to send mail";
-"send_feedback_message" = "You need the 'Mail' app to send mail. Please restore the app from the App Store or check your email settings and try again.";
-"send_feedbacky_go" = "Go to App Store";
-"send_feedback_cancle" = "Cancel";
+"send_feedback_title" = "Échec de l'envoi du courrier";
+"send_feedback_message" = "Vous avez besoin de l'application 'Mail' pour envoyer du courrier. Veuillez restaurer l'application depuis l'App Store ou vérifier vos paramètres de messagerie et réessayer.";
+"send_feedbacky_go" = "Aller à l'App Store";
+"send_feedback_cancle" = "Annuler";    // (언어 설정 시 참고)
 
 // 언어 화면 NotiLabel Text
-"language_noti" = "More languages will be supported in the future.";
+"language_noti" = "Plus de langues seront prises en charge à l'avenir.";
