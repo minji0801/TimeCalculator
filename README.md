@@ -7,7 +7,7 @@
 <br/>
 
 <!-- Badge -->
-![Generic badge](https://img.shields.io/badge/version-1.1.0-brightgreen)
+![Generic badge](https://img.shields.io/badge/version-1.2.0-brightgreen)
 ![Generic badge](https://img.shields.io/badge/platform-iOS-lightgrey)
 ![Generic badge](https://img.shields.io/badge/language-Swift-orange)
 ![Generic badge](https://img.shields.io/badge/database-Firebase-blue)
@@ -20,6 +20,10 @@
 <br/>
 <br/>
 <br/>
+<br/>
+<br/>
+
+h:ours 네이밍한 설명
 <br/>
 <br/>
 
@@ -134,19 +138,28 @@ func convertTimeFormat(_ value: [String]) -> String {
 <!-- 8. 화면 및 디자인 -->
 ## 🌈 화면 및 디자인
 ### Accent Color
-![스크린샷 2022-01-27 오후 8 31 14](https://user-images.githubusercontent.com/49383370/151350738-ec07e9ac-4de9-4388-9f47-f5584fdabc98.png)
-<br/>
 h:ours의 포인트 색상은 팬톤에서 선정한 2022년 올해의 컬러 '베리 페리(Veri Peri)'이다.
 
-### Icon
-초기 디자인 :
-<img width="720" alt="스크린샷 2022-01-27 오후 8 37 55" src="https://user-images.githubusercontent.com/49383370/151354559-0966e195-8053-4047-afcd-e73b9e5f1609.png">
+<p align="center"><img src="https://user-images.githubusercontent.com/49383370/151350738-ec07e9ac-4de9-4388-9f47-f5584fdabc98.png"><p/>
+<br/>
 
-최종 아이콘 :
-![icon-ios](https://user-images.githubusercontent.com/49383370/151354405-fc329708-2592-4448-9f75-47137ea35c59.png)
+### App Icon
+- **초기 버전**
+
+  반복되는 점들로 이루어진 원의 형태는 시계의 시점과 분점을 연상하고, 가운데에 위치한 쌍점(:)은 앱 이름(h:ours)에도 사용되었듯이 시간을 표시할 때 사용되는 부호를 의미한다.  
+
+<p align="center"><img width="500" src="https://user-images.githubusercontent.com/49383370/151354559-0966e195-8053-4047-afcd-e73b9e5f1609.png"><p/>
+  
+- **최종 버전**
+
+  두 종류 중에서 포인트 색상을 배경으로 한 아이콘을 채택했다.
+  
+<p align="center"><img src="https://user-images.githubusercontent.com/49383370/151538320-83cd6eb3-f13e-4fcd-88a4-63ec12723f7d.png"></p>
+<br/>
 
 ### UI/UX
-<img width="769" alt="스크린샷 2022-01-27 오후 9 00 04" src="https://user-images.githubusercontent.com/49383370/151354913-944db9e6-5d09-4e49-b6cb-7452094932cb.png">
+<p align="center"><img alt="UI/UX Light Mode" src="https://user-images.githubusercontent.com/49383370/151543869-aef6a8d8-d21d-42dd-b26d-b246608767eb.png"></p>
+<p align="center"><img alt="UI/UX Dark Mode" src="https://user-images.githubusercontent.com/49383370/151543880-1c3f84cc-89cb-4e89-b6dd-fcb8e63331c6.png"></p>
 <br/>
 
 <!-- 9. 만나러 가기 -->
@@ -172,6 +185,10 @@ h:ours의 포인트 색상은 팬톤에서 선정한 2022년 올해의 컬러 '�
 > - 일본어, 중국어(간체, 번체) 지원
 > - 디데이 계산 오류 수정
 > - 설정 : 앱 평가 기능 추가
+
+### v1.2.0 (2022. 1. 27)
+> - 앱 추적 권한 및 광고 추가
+
 <br/>
 <br/>
 
@@ -181,10 +198,6 @@ h:ours의 포인트 색상은 팬톤에서 선정한 2022년 올해의 컬러 '�
 <br/>
 
 <!-- Footer -->
-<p align="center">
-  <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fminji0801%2FTimeCalculator&count_bg=%236769AB&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)"/>
-</p>
+<p align="center"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fminji0801%2FTimeCalculator&count_bg=%236769AB&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)"/></p>
 
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=minji0801&show_icons=true&theme=material-palenight"/>
-</p>
+<p align="center"><img src="https://github-readme-stats.vercel.app/api?username=minji0801&show_icons=true&theme=material-palenight"/></p>
