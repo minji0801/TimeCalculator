@@ -7,7 +7,7 @@
 <br/>
 
 <!-- Badge -->
-![Generic badge](https://img.shields.io/badge/version-1.2.0-brightgreen)
+![Generic badge](https://img.shields.io/badge/version-1.3.0-brightgreen)
 ![Generic badge](https://img.shields.io/badge/platform-iOS-lightgrey)
 ![Generic badge](https://img.shields.io/badge/language-Swift-orange)
 ![Generic badge](https://img.shields.io/badge/database-Firebase-blue)
@@ -33,10 +33,10 @@ h:ours 네이밍한 설명
 1. [개발 동기](#-개발-동기)
 2. [개발 목표](#-개발-목표)
 3. [시간 계산](#-시간-계산)
-4. [디데이 계산]
-5. [이전 계산 기록]
-6. [언어 지원]
-7. [그 외 기능] : 다크모드, 사운드 설정, 앱 평가, 피드백 보내기, 앱 추적 권한 요청, IBDesignable, 튜토리얼 뷰(Pagecontrol)
+4. [디데이 계산](#-디데이-계산)
+5. [계산 기록](#-계산-기록)
+6. [언어 지원](#-언어-지원)
+7. [그 외 기능](#-그-외-기능)
 8. [화면 및 디자인](#-화면-및-디자인)
 9. [만나러 가기](#-만나러-가기)
 10. [버전 기록](#-버전-기록)
@@ -79,9 +79,9 @@ pod 'Google-Mobile-Ads-SDK'
 
 <!-- 3. 시간 계산 -->
 ## ⏰ 시간 계산
-시간을 계산하는 로직이 제일 까다롭고 오래걸렸다.
+### 1. 시간 형식 변환
 
-제일 큰 문제점은 **연산자를 클릭할 때 입력한 시간 또는 연산 결과를 올바른 시간 포맷으로 보여줘야 한다**는 것이다.  
+시간 계산에 있어서 "연산자를 클릭할 때 입력한 시간 또는 연산 결과를 올바른 시간 포맷으로 보여줘야 한다" 는 것이 제일 큰 문제였다.  
 > 예1) 사용자가 3:66를 입력하고 + 를 클릭하면 4:06으로 보여줘야 한다.  
 > 
 > 예2) 1:50 + 0:25 의 연산 결과는 2:15로 보여줘야 한다.
@@ -117,7 +117,7 @@ func convertTimeFormat(_ value: [String]) -> String {
 <br/>
 <br/>
 
-### - 뺄셈과 덧셈
+### 2. 뺄셈과 덧셈
 
 뺄셈 연산은 첫번째 피연산자가 세자리 이상이고, 첫번째 피연산자의 분이 두번째 피연산자의 분보다 작으면 40을 뺀다.
 > ex) 1:05 - 0:30 
@@ -128,14 +128,14 @@ func convertTimeFormat(_ value: [String]) -> String {
 <br/>
 
 덧셈 연산의 경우 아래와 같이 연산되는 문제가 있었다.
-
-이는 입력받은 시간을 String에서 Int형으로 바꾸고 덧셈을 했으니 58 + 53 = 111를 1:11로 올바르게 보여준 것이다.
 > 0:58 + 0:53 = 1:11 
 > 
 > (정상적인 연산 결과는 1:51이다.)
+
+이는 입력받은 시간을 String에서 Int형으로 바꾸고 덧셈을 했으니 58 + 53 = 111를 1:11로 올바르게 보여준 것이다.
 <br/>
 
-덧셈 연산은 입력받은 두 시간의 분이 모두 두자리이고, 분의 합이 100을 넘으면 40을 더하여 해결했다.
+따라서, 입력받은 두 시간의 분이 모두 두자리이고 분의 합이 100을 넘으면 40을 더한다.
 > ex) 0:58 + 0:53 
 > 
 > => 58 + 53 + 40 = 151 
@@ -144,9 +144,164 @@ func convertTimeFormat(_ value: [String]) -> String {
 <br/>
 <br/>
 
+### 3. 연산자 연속 클릭 처리
+처음에는 연산자 버튼을 클릭하면 해당 연산을 바로 실행하도록 구현했으나, 사용자가 실수로 + 버튼을 클릭했다가 - 버튼을 클릭한 경우에는 에러가 발생한다.
 
-연산자를 눌렀는데 또누르면 에러발생!
+그래서 operation 메서드를 따로 만들었고 연산자가 클릭되었을 때 실행된다.
 
+이 메서드에서 displayNumber 값이 있을 때만 연산을 수행한다. (displayNumber는 사용자가 입력한 시간을 숫자형태로 저장하는 String 타입 변수)
+
+따라서, 연산자 버튼을 연속해서 클릭하더라도 에러가 발생하지 않는다.
+
+```swift
+func operation(_ operation: Operation) {
+    self.isClickedOperation = true
+    self.displayNumber = convertTimeFormat(displayNumber.map { String($0) })
+
+    if self.currentOperation != .unknown {
+        // 두번째 이상으로 연산기호 눌렀을 때
+        if !self.displayNumber.isEmpty {
+            self.secondOperand = self.displayNumber
+            self.displayNumber = ""
+
+            guard let firstOperand = Int(self.firstOperand) else { return }
+            guard let secondOperand = Int(self.secondOperand) else { return }
+
+            // 연산 실시
+            switch self.currentOperation {
+            case .Add:
+                // 둘다 분이 두자리고 두 합이 100이 넘으면 40 더하기
+                let firstMin = self.firstOperand.suffix(2)
+                let secondMin = self.secondOperand.suffix(2)
+
+                if firstMin.count == 2 && secondMin.count == 2 && (Int(firstMin)! + Int(secondMin)!) > 99 {
+                    self.result = "\(firstOperand + secondOperand + 40)"
+                } else {
+                    self.result = "\(firstOperand + secondOperand)"
+                }
+
+            case .Subtract:
+                self.result = String(minusOperation(self.firstOperand, self.secondOperand))
+
+            default:
+                break
+            }
+
+            self.result = convertTimeFormat(self.result.map { String($0) })
+            self.firstOperand = self.result
+            self.outputLabel.text = updateLabel(self.result)
+        }
+
+        self.currentOperation = operation
+    } else {
+        // 처음으로 연산기호 눌렀을 때
+        self.outputLabel.text = updateLabel(self.displayNumber)
+        self.firstOperand = self.displayNumber
+        self.currentOperation = operation
+        self.displayNumber = ""
+    }
+}
+```
+<br/>
+
+<!-- 4. 디데이 계산 -->
+## 📅 디데이 계산
+<br/>
+
+<!-- 5. 계산 기록 -->
+## 📝 계산 기록
+등호(=) 버튼을 클릭했을 때 UserDefaults를 이용해서 계산식을 로컬에 저장한다.
+
+```swift
+@IBAction func equalButtonTapped(_ sender: UIButton) {
+    symbolLabel.text = ""
+    self.operation(self.currentOperation)
+    self.isClickedEqual = true
+
+    // 계산 기록하기 : 계산식이 담긴 문자열(연산식 + "=" + 결과값)을 UserDefaults에 저장하기
+    // ex) 4:16 + 1:09 + 0:37 = 6:02
+    formula += "\(updateLabel(self.secondOperand)) = \(self.outputLabel.text!)"
+
+    var history = UserDefaults.standard.array(forKey: "History") as? [String]
+    if history == nil {
+        history = [formula]
+    } else {
+        history?.append(formula)
+    }
+    UserDefaults.standard.set(history! ,forKey: "History")
+
+    self.formula = ""
+}
+```
+<br/>
+
+단, 올바른 계산식을 만들기 위해서 숫자 버튼을 클릭할 때마다 isClickedOperation 변수를 확인한다.
+
+숫자 버튼을 눌렀을 때 이미 연산자를 누른적이 있다면(isClickedOperation = true) 계산식을 만들고, 연산자를 누른적은 없지만 등호(=)를 누른적이 있다면(isClickedOperation = false, isClickedEqual = true) 피연산자와 현재 연산자의 값을 초기화시킨다.
+
+계산식을 만들 때 주의할 점은 첫번째 피연산자를 가져올 때이다.
+
+즉, 연산을 제일 처음할 경우인데 두번째 피연산자가 없을 때와 등호(=) 기호를 누른 후에 추가로 연산을 진행할 때만 첫번째 피연산자를 가져오면 된다.
+
+```swift
+@IBAction func numberButtonTapped(_ sender: UIButton) {
+    // 계산식을 올바르게 만들기 위해서
+    if self.isClickedOperation {    // 계산 끝난 후 연산자 누르면
+
+        if self.secondOperand.isEmpty || isClickedEqual {
+            // 첫번째 피연산자 가져오는 경우 : 두번째 피연산자가 없을 때, = 기호 누른 후 추가로 연산할 때
+            formula = updateLabel(self.firstOperand)
+        } else {
+            formula += updateLabel(self.secondOperand)
+        }
+
+        switch self.currentOperation {
+        case .Add:
+            formula += " + "
+        case .Subtract:
+            formula += " - "
+        default:
+            break
+        }
+
+    } else {    // 계산 끝난 후 바로 숫자 누르면
+        if self.isClickedEqual {
+            self.firstOperand = ""
+            self.secondOperand = ""
+            self.currentOperation = .unknown
+            self.isClickedEqual = false
+        }
+    }
+
+
+    guard let numberValue = sender.title(for: .normal) else { return }
+    if displayNumber.count < 8 {
+        self.displayNumber += numberValue
+        self.outputLabel.text = updateLabel(displayNumber)
+    }
+}
+```
+<br/>
+
+계산이 끝난 후에 사용자가 행할 수 있는 연산의 갈래는 두가지가 있다.
+> 1) 앞서 계산한 결과에 이어 바로 연산한다.
+>
+> 2) 바로 숫자를 입력하고 새 연산을 시작한다.
+<br/>
+
+<!-- 6. 언어 지원 -->
+## 🌐 언어 지원
+<br/>
+
+<!-- 7. 그 외 기능 -->
+## 📌 그 외 기능
+### 다크모드
+### 사운드 설정
+### 앱 평가
+### 피드백 보내기
+### 앱 추적 권한 요청
+### IBDesignable
+### 튜토리얼 뷰(Pagecontrol)
 <br/>
 
 <!-- 8. 화면 및 디자인 -->
@@ -203,6 +358,8 @@ h:ours의 포인트 색상은 팬톤에서 선정한 2022년 올해의 컬러 '�
 ### v1.2.0 (2022. 1. 27)
 > - 앱 추적 권한 및 광고 추가
 
+### v1.3.0 (2022. 1. 31)
+> - 스페인어, 프랑스어, 독일어 지원
 <br/>
 <br/>
 
