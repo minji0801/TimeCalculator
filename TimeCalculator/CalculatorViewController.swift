@@ -94,7 +94,6 @@ class CalculatorViewController: UIViewController {
             }
         }
         
-        self.isClickedOperation = false
         
         guard let numberValue = sender.title(for: .normal) else { return }
         if displayNumber.count < 8 {
@@ -158,6 +157,7 @@ class CalculatorViewController: UIViewController {
         symbolLabel.text = ""
         self.operation(self.currentOperation)
         self.isClickedEqual = true
+        self.isClickedOperation = false
         
         // 계산 기록하기 : 계산식이 담긴 문자열(연산식 + "=" + 결과값)을 UserDefaults에 저장하기
         // ex) 4:16 + 1:09 + 0:37 = 6:02
