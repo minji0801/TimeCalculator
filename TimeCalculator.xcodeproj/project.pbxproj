@@ -12,6 +12,7 @@
 		A52445DC277C4C6E00BB378F /* LanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52445DB277C4C6E00BB378F /* LanguageViewController.swift */; };
 		A528F4D527798E3700034F36 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A528F4D427798E3700034F36 /* RoundButton.swift */; };
 		A55CF47727858B7C00BE53B7 /* SDSamliphopangcheTTFBasic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A55CF47527858B7C00BE53B7 /* SDSamliphopangcheTTFBasic.ttf */; };
+		A55D927627AA416D00E75EA9 /* ChangeLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55D927527AA416D00E75EA9 /* ChangeLanguage.swift */; };
 		A5649A50277440BD00A77CF2 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5649A4F277440BD00A77CF2 /* TabBarController.swift */; };
 		A569A9E9276710BF00435CF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A569A9E8276710BF00435CF0 /* AppDelegate.swift */; };
 		A569A9EB276710BF00435CF0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A569A9EA276710BF00435CF0 /* SceneDelegate.swift */; };
@@ -35,6 +36,7 @@
 		A52445DB277C4C6E00BB378F /* LanguageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageViewController.swift; sourceTree = "<group>"; };
 		A528F4D427798E3700034F36 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		A55CF47527858B7C00BE53B7 /* SDSamliphopangcheTTFBasic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SDSamliphopangcheTTFBasic.ttf; sourceTree = "<group>"; };
+		A55D927527AA416D00E75EA9 /* ChangeLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeLanguage.swift; sourceTree = "<group>"; };
 		A5649A4F277440BD00A77CF2 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		A569A9E5276710BF00435CF0 /* TimeCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A569A9E8276710BF00435CF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				A56AF277276C82180043FD12 /* UIConfigure.swift */,
+				A55D927527AA416D00E75EA9 /* ChangeLanguage.swift */,
 			);
 			path = Method;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 				A569A9E2276710BF00435CF0 /* Frameworks */,
 				A569A9E3276710BF00435CF0 /* Resources */,
 				38B93222B8F0A3ED9567116D /* [CP] Embed Pods Frameworks */,
+				A535A04227AA3487002BCBE2 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -284,6 +288,24 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TimeCalculator/Pods-TimeCalculator-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		A535A04227AA3487002BCBE2 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
 		FAC4EB900BABF19D52502A48 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -316,6 +338,7 @@
 				A52445DC277C4C6E00BB378F /* LanguageViewController.swift in Sources */,
 				A595A507277AC88F005D1279 /* SettingButton.swift in Sources */,
 				A528F4D527798E3700034F36 /* RoundButton.swift in Sources */,
+				A55D927627AA416D00E75EA9 /* ChangeLanguage.swift in Sources */,
 				A569A9E9276710BF00435CF0 /* AppDelegate.swift in Sources */,
 				A56AF278276C82180043FD12 /* UIConfigure.swift in Sources */,
 				A5FD7E09278BE95E0078D907 /* HistoryViewController.swift in Sources */,
@@ -507,7 +530,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = MZ4WUT4W35;
 				EXCLUDED_ARCHS = "";
 				GENERATE_INFOPLIST_FILE = YES;
@@ -525,7 +548,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3.0;
+				MARKETING_VERSION = 1.3.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alswl.TimeCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -543,7 +566,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = MZ4WUT4W35;
 				EXCLUDED_ARCHS = "";
 				GENERATE_INFOPLIST_FILE = YES;
@@ -561,7 +584,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3.0;
+				MARKETING_VERSION = 1.3.1;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alswl.TimeCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";

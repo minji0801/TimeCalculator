@@ -19,5 +19,3 @@ class SettingButton: UIButton {
         }
     }
 }
-
-//SDSamliphopangcheTTFBasic
