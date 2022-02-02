@@ -7,5 +7,6 @@ target 'TimeCalculator' do
 
   # Pods for TimeCalculator
   pod 'Google-Mobile-Ads-SDK'
+  pod 'SwiftLint'
 
 end
