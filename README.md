@@ -53,28 +53,28 @@
 <!-- 1. 개발 동기 -->
 ## 🔥 개발 동기
 ### 1. 시간을 계산하는데 불편함이 있다.
-- 매일 플래너에 Total Time을 기록하는데에 있어 시간 계산에 대한 불편함이 있다.
-- ‘Hours’ 앱으로 시간을 계산하고 있지만 이와 차별화된 앱을 개발하고 싶다.
+- 매일 플래너에 Total Time을 기록하는데에 있어 시간 계산에 대한 불편함이 있었습니다.
+- ‘Hours’ 앱으로 시간을 계산하고 있지만 이와 차별화된 앱을 개발하고 싶었습니다.
 
-### 2. 시간과 더불어 날짜 계산도 한 곳에서 할 수 있으면 겠다.
-- ‘Hours’ 앱은 시간만 계산할 수 있다. 
-- 시간 계산뿐만 아니라 날짜 계산(디데이)도 가능한 앱이 출시되면 좋겠다.
+### 2. 날짜 계산까지 한 곳에서 할 수 있으면 좋겠다.
+- ‘Hours’ 앱은 시간만 계산할 수 있습니다.
+- 시간 계산뿐만 아니라 날짜 계산(디데이)도 가능한 앱이 개발하고 싶었습니다.
 
 <br/>
 
 <!-- 2. 개발 목표 -->
 ## 🎯 개발 목표
 ### 1. 시간 계산
-- 시간 계산이 제일 우선으로, 앱을 켜면 바로 시간을 계산할 수 있다.
-- 일반 계산기 형태로 시간을 계산한다. (‘Hours’ 앱과 유사)
+- 시간 계산이 제일 우선으로, 앱을 켜면 바로 시간을 계산할 수 있습니다.
+- 일반 계산기 형태로 시간을 계산합니다. (‘Hours’ 앱과 유사)
 
 ### 2. 날짜 계산
-- 기준일과 목표일을 사용자가 입력하면 디데이를 계산하여 보여준다.
-- 기준일과 목표일의 기본값에 오늘 날짜가 입력된다.
+- 기준일과 목표일을 사용자가 입력하면 디데이를 계산하여 보여줍니다.
+- 기준일과 목표일의 기본값에 오늘 날짜가 입력됩니다.
 
 ### 3. 다국어 지원
-- 앞서 출시한 'Scoit'은 영어만 지원했고, '모닥이'는 한국어만 지원했다.
-- 이번에는 현지화를 통해 다양한 나라에서 편하게 이용할 수 있다.
+- 이전에 출시한 'Scoit'은 영어만 지원했고, '모닥이'는 한국어만 지원했습니다.
+- 이번에는 현지화를 통해 다양한 나라에서 편하게 이용할 수 있습니다.
 
 <br/>
 
@@ -82,7 +82,7 @@
 ## ⏰ 시간 계산
 ### 1. 시간 형식 변환
 
-시간 계산에 있어서 "연산자를 클릭할 때 입력한 시간 또는 연산 결과를 올바른 시간 포맷으로 보여줘야 한다" 는 것이 제일 큰 문제였다.  
+시간 계산에 있어서 "연산자를 클릭할 때 입력한 시간 또는 연산 결과를 올바른 시간 포맷으로 보여줘야 한다" 는 것이 제일 큰 문제였습니다.  
 > 예1) 사용자가 3:66를 입력하고 + 를 클릭하면 4:06으로 보여줘야 한다.  
 > 
 > 예2) 1:50 + 0:25 의 연산 결과는 2:15로 보여줘야 한다.
@@ -90,11 +90,11 @@
 <br/>
 <br/>
 
-따라서, 올바른 시간 형식으로 값을 변환하는 converTimeFormat 메서드를 만들었다.
+따라서, 올바른 시간 형식으로 값을 변환하는 converTimeFormat 메서드를 만들었습니다.
 
-converTimeFormat 메서드는 입력받은 시간의 분이 60~99 사이라면 분에서 60을 빼고 시에는 1을 더한다.
-
-이 메서드는 연산 기호를 누른 후 반드시 실행되며, 연산 결과가 있다면 그 결과값에 대해서도 적용된다.
+> 입력받은 시간의 분이 60~99 사이라면 분에서 60을 빼고 시에는 1을 더한다.
+>
+> 연산 기호를 누른 후 반드시 실행되며, 연산 결과가 있다면 그 결과값에 대해서도 적용된다.
 
 ```swift
 func convertTimeFormat(_ value: [String]) -> String {
@@ -122,7 +122,7 @@ func convertTimeFormat(_ value: [String]) -> String {
 
 ### 2. 뺄셈과 덧셈
 
-뺄셈 연산은 첫번째 피연산자가 세자리 이상이고, 첫번째 피연산자의 분이 두번째 피연산자의 분보다 작으면 40을 뺀다.
+뺄셈 연산은 첫번째 피연산자가 세자리 이상이고, 첫번째 피연산자의 분이 두번째 피연산자의 분보다 작으면 40을 뺍니다.
 > ex) 1:05 - 0:30 
 > 
 > => 105 - 30 - 40 = 35
@@ -131,16 +131,16 @@ func convertTimeFormat(_ value: [String]) -> String {
 
 <br/>
 
-덧셈 연산의 경우 아래와 같이 연산되는 문제가 있었다.
+덧셈 연산의 경우 아래와 같이 연산되는 문제가 있었습니다.
 > 0:58 + 0:53 = 1:11 
 > 
 > (정상적인 연산 결과는 1:51이다.)
 
-이는 입력받은 시간을 String에서 Int형으로 바꾸고 덧셈을 했으니 58 + 53 = 111를 1:11로 올바르게 보여준 것이다.
+이는 입력받은 시간을 String에서 Int형으로 바꾸고 덧셈을 했으니 58 + 53 = 111를 1:11로 올바르게 보여준 것입니다.
 
 <br/>
 
-따라서, 입력받은 두 시간의 분이 모두 두자리이고 분의 합이 100을 넘으면 40을 더한다.
+따라서, 덧셈 연산은 입력받은 두 시간의 분이 모두 두자리이고 분의 합이 100을 넘으면 40을 더합니다.
 > ex) 0:58 + 0:53 
 > 
 > => 58 + 53 + 40 = 151 
@@ -151,13 +151,13 @@ func convertTimeFormat(_ value: [String]) -> String {
 <br/>
 
 ### 3. 연산자 연속 클릭 처리
-처음에는 연산자 버튼을 클릭하면 해당 연산을 바로 실행하도록 구현했으나, 사용자가 실수로 + 버튼을 클릭했다가 - 버튼을 클릭한 경우에는 에러가 발생한다.
+개발 초기에 연산자 버튼을 클릭하면 해당 연산을 바로 실행하도록 구현했는데, 그러면 + 버튼을 클릭했다가 - 버튼을 클릭한 경우에는 에러가 발생했습니다.
 
-그래서 operation 메서드를 따로 만들었고 연산자가 클릭되었을 때 실행된다.
+그래서 operation 메서드를 따로 만들었고 연산자가 클릭되었을 때 호출합니다.
 
-이 메서드에서 displayNumber 값이 있을 때만 연산을 수행한다. (displayNumber는 사용자가 입력한 시간을 숫자형태로 저장하는 String 타입 변수)
-
-따라서, 연산자 버튼을 연속해서 클릭하더라도 에러가 발생하지 않는다.
+> displayNumber 값이 있을 때만 연산을 수행한다. (displayNumber는 사용자가 입력한 시간을 숫자형태로 저장하는 String 타입 변수)
+>
+> 따라서, 연산자 버튼을 연속해서 클릭하더라도 에러가 발생하지 않는다.
 
 ```swift
 func operation(_ operation: Operation) {
@@ -218,7 +218,7 @@ func operation(_ operation: Operation) {
 
 <!-- 5. 계산 기록 -->
 ## 📝 계산 기록
-등호(=) 버튼을 클릭했을 때 UserDefaults를 이용해서 계산식을 로컬에 저장한다.
+등호(=) 버튼을 클릭했을 때 UserDefaults를 이용해서 계산식을 로컬에 저장합니다.
 
 ```swift
 @IBAction func equalButtonTapped(_ sender: UIButton) {
@@ -244,13 +244,13 @@ func operation(_ operation: Operation) {
 
 <br/>
 
-단, 올바른 계산식을 만들기 위해서 숫자 버튼을 클릭할 때마다 isClickedOperation 변수를 확인한다.
+단, 올바른 계산식을 만들기 위해서 숫자 버튼을 클릭할 때마다 isClickedOperation 변수를 확인합니다.
 
-숫자 버튼을 눌렀을 때 이미 연산자를 누른적이 있다면(isClickedOperation = true) 계산식을 만들고, 연산자를 누른적은 없지만 등호(=)를 누른적이 있다면(isClickedOperation = false, isClickedEqual = true) 피연산자와 현재 연산자의 값을 초기화시킨다.
+숫자 버튼을 눌렀을 때 이미 연산자를 누른적이 있다면(isClickedOperation = true) 계산식을 만들고, 연산자를 누른적은 없지만 등호(=)를 누른적이 있다면(isClickedOperation = false, isClickedEqual = true) 피연산자와 현재 연산자의 값을 초기화합니다.
 
-계산식을 만들 때 주의할 점은 첫번째 피연산자를 가져올 때이다.
+계산식을 만들 때 주의할 점은 첫번째 피연산자를 가져올 때입니다.
 
-즉, 연산을 제일 처음할 경우인데 두번째 피연산자가 없을 때와 등호(=) 기호를 누른 후에 추가로 연산을 진행할 때만 첫번째 피연산자를 가져오면 된다.
+즉, 연산을 제일 처음할 경우인데 두번째 피연산자가 없을 때와 등호(=) 기호를 누른 후에 추가로 연산을 진행할 때만 첫번째 피연산자를 가져오면 됩니다.
 
 ```swift
 @IBAction func numberButtonTapped(_ sender: UIButton) {
@@ -282,7 +282,6 @@ func operation(_ operation: Operation) {
         }
     }
 
-
     guard let numberValue = sender.title(for: .normal) else { return }
     if displayNumber.count < 8 {
         self.displayNumber += numberValue
@@ -293,7 +292,7 @@ func operation(_ operation: Operation) {
 
 <br/>
 
-계산이 끝난 후에 사용자가 행할 수 있는 연산의 갈래는 두가지가 있다.
+계산이 끝난 후에 사용자가 행할 수 있는 연산의 갈래는 두가지가 있습니다.
 > 1) 앞서 계산한 결과에 이어 바로 연산한다.
 >
 > 2) 바로 숫자를 입력하고 새 연산을 시작한다.
@@ -302,18 +301,18 @@ func operation(_ operation: Operation) {
 
 <!-- 6. 언어 지원 -->
 ## 🌐 언어 지원
+설정에서 '언어' 버튼을 통해서 언어를 변경할 수 있습니다. 1.3.1 버전 기준으로 총 8개의 언어를 지원하고 있습니다.
+<p align="center"><img src="https://user-images.githubusercontent.com/49383370/152671549-b8ddf5c3-cd00-4350-a95b-cf97c7428545.jpeg"></p>
 
 <br/>
 
 <!-- 7. 기타 -->
 ## 📌 기타
 ### 다크 모드
-설정에서 '다크 모드'를 클릭하면 UserDefaults를 이용해 로컬에서 해당 값을 가져온 후 반대로 저장한다.
+설정에서 '다크 모드' 버튼으로 앱의 UI Style을 변경할 수 있습니다.
+<p align="center"><img src="https://user-images.githubusercontent.com/49383370/152300020-5cae4abe-4ab4-4473-b604-eb86e3a059d9.jpeg"></p>
 
-앱의 기본 Appearance를 Light로 설정했기 때문에 처음에는 무조건 false를 가져온다.
-
-![다크모드](https://user-images.githubusercontent.com/49383370/152300020-5cae4abe-4ab4-4473-b604-eb86e3a059d9.jpeg)
-
+UserDefaults를 이용하여 로컬에서 키가 "Dark"인 값을 가져온 후 반대로 저장합니다. 앱의 기본 모드를 Light로 설정했기 때문에 처음에는 무조건 false를 가져옵니다.
 ```swift
 @IBAction func darkModeButtonTapped(_ sender: UIButton) {
     let appearance = UserDefaults.standard.bool(forKey: "Dark")
@@ -329,9 +328,9 @@ func operation(_ operation: Operation) {
 
 <br/>
 
-viewWillAppear()에서 appearanceCheck 함수가 호출되서 UserDefaults로 로컬에 저장한 값을 기준으로 앱의 Appearance를 변경시킨다.
+viewWillAppear()에서 appearanceCheck 함수가 호출되서 UserDefaults로 로컬에 저장한 값을 기준으로 앱의 Appearance를 변경합니다.
 
-모든 ViewController의 viewWillAppear()에서 appearanceCheck 함수를 호출한다.
+모든 ViewController의 viewWillAppear()에서 appearanceCheck 함수를 호출합니다.
 
 ```swift
 override func viewWillAppear(_ animated: Bool) {
@@ -365,10 +364,10 @@ func appearanceCheck(_ viewController: UIViewController) {
 <br/>
 
 ### 사운드 설정
-기본 설정으로 버튼 클릭 시 소리 나는데, 설정에서 '사운드'를 클릭하면 소리가 나지 않게 할 수 있다. 
+기본으로 버튼 클릭 시 소리가 나는데, 설정에서 '사운드' 버튼을 통해 소리가 나지 않도록 설정할 수 있습니다. 
 <p align="center"><img src="https://user-images.githubusercontent.com/49383370/152310768-25e6b7c8-26dc-4b9e-83d4-de5d5fe38db3.jpeg"></p>
 
-UserDefaluts를 이용해 로컬에서 해당 값을 가져온 후 반대로 저장한다.
+UserDefaluts를 이용해 로컬에서 키가 "SoundOff"인 값을 가져온 후 반대로 저장합니다.
 
 ```swift
 @IBAction func soundButtonTapped(_ sender: UIButton) {
@@ -377,7 +376,7 @@ UserDefaluts를 이용해 로컬에서 해당 값을 가져온 후 반대로 저
 }
 ```
 
-그리고 해당 버튼 클릭 시 로컬에 저장된 값을 가져와 그 값에 따라 사운드를 컨트롤한다.
+그리고 해당 버튼 클릭 시 로컬에 저장된 값을 가져와 그 값에 따라 사운드를 컨트롤합니다.
 
 ```swift
 @IBAction func buttonPressed(_ sender: Any) {
@@ -389,11 +388,10 @@ UserDefaluts를 이용해 로컬에서 해당 값을 가져온 후 반대로 저
 }
 ```
 
-
 <br/>
 
 ### 앱 평가
-설정에서 '앱 평가'를 클릭하면 App Store에서 h:ours를 보여준다.
+설정에서 '앱 평가' 버튼을 통해 App Store의 h:ours 페이지로 이동할 수 있습니다.
 <p align="center"><img src="https://user-images.githubusercontent.com/49383370/152300317-e8fc9497-b8ec-4fa0-8110-100c99f1600b.jpeg"></p>
 
 ```swift
@@ -413,8 +411,10 @@ UserDefaluts를 이용해 로컬에서 해당 값을 가져온 후 반대로 저
 <br/>
 
 ### 피드백 보내기
-설정에서 '피드백 보내기'를 클릭하면 MessageUI를 이용해서 개발자에게 피드백을 보낸다.
+설정에서 '피드백 보내기' 버튼을 통해서 개발자에게 피드백을 보낼 수 있습니다.
 <p align="center"><img src="https://user-images.githubusercontent.com/49383370/152298101-6f4ae3b8-b9c4-4efd-b4c3-df52b07d0c8a.jpeg"></p>
+
+MessageUI를 이용해서 Main 앱으로 이메일 작성 화면을 띄웁니다.
 
 ```swift
 import MessageUI
@@ -468,7 +468,7 @@ import MessageUI
 ```
 
 ### 앱 추적 권한 요청
-사용자에게 맞춤형 광고를 제공하기 위해 앱을 처음 설치하고 실행할 때 앱 추적 권한을 요청한다.
+사용자에게 맞춤형 광고를 제공하기 위해서 앱을 처음 설치하고 실행할 때 앱 추적 권한을 요청합니다.
 
 ```swift
 import AdSupport
