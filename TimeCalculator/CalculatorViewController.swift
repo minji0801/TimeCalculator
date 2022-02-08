@@ -31,6 +31,7 @@ class CalculatorViewController: UIViewController {
     var formula = ""                // 계산식 담는 문자열
     var isClickedOperation = false  // 연산자 버튼이 눌렸는지
     var isClickedEqual = false      // = 기호 눌렀는지
+    var isAddedFormula = false      // secondOperand를 formula에 넣었는지
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,38 +67,51 @@ class CalculatorViewController: UIViewController {
 
     // 숫자 버튼 눌렀을 때
     @IBAction func numberButtonTapped(_ sender: UIButton) {
-        // 계산식을 올바르게 만들기 위해서
-        if self.isClickedOperation {    // 계산 끝난 후 연산기호 누르면
+        self.createCorrectFormula()
 
+        guard let numberValue = sender.title(for: .normal) else { return }
+        if displayNumber.count < 8 {
+            self.displayNumber += numberValue
+            self.outputLabel.text = updateLabel(displayNumber)
+        }
+    }
+
+    // 올바른 계산식 만들기
+    func createCorrectFormula() {
+        if self.isClickedOperation {    // +나 -연산자 누른적 있으면
+            // 첫번째 연산자 가져오는 경우 : 두번째 연산자가 없을 때, = 기호 누른 후 추가로 연산할 때
             if self.secondOperand.isEmpty || isClickedEqual {
-                // 첫번째 연산자 가져오는 경우 : 두번째 연산자가 없을 때, = 기호 누른 후 추가로 연산할 때
                 formula = updateLabel(self.firstOperand)
+                switch self.currentOperation {
+                case .add:
+                    formula += " + "
+                case .subtract:
+                    formula += " - "
+                default:
+                    break
+                }
             } else {
-                formula += updateLabel(self.secondOperand)
+                // secondOperand를 이미 formula에 넣은 경우는 다시 넣지 않도록
+                if !self.isAddedFormula {
+                    formula += updateLabel(self.secondOperand)
+                    switch self.currentOperation {
+                    case .add:
+                        formula += " + "
+                    case .subtract:
+                        formula += " - "
+                    default:
+                        break
+                    }
+                    self.isAddedFormula = true
+                }
             }
-
-            switch self.currentOperation {
-            case .add:
-                formula += " + "
-            case .subtract:
-                formula += " - "
-            default:
-                break
-            }
-
-        } else {    // 계산 끝난 후 바로 숫자 누르면
+        } else {    // +나 -연산자 누른적은 없지만 =연산자 누른적 있으면
             if self.isClickedEqual {
                 self.firstOperand = ""
                 self.secondOperand = ""
                 self.currentOperation = .unknown
                 self.isClickedEqual = false
             }
-        }
-
-        guard let numberValue = sender.title(for: .normal) else { return }
-        if displayNumber.count < 8 {
-            self.displayNumber += numberValue
-            self.outputLabel.text = updateLabel(displayNumber)
         }
     }
 
@@ -129,6 +143,7 @@ class CalculatorViewController: UIViewController {
         self.symbolLabel.text = ""
         self.isClickedOperation = false
         self.isClickedEqual = false
+        self.formula = ""
     }
 
     // Del 버튼 눌렀을 때
@@ -143,12 +158,14 @@ class CalculatorViewController: UIViewController {
     @IBAction func plusButtonTapped(_ sender: UIButton) {
         self.symbolLabel.text = "+"
         self.operation(.add)
+        self.isAddedFormula = false
     }
 
     // - 버튼 눌렀을 때
     @IBAction func minusButtonTapped(_ sender: UIButton) {
         self.symbolLabel.text = "-"
         self.operation(.subtract)
+        self.isAddedFormula = false
     }
 
     // = 버튼 눌렀을 때
@@ -159,17 +176,20 @@ class CalculatorViewController: UIViewController {
         self.isClickedOperation = false
 
         // 계산 기록하기 : 계산식이 담긴 문자열(연산식 + "=" + 결과값)을 UserDefaults에 저장하기
+        // formula가 "0:00 = 0:00"이면 저장하지 않기
         // ex) 4:16 + 1:09 + 0:37 = 6:02
-        formula += "\(updateLabel(self.secondOperand)) = \(self.outputLabel.text!)"
 
-        var history = UserDefaults.standard.array(forKey: "History") as? [String]
-        if history == nil {
-            history = [formula]
-        } else {
-            history?.append(formula)
+        self.formula += "\(updateLabel(self.secondOperand)) = \(self.outputLabel.text!)"
+
+        if self.formula != "0:00 = 0:00" {
+            var history = UserDefaults.standard.array(forKey: "History") as? [String]
+            if history == nil {
+                history = [formula]
+            } else {
+                history?.append(formula)
+            }
+            UserDefaults.standard.set(history!, forKey: "History")
         }
-        UserDefaults.standard.set(history!, forKey: "History")
-
         self.formula = ""
     }
 
