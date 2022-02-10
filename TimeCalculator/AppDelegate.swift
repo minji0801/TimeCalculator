@@ -28,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // 앱 추적 권한 요청
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             if #available(iOS 14, *) {
-                ATTrackingManager.requestTrackingAuthorization { status in
+                ATTrackingManager.requestTrackingAuthorization { [weak self] status in
                     switch status {
                     case .authorized:           // 허용됨
                         print("Authorized")

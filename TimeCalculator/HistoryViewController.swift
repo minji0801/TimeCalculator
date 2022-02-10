@@ -48,10 +48,10 @@ class HistoryViewController: UIViewController {
     @IBAction func deleteButtonTapped(_ sender: UIButton) {
         let alert = UIAlertController(title: self.alertTitle, message: self.alertMessage, preferredStyle: .alert)
         let noAction = UIAlertAction(title: self.noTitle, style: .destructive, handler: nil)
-        let yesAction = UIAlertAction(title: self.yesTitle, style: .default) { _ in
+        let yesAction = UIAlertAction(title: self.yesTitle, style: .default) { [weak self] _ in
             UserDefaults.standard.set([], forKey: "History")
             DispatchQueue.main.async {
-                self.viewWillAppear(true)
+                self?.viewWillAppear(true)
             }
         }
 

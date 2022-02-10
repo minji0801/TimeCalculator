@@ -126,7 +126,7 @@ class SettingViewController: UIViewController {
         } else {
 //            print("메일 보내기 실패")
             let sendMailErrorAlert = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .alert)
-            let goAppStoreAction = UIAlertAction(title: goTitle, style: .default) { _ in
+            let goAppStoreAction = UIAlertAction(title: goTitle, style: .default) { [weak self] _ in
                 // 앱스토어로 이동하기(Mail)
                 let store = "https://apps.apple.com/kr/app/mail/id1108187098"
                 if let url = URL(string: store), UIApplication.shared.canOpenURL(url) {
@@ -163,7 +163,7 @@ class SettingViewController: UIViewController {
         var systemInfo = utsname()
         uname(&systemInfo)
         let machineMirror = Mirror(reflecting: systemInfo.machine)
-        let identifier = machineMirror.children.reduce("") { identifier, element in
+        let identifier = machineMirror.children.reduce("") { [weak self] identifier, element in
             guard let value = element.value as? Int8, value != 0 else { return identifier }
             return identifier + String(UnicodeScalar(UInt8(value)))
         }
@@ -196,8 +196,6 @@ class SettingViewController: UIViewController {
         let path = Bundle.main.path(forResource: language, ofType: "lproj")
                     ?? Bundle.main.path(forResource: "en", ofType: "lproj")
         let bundle = Bundle(path: path!)
-        print(language!)
-        print(path!)
 
         self.titleLabel.text = bundle?.localizedString(forKey: "settings", value: nil, table: nil)
         self.darkModeButton.setTitle(bundle?.localizedString(forKey: "dark", value: nil, table: nil), for: .normal)

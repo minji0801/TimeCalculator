@@ -89,8 +89,6 @@ class LanguageViewController: UIViewController {
         let path = Bundle.main.path(forResource: language, ofType: "lproj")
                     ?? Bundle.main.path(forResource: "en", ofType: "lproj")
         let bundle = Bundle(path: path!)
-//        print(language!)
-//        print(path!)
 
         self.notiLabel.text = bundle?.localizedString(forKey: "language_noti", value: nil, table: nil)
     }
