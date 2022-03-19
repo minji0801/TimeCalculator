@@ -6,6 +6,7 @@ target 'TimeCalculator' do
   use_frameworks!
 
   # Pods for TimeCalculator
+  pod 'Firebase/Analytics'
   pod 'Google-Mobile-Ads-SDK'
   pod 'SwiftLint'
 

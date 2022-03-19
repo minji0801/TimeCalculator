@@ -9,8 +9,11 @@ import UIKit
 import AVFoundation
 import GoogleMobileAds
 
-class DdayViewController: UIViewController {
-    var player: AVAudioPlayer!
+final class DdayViewController: UIViewController {
+    private let calendar = Calendar.current
+    private let currentDate = Date()
+    private let dateFormatter = DateFormatter()
+    private lazy var daysCount: Int = 0
 
     @IBOutlet weak var startLabel: UILabel!
     @IBOutlet weak var startDatePicker: UIDatePicker!
@@ -73,28 +76,21 @@ class DdayViewController: UIViewController {
         } else {
             let result = Calendar.current.dateComponents(
                 [.day],
-                from: startDatePicker.date,
-                to: endDatePicker.date
-            ).day!
+                from: endDatePicker.date,
+                to: startDatePicker.date
+            ).day! + 1
 //            print("result = \(result)")
-            if result < 0 {
-                // result가 음수면 절대값씌워서 앞에 + 붙이기
-                return "+ \(result.magnitude)"
+            if result > 0 {
+                return "+ \(result - 1)"
             } else {
-                // 0이거나 양수면 1더해서 앞에 - 붙이기
-                return "- \((result + 1))"
+                return "- \((result.magnitude + 1))"
             }
         }
     }
 
     // 언어 설정
     func setLanguage() {
-        var language = UserDefaults.standard.array(forKey: "Language")?.first as? String
-        if language == nil {
-            let str = String(NSLocale.preferredLanguages[0])
-            language = String(str.dropLast(3))
-        }
-
+        var language = LanguageManaer.currentLanguage()
         var path = Bundle.main.path(forResource: language, ofType: "lproj")
         if path == nil {
             path = Bundle.main.path(forResource: "en", ofType: "lproj")
@@ -110,7 +106,7 @@ class DdayViewController: UIViewController {
             for: .normal
         )
 
-        self.startDatePicker.locale = Locale(identifier: language!)
-        self.endDatePicker.locale = Locale(identifier: language!)
+        self.startDatePicker.locale = Locale(identifier: language)
+        self.endDatePicker.locale = Locale(identifier: language)
     }
 }

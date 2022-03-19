@@ -16,7 +16,6 @@ enum Operation {
 }
 
 class CalculatorViewController: UIViewController {
-    var player: AVAudioPlayer!
 
     @IBOutlet weak var outputLabel: UILabel!
     @IBOutlet weak var symbolLabel: UILabel!

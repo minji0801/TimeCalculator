@@ -12,21 +12,21 @@ import UIKit
 func changeLanguageFirst(_ text: String) {
     switch text {
     case "English":
-        UserDefaults.standard.set(["en"], forKey: "Language")
+        LanguageManaer.applyLanguage(language: .english)
     case "简体中文":
-        UserDefaults.standard.set(["zh-Hans"], forKey: "Language")
+        LanguageManaer.applyLanguage(language: .chineseS)
     case "繁體中文":
-        UserDefaults.standard.set(["zh-Hant"], forKey: "Language")
+        LanguageManaer.applyLanguage(language: .chineseT)
     case "日本語":
-        UserDefaults.standard.set(["ja"], forKey: "Language")
+        LanguageManaer.applyLanguage(language: .japanese)
     case "Español":
-        UserDefaults.standard.set(["es"], forKey: "Language")
+        LanguageManaer.applyLanguage(language: .spanish)
     case "Français":
-        UserDefaults.standard.set(["fr"], forKey: "Language")
+        LanguageManaer.applyLanguage(language: .french)
     case "Deutsch":
-        UserDefaults.standard.set(["de"], forKey: "Language")
+        LanguageManaer.applyLanguage(language: .german)
     case "Русский":
-        UserDefaults.standard.set(["ru"], forKey: "Language")
+        LanguageManaer.applyLanguage(language: .russian)
     default: break
     }
 }
@@ -35,21 +35,21 @@ func changeLanguageFirst(_ text: String) {
 func changeLanguageSecond(_ text: String) {
     switch text {
     case "Português (Brasil)":
-        UserDefaults.standard.set(["pt-BR"], forKey: "Language")
+        LanguageManaer.applyLanguage(language: .portuguese)
     case "Italiano":
-        UserDefaults.standard.set(["it"], forKey: "Language")
+        LanguageManaer.applyLanguage(language: .italian)
     case "한국어":
-        UserDefaults.standard.set(["ko"], forKey: "Language")
+        LanguageManaer.applyLanguage(language: .korean)
     case "Türkçe":
-        UserDefaults.standard.set(["tr"], forKey: "Language")
+        LanguageManaer.applyLanguage(language: .turkish)
     case "Nederlands":
-        UserDefaults.standard.set(["nl"], forKey: "Language")
+        LanguageManaer.applyLanguage(language: .dutch)
     case "ภาษาไทย":
-        UserDefaults.standard.set(["th"], forKey: "Language")
+        LanguageManaer.applyLanguage(language: .thai)
     case "Svenska":
-        UserDefaults.standard.set(["sv"], forKey: "Language")
+        LanguageManaer.applyLanguage(language: .swedish)
     case "Dansk":
-        UserDefaults.standard.set(["da"], forKey: "Language")
+        LanguageManaer.applyLanguage(language: .danish)
     default: break
     }
 }
@@ -58,19 +58,19 @@ func changeLanguageSecond(_ text: String) {
 func changeLanguageThird(_ text: String) {
     switch text {
     case "Tiếng Việt":
-        UserDefaults.standard.set(["vi"], forKey: "Language")
+        LanguageManaer.applyLanguage(language: .vietnamese)
     case "Norsk Bokmål":
-        UserDefaults.standard.set(["nb"], forKey: "Language")
+        LanguageManaer.applyLanguage(language: .norwegian)
     case "Polski":
-        UserDefaults.standard.set(["pl"], forKey: "Language")
+        LanguageManaer.applyLanguage(language: .polish)
     case "Suomi":
-        UserDefaults.standard.set(["fi"], forKey: "Language")
+        LanguageManaer.applyLanguage(language: .finnish)
     case "Bahasa Indonesia":
-        UserDefaults.standard.set(["id"], forKey: "Language")
+        LanguageManaer.applyLanguage(language: .indonesian)
     case "Čeština":
-        UserDefaults.standard.set(["cs"], forKey: "Language")
+        LanguageManaer.applyLanguage(language: .czech)
     case "Українська":
-        UserDefaults.standard.set(["uk"], forKey: "Language")
+        LanguageManaer.applyLanguage(language: .ukrainian)
     default: break
     }
 }

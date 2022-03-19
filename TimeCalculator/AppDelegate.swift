@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 import AdSupport
 import AppTrackingTransparency
 import GoogleMobileAds
@@ -25,10 +26,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         _ application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
     ) -> Bool {
+        FirebaseApp.configure()
+
         // 앱 추적 권한 요청
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             if #available(iOS 14, *) {
-                ATTrackingManager.requestTrackingAuthorization { [weak self] status in
+                ATTrackingManager.requestTrackingAuthorization { status in
                     switch status {
                     case .authorized:           // 허용됨
                         print("Authorized")

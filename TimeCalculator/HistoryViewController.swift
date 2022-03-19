@@ -67,11 +67,7 @@ class HistoryViewController: UIViewController {
 
     // 언어 설정
     func setLanguage() {
-        var language = UserDefaults.standard.array(forKey: "Language")?.first as? String
-        if language == nil {
-            let str = String(NSLocale.preferredLanguages[0])
-            language = String(str.dropLast(3))
-        }
+        let language = LanguageManaer.currentLanguage()
         let path = Bundle.main.path(forResource: language, ofType: "lproj")
                     ?? Bundle.main.path(forResource: "en", ofType: "lproj")
         let bundle = Bundle(path: path!)

@@ -14,17 +14,17 @@ func appearanceCheck(_ viewController: UIViewController) {
 
     if appearance {
         viewController.overrideUserInterfaceStyle = .dark
-        if #available(iOS 13.0, *) {
-            UIApplication.shared.statusBarStyle = .lightContent
-        } else {
-            UIApplication.shared.statusBarStyle = .default
-        }
     } else {
         viewController.overrideUserInterfaceStyle = .light
-        if #available(iOS 13.0, *) {
-            UIApplication.shared.statusBarStyle = .darkContent
+    }
+
+    if #available(iOS 13.0, *) {
+        if appearance {
+            UIApplication.shared.statusBarStyle = .lightContent
         } else {
-            UIApplication.shared.statusBarStyle = .default
+            UIApplication.shared.statusBarStyle = .darkContent
         }
+    } else {
+        UIApplication.shared.statusBarStyle = .default
     }
 }
