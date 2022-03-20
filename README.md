@@ -1,17 +1,16 @@
 <div align="center">
   
   <!-- Header -->
-  [![header](https://capsule-render.vercel.app/api?type=waving&color=6667AB&height=300&section=header&text=h:ours&desc=시간%20%2F%20디데이%20계산기&descAlignY=60&fontSize=85&fontAlignY=40&fontColor=FFFFFF)](https://github.com/minji0801/TimeCalculator)
+  [![header](https://capsule-render.vercel.app/api?type=waving&color=6667AB&height=250&section=header&text=h:ours&desc=Hour%20%2F%20D-day%20Calculator&descAlignY=55&fontSize=75&fontAlignY=40&fontColor=FFFFFF)](https://github.com/minji0801/TimeCalculator)
   
-  <br/>
+  h:ours is a combination of ```'hours'``` and a ```colon(:)``` indicating the time.
+
+  Hope this helps in calculating the time for each of us, and it contains the meaning of ```'hours is ours'```.
+  
   <br/>
   
   <!-- Badge -->
   ![version](https://img.shields.io/badge/v-1.3.2-brightgreen?style=flat-square)
-  
-  <br/>
-  <br/>
-  
   ![iOS](https://img.shields.io/badge/iOS-000000?style=flat-square&logo=iOS&logoColor=white)
   ![Swift](https://img.shields.io/badge/Swift-F05138?style=flat-square&logo=Swift&logoColor=white)
   ![Xcode](https://img.shields.io/badge/Xcode-147EFB?style=flat-square&logo=Xcode&logoColor=white)
@@ -21,32 +20,21 @@
   [![Notion](https://img.shields.io/badge/Notion-181717?style=flat-square&logo=Notion&logoColor=white)](https://midi-dill-147.notion.site/h-ours-4d1c8693f14f417d8676e4d2742aab38)
   [![Gmail](https://img.shields.io/badge/Gmail-EA4335?style=flat-square&logo=Gmail&logoColor=white)](https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=hcolonours.help@gmail.com)
 
-  <br/>
-  <br/>
-  <br/>
-
-  #### h:ours는 시간을 의미하는 hours와 시간을 표시하는 콜론(:)이 합쳐진 단어입니다.
-
-  #### 우리 각자의 시간을 계산하는 데 도움이 되길 바라며 '시간은 우리의 것(hours is ours)'이라는 뜻을 포함하고 있습니다.
 </div>
 
-<br/>
-<br/>
-<br/>
-
 <!-- Navigation -->
-# 목차
-1. [개발 동기](#-개발-동기)
-2. [개발 목표](#-개발-목표)
+# Navigation
+1. [Motive](#-개발-동기)
+2. [Goals](#-개발-목표)
 3. [시간 계산](#-시간-계산)
 4. [디데이 계산](#-디데이-계산)
 5. [계산 기록](#-계산-기록)
 6. [설정](#-설정)
 7. [앱 추적 권한](#-앱-추적-권한)
-8. [화면 및 디자인](#-화면-및-디자인)
-9. [이번에 처음 다룬 것](#-이번에-처음-다룬-것)
-10. [만나러 가기](#-만나러-가기)
-11. [버전 기록](#-버전-기록)
+8. [Design](#-화면-및-디자인)
+9. [First time dealing with this](#-이번에-처음-다룬-것)
+10. [Contact](#-만나러-가기)
+11. [Version History](#Version-History)
 
 <br/>
 
@@ -714,89 +702,56 @@ import AppTrackingTransparency
 
 <br/>
 
-<!-- 8. 화면 및 디자인 -->
-## 🌈 화면 및 디자인
+<!-- 8. Design -->
+## Design
 ### Accent Color
+The point color is ```'Veri Peri'```, the color of the year for 2022.
 
-h:ours의 포인트 색상은 팬톤에서 선정한 2022년 올해의 컬러인 '베리 페리(Veri Peri)'이다.
-
-<br/>
-
-<p align="center"><img src="https://user-images.githubusercontent.com/49383370/151350738-ec07e9ac-4de9-4388-9f47-f5584fdabc98.png"></p>
-
-<br/>
+<p align="left"><img width="100" src="https://user-images.githubusercontent.com/49383370/159161578-9fcae8f3-81f2-487a-855d-9b48ebd8d7b9.png"></p>
 
 ### App Icon
-- **초기 버전**
+The shape of a circle made of repeating dots is reminiscent of a clock, and the double dot (:) in the center means the time symbol.
 
-  반복되는 점들로 이루어진 원의 형태는 시계의 시점과 분점을 연상하고, 가운데에 위치한 쌍점(:)은 앱 이름(h:ours)에도 사용되었듯이 시간을 표시할 때 사용되는 부호를 의미한다.  
-<br/>
-
-<p align="center"><img width="500" src="https://user-images.githubusercontent.com/49383370/151354559-0966e195-8053-4047-afcd-e73b9e5f1609.png"></p>
-  
-- **최종 버전**
-
-  위의 두 종류 중 포인트 색상을 배경으로 한 아이콘을 채택했다.
-
-<br/>
-
-<p align="center"><img src="https://user-images.githubusercontent.com/49383370/151538320-83cd6eb3-f13e-4fcd-88a4-63ec12723f7d.png"></p>
-
-<br/>
+<p align="left"><img width="100" src="https://user-images.githubusercontent.com/49383370/159161637-7f0a4cf0-1434-481f-96e7-f0b9b4e88c98.png"></p>
 
 ### UI/UX
-전반적인 앱의 화면은 아래와 같다.
+<p align="center"><img alt="UI/UX Light Mode" src="https://user-images.githubusercontent.com/49383370/159161762-49967309-34b0-44e0-84d8-e3cdc81fb43f.png"></p>
 
 <br/>
 
-<p align="center"><img alt="UI/UX Light Mode" src="https://user-images.githubusercontent.com/49383370/151543869-aef6a8d8-d21d-42dd-b26d-b246608767eb.png"></p>
-<p align="center"><img alt="UI/UX Dark Mode" src="https://user-images.githubusercontent.com/49383370/151543880-1c3f84cc-89cb-4e89-b6dd-fcb8e63331c6.png"></p>
+<!-- 9. First time dealing with this -->
+## First time dealing with this
+- ### Localization
+  For the first time, I dealt with Localization for multilingual support, which was an important goal of this app development. It can be implemented in storyboard or code, but in h:ours, it was implemented in code.
+
+  > Blog: https://velog.io/@minji0801/iOS-Swift-다국어-지원
+
+- ### App Tracking Appearncey
+  I tried it while developing 'Modakyi', but it didn't work, so I gave it up first, but h:ours solved it. It didn't work because AppDelegate immediately requested the app tracking permission.  I solved it by requesting permission a bit late with ```DispatchQueue.main.asyncAfter(deadline: .now() + 1) {}```.
+
+  > Blog: https://velog.io/@minji0801/iOS-Swift-앱-추적-권한-Alert-띄우기
+
+- ### Figma
+  In the initial development of 'Modakyi', only simple icons were created with Figma, but 'h:ours' also produced ```icons, app store thumbnails, and tutorial images```. When I first encountered Figma in 'Modakyi', I didn't know how to operate it well, but the contents of Figma I learned in the 'KDC Introduction to Developing My Own iOS App' lecture I took in December 2021 was helpful.
+
+  <p align="center"><img alt="Figma" src="https://user-images.githubusercontent.com/49383370/153407648-401c8396-a0ab-4820-b258-d56ae9f36b7c.png"></p>
+
+- ### gitignore
+  I tried gitignore in the past, but it didn't work, so I passed it on, but I solved it this time. One blog said that gitignore should be applied when creating a project for the first time, but it was applied well even if there was a lot of code and it was committed.
+
+  Now, since I hide the Google key value of Info.plist with gitignore and upload it, there is no longer a warning notification from gitguardian.
+
+  > Blog: https://velog.io/@minji0801/iOS-개발자는-gitignore-어떻게-만드나요
+
+- ### SwiftLint
+  SwiftLint learned in the 'Fast Campus iOS App Development with Swift Super Grid Package' lecture was applied to 'h:ours'.
+
+  > Blog: https://velog.io/@minji0801/SwiftLint
 
 <br/>
 
-<!-- 9. 이번에 처음 다룬 것 -->
-## 🐥 이번에 처음 다룬 것
-### 1. Localization
-이번 앱 개발의 중요한 목표였던 다국어 지원을 위해 Localization을 처음 다뤄보았다. 스토리보드 혹은 코드로 구현할 수 있는데 h:ours에서는 코드로 구현했다.
-
-<br/>
-
-> 내용 정리: https://velog.io/@minji0801/iOS-Swift-다국어-지원
-
-### 2. App Tracking Appearncey
-'모닥이' 개발 시 AdMob 광고를 넣을 때 시도했다가 안돼서 우선 넘겼는데, h:ours에서 해결했다. AppDelegate에서 앱 추적 권한을 바로 요청하면 안되고  DispatchQueue.main.asyncAfter(deadline: .now() + 1) {} 를 이용해서 좀 더 늦게 권한을 요청해야 제대로 보여진다.
-
-<br/>
-
-> 내용 정리: https://velog.io/@minji0801/iOS-Swift-앱-추적-권한-Alert-띄우기
-
-### 3. Figma
-초기 '모닥이' 개발 시 Figma로 간단한 아이콘만 제작했지만 h:ours는 아이콘, 앱 스토어 미리보기 이미지, 튜토리얼 이미지까지 제작했다. '모닥이' 때는 Figma를 처음 접했을 때라 조작방법을 잘 몰랐지만, 2021년 12월에 수강한 '[KDC] 나만의 iOS 앱 개발 입문' 강의에서 학습한 Figma 내용이 도움되었다.
-
-<br/>
-
-<p align="center"><img alt="Figma" src="https://user-images.githubusercontent.com/49383370/153407648-401c8396-a0ab-4820-b258-d56ae9f36b7c.png"></p>
-
-<br/>
-
-### 4. gitignore
-gitignore도 예전에 시도했다가 안돼서 넘겼던 부분인데 이번에 해결했다. 어느 블로그에서 gitignore는 프로젝트를 처음 만들 때 적용해야 된다고 해서 새 프로젝트를 만들 때 시도하려고 넘겼던데, 이미 코드도 많이 있고 커밋되어 있어도 잘 적용된다.
-
-이제 gitignore로 Info.plist의 구글 키값을 숨겨서 올리니까 더이상 gitguardian에서 경고 알림이 오지 않는다.
-
-> 내용 정리: https://velog.io/@minji0801/iOS-개발자는-gitignore-어떻게-만드나요
-
-<br/>
-
-### 5. SwiftLint
-'패스트캠퍼스 iOS 앱 개발 with Swift 초격자 패키지' 강의에서 학습한 SwiftLint를 h:ours에 적용하여 코드를 정리했다.
-
-> 내용 정리: https://velog.io/@minji0801/SwiftLint
-
-<br/>
-
-<!-- 10. 만나러 가기 -->
-## 👀 만나러 가기
+<!-- 10. Contact -->
+## Contact
 ### App Store
 > https://apps.apple.com/kr/app/h-ours/id1605524722
 
@@ -808,30 +763,29 @@ gitignore도 예전에 시도했다가 안돼서 넘겼던 부분인데 이번�
 
 <br/>
 
-<!-- 11. 버전 기록 -->
-## 🚀 버전 기록
-### v1.0.0 (2022. 1. 21)
-> - 한국어, 영어 지원
-> - 기본 기능 제공 (시간 및 디데이 계산, 이전 계산 기록 확인)
-> - 설정 : 다크모드, 사운드 설정, 언어 변경, 피드백 보내기
+<!-- 11.Version History -->
+## Version History
+### v1.0.0 (2022.1.21)
+> - Support Korean and English
+> - Provide basic functions
 
-### v1.1.0 (2022. 1. 23)
-> - 일본어, 중국어(간체, 번체) 지원
-> - 디데이 계산 오류 수정 (디데이 출력값이 정상 결과와 다른 오류 수정)
-> - 설정 : 앱 평가 기능 추가
+### v1.1.0 (2022.1.23)
+> - Support Japanese and Chinese (Simplified, Traditional)
+> - D-day calculation error correction (D-day output value is different from normal result)
+> - Settings: Add app rating function
 
-### v1.2.0 (2022. 1. 27)
-> - 앱 추적 권한 및 광고 추가
+### v1.2.0 (2022.1.27)
+> - Add App Tracking Permissions and Ads
 
-### v1.3.0 (2022. 1. 31)
-> - 스페인어, 프랑스어, 독일어 지원
+### v1.3.0 (2022.1.31)
+> - Support Spanish, French and German
 
-### v1.3.1 (2022. 2. 3)
-> - 시간 계산 오류 수정 (이전 계산 결과에 이어서 연산할 시 첫번째 피연산자가 초기화되는 오류 수정)
-> - SwiftLint 적용
+### v1.3.1 (2022.2.3)
+> - Time calculation error correction (correction of the error in which the first operand is initialized when the operation continues after the previous calculation result)
+> - Apply SwiftLint
 
 ### v1.3.2 (2022.2.9)
-> - 계산 기록 오류 수정 (계산식 만들 때 두번째 피연산자가 반복되는 오류 수정)
+> - Fix calculation history error (Fixed an error where the second operand was repeated when creating a formula)
 
 
 <br/>
@@ -839,7 +793,6 @@ gitignore도 예전에 시도했다가 안돼서 넘겼던 부분인데 이번�
 
 ---
 
-<br/>
 <br/>
 <br/>
 
