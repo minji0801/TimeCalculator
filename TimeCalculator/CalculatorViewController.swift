@@ -15,22 +15,22 @@ enum Operation {
     case unknown
 }
 
-class CalculatorViewController: UIViewController {
+final class CalculatorViewController: UIViewController {
 
     @IBOutlet weak var outputLabel: UILabel!
     @IBOutlet weak var symbolLabel: UILabel!
     @IBOutlet weak var bannerView: GADBannerView!
 
-    var displayNumber = ""
-    var firstOperand = ""
-    var secondOperand = ""
-    var result = ""
-    var currentOperation: Operation = .unknown
+    private lazy var displayNumber = ""
+    private lazy var firstOperand = ""
+    private lazy var secondOperand = ""
+    private lazy var result = ""
+    private lazy var currentOperation: Operation = .unknown
 
-    var formula = ""                // 계산식 담는 문자열
-    var isClickedOperation = false  // 연산자 버튼이 눌렸는지
-    var isClickedEqual = false      // = 기호 눌렀는지
-    var isAddedFormula = false      // secondOperand를 formula에 넣었는지
+    private lazy var formula = ""                // 계산식 담는 문자열
+    private lazy var isClickedOperation = false  // 연산자 버튼이 눌렸는지
+    private lazy var isClickedEqual = false      // = 기호 눌렀는지
+    private lazy var isAddedFormula = false      // secondOperand를 formula에 넣었는지
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,7 +46,7 @@ class CalculatorViewController: UIViewController {
             let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
             let tutorialViewController = storyboard.instantiateViewController(withIdentifier: "TutorialViewController")
             tutorialViewController.modalPresentationStyle = .fullScreen
-            self.present(tutorialViewController, animated: false, completion: nil)
+            present(tutorialViewController, animated: false)
         }
     }
 
@@ -66,22 +66,22 @@ class CalculatorViewController: UIViewController {
 
     // 숫자 버튼 눌렀을 때
     @IBAction func numberButtonTapped(_ sender: UIButton) {
-        self.createCorrectFormula()
+        createCorrectFormula()
 
         guard let numberValue = sender.title(for: .normal) else { return }
         if displayNumber.count < 8 {
-            self.displayNumber += numberValue
-            self.outputLabel.text = updateLabel(displayNumber)
+            displayNumber += numberValue
+            outputLabel.text = updateLabel(displayNumber)
         }
     }
 
     // 올바른 계산식 만들기
     func createCorrectFormula() {
-        if self.isClickedOperation {    // +나 -연산자 누른적 있으면
+        if isClickedOperation {    // +나 -연산자 누른적 있으면
             // 첫번째 연산자 가져오는 경우 : 두번째 연산자가 없을 때, = 기호 누른 후 추가로 연산할 때
-            if self.secondOperand.isEmpty || isClickedEqual {
-                formula = updateLabel(self.firstOperand)
-                switch self.currentOperation {
+            if secondOperand.isEmpty || isClickedEqual {
+                formula = updateLabel(firstOperand)
+                switch currentOperation {
                 case .add:
                     formula += " + "
                 case .subtract:
@@ -91,9 +91,9 @@ class CalculatorViewController: UIViewController {
                 }
             } else {
                 // secondOperand를 이미 formula에 넣은 경우는 다시 넣지 않도록
-                if !self.isAddedFormula {
-                    formula += updateLabel(self.secondOperand)
-                    switch self.currentOperation {
+                if !isAddedFormula {
+                    formula += updateLabel(secondOperand)
+                    switch currentOperation {
                     case .add:
                         formula += " + "
                     case .subtract:
@@ -101,15 +101,15 @@ class CalculatorViewController: UIViewController {
                     default:
                         break
                     }
-                    self.isAddedFormula = true
+                    isAddedFormula = true
                 }
             }
         } else {    // +나 -연산자 누른적은 없지만 =연산자 누른적 있으면
-            if self.isClickedEqual {
-                self.firstOperand = ""
-                self.secondOperand = ""
-                self.currentOperation = .unknown
-                self.isClickedEqual = false
+            if isClickedEqual {
+                firstOperand = ""
+                secondOperand = ""
+                currentOperation = .unknown
+                isClickedEqual = false
             }
         }
     }
@@ -133,54 +133,54 @@ class CalculatorViewController: UIViewController {
 
     // AC 버튼 눌렀을 때
     @IBAction func allClearButtonTapped(_ sender: UIButton) {
-        self.displayNumber = ""
-        self.firstOperand = ""
-        self.secondOperand = ""
-        self.result = ""
-        self.currentOperation = .unknown
-        self.outputLabel.text = "0:00"
-        self.symbolLabel.text = ""
-        self.isClickedOperation = false
-        self.isClickedEqual = false
-        self.formula = ""
+        displayNumber = ""
+        firstOperand = ""
+        secondOperand = ""
+        result = ""
+        currentOperation = .unknown
+        outputLabel.text = "0:00"
+        symbolLabel.text = ""
+        isClickedOperation = false
+        isClickedEqual = false
+        formula = ""
     }
 
     // Del 버튼 눌렀을 때
     @IBAction func deleteButtonTapped(_ sender: UIButton) {
         if !displayNumber.isEmpty {
             displayNumber.removeLast()
-            self.outputLabel.text = updateLabel(displayNumber)
+            outputLabel.text = updateLabel(displayNumber)
         }
     }
 
     // + 버튼 눌렀을 때
     @IBAction func plusButtonTapped(_ sender: UIButton) {
-        self.symbolLabel.text = "+"
-        self.operation(.add)
-        self.isAddedFormula = false
+        symbolLabel.text = "+"
+        operation(.add)
+        isAddedFormula = false
     }
 
     // - 버튼 눌렀을 때
     @IBAction func minusButtonTapped(_ sender: UIButton) {
-        self.symbolLabel.text = "-"
-        self.operation(.subtract)
-        self.isAddedFormula = false
+        symbolLabel.text = "-"
+        operation(.subtract)
+        isAddedFormula = false
     }
 
     // = 버튼 눌렀을 때
     @IBAction func equalButtonTapped(_ sender: UIButton) {
         symbolLabel.text = ""
-        self.operation(self.currentOperation)
-        self.isClickedEqual = true
-        self.isClickedOperation = false
+        operation(currentOperation)
+        isClickedEqual = true
+        isClickedOperation = false
 
         // 계산 기록하기 : 계산식이 담긴 문자열(연산식 + "=" + 결과값)을 UserDefaults에 저장하기
         // formula가 "0:00 = 0:00"이면 저장하지 않기
         // ex) 4:16 + 1:09 + 0:37 = 6:02
 
-        self.formula += "\(updateLabel(self.secondOperand)) = \(self.outputLabel.text!)"
+        formula += "\(updateLabel(secondOperand)) = \(outputLabel.text!)"
 
-        if self.formula != "0:00 = 0:00" {
+        if formula != "0:00 = 0:00" {
             var history = UserDefaults.standard.array(forKey: "History") as? [String]
             if history == nil {
                 history = [formula]
@@ -189,19 +189,19 @@ class CalculatorViewController: UIViewController {
             }
             UserDefaults.standard.set(history!, forKey: "History")
         }
-        self.formula = ""
+        formula = ""
     }
 
-    // 연산 함수
+    /// 연산 함수
     func operation(_ operation: Operation) {
-        self.isClickedOperation = true
-        self.displayNumber = convertTimeFormat(displayNumber.map { String($0) })
+        isClickedOperation = true
+        displayNumber = convertTimeFormat(displayNumber.map { String($0) })
 
-        if self.currentOperation != .unknown {
+        if currentOperation != .unknown {
             // 두번째 이상으로 연산기호 눌렀을 때
-            if !self.displayNumber.isEmpty {
-                self.secondOperand = self.displayNumber
-                self.displayNumber = ""
+            if !displayNumber.isEmpty {
+                secondOperand = displayNumber
+                displayNumber = ""
 
                 guard let firstOperand = Int(self.firstOperand) else { return }
                 guard let secondOperand = Int(self.secondOperand) else { return }
@@ -214,30 +214,30 @@ class CalculatorViewController: UIViewController {
                     let secondMin = self.secondOperand.suffix(2)
 
                     if firstMin.count == 2 && secondMin.count == 2 && (Int(firstMin)! + Int(secondMin)!) > 99 {
-                        self.result = "\(firstOperand + secondOperand + 40)"
+                        result = "\(firstOperand + secondOperand + 40)"
                     } else {
-                        self.result = "\(firstOperand + secondOperand)"
+                        result = "\(firstOperand + secondOperand)"
                     }
 
                 case .subtract:
-                    self.result = String(minusOperation(self.firstOperand, self.secondOperand))
+                    result = String(minusOperation(self.firstOperand, self.secondOperand))
 
                 default:
                     break
                 }
 
-                self.result = convertTimeFormat(self.result.map { String($0) })
-                self.firstOperand = self.result
-                self.outputLabel.text = updateLabel(self.result)
+                result = convertTimeFormat(result.map { String($0) })
+                self.firstOperand = result
+                outputLabel.text = updateLabel(result)
             }
 
-            self.currentOperation = operation
+            currentOperation = operation
         } else {
             // 처음으로 연산기호 눌렀을 때
-            self.outputLabel.text = updateLabel(self.displayNumber)
-            self.firstOperand = self.displayNumber
-            self.currentOperation = operation
-            self.displayNumber = ""
+            outputLabel.text = updateLabel(displayNumber)
+            firstOperand = self.displayNumber
+            currentOperation = operation
+            displayNumber = ""
         }
     }
 

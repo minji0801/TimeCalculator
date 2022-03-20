@@ -39,7 +39,7 @@ class LanguageViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setLanguage()
+        setLanguage()
 
         let appearance = UserDefaults.standard.bool(forKey: "Dark")
 
@@ -86,6 +86,6 @@ class LanguageViewController: UIViewController {
                     ?? Bundle.main.path(forResource: "en", ofType: "lproj")
         let bundle = Bundle(path: path!)
 
-        self.notiLabel.text = bundle?.localizedString(forKey: "language_noti", value: nil, table: nil)
+        notiLabel.text = bundle?.localizedString(forKey: "language_noti", value: nil, table: nil)
     }
 }

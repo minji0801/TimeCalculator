@@ -9,10 +9,12 @@ import UIKit
 import AVFoundation
 import MessageUI
 
-class SettingViewController: UIViewController {
-    var player: AVAudioPlayer!
-    var alertTitle = "", alertMessage = ""
-    var goTitle = "", cancleTitle = ""
+final class SettingViewController: UIViewController {
+    private var player: AVAudioPlayer!
+    private lazy var alertTitle = ""
+    private lazy var alertMessage = ""
+    private lazy var goTitle = ""
+    private lazy var cancleTitle = ""
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var versionLabel: UILabel!
@@ -26,12 +28,12 @@ class SettingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.setLanguage()
-        self.versionLabel.text = "iOS v\(getCurrentVersion()) build \(getBuildNumber())"
+        setLanguage()
+        versionLabel.text = "iOS v\(getCurrentVersion()) build \(getBuildNumber())"
 
         NotificationCenter.default.addObserver(
             self,
-            selector: #selector(self.didDismissLanguageVCNotification(_:)),
+            selector: #selector(didDismissLanguageVCNotification(_:)),
             name: NSNotification.Name("DismissLanguageVC"),
             object: nil
         )
@@ -54,7 +56,7 @@ class SettingViewController: UIViewController {
     }
 
     @objc func didDismissLanguageVCNotification(_ notification: Notification) {
-        self.setLanguage()
+        setLanguage()
     }
 
     // 모든 버튼이 눌릴 때마다 소리 출력
@@ -75,7 +77,7 @@ class SettingViewController: UIViewController {
         } else {
             UserDefaults.standard.set(true, forKey: "Dark")
         }
-        self.viewWillAppear(true)
+        viewWillAppear(true)
     }
 
     // 버튼 사운드 클릭 시
@@ -89,10 +91,15 @@ class SettingViewController: UIViewController {
         // 스토어 url 열기
         let store = "https://apps.apple.com/kr/app/h-ours/id1605524722"
         if let url = URL(string: store), UIApplication.shared.canOpenURL(url) {
+            var components = URLComponents(url: url, resolvingAgainstBaseURL: false)
+            components?.queryItems =  [URLQueryItem(name: "action", value: "write-review")]
+
+            guard let writeReviewURL = components?.url else { return }
+
             if #available(iOS 10.0, *) {
-                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                UIApplication.shared.open(writeReviewURL, options: [:], completionHandler: nil)
             } else {
-                UIApplication.shared.openURL(url)
+                UIApplication.shared.openURL(writeReviewURL)
             }
         }
     }
@@ -112,9 +119,9 @@ class SettingViewController: UIViewController {
 
 
                              ----------------------------
-                             Device Model : \(self.getDeviceIdentifier())
+                             Device Model : \(getDeviceIdentifier())
                              Device OS : \(UIDevice.current.systemVersion)
-                             App Version : \(self.getCurrentVersion())
+                             App Version : \(getCurrentVersion())
                              ----------------------------
                              """
 
@@ -122,7 +129,7 @@ class SettingViewController: UIViewController {
             composeViewController.setSubject("<h:ours> Feedback")
             composeViewController.setMessageBody(bodyString, isHTML: false)
 
-            self.present(composeViewController, animated: true, completion: nil)
+            present(composeViewController, animated: true)
         } else {
 //            print("메일 보내기 실패")
             let sendMailErrorAlert = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .alert)
@@ -141,7 +148,7 @@ class SettingViewController: UIViewController {
 
             sendMailErrorAlert.addAction(goAppStoreAction)
             sendMailErrorAlert.addAction(cancleAction)
-            self.present(sendMailErrorAlert, animated: true, completion: nil)
+            present(sendMailErrorAlert, animated: true)
         }
     }
 
@@ -150,12 +157,12 @@ class SettingViewController: UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: .main)
         let languageViewController = storyboard.instantiateViewController(withIdentifier: "LanguageViewController")
         languageViewController.modalPresentationStyle = .fullScreen
-        self.present(languageViewController, animated: false, completion: nil)
+        present(languageViewController, animated: false)
     }
 
     // 뒤로 가기 버튼 클릭 시
     @IBAction func backButtonTapped(_ sender: UIButton) {
-        self.navigationController?.popToRootViewController(animated: true)
+        navigationController?.popToRootViewController(animated: true)
     }
 
     // Device Identifier 찾기
@@ -192,18 +199,18 @@ class SettingViewController: UIViewController {
                     ?? Bundle.main.path(forResource: "en", ofType: "lproj")
         let bundle = Bundle(path: path!)
 
-        self.titleLabel.text = bundle?.localizedString(forKey: "settings", value: nil, table: nil)
-        self.darkModeButton.setTitle(bundle?.localizedString(forKey: "dark", value: nil, table: nil), for: .normal)
-        self.soundButton.setTitle(bundle?.localizedString(forKey: "sound", value: nil, table: nil), for: .normal)
-        self.reviewButton.setTitle(bundle?.localizedString(forKey: "review", value: nil, table: nil), for: .normal)
-        self.feedbackButton.setTitle(bundle?.localizedString(forKey: "feedback", value: nil, table: nil), for: .normal)
-        self.languageButton.setTitle(bundle?.localizedString(forKey: "language", value: nil, table: nil), for: .normal)
-        self.backButton.setTitle(bundle?.localizedString(forKey: "back", value: nil, table: nil), for: .normal)
+        titleLabel.text = bundle?.localizedString(forKey: "settings", value: nil, table: nil)
+        darkModeButton.setTitle(bundle?.localizedString(forKey: "dark", value: nil, table: nil), for: .normal)
+        soundButton.setTitle(bundle?.localizedString(forKey: "sound", value: nil, table: nil), for: .normal)
+        reviewButton.setTitle(bundle?.localizedString(forKey: "review", value: nil, table: nil), for: .normal)
+        feedbackButton.setTitle(bundle?.localizedString(forKey: "feedback", value: nil, table: nil), for: .normal)
+        languageButton.setTitle(bundle?.localizedString(forKey: "language", value: nil, table: nil), for: .normal)
+        backButton.setTitle(bundle?.localizedString(forKey: "back", value: nil, table: nil), for: .normal)
 
-        self.alertTitle = bundle?.localizedString(forKey: "send_feedback_title", value: nil, table: nil) ?? ""
-        self.alertMessage = bundle?.localizedString(forKey: "send_feedback_message", value: nil, table: nil) ?? ""
-        self.goTitle = bundle?.localizedString(forKey: "send_feedbacky_go", value: nil, table: nil) ?? ""
-        self.cancleTitle = bundle?.localizedString(forKey: "send_feedback_cancle", value: nil, table: nil) ?? ""
+        alertTitle = bundle?.localizedString(forKey: "send_feedback_title", value: nil, table: nil) ?? ""
+        alertMessage = bundle?.localizedString(forKey: "send_feedback_message", value: nil, table: nil) ?? ""
+        goTitle = bundle?.localizedString(forKey: "send_feedbacky_go", value: nil, table: nil) ?? ""
+        cancleTitle = bundle?.localizedString(forKey: "send_feedback_cancle", value: nil, table: nil) ?? ""
     }
 }
 
@@ -213,6 +220,6 @@ extension SettingViewController: MFMailComposeViewControllerDelegate {
         didFinishWith result: MFMailComposeResult,
         error: Error?
     ) {
-        self.dismiss(animated: true, completion: nil)
+        dismiss(animated: true)
     }
 }

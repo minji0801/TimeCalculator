@@ -111,14 +111,14 @@ final class DdayViewController: UIViewController {
 
         let bundle = Bundle(path: path!)
 
-        self.startLabel.text = bundle?.localizedString(forKey: "start", value: nil, table: nil)
-        self.endLabel.text = bundle?.localizedString(forKey: "end", value: nil, table: nil)
-        self.calculateButton.setTitle(
+        startLabel.text = bundle?.localizedString(forKey: "start", value: nil, table: nil)
+        endLabel.text = bundle?.localizedString(forKey: "end", value: nil, table: nil)
+        calculateButton.setTitle(
             bundle?.localizedString(forKey: "calculate", value: nil, table: nil),
             for: .normal
         )
 
-        self.startDatePicker.locale = Locale(identifier: language)
-        self.endDatePicker.locale = Locale(identifier: language)
+        startDatePicker.locale = Locale(identifier: language)
+        endDatePicker.locale = Locale(identifier: language)
     }
 }

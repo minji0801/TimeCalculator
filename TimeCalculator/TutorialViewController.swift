@@ -7,9 +7,9 @@
 
 import UIKit
 
-class TutorialViewController: UIViewController {
-    let images = ["page0", "page1", "page2", "page3"]
-    var texts = [String]()
+final class TutorialViewController: UIViewController {
+    private let images = ["page0", "page1", "page2", "page3"]
+    private lazy var texts = [String]()
 
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var label: UILabel!
@@ -17,7 +17,7 @@ class TutorialViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setLanguage()
+        setLanguage()
 
         pageControl.numberOfPages = images.count
         pageControl.currentPage = 0
@@ -25,19 +25,19 @@ class TutorialViewController: UIViewController {
         imageView.image = UIImage(named: images[0])
         label.text = texts[0]
 
-        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(self.respondToSwipeGesture(_:)))
+        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(respondToSwipeGesture(_:)))
         swipeLeft.direction = UISwipeGestureRecognizer.Direction.left
-        self.view.addGestureRecognizer(swipeLeft)
+        view.addGestureRecognizer(swipeLeft)
 
-        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(self.respondToSwipeGesture(_:)))
+        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(respondToSwipeGesture(_:)))
         swipeRight.direction = UISwipeGestureRecognizer.Direction.right
-        self.view.addGestureRecognizer(swipeRight)
+        view.addGestureRecognizer(swipeRight)
     }
 
     // close
     @IBAction func closeButtonTapped(_ sender: UIButton) {
         UserDefaults.standard.set(true, forKey: "showedTutorial")
-        self.dismiss(animated: false, completion: nil)
+        dismiss(animated: false)
     }
 
     // swipe
@@ -48,12 +48,12 @@ class TutorialViewController: UIViewController {
                 if pageControl.currentPage != 5 {
                     pageControl.currentPage += 1
                 }
-                self.pageChange()
+                pageChange()
             case UISwipeGestureRecognizer.Direction.right :
                 if pageControl.currentPage != 0 {
                     pageControl.currentPage -= 1
                 }
-                self.pageChange()
+                pageChange()
             default:
                 break
             }
@@ -72,9 +72,9 @@ class TutorialViewController: UIViewController {
                     ?? Bundle.main.path(forResource: "en", ofType: "lproj")
         let bundle = Bundle(path: path!)
 
-        self.texts.append(bundle?.localizedString(forKey: "tutorial_page0", value: nil, table: nil) ?? "")
-        self.texts.append(bundle?.localizedString(forKey: "tutorial_page1", value: nil, table: nil) ?? "")
-        self.texts.append(bundle?.localizedString(forKey: "tutorial_page2", value: nil, table: nil) ?? "")
-        self.texts.append(bundle?.localizedString(forKey: "tutorial_page3", value: nil, table: nil) ?? "")
+        texts.append(bundle?.localizedString(forKey: "tutorial_page0", value: nil, table: nil) ?? "")
+        texts.append(bundle?.localizedString(forKey: "tutorial_page1", value: nil, table: nil) ?? "")
+        texts.append(bundle?.localizedString(forKey: "tutorial_page2", value: nil, table: nil) ?? "")
+        texts.append(bundle?.localizedString(forKey: "tutorial_page3", value: nil, table: nil) ?? "")
     }
 }

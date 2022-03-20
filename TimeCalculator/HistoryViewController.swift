@@ -8,17 +8,19 @@
 import UIKit
 import GoogleMobileAds
 
-class HistoryViewController: UIViewController {
-    var text = ""
-    var alertTitle = "", alertMessage = ""
-    var noTitle = "", yesTitle = ""
+final class HistoryViewController: UIViewController {
+    private lazy var text = ""
+    private lazy var alertTitle = ""
+    private lazy var alertMessage = ""
+    private lazy var noTitle = ""
+    private lazy var yesTitle = ""
 
     @IBOutlet weak var historyTextView: UITextView!
     @IBOutlet weak var bannerView: GADBannerView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setLanguage()
+        setLanguage()
 
         // Admob 광고
         bannerView.adUnitID = "ca-app-pub-7980627220900140/3292460324"
@@ -33,22 +35,22 @@ class HistoryViewController: UIViewController {
         guard let history = UserDefaults.standard.array(forKey: "History") as? [String] else { return }
 
         if history.isEmpty {
-            self.text = ""
+            text = ""
         } else {
             history.forEach {
-                self.text += """
-                             \($0) \n\n
-                             """
+                text += """
+                       \($0) \n\n
+                       """
             }
         }
-        historyTextView.text = self.text
+        historyTextView.text = text
     }
 
     // 휴지통 버튼 클릭시
     @IBAction func deleteButtonTapped(_ sender: UIButton) {
-        let alert = UIAlertController(title: self.alertTitle, message: self.alertMessage, preferredStyle: .alert)
-        let noAction = UIAlertAction(title: self.noTitle, style: .destructive, handler: nil)
-        let yesAction = UIAlertAction(title: self.yesTitle, style: .default) { [weak self] _ in
+        let alert = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .alert)
+        let noAction = UIAlertAction(title: noTitle, style: .destructive, handler: nil)
+        let yesAction = UIAlertAction(title: yesTitle, style: .default) { [weak self] _ in
             UserDefaults.standard.set([], forKey: "History")
             DispatchQueue.main.async {
                 self?.viewWillAppear(true)
@@ -57,12 +59,12 @@ class HistoryViewController: UIViewController {
 
         alert.addAction(noAction)
         alert.addAction(yesAction)
-        self.present(alert, animated: true, completion: nil)
+        present(alert, animated: true)
     }
 
     // 닫기 버튼 클릭시
     @IBAction func dismissButtonTapped(_ sender: UIButton) {
-        self.dismiss(animated: false, completion: nil)
+        dismiss(animated: false)
     }
 
     // 언어 설정
@@ -72,9 +74,9 @@ class HistoryViewController: UIViewController {
                     ?? Bundle.main.path(forResource: "en", ofType: "lproj")
         let bundle = Bundle(path: path!)
 
-        self.alertTitle = bundle?.localizedString(forKey: "delete_history_title", value: nil, table: nil) ?? ""
-        self.alertMessage = bundle?.localizedString(forKey: "delete_history_message", value: nil, table: nil) ?? ""
-        self.noTitle = bundle?.localizedString(forKey: "delete_history_no", value: nil, table: nil) ?? ""
-        self.yesTitle = bundle?.localizedString(forKey: "delete_history_yes", value: nil, table: nil) ?? ""
+        alertTitle = bundle?.localizedString(forKey: "delete_history_title", value: nil, table: nil) ?? ""
+        alertMessage = bundle?.localizedString(forKey: "delete_history_message", value: nil, table: nil) ?? ""
+        noTitle = bundle?.localizedString(forKey: "delete_history_no", value: nil, table: nil) ?? ""
+        yesTitle = bundle?.localizedString(forKey: "delete_history_yes", value: nil, table: nil) ?? ""
     }
 }
