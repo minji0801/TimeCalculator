@@ -7,52 +7,52 @@
 */
 
 // 튜토리얼
-"tutorial_page0" = "Calculate the time and D-day";
-"tutorial_page1" = "Check the previous calculation";
-"tutorial_page2" = "Manage the app in settings";
-"tutorial_page3" = "Reset the D-day Calculation";
+"tutorial_page0" = "Tính thời gian và ngày D";
+"tutorial_page1" = "Kiểm tra phép tính trước đó";
+"tutorial_page2" = "Quản lý ứng dụng trong cài đặt";
+"tutorial_page3" = "Đặt lại cách tính ngày D";
 
 // 시작 날짜(캘린더 앱 참고)
-"start" = "Starts :";
+"start" = "Bắt đầu :";
 
 // 종료 날짜(캘린더 앱 참고)
-"end" = "Ends :";
+"end" = "Kết thúc :";
 
 // 계산하기
-"calculate" = "Calculate";
+"calculate" = "Tính toán";
 
 // 설정(설정 앱 참고)
-"settings" = "Settings";
+"settings" = "Cài đặt";
 
 // 다크 모드(설정 앱 참고)
-"dark" = "Dark";
+"dark" = "Tối";
 
 // 소리(설정 앱 참고)
-"sound" = "Sound";
+"sound" = "Âm thanh";
 
 // 앱 평가(Hours 참고)
-"review" = "Rate the App";
+"review" = "Đánh giá ứng dụng";
 
 // 피드백 보내기(Hours 참고)
-"feedback" = "Send feedback";
+"feedback" = "Gửi phản hồi";
 
 // 언어(설정 앱 참고)
-"language" = "Language";
+"language" = "Ngôn ngữ";
 
 // 뒤로가기(Hidden Folks 참고)
-"back" = "Back";
+"back" = "Trở về";
 
 // 계산 기록 삭제 Alert 창
-"delete_history_title" = "Delete the record";
-"delete_history_message" = "Do you want to erase the calculation record?";
-"delete_history_no" = "No";
-"delete_history_yes" = "Yes";
+"delete_history_title" = "Xóa lịch sử";
+"delete_history_message" = "Bạn có muốn xóa lịch sử tính toán không?";
+"delete_history_no" = "Không";
+"delete_history_yes" = "Vâng";
 
 // 피드백 보내기 Alert 창
-"send_feedback_title" = "Failed to send mail";
-"send_feedback_message" = "You need the 'Mail' app to send mail. Please restore the app from the App Store or check your email settings and try again.";
-"send_feedbacky_go" = "Go to App Store";
-"send_feedback_cancle" = "Cancel";
+"send_feedback_title" = "Không gửi được thư";
+"send_feedback_message" = "Bạn cần ứng dụng 'Thư' để gửi thư. Vui lòng khôi phục ứng dụng từ App Store hoặc kiểm tra cài đặt email của bạn và thử lại.";
+"send_feedbacky_go" = "Đi tới App Store";
+"send_feedback_cancle" = "Hủy bỏ";
 
 // 언어 화면 NotiLabel Text
-"language_noti" = "More languages will be supported in the future.";
+"language_noti" = "Nhiều ngôn ngữ hơn sẽ được hỗ trợ trong tương lai.";

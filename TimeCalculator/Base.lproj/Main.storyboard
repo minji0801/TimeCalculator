@@ -40,6 +40,9 @@
                                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="X0V-C6-TBl">
                                                 <rect key="frame" x="81.5" y="0.0" width="292.5" height="50"/>
                                                 <color key="tintColor" name="AccentColor"/>
+                                                <connections>
+                                                    <action selector="startDatePickerChanged:" destination="NWT-X2-Y8n" eventType="valueChanged" id="7DK-pp-bfK"/>
+                                                </connections>
                                             </datePicker>
                                         </subviews>
                                     </stackView>
@@ -338,13 +341,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="More languages will be supported in the future." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fc8-Ss-MxC">
-                                <rect key="frame" x="30" y="350.5" width="354" height="12"/>
+                                <rect key="frame" x="30" y="327" width="354" height="12"/>
                                 <fontDescription key="fontDescription" name="SDSamliphopangcheTTFBasic" family="Sandoll Samliphopangche TTF" pointSize="12"/>
                                 <color key="textColor" systemColor="systemGrayColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="xzA-um-nrI">
-                                <rect key="frame" x="30" y="382.5" width="354" height="131"/>
+                                <rect key="frame" x="30" y="359" width="354" height="178"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="TGF-Y9-FDX">
                                         <rect key="frame" x="0.0" y="0.0" width="354" height="37"/>
@@ -435,7 +438,7 @@
                                         <rect key="frame" x="0.0" y="94" width="354" height="37"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cex-NL-6Hi" customClass="SettingButton" customModule="TimeCalculator" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="172" height="37"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="111.5" height="37"/>
                                                 <color key="tintColor" systemColor="labelColor"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Deutsch"/>
@@ -446,37 +449,8 @@
                                                     <action selector="languageButtonTapped:" destination="DQc-NT-tPx" eventType="touchUpInside" id="ZQX-cm-E6Z"/>
                                                 </connections>
                                             </button>
-                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="08n-5m-srM" customClass="SettingButton" customModule="TimeCalculator" customModuleProvider="target">
-                                                <rect key="frame" x="177" y="0.0" width="0.0" height="37"/>
-                                                <color key="tintColor" systemColor="labelColor"/>
-                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" title="Русский"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSetting" value="YES"/>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="languageButtonTapped:" destination="DQc-NT-tPx" eventType="touchUpInside" id="QH1-Kz-KGe"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rgj-wr-trX" customClass="SettingButton" customModule="TimeCalculator" customModuleProvider="target">
-                                                <rect key="frame" x="182" y="0.0" width="172" height="37"/>
-                                                <color key="tintColor" systemColor="labelColor"/>
-                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" title="한국어"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSetting" value="YES"/>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="languageButtonTapped:" destination="DQc-NT-tPx" eventType="touchUpInside" id="Gq2-oZ-sM9"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="7ph-wF-5UF">
-                                        <rect key="frame" x="0.0" y="131" width="354" height="0.0"/>
-                                        <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CLk-qc-Jbz" customClass="SettingButton" customModule="TimeCalculator" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="111.5" height="0.0"/>
+                                                <rect key="frame" x="121.5" y="0.0" width="111" height="37"/>
                                                 <color key="tintColor" systemColor="labelColor"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Português (Brasil)"/>
@@ -488,7 +462,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RYZ-ul-Yhd" customClass="SettingButton" customModule="TimeCalculator" customModuleProvider="target">
-                                                <rect key="frame" x="121.5" y="0.0" width="111" height="0.0"/>
+                                                <rect key="frame" x="242.5" y="0.0" width="111.5" height="37"/>
                                                 <color key="tintColor" systemColor="labelColor"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Italiano"/>
@@ -499,22 +473,51 @@
                                                     <action selector="languageButtonTapped:" destination="DQc-NT-tPx" eventType="touchUpInside" id="HnU-ff-mkn"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wXz-PE-lVA" customClass="SettingButton" customModule="TimeCalculator" customModuleProvider="target">
-                                                <rect key="frame" x="242.5" y="0.0" width="111.5" height="0.0"/>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="08n-5m-srM" customClass="SettingButton" customModule="TimeCalculator" customModuleProvider="target">
+                                                <rect key="frame" x="354" y="0.0" width="0.0" height="37"/>
                                                 <color key="tintColor" systemColor="labelColor"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" title="Türkçe"/>
+                                                <state key="normal" title="Русский"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isSetting" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="languageButtonTapped:" destination="DQc-NT-tPx" eventType="touchUpInside" id="8nn-SF-Mye"/>
+                                                    <action selector="languageButtonTapped:" destination="DQc-NT-tPx" eventType="touchUpInside" id="QH1-Kz-KGe"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="7ph-wF-5UF">
+                                        <rect key="frame" x="0.0" y="141" width="354" height="37"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rgj-wr-trX" customClass="SettingButton" customModule="TimeCalculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="172" height="37"/>
+                                                <color key="tintColor" systemColor="labelColor"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="한국어"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSetting" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="languageButtonTapped:" destination="DQc-NT-tPx" eventType="touchUpInside" id="Gq2-oZ-sM9"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vng-ao-p7r" customClass="SettingButton" customModule="TimeCalculator" customModuleProvider="target">
+                                                <rect key="frame" x="182" y="0.0" width="172" height="37"/>
+                                                <color key="tintColor" systemColor="labelColor"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Tiếng Việt"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSetting" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="languageButtonTapped:" destination="DQc-NT-tPx" eventType="touchUpInside" id="e3O-bq-sCa"/>
                                                 </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
                                     <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qXW-TC-Twd">
-                                        <rect key="frame" x="0.0" y="131" width="354" height="0.0"/>
+                                        <rect key="frame" x="0.0" y="178" width="354" height="0.0"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tia-Wa-FgK" customClass="SettingButton" customModule="TimeCalculator" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="111.5" height="0.0"/>
@@ -555,7 +558,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="8wh-26-lxQ">
-                                        <rect key="frame" x="0.0" y="131" width="354" height="0.0"/>
+                                        <rect key="frame" x="0.0" y="178" width="354" height="0.0"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3h8-zV-LaV" customClass="SettingButton" customModule="TimeCalculator" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="111.5" height="0.0"/>
@@ -569,16 +572,16 @@
                                                     <action selector="languageButtonTapped:" destination="DQc-NT-tPx" eventType="touchUpInside" id="Jtl-1g-IS1"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vng-ao-p7r" customClass="SettingButton" customModule="TimeCalculator" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wXz-PE-lVA" customClass="SettingButton" customModule="TimeCalculator" customModuleProvider="target">
                                                 <rect key="frame" x="121.5" y="0.0" width="111" height="0.0"/>
                                                 <color key="tintColor" systemColor="labelColor"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" title="Tiếng Việt"/>
+                                                <state key="normal" title="Türkçe"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isSetting" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="languageButtonTapped:" destination="DQc-NT-tPx" eventType="touchUpInside" id="e3O-bq-sCa"/>
+                                                    <action selector="languageButtonTapped:" destination="DQc-NT-tPx" eventType="touchUpInside" id="8nn-SF-Mye"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9NN-nt-hUB" customClass="SettingButton" customModule="TimeCalculator" customModuleProvider="target">
@@ -596,7 +599,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="a5i-kW-j7g">
-                                        <rect key="frame" x="0.0" y="131" width="354" height="0.0"/>
+                                        <rect key="frame" x="0.0" y="178" width="354" height="0.0"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ywK-4l-3w0" customClass="SettingButton" customModule="TimeCalculator" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="111.5" height="0.0"/>
@@ -637,7 +640,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="32z-g9-ERI">
-                                        <rect key="frame" x="0.0" y="131" width="354" height="0.0"/>
+                                        <rect key="frame" x="0.0" y="178" width="354" height="0.0"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RLN-Si-NEj" customClass="SettingButton" customModule="TimeCalculator" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="111.5" height="0.0"/>

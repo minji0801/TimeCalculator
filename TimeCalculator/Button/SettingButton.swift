@@ -12,7 +12,7 @@ class SettingButton: UIButton {
     @IBInspectable var isSetting: Bool = false {
         didSet {
             if isSetting {
-                self.titleLabel?.font = UIFont(name: "SDSamliphopangcheTTFBasic", size: 15)
+                self.titleLabel?.font = UIFont(name: "SDSamliphopangcheTTFBasic", size: 14)
                 self.titleLabel?.lineBreakMode = NSLineBreakMode.byWordWrapping
                 self.titleLabel?.textAlignment = .center
             }

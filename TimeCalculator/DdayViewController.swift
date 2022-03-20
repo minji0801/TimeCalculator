@@ -10,10 +10,7 @@ import AVFoundation
 import GoogleMobileAds
 
 final class DdayViewController: UIViewController {
-    private let calendar = Calendar.current
-    private let currentDate = Date()
-    private let dateFormatter = DateFormatter()
-    private lazy var daysCount: Int = 0
+    private lazy var changedStart: Bool = false // 시작일 변경 여부
 
     @IBOutlet weak var startLabel: UILabel!
     @IBOutlet weak var startDatePicker: UIDatePicker!
@@ -35,18 +32,26 @@ final class DdayViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.setLanguage()
+        setLanguage()
         appearanceCheck(self)
     }
 
-    // 새로고침
+    /// 새로고침
     @IBAction func refreshButtonTapped(_ sender: UIButton) {
-        self.startDatePicker.date = Date()
-        self.endDatePicker.date = Date()
-        self.ddayLabel.text = "D - DAY"
+        startDatePicker.date = Date()
+        endDatePicker.date = Date()
+        changedStart = false
+        ddayLabel.text = "D - DAY"
     }
 
-    // 계산하기
+    /// 시작일 변경되면
+    @IBAction func startDatePickerChanged(_ sender: UIDatePicker) {
+        if !changedStart {
+            changedStart = true
+        }
+    }
+
+    /// 계산하기
     @IBAction func calculateButtonTapped(_ sender: UIButton) {
         let soundOff = UserDefaults.standard.bool(forKey: "SoundOff")
         if !soundOff {
@@ -76,14 +81,21 @@ final class DdayViewController: UIViewController {
         } else {
             let result = Calendar.current.dateComponents(
                 [.day],
-                from: endDatePicker.date,
-                to: startDatePicker.date
+                from: startDatePicker.date,
+                to: endDatePicker.date
             ).day! + 1
+
+//            print("startDate : \(startDatePicker.date), endDate : \(endDatePicker.date)")
 //            print("result = \(result)")
+
             if result > 0 {
-                return "+ \(result - 1)"
+                if changedStart {   // 시작일이 변경되었을 때
+                    return "- \(result - 1)"
+                } else {    // 시작일이 변경되지 않았을 때
+                    return "- \(result)"
+                }
             } else {
-                return "- \((result.magnitude + 1))"
+                return "+ \((result.magnitude + 1))"
             }
         }
     }

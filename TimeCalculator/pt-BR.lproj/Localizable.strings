@@ -7,52 +7,52 @@
 */
 
 // 튜토리얼
-"tutorial_page0" = "Calculate the time and D-day";
-"tutorial_page1" = "Check the previous calculation";
-"tutorial_page2" = "Manage the app in settings";
-"tutorial_page3" = "Reset the D-day Calculation";
+"tutorial_page0" = "Calcular a hora e o dia D";
+"tutorial_page1" = "Confira o cálculo anterior";
+"tutorial_page2" = "Gerencie o aplicativo nas configurações";
+"tutorial_page3" = "Redefinir o cálculo do dia D";
 
 // 시작 날짜(캘린더 앱 참고)
-"start" = "Starts :";
+"start" = "Começa :";
 
 // 종료 날짜(캘린더 앱 참고)
-"end" = "Ends :";
+"end" = "Termina :";
 
 // 계산하기
-"calculate" = "Calculate";
+"calculate" = "Calcular";
 
 // 설정(설정 앱 참고)
-"settings" = "Settings";
+"settings" = "Ajustes";
 
 // 다크 모드(설정 앱 참고)
-"dark" = "Dark";
+"dark" = "Escura";
 
 // 소리(설정 앱 참고)
-"sound" = "Sound";
+"sound" = "Som";
 
 // 앱 평가(Hours 참고)
-"review" = "Rate the App";
+"review" = "Avalie o aplicativo";
 
 // 피드백 보내기(Hours 참고)
-"feedback" = "Send feedback";
+"feedback" = "Enviar comentários";
 
 // 언어(설정 앱 참고)
-"language" = "Language";
+"language" = "Idioma";
 
 // 뒤로가기(Hidden Folks 참고)
-"back" = "Back";
+"back" = "Voltar";
 
 // 계산 기록 삭제 Alert 창
-"delete_history_title" = "Delete the record";
-"delete_history_message" = "Do you want to erase the calculation record?";
-"delete_history_no" = "No";
-"delete_history_yes" = "Yes";
+"delete_history_title" = "Excluir o registro";
+"delete_history_message" = "Deseja apagar o registro de cálculo?";
+"delete_history_no" = "Não";
+"delete_history_yes" = "Sim";
 
 // 피드백 보내기 Alert 창
-"send_feedback_title" = "Failed to send mail";
-"send_feedback_message" = "You need the 'Mail' app to send mail. Please restore the app from the App Store or check your email settings and try again.";
-"send_feedbacky_go" = "Go to App Store";
-"send_feedback_cancle" = "Cancel";
+"send_feedback_title" = "Falha ao enviar e-mail";
+"send_feedback_message" = "Você precisa do aplicativo 'Mail' para enviar e-mails. Por favor, restaure o aplicativo da App Store ou verifique suas configurações de e-mail e tente novamente.";
+"send_feedbacky_go" = "Ir para a App Store";
+"send_feedback_cancle" = "Cancelar";
 
 // 언어 화면 NotiLabel Text
-"language_noti" = "More languages will be supported in the future.";
+"language_noti" = "Mais idiomas serão suportados no futuro.";
