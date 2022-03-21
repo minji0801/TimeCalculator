@@ -1,11 +1,11 @@
 <div align="center">
   
   <!-- Header -->
-  [![header](https://capsule-render.vercel.app/api?type=waving&color=6667AB&height=250&section=header&text=h:ours&desc=Hour%20%2F%20D-day%20Calculator&descAlignY=55&fontSize=75&fontAlignY=40&fontColor=FFFFFF)](https://github.com/minji0801/TimeCalculator)
+  [![header](https://capsule-render.vercel.app/api?type=waving&color=6667AB&height=250&section=header&text=h:ours&desc=Hours%20%2F%20D-day%20Calculator&descAlignY=55&fontSize=75&fontAlignY=40&fontColor=FFFFFF)](https://github.com/minji0801/TimeCalculator)
   
   h:ours is a combination of ```'hours'``` and a ```colon(:)``` indicating the time.
 
-  Hope this helps in calculating the time for each of us, and it contains the meaning of ```'hours is ours'```.
+  Hope this helps in calculating the hours for each of us, and it contains the meaning of ```'hours is ours'```.
   
   <br/>
   
@@ -24,9 +24,9 @@
 
 <!-- Navigation -->
 # Navigation
-1. [Motive](#-개발-동기)
-2. [Goals](#-개발-목표)
-3. [시간 계산](#-시간-계산)
+1. [Motive](#Motive)
+2. [Goals](#Goals)
+3. [Hours calculator](#-Hours-calculator)
 4. [디데이 계산](#-디데이-계산)
 5. [계산 기록](#-계산-기록)
 6. [설정](#-설정)
@@ -38,188 +38,75 @@
 
 <br/>
 
-<!-- 1. 개발 동기 -->
-## 🔥 개발 동기
-- **시간을 계산하기가 불편하다.**
-  - 매일 플래너에 Total Time을 기록하기 위한 시간 계산에 불편함이 있다.
-  - ‘Hours’ 앱으로 시간을 계산하고 있지만 이보 더 좋은 앱을 개발하고 싶다.
-
-- **디데이 계산도 할 수 있으면 좋겠다.**
-  - ‘Hours’ 앱은 시간만 계산할 수 있다.
-  - 시간 계산뿐만 아니라 날짜 계산(디데이)까지 가능하면 더 편리할 것 이다.
+<!-- 1. Motive -->
+## Motive
+I write down D-day and total study hours on my daily planner everyday. D-day was counted directly or through a web site, and the total study hours was calculated using the 'Hours' app. Since the 'Hours' app could only count the hours, I made an app that could count up to D-day.
 
 <br/>
 
-<!-- 2. 개발 목표 -->
-## 🎯 개발 목표
-- **시간 계산**
-  - 시간 계산이 제일 우선으로, 앱을 켜면 바로 시간을 계산할 수 있다.
-  - 일반 계산기 형태로 시간을 계산한다. (‘Hours’ 앱과 유사)
-
-- **디데이 계산**
-  - 기준일과 목표일을 입력하면 계산한 디데이를 출력한다.
-  - 기준일과 목표일의 기본값으로 오늘 날짜가 입력된다.
-
-- **다국어 지원**
-  - 이전에 출시한 'Scoit'은 영어만 지원했고, '모닥이'는 한국어만 지원했다.
-  - 이번에는 현지화를 통해 다양한 나라에서 사용할 수 있도록 언어를 지원한다.
+<!-- 2. Goals -->
+## Goals
+- User can calculate hours in the form of a general calculator.
+- If user enter the start date and end date, the calculated D-day is displayed.
+- Supports languages for use in various countries.
 
 <br/>
 
-<!-- 3. 시간 계산 -->
-## ⏰ 시간 계산
+<!-- 3. Hours calculator -->
+## Hours calculator
+This is the first screen you see when you launch the app. Hours can be calculated in the form of a regular calculator. Code is [here](https://github.com/minji0801/TimeCalculator/blob/main/TimeCalculator/CalculatorViewController.swift)
 
-### 1. 시간 형식 변환
+<p align="left"><img width="200" src="https://user-images.githubusercontent.com/49383370/159242720-83dc09fc-bcf2-4ad6-a56e-39bc290efece.png"></p>
 
-시간 계산에서 제일 큰 문제는 **"연산자를 클릭할 때 입력한 시간 또는 연산 결과를 올바른 시간 포맷으로 보여줘야 한다"** 는 것이다.
+- ### Time format conversion
+  The biggest problem in hours calculation was to display the entered hours or calculation result in the correct format when clicking the operator.
 
-> 예시) 
->
->     입력: 3:66 +
->     출력: 4:06
-> 
->     입력: 1:50 + 0:25
->     출력: 2:15
+  > ex)
+  >
+  >     input : 3:66 +  
+  >     output: 4:06
+  >     
+  >     input : 1:50 + 0:25
+  >     output: 2:15
 
-<br/>
-<br/>
+  If the minute of the hour entered is between 60 and 99, subtract 60 from the minute and add 1 to the hour to convert it to the correct time format.
+  
+  > ex)
+  >
+  >     input : 3:66 +
+  >     convertTimeFormat method is called.
+  >     Receives the input time as a [String] type as a parameter. ➜ (["3", "6", "6"])
+  >     Since the minute (66) is between 60 and 99, it returns 406, which is the value obtained by subtracting 60 from the minute and adding 1 to the hour.
 
-그래서 입력 값을 올바른 시간 형식으로 변환하는 메서드를 만들었다. 입력한 시간의 분이 60~99 사이라면 분에 60을 빼고 시에 1을 더한다.
+- ### Addition
+  If the minutes of the entered hour are all two digits, and the sum of the minutes exceeds 100, add 40.
+ 
+   > ex)
+   >
+   >    input : 0:58 + 0:53 =
+   >    Calculation: 58 + 53 + 40 = 151
+   >    Output: 1:51
+   >
+   > ➜ Since both the minutes (58 and 53) of the entered hour have two digits, and the sum (111) exceeds 100, 40 is added.
 
-연산 기호를 누른 후 반드시 실행되며, 연산 결과가 있다면 그 결과값에도 적용된다.
+- ### Subtraction
+   If the first operand has more than three digits and the minute is less than the minute of the second operand, subtract 40.
+   
+   > ex)
+   >
+   > input: 1:05 - 0:30 =
+   > Calculation: 105 - 30 - 40 = 35
+   > Output: 0:35
+   >
+   > ➜ Since the first operand (105) has three digits, and the minute (5) is less than the minute (30) of the second operand,  40 is subtracted.
 
-> 예시) 
->
->     입력: 3:66 +
->     convertTimeFormat 메서드가 호출된다.
->     [String] 타입으로 입력한 시간을 파라미터로 받아온다. ➜ (["3", "6", "6"])
->     분(66)이 60~99 사이니까 분에 60을 빼고 시에 1을 더한 값인 406을 반환한다.
+- ### Operator consecutive clicks
+  At first, it was implemented to execute the corresponding operation immediately when the operator button is clicked, but then the problem is when the operator button is clicked consecutively. So, I create an method and call it whenever the operator button is clicked.
 
-<br/>
-
-```swift
-// 시간 형식으로 맞춰 변환하는 함수
-func convertTimeFormat(_ value: [String]) -> String {
-    // 시간 포맷에 맞추기 (분이 60에서 99사이라면 60을 뺀 값을 분에 적고 시에 +1 해주기)
-    // 두글자 이상일 때 [6, 1] 뒤에서 두글자 가져오기
-    if value.count > 1 {
-        let lastIndex = value.lastIndex(of: value.last!)!
-        var operandMinute = Int(value[lastIndex - 1 ... lastIndex].joined())!
-
-        if operandMinute > 59 {
-            var operandHour = 0
-
-            if value.count > 2 {
-                operandHour = Int(value[0...lastIndex - 2].joined())!
-            }
-            operandHour += 1
-            operandMinute -= 60
-//                print("format => \(operandHour):\(String(format: "%02d", operandMinute))")
-            return "\(operandHour)\(String(format: "%02d", operandMinute))"
-        }
-    }
-    return value.joined()
-}
-```
-
-<br/>
-<br/>
-
-### 2. 뺄셈과 덧셈
-
-우선, 뺄셈은 첫번째 피연산자가 세자리 이상이고 분이 두번째 피연산자의 분보다 작으면 40을 뺀다.
-> 예시) 
->
->     입력: 1:05 - 0:30 =
->     계산: 105 - 30 - 40 = 35
->     출력: 0:35
->
-> ➜ 첫번째 피연산자(105)가 세자리이고, 분(5)이 두번째 피연산자의 분(30)보다 작기 때문에 40을 뺐다.
-
-<br/>
-
-그리고 덧셈에서는 아래와 같이 계산되는 문제가 있었다. 입력한 시간을 String에서 Int형으로 바꾸고 더했으니 그 결과가 출력된 것이다.
-> 예시)
->
->     입력: 0:58 + 0:53 = 
->     출력: 1:11 (원래 1:51)
-
-<br/>
-
-그래서 덧셈은 입력한 시간의 분이 모두 두자리이고 분의 합이 100을 넘으면 40을 더한다.
-> 예시)
->
->     입력: 0:58 + 0:53 =
->     계산: 58 + 53 + 40 = 151 
->     출력: 1:51 
->
-> ➜ 입력한 시간의 분(58과 53)이 모두 두자리고, 두 합(111)이 100을 넘기때문에 40을 더했다.
-
-<br/>
-<br/>
-
-### 3. 연산자 연속 클릭 시
-처음에는 연산자 버튼을 클릭하면 해당 연산을 바로 실행하도록 구현했는데, 그러면 연산자 버튼을 연속으로 클릭했을 때가 문제다. 그래서 operation 메서드를 만들어서 연산자 버튼이 클릭될 때마다 호출한다.
-
-> operation 메서드 
->
->     displayNumber 변수에 값이 있을 때만 연산을 수행한다.
->     (displayNumber는 입력한 시간을 숫자형태로 저장하는 String 타입 변수)
->     (즉, 2:58을 입력하면 displayNumber는 "258"이다.)
->     따라서, 연산자 버튼을 연속해서 클릭하더라도 에러가 발생하지 않는다.
-
-<br/>
-
-```swift
-// 연산 함수
-func operation(_ operation: Operation) {
-    self.isClickedOperation = true
-    self.displayNumber = convertTimeFormat(displayNumber.map { String($0) })
-
-    if self.currentOperation != .unknown {
-        // 두번째 이상으로 연산기호 눌렀을 때
-        if !self.displayNumber.isEmpty {
-            self.secondOperand = self.displayNumber
-            self.displayNumber = ""
-
-            guard let firstOperand = Int(self.firstOperand) else { return }
-            guard let secondOperand = Int(self.secondOperand) else { return }
-
-            // 연산 실시
-            switch self.currentOperation {
-            case .add:
-                // 둘다 분이 두자리고 두 합이 100이 넘으면 40 더하기
-                let firstMin = self.firstOperand.suffix(2)
-                let secondMin = self.secondOperand.suffix(2)
-
-                if firstMin.count == 2 && secondMin.count == 2 && (Int(firstMin)! + Int(secondMin)!) > 99 {
-                    self.result = "\(firstOperand + secondOperand + 40)"
-                } else {
-                    self.result = "\(firstOperand + secondOperand)"
-                }
-
-            case .subtract:
-                self.result = String(minusOperation(self.firstOperand, self.secondOperand))
-
-            default:
-                break
-            }
-
-            self.result = convertTimeFormat(self.result.map { String($0) })
-            self.firstOperand = self.result
-            self.outputLabel.text = updateLabel(self.result)
-        }
-
-        self.currentOperation = operation
-    } else {
-        // 처음으로 연산기호 눌렀을 때
-        self.outputLabel.text = updateLabel(self.displayNumber)
-        self.firstOperand = self.displayNumber
-        self.currentOperation = operation
-        self.displayNumber = ""
-    }
-}
-```
+  >     The operation is performed only when the displayNumber variable has a value.
+  >     (displayNumber is a String type variable that stores the input time as a number)
+  >     (i.e. if you enter 2:58, displayNumber is "258")
+  >     Therefore, no error occurs even if the operator button is clicked consecutively.
 
 <br/>
 
@@ -781,7 +668,7 @@ The shape of a circle made of repeating dots is reminiscent of a clock, and the 
 > - Support Spanish, French and German
 
 ### v1.3.1 (2022.2.3)
-> - Time calculation error correction (correction of the error in which the first operand is initialized when the operation continues after the previous calculation result)
+> - Hours calculation error correction (correction of the error in which the first operand is initialized when the operation continues after the previous calculation result)
 > - Apply SwiftLint
 
 ### v1.3.2 (2022.2.9)
