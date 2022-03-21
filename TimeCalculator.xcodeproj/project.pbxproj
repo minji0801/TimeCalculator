@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7E85AB1C5E23987D030B099E /* Pods_TimeCalculator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B8DCDE81AB582DD5ABEF26 /* Pods_TimeCalculator.framework */; };
+		90E5AA6D3A0D3D95D9EFDED9 /* Pods_TimeCalculator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA35ACABAF79D9C1D256D57D /* Pods_TimeCalculator.framework */; };
 		A523248E277D746900282987 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A5232490277D746900282987 /* Localizable.strings */; };
 		A52445DC277C4C6E00BB378F /* LanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52445DB277C4C6E00BB378F /* LanguageViewController.swift */; };
 		A528F4D527798E3700034F36 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A528F4D427798E3700034F36 /* RoundButton.swift */; };
@@ -22,7 +22,6 @@
 		A569A9FD27671A8100435CF0 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A569A9FC27671A8100435CF0 /* CalculatorViewController.swift */; };
 		A56AF275276C67270043FD12 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56AF274276C67270043FD12 /* SettingViewController.swift */; };
 		A56AF278276C82180043FD12 /* UIConfigure.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56AF277276C82180043FD12 /* UIConfigure.swift */; };
-		A56D27DA27E5FC73007FA546 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A56D27D927E5FC73007FA546 /* GoogleService-Info.plist */; };
 		A56D27DD27E6002F007FA546 /* LanguageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56D27DC27E6002F007FA546 /* LanguageManager.swift */; };
 		A595A4FB277AB945005D1279 /* FredokaOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A595A4FA277AB945005D1279 /* FredokaOne-Regular.ttf */; };
 		A595A507277AC88F005D1279 /* SettingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A595A506277AC88F005D1279 /* SettingButton.swift */; };
@@ -32,7 +31,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		09B8DCDE81AB582DD5ABEF26 /* Pods_TimeCalculator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimeCalculator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		49D0AB4484E14C5429CA3BE9 /* Pods-TimeCalculator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeCalculator.release.xcconfig"; path = "Target Support Files/Pods-TimeCalculator/Pods-TimeCalculator.release.xcconfig"; sourceTree = "<group>"; };
 		A523248F277D746900282987 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A52445DB277C4C6E00BB378F /* LanguageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageViewController.swift; sourceTree = "<group>"; };
@@ -50,7 +48,6 @@
 		A569A9FC27671A8100435CF0 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
 		A56AF274276C67270043FD12 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		A56AF277276C82180043FD12 /* UIConfigure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIConfigure.swift; sourceTree = "<group>"; };
-		A56D27D927E5FC73007FA546 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A56D27DC27E6002F007FA546 /* LanguageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageManager.swift; sourceTree = "<group>"; };
 		A5924F082780421E005AE15A /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A595A4FA277AB945005D1279 /* FredokaOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FredokaOne-Regular.ttf"; sourceTree = "<group>"; };
@@ -77,9 +74,11 @@
 		A599D9F527992BF400E1DC22 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		A599D9F627992C0A00E1DC22 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		A5A2B9E32796BBAB004B5584 /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
+		A5BF6D3027E8478800610A42 /* GoogleMobileAds.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = GoogleMobileAds.xcframework; path = "Pods/Google-Mobile-Ads-SDK/Frameworks/GoogleMobileAdsFramework-Current/GoogleMobileAds.xcframework"; sourceTree = "<group>"; };
 		A5CBF44A276B48FA002C3A87 /* DdayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DdayViewController.swift; sourceTree = "<group>"; };
 		A5FD7E08278BE95E0078D907 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		C00BCC505680FC8B908A1879 /* Pods-TimeCalculator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeCalculator.debug.xcconfig"; path = "Target Support Files/Pods-TimeCalculator/Pods-TimeCalculator.debug.xcconfig"; sourceTree = "<group>"; };
+		DA35ACABAF79D9C1D256D57D /* Pods_TimeCalculator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimeCalculator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7E85AB1C5E23987D030B099E /* Pods_TimeCalculator.framework in Frameworks */,
+				90E5AA6D3A0D3D95D9EFDED9 /* Pods_TimeCalculator.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,7 +105,8 @@
 		7ADF35C73A08D6E2F1514E41 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				09B8DCDE81AB582DD5ABEF26 /* Pods_TimeCalculator.framework */,
+				A5BF6D3027E8478800610A42 /* GoogleMobileAds.xcframework */,
+				DA35ACABAF79D9C1D256D57D /* Pods_TimeCalculator.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -158,7 +158,6 @@
 				A569A9F1276710C000435CF0 /* Assets.xcassets */,
 				A569A9F3276710C000435CF0 /* LaunchScreen.storyboard */,
 				A569A9F6276710C000435CF0 /* Info.plist */,
-				A56D27D927E5FC73007FA546 /* GoogleService-Info.plist */,
 				A5232490277D746900282987 /* Localizable.strings */,
 			);
 			path = TimeCalculator;
@@ -201,8 +200,8 @@
 				A569A9E1276710BF00435CF0 /* Sources */,
 				A569A9E2276710BF00435CF0 /* Frameworks */,
 				A569A9E3276710BF00435CF0 /* Resources */,
-				38B93222B8F0A3ED9567116D /* [CP] Embed Pods Frameworks */,
 				A535A04227AA3487002BCBE2 /* SwiftLint */,
+				65A1028499AE2D368E13462F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -279,14 +278,13 @@
 				A569A9F2276710C000435CF0 /* Assets.xcassets in Resources */,
 				A569A9F0276710BF00435CF0 /* Main.storyboard in Resources */,
 				A595A4FB277AB945005D1279 /* FredokaOne-Regular.ttf in Resources */,
-				A56D27DA27E5FC73007FA546 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		38B93222B8F0A3ED9567116D /* [CP] Embed Pods Frameworks */ = {
+		65A1028499AE2D368E13462F /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (

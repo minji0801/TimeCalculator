@@ -8,9 +8,9 @@
 
 // 튜토리얼
 "tutorial_page0" = "Calcular a hora e o dia D";
-"tutorial_page1" = "Confira o cálculo anterior";
-"tutorial_page2" = "Gerencie o aplicativo nas configurações";
-"tutorial_page3" = "Redefinir o cálculo do dia D";
+"tutorial_page1" = "Verifique o cálculo anterior";
+"tutorial_page2" = "Gerencie o aplicativo nas ajustes";
+"tutorial_page3" = "Reinicializar o cálculo do dia D";
 
 // 시작 날짜(캘린더 앱 참고)
 "start" = "Começa :";

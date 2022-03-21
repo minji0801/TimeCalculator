@@ -7,10 +7,10 @@
 */
 
 // 튜토리얼
-"tutorial_page0" = "Tính thời gian và ngày D";
+"tutorial_page0" = "Tính toán thời gian và D-day";
 "tutorial_page1" = "Kiểm tra phép tính trước đó";
 "tutorial_page2" = "Quản lý ứng dụng trong cài đặt";
-"tutorial_page3" = "Đặt lại cách tính ngày D";
+"tutorial_page3" = "Đặt lại cách tính D-day";
 
 // 시작 날짜(캘린더 앱 참고)
 "start" = "Bắt đầu :";
