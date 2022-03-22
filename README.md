@@ -26,15 +26,14 @@
 # Navigation
 1. [Motive](#Motive)
 2. [Goals](#Goals)
-3. [Hours calculator](#-Hours-calculator)
-4. [디데이 계산](#-디데이-계산)
-5. [계산 기록](#-계산-기록)
-6. [설정](#-설정)
-7. [앱 추적 권한](#-앱-추적-권한)
-8. [Design](#-화면-및-디자인)
-9. [First time dealing with this](#-이번에-처음-다룬-것)
-10. [Contact](#-만나러-가기)
-11. [Version History](#Version-History)
+3. [Hours](#Hours)
+4. [D-day](#D-day)
+5. [Record](#Record)
+6. [Settings](#Settings)
+7. [Design](#Design)
+8. [First time dealing with this](#First-time-dealing-with-this)
+9. [Contact](#Contact)
+10. [Version History](#Version-History)
 
 <br/>
 
@@ -52,8 +51,8 @@ I write down D-day and total study hours on my daily planner everyday. D-day was
 
 <br/>
 
-<!-- 3. Hours calculator -->
-## Hours calculator
+<!-- 3. Hours -->
+## Hours
 This is the first screen you see when you launch the app. Hours can be calculated in the form of a regular calculator. Code is [here](https://github.com/minji0801/TimeCalculator/blob/main/TimeCalculator/CalculatorViewController.swift)
 
 <p align="left"><img width="200" src="https://user-images.githubusercontent.com/49383370/159242720-83dc09fc-bcf2-4ad6-a56e-39bc290efece.png"></p>
@@ -75,7 +74,7 @@ This is the first screen you see when you launch the app. Hours can be calculate
   >
   >     input : 3:66 +
   >     convertTimeFormat method is called.
-  >     Receives the input time as a [String] type as a parameter. ➜ (["3", "6", "6"])
+  >     Receives the input time as a [String] type as a parameter. → (["3", "6", "6"])
   >     Since the minute (66) is between 60 and 99, it returns 406, which is the value obtained by subtracting 60 from the minute and adding 1 to the hour.
 
 - ### Addition
@@ -83,22 +82,20 @@ This is the first screen you see when you launch the app. Hours can be calculate
  
    > ex)
    >
-   >    input : 0:58 + 0:53 =
-   >    Calculation: 58 + 53 + 40 = 151
-   >    Output: 1:51
-   >
-   > ➜ Since both the minutes (58 and 53) of the entered hour have two digits, and the sum (111) exceeds 100, 40 is added.
+   >     input : 0:58 + 0:53 =
+   >     calculation: 58 + 53 + 40 = 151
+   >     output: 1:51
+   >     → Since both the minutes (58 and 53) of the entered hour have two digits, and the sum (111) exceeds 100, 40 is added.
 
 - ### Subtraction
    If the first operand has more than three digits and the minute is less than the minute of the second operand, subtract 40.
    
    > ex)
    >
-   > input: 1:05 - 0:30 =
-   > Calculation: 105 - 30 - 40 = 35
-   > Output: 0:35
-   >
-   > ➜ Since the first operand (105) has three digits, and the minute (5) is less than the minute (30) of the second operand,  40 is subtracted.
+   >     input: 1:05 - 0:30 =
+   >     calculation: 105 - 30 - 40 = 35
+   >     output: 0:35
+   >     → Since the first operand (105) has three digits, and the minute (5) is less than the minute (30) of the second operand,  40 is subtracted.
 
 - ### Operator consecutive clicks
   At first, it was implemented to execute the corresponding operation immediately when the operator button is clicked, but then the problem is when the operator button is clicked consecutively. So, I create an method and call it whenever the operator button is clicked.
@@ -110,486 +107,82 @@ This is the first screen you see when you launch the app. Hours can be calculate
 
 <br/>
 
-<!-- 4. 디데이 계산 -->
-## 📅 디데이 계산
+<!-- 4. D-day -->
+## D-day
+Calculate the difference between the start date and the end date using the ```dateComponents``` method of ```Calendar```. Code is [here](https://github.com/minji0801/TimeCalculator/blob/main/TimeCalculator/DdayViewController.swift)
 
-디데이 계산이 은근 헷갈렸다. Calendar의 dateComponents메서드로 기준일과 종료일의 차이를 계산한다. 계산 결과가 음수면 절대값으로 변환하고 앞에 "+"를 붙이고, 계산 결과가 0이거나 양수면 1을 더한 후 앞에 "-"를 붙인다.
+<p align="left"><img width="200" src="https://user-images.githubusercontent.com/49383370/159429974-d018cf99-5856-41bd-aa9d-ef01ca88d79f.png"></p>
 
-> 예시)
+If the calculation result is ```0 or negative```, 1 is added after converting the absolute value, and "+" is added in front.
+
+If the calculation result is ```positive```, it is calculated differently depending on whether the start date has been changed. If you change the start date, subtract 1 and add a "-" in front of it. If the start date has not been changed, prefix it with a "-".
+
+The reason for doing this is that the number of days is calculated based on the time from the start date to the end date, and if the start date is not changed, one less day is counted.
+
+> ex)
 >
->     기준일: 2022.2.10, 종료일: 2022.2.17
->     dateComponents 메서드의 결과가 6이라서 1을 더하고 앞에 "-"를 붙인다.
->     출력: D - 7
+>     start: March 22, 2022 (default)
+>     end: March 29, 2022 
+>     output: D - 7
+>     → Since the calculation result is 7 and the start date has not been changed, add "-" in front of it.
 >
->     기준일: 2022.2.10, 종료일: 2022.2.3
->     dateComponents 메서드의 결과가 -7이라서 절대값으로 변환한 후 앞에 "+"를 붙인다.
->     출력: D + 7
+>     start: 2022.3.22 (start date changed)
+>     end: 2022.3.29 
+>     output: D - 7
+>     → Since the calculation result is 8 and the start date has been changed, subtract 1 and add "-" in front.
+>
+>     start: March 22, 2022 
+>     end: March 15, 2022
+>     output: D + 7
+>     → Since the calculation result is -6, it is converted to an absolute value, and 1 is added and a "+" is added in front.
 
 <br/>
 
-```swift
-// 디데이 계산
-func calculationDday() -> String {
-    let formatter = DateFormatter()
-    formatter.dateFormat = "yyyy-MM-dd"
-    if let language = UserDefaults.standard.array(forKey: "Language")?.first as? String {
-        formatter.locale = Locale(identifier: language)
-    }
+<!-- 5. Record -->
+## Record
+Shows the time calculation result stored in Userdefaults. You can also reset records. Code is [here](https://github.com/minji0801/TimeCalculator/blob/main/TimeCalculator/HistoryViewController.swift)
 
-    let startDate = formatter.string(from: startDatePicker.date)
-    let endDate = formatter.string(from: endDatePicker.date)
+<p align="left"><img width="200" src="https://user-images.githubusercontent.com/49383370/159430089-1f7c81b7-a261-4ad6-8930-10908e9b7b47.png"></p>
 
-//        print("startDate : \(startDate), endDate : \(endDate)")
+When the equal sign(=) is clicked in the hours calculator, the calculation formula is saved in UserDefaults. However, to make a correct calculation formular, check the ```isClickedOperation``` variable every time a number is clicked. Code is [here](https://github.com/minji0801/TimeCalculator/blob/main/TimeCalculator/CalculatorViewController.swift)
 
-    if startDate == endDate {
-        return "- DAY"
-    } else {
-        let result = Calendar.current.dateComponents(
-            [.day],
-            from: startDatePicker.date,
-            to: endDatePicker.date
-        ).day!
-//            print("result = \(result)")
-        if result < 0 {
-            // result가 음수면 절대값씌워서 앞에 + 붙이기
-            return "+ \(result.magnitude)"
-        } else {
-            // 0이거나 양수면 1더해서 앞에 - 붙이기
-            return "- \((result + 1))"
-        }
-    }
-}
-```
+If you have already pressed plus(+) or minus(-) when you press a number ```(isClickedOperation = true)```, create a calculation formula. If you have never pressed plus(+) or minus(-) but have pressed the equal sign(=) ```(isClickedOperation = false, isClickedEqual = true)```, initializes the values of the operands and the current operator.
+
+Also, the first operand get only when there is no second operand and when performing an addition operation after pressing the equal sign(=). And check whether the second operand is inserted into the calculation formula with the ```isAddedFormula``` variable. If click plus(+) or minus(-), initializes the value to false.
+
+If it don't do this, the formula is generated as follows.
+>     calculation: 4:36 + 0:35 + 0:21 + 0:22 = 5:54
+>     calculation formula: 4:36 + 0:35 + 0:35 + 0:21 + 0:21 + 0:22 = 5:54
 <br/>
 
-<!-- 5. 계산 기록 -->
-## 📝 계산 기록
-등호(=) 버튼을 클릭했을 때 UserDefaults를 이용해서 계산식을 로컬에 저장한다.
+<!-- 6. Settings -->
+## Settings
+Various functions such as dark mode, sound settings, language change, app rating, send feedback provided on the setting screen. Code is [here](https://github.com/minji0801/TimeCalculator/blob/main/TimeCalculator/SettingViewController.swift)
 
-```swift
-// = 버튼 눌렀을 때
-@IBAction func equalButtonTapped(_ sender: UIButton) {
-    symbolLabel.text = ""
-    self.operation(self.currentOperation)
-    self.isClickedEqual = true
-    self.isClickedOperation = false
+<p align="left"><img width="200" src="https://user-images.githubusercontent.com/49383370/159439992-6b17cd6a-306d-489c-911b-bb7c37137652.png"></p>
 
-    // 계산 기록하기 : 계산식이 담긴 문자열(연산식 + "=" + 결과값)을 UserDefaults에 저장하기
-    // formula가 "0:00 = 0:00"이면 저장하지 않기
-    // ex) 4:16 + 1:09 + 0:37 = 6:02
+- ### Dark mode
+  The ```appearanceCheck``` function is called in the ```viewWillAppear``` method, and the Appearance of the app is changed by getting the value stored in UserDefaults.
 
-    self.formula += "\(updateLabel(self.secondOperand)) = \(self.outputLabel.text!)"
+- ### Sound settings
+  You can disable the button click sound through the ```'Sound'``` button in the settings. Get the value stored in UserDefaults and play the sound with the ```AVFoundation``` framework.
 
-    if self.formula != "0:00 = 0:00" {
-        var history = UserDefaults.standard.array(forKey: "History") as? [String]
-        if history == nil {
-            history = [formula]
-        } else {
-            history?.append(formula)
-        }
-        UserDefaults.standard.set(history!, forKey: "History")
-    }
-    self.formula = ""
-}
-```
+- ### Change language
+  You can change the language of the app through the 'Language' button in Settings. As of version 1.4.0, a total of 11 languages are supported.
+
+  <p align="left"><img width="200" src="https://user-images.githubusercontent.com/49383370/159459341-e76901bc-87d2-4c14-81ef-7d4b8393c469.png"></p>
+
+  When the ```'Language'``` button is clicked, the changeLanguageFirst, changeLanguageSecond, changeLanguageThird methods are called and the value is saved in UserDefaults using ```LanguageManager```. The method is divided into three because it violates ```SwiftLint's cyclic complexity rule```. Code is [here](https://github.com/minji0801/TimeCalculator/blob/main/TimeCalculator/Manager/LanguageManager.swift)
+
+- ### App rating
+  Go to the App Store app page through the ```'Rate the App'``` button in Settings and show the review writing screen.
+
+- ### Send feedback
+  Using the ```MessageUI``` framework, the Mail app shows the email composing screen.
 
 <br/>
 
-단, 올바른 계산식을 만들기 위해서 숫자 버튼을 클릭할 때마다 isClickedOperation 변수를 확인한다. 
-
-<br/>
-
-숫자 버튼을 눌렀을 때 이미 더하기(+)나 빼기(-)를 누른적이 있다면(isClickedOperation = true) 계산식을 만들고, 더하기(+)나 빼기(-)를 누른적은 없지만 등호(=)를 누른적이 있다면(isClickedOperation = false, isClickedEqual = true) 피연산자와 현재 연산자의 값을 초기화한다.
-
-<br/>
-
-계산식을 만들기 위해 첫번째 피연산자를 가져올 때 주의해야 한다. 즉, 연산을 제일 처음하는 경우를 말하는데, 두번째 피연산자가 없을 때와 등호(=)를 누른 후 추가 연산을 할 때만 첫번째 피연산자를 가져온다.
-
-<br/>
-
-그리고 여기서 두번째 피연산자가 반복해서 계산식에 입력되는 문제가 있었다. 그래서 isAddedFormula 변수로 두번째 피연산자를 계산식에 넣었는지 확인한다. 더하기(+)나 빼기(-) 를 클릭하면 false로 값을 초기화한다.
-
-```swift
-// 올바른 계산식 만들기
-func createCorrectFormula() {
-    if self.isClickedOperation {    // +나 -연산자 누른적 있으면
-        // 첫번째 연산자 가져오는 경우 : 두번째 연산자가 없을 때, = 기호 누른 후 추가로 연산할 때
-        if self.secondOperand.isEmpty || isClickedEqual {
-            formula = updateLabel(self.firstOperand)
-            switch self.currentOperation {
-            case .add:
-                formula += " + "
-            case .subtract:
-                formula += " - "
-            default:
-                break
-            }
-        } else {
-            // secondOperand를 이미 formula에 넣은 경우는 다시 넣지 않도록
-            if !self.isAddedFormula {
-                formula += updateLabel(self.secondOperand)
-                switch self.currentOperation {
-                case .add:
-                    formula += " + "
-                case .subtract:
-                    formula += " - "
-                default:
-                    break
-                }
-                self.isAddedFormula = true
-            }
-        }
-    } else {    // +나 -연산자 누른적은 없지만 =연산자 누른적 있으면
-        if self.isClickedEqual {
-            self.firstOperand = ""
-            self.secondOperand = ""
-            self.currentOperation = .unknown
-            self.isClickedEqual = false
-        }
-    }
-}
-```
-
-<br/>
-
-<!-- 6. 설정 -->
-## 🛠 설정
-### 다크 모드
-설정의 '다크 모드' 버튼으로 앱의 UI Style을 변경할 수 있다.
-
-<br/>
-
-<p align="center"><img src="https://user-images.githubusercontent.com/49383370/152300020-5cae4abe-4ab4-4473-b604-eb86e3a059d9.jpeg"></p>
-
-<br/>
-
-UserDefaults로 키가 "Dark"인 로컬저장소에서 값을 가져온 후 이와 반대로 저장한다. 앱의 기본 Appearance를 Light로 설정했기 때문에 처음에 가져오는 값은 false다.
-
-<br/>
-
-```swift
-// 다크모드 버튼 클릭 시
-@IBAction func darkModeButtonTapped(_ sender: UIButton) {
-    let appearance = UserDefaults.standard.bool(forKey: "Dark")
-
-    if appearance {
-        UserDefaults.standard.set(false, forKey: "Dark")
-    } else {
-        UserDefaults.standard.set(true, forKey: "Dark")
-    }
-    self.viewWillAppear(true)
-}
-```
-
-<br/>
-
-viewWillAppear 메서드에서 appearanceCheck 함수가 호출된다. UserDefaults로 로컬에 저장한 값을 가져와 앱의 Appearance를 변경한다. 모든 ViewController의 viewWillAppear 메서드에서 appearanceCheck 함수를 호출한다.
-
-<br/>
-
-```swift
-override func viewWillAppear(_ animated: Bool) {
-    super.viewWillAppear(animated)
-    appearanceCheck(self)
-}
-```
-
-```swift
-// UserDefaults에 저장된 값을 통해 다크모드 확인하는 메소드
-func appearanceCheck(_ viewController: UIViewController) {
-    let appearance = UserDefaults.standard.bool(forKey: "Dark")
-
-    if appearance {
-        viewController.overrideUserInterfaceStyle = .dark
-        if #available(iOS 13.0, *) {
-            UIApplication.shared.statusBarStyle = .lightContent
-        } else {
-            UIApplication.shared.statusBarStyle = .default
-        }
-    } else {
-        viewController.overrideUserInterfaceStyle = .light
-        if #available(iOS 13.0, *) {
-            UIApplication.shared.statusBarStyle = .darkContent
-        } else {
-            UIApplication.shared.statusBarStyle = .default
-        }
-    }
-}
-```
-
-<br/>
-
-### 사운드
-기본으로 버튼 클릭 시 소리가 나도록 구현했는데, 설정의 '사운드' 버튼을 통해 소리가 나지 않도록 할 수 있다. 
-
-<br/>
-
-<p align="center"><img src="https://user-images.githubusercontent.com/49383370/152310768-25e6b7c8-26dc-4b9e-83d4-de5d5fe38db3.jpeg"></p>
-
-<br/>
-
-UserDefaluts로 키가 "SoundOff"인 로컬 저장소에서 값을 가져온 후 이와 반대로 저장한다.
-
-<br/>
-
-```swift
-// 버튼 사운드 클릭 시
-@IBAction func soundButtonTapped(_ sender: UIButton) {
-    let soundOff = UserDefaults.standard.bool(forKey: "SoundOff")
-    UserDefaults.standard.set(!soundOff, forKey: "SoundOff")
-}
-```
-
-그리고 버튼을 클릭하면 로컬에 저장된 값을 가져와 AVFoundation 프레임워크로 소리를 재생한다.
-
-<br/>
-
-```swift
-import AVFoundation
-
-// 버튼이 눌릴 때마다 소리 출력
-@IBAction func buttonPressed(_ sender: Any) {
-    let soundOff = UserDefaults.standard.bool(forKey: "SoundOff")
-    if !soundOff {
-        let systemSoundID: SystemSoundID = 1104
-        AudioServicesPlaySystemSound(systemSoundID)
-    }
-}
-```
-
-<br/>
-
-### 언어
-설정의 '언어' 버튼을 통해서 앱의 언어를 변경할 수 있다. 1.3.2 버전을 기준으로 총 8개의 언어를 지원하고 있다.
-
-<br/>
-
-<p align="center"><img src="https://user-images.githubusercontent.com/49383370/152671549-b8ddf5c3-cd00-4350-a95b-cf97c7428545.jpeg"></p>
-
-<br/>
-
-'언어' 버튼을 클릭하면 changeLanguageFirst, changeLanguageSecond, changeLanguageThird 메서드를 호출해서 UserDefaults로 키가 "Language"인 로컬에 값을 저장한다. 하나의 메서드로 작성할 시 SwiftLint의 순환 복잡도 룰에 위반되기 때문에 메서드를 3개로 나눈 것이다.
-
-```swift
-@IBAction func languageButtonTapped(_ sender: UIButton) {
-    ...
-    changeLanguageFirst((sender.titleLabel?.text)!)
-    changeLanguageSecond((sender.titleLabel?.text)!)
-    changeLanguageThird((sender.titleLabel?.text)!)
-    ...
-}
-```
-
-```swift
-// 언어 변경 첫번째
-func changeLanguageFirst(_ text: String) {
-    switch text {
-    case "English":
-        UserDefaults.standard.set(["en"], forKey: "Language")
-    case "简体中文":
-        UserDefaults.standard.set(["zh-Hans"], forKey: "Language")
-    case "繁體中文":
-        UserDefaults.standard.set(["zh-Hant"], forKey: "Language")
-    case "日本語":
-        UserDefaults.standard.set(["ja"], forKey: "Language")
-    case "Español":
-        UserDefaults.standard.set(["es"], forKey: "Language")
-    case "Français":
-        UserDefaults.standard.set(["fr"], forKey: "Language")
-    case "Deutsch":
-        UserDefaults.standard.set(["de"], forKey: "Language")
-    case "Русский":
-        UserDefaults.standard.set(["ru"], forKey: "Language")
-    default: break
-    }
-}
-
-// 언어 변경 두번째
-func changeLanguageSecond(_ text: String) {
-    switch text {
-    case "Português (Brasil)":
-        UserDefaults.standard.set(["pt-BR"], forKey: "Language")
-    case "Italiano":
-        UserDefaults.standard.set(["it"], forKey: "Language")
-    case "한국어":
-        UserDefaults.standard.set(["ko"], forKey: "Language")
-    case "Türkçe":
-        UserDefaults.standard.set(["tr"], forKey: "Language")
-    case "Nederlands":
-        UserDefaults.standard.set(["nl"], forKey: "Language")
-    case "ภาษาไทย":
-        UserDefaults.standard.set(["th"], forKey: "Language")
-    case "Svenska":
-        UserDefaults.standard.set(["sv"], forKey: "Language")
-    case "Dansk":
-        UserDefaults.standard.set(["da"], forKey: "Language")
-    default: break
-    }
-}
-
-// 언어 변경 세번째
-func changeLanguageThird(_ text: String) {
-    switch text {
-    case "Tiếng Việt":
-        UserDefaults.standard.set(["vi"], forKey: "Language")
-    case "Norsk Bokmål":
-        UserDefaults.standard.set(["nb"], forKey: "Language")
-    case "Polski":
-        UserDefaults.standard.set(["pl"], forKey: "Language")
-    case "Suomi":
-        UserDefaults.standard.set(["fi"], forKey: "Language")
-    case "Bahasa Indonesia":
-        UserDefaults.standard.set(["id"], forKey: "Language")
-    case "Čeština":
-        UserDefaults.standard.set(["cs"], forKey: "Language")
-    case "Українська":
-        UserDefaults.standard.set(["uk"], forKey: "Language")
-    default: break
-    }
-}
-```
-
-<br/>
-
-### 앱 평가
-설정의 '앱 평가' 버튼을 통해 App Store 앱페이지로 이동한다.
-
-<br/>
-
-<p align="center"><img src="https://user-images.githubusercontent.com/49383370/152300317-e8fc9497-b8ec-4fa0-8110-100c99f1600b.jpeg"></p>
-
-<br/>
-
-```swift
-// 앱 평가 버튼 클릭 시
-@IBAction func reviewButtonTapped(_ sender: UIButton) {
-    // 스토어 url 열기
-    let store = "https://apps.apple.com/kr/app/h-ours/id1605524722"
-    if let url = URL(string: store), UIApplication.shared.canOpenURL(url) {
-        if #available(iOS 10.0, *) {
-            UIApplication.shared.open(url, options: [:], completionHandler: nil)
-        } else {
-            UIApplication.shared.openURL(url)
-        }
-    }
-}
-```
-
-<br/>
-
-### 피드백 보내기
-설정의 '피드백 보내기' 버튼을 통해서 개발자에게 피드백을 보낼 수 있다.
-
-<br/>
-
-<p align="center"><img src="https://user-images.githubusercontent.com/49383370/152298101-6f4ae3b8-b9c4-4efd-b4c3-df52b07d0c8a.jpeg"></p>
-
-<br/>
-
-MessageUI 프레임워크를 이용하여 Mail 앱으로 이메일 작성 화면을 보여준다.
-
-<br/>
-
-```swift
-import MessageUI
-
-// 피드백 보내기 버튼 클릭 시
-@IBAction func feedbackButtonTapped(_ sender: UIButton) {
-    if MFMailComposeViewController.canSendMail() {
-        let composeViewController = MFMailComposeViewController()
-        composeViewController.mailComposeDelegate = self
-
-        let bodyString = """
-                         Please write your feedback here.
-                         I will reply you as soon as possible.
-                         If there is an incorrect translation, please let me know and I will correct it.
-                         thank you :)
-
-
-
-                         ----------------------------
-                         Device Model : \(self.getDeviceIdentifier())
-                         Device OS : \(UIDevice.current.systemVersion)
-                         App Version : \(self.getCurrentVersion())
-                         ----------------------------
-                         """
-
-        composeViewController.setToRecipients(["hcolonours.help@gmail.com"])
-        composeViewController.setSubject("<h:ours> Feedback")
-        composeViewController.setMessageBody(bodyString, isHTML: false)
-
-        self.present(composeViewController, animated: true, completion: nil)
-    } else {
-//            print("메일 보내기 실패")
-        let sendMailErrorAlert = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .alert)
-        let goAppStoreAction = UIAlertAction(title: goTitle, style: .default) { [weak self] _ in
-            // 앱스토어로 이동하기(Mail)
-            let store = "https://apps.apple.com/kr/app/mail/id1108187098"
-            if let url = URL(string: store), UIApplication.shared.canOpenURL(url) {
-                if #available(iOS 10.0, *) {
-                    UIApplication.shared.open(url, options: [:], completionHandler: nil)
-                } else {
-                    UIApplication.shared.openURL(url)
-                }
-            }
-        }
-        let cancleAction = UIAlertAction(title: cancleTitle, style: .destructive, handler: nil)
-
-        sendMailErrorAlert.addAction(goAppStoreAction)
-        sendMailErrorAlert.addAction(cancleAction)
-        self.present(sendMailErrorAlert, animated: true, completion: nil)
-    }
-}
-```
-
-<br/>
-
-<!-- 7. 앱 추적 권한 -->
-## 📍 앱 추적 권한
-사용자에게 맞춤형 광고를 제공하기 위해서 앱을 처음 설치하고 실행할 때 앱 추적 권한을 요청한다.
-
-<br/>
-
-```swift
-import AdSupport
-import AppTrackingTransparency
-
-...
-
-    func application(
-        _ application: UIApplication,
-        didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
-    ) -> Bool {
-        // 앱 추적 권한 요청
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            if #available(iOS 14, *) {
-                ATTrackingManager.requestTrackingAuthorization { status in
-                    switch status {
-                    case .authorized:           // 허용됨
-                        print("Authorized")
-                        print("IDFA = \(ASIdentifierManager.shared().advertisingIdentifier)")
-                    case .denied:               // 거부됨
-                        print("Denied")
-                    case .notDetermined:        // 결정되지 않음
-                        print("Not Determined")
-                    case .restricted:           // 제한됨
-                        print("Restricted")
-                    @unknown default:           // 알려지지 않음
-                        print("Unknow")
-                    }
-                }
-            }
-        }
-
-        // AdMob
-        GADMobileAds.sharedInstance().start(completionHandler: nil)
-        return true
-    }
-```
-
-<br/>
-
-<!-- 8. Design -->
+<!-- 7. Design -->
 ## Design
 ### Accent Color
 The point color is ```'Veri Peri'```, the color of the year for 2022.
@@ -602,11 +195,11 @@ The shape of a circle made of repeating dots is reminiscent of a clock, and the 
 <p align="left"><img width="100" src="https://user-images.githubusercontent.com/49383370/159161637-7f0a4cf0-1434-481f-96e7-f0b9b4e88c98.png"></p>
 
 ### UI/UX
-<p align="center"><img alt="UI/UX Light Mode" src="https://user-images.githubusercontent.com/49383370/159161762-49967309-34b0-44e0-84d8-e3cdc81fb43f.png"></p>
+<p align="center"><img alt="UI/UX Light Mode" src="https://user-images.githubusercontent.com/49383370/159465188-6a642866-968e-48ef-9126-76be44674776.png"></p>
 
 <br/>
 
-<!-- 9. First time dealing with this -->
+<!-- 8. First time dealing with this -->
 ## First time dealing with this
 - ### Localization
   For the first time, I dealt with Localization for multilingual support, which was an important goal of this app development. It can be implemented in storyboard or code, but in h:ours, it was implemented in code.
@@ -637,7 +230,7 @@ The shape of a circle made of repeating dots is reminiscent of a clock, and the 
 
 <br/>
 
-<!-- 10. Contact -->
+<!-- 9. Contact -->
 ## Contact
 ### App Store
 > https://apps.apple.com/kr/app/h-ours/id1605524722
@@ -650,7 +243,7 @@ The shape of a circle made of repeating dots is reminiscent of a clock, and the 
 
 <br/>
 
-<!-- 11.Version History -->
+<!-- 10.Version History -->
 ## Version History
 ### v1.0.0 (2022.1.21)
 > - Support Korean and English
@@ -674,6 +267,10 @@ The shape of a circle made of repeating dots is reminiscent of a clock, and the 
 ### v1.3.2 (2022.2.9)
 > - Fix calculation history error (Fixed an error where the second operand was repeated when creating a formula)
 
+### v1.4.0 (2022.3.22)
+> - Add Portuguese, Italian, and Vietnamese
+> - Correct D-day calculation errors
+> - Modify of app evaluation function
 
 <br/>
 <br/>
@@ -689,7 +286,6 @@ The shape of a circle made of repeating dots is reminiscent of a clock, and the 
   <!-- GitHub Stats -->
   <a href="https://github.com/minji0801"><img src="https://github-readme-stats.vercel.app/api?username=minji0801&show_icons=true&theme=buefy"/></a>
   
-  <br/>
   <br/>
   <br/>
   
