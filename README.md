@@ -10,7 +10,7 @@
   <br/>
   
   <!-- Badge -->
-  ![version](https://img.shields.io/badge/v-1.3.2-brightgreen?style=flat-square)
+  ![version](https://img.shields.io/badge/v-1.4.0-brightgreen?style=flat-square)
   ![iOS](https://img.shields.io/badge/iOS-000000?style=flat-square&logo=iOS&logoColor=white)
   ![Swift](https://img.shields.io/badge/Swift-F05138?style=flat-square&logo=Swift&logoColor=white)
   ![Xcode](https://img.shields.io/badge/Xcode-147EFB?style=flat-square&logo=Xcode&logoColor=white)
